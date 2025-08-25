@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta property="og:site_name" content="Maia Estates" />
+    <meta property="og:url" content="https://www.maiaestates.in" />
+    <meta name="twitter:domain" content="www.maiaestates.in" />
+    <link rel="canonical" href="https://www.maiaestates.in/" />
+    <meta name="robots" content="index, follow">
+    <title>Top Real Estate Builders & Developers in Bangalore | Best Real Estate Company in Bangalore | MAIA Estates</title>
+    <meta property="og:title" content="Top Real Estate Builders & Developers in Bangalore | Best Real Estate Company in Bangalore | MAIA Estates" />
+    <meta name="keywords" content="Ultra Luxury Apartments in Bangalore, Luxury Projects In Bangalore, Premium Apartments In Bangalore, Real Estate Developers in Bangalore, Top Developers in Bangalore, Best Builders in Bangalore, Builders and Developers in Bangalore, Top Builders in Bangalore, Real Estates Builders in Bangalore, Best Developers in Bangalore"/>
+    <meta name="twitter:description" content="MAIA Estates - Top Real Estate Developer in Bangalore. We believe in the importance of responsible & sustainable designs and thus offer luxury homes, and residential apartments in Bangalore at the best price." />
+    <meta name="description" content="MAIA Estates - Top Real Estate Developer in Bangalore. We believe in the importance of responsible & sustainable designs and thus offer luxury homes, and residential apartments in Bangalore at the best price." />
+    <meta property="og:description" content="MAIA Estates - Top Real Estate Developer in Bangalore. We believe in the importance of responsible & sustainable designs and thus offer luxury homes, and residential apartments in Bangalore at the best price." />
+    <meta property="og:title" content="Top Real Estate Builders & Developers in Bangalore | Best Real Estate Company in Bangalore | MAIA Estates">
+    <meta property="og:site_name" content=" Maia Estates">
+    <meta property="og:url" content="https://www.maiaestates.in/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.maiaestates.in/images/Maiaestates1.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <meta property="og:title" content="Top Real Estate Builders & Developers in Bangalore | Best Real Estate Company in Bangalore | MAIA Estates" />
+    <meta name="twitter:title" content="Top Real Estate Builders & Developers in Bangalore | Best Real Estate Company in Bangalore | MAIA Estates" />
+    <!--<meta property="og:description" content="MAIA Estates - Top Real Estate Developer in Bangalore. We believe in the importance of responsible & sustainable designs and thus offer luxury homes, and residential apartments in Bangalore at the best price." />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="utility.css">
+    <link rel="stylesheet" type="text/css" href="maiaestates.css">
+    
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+
+    <!-- Lenis Smooth Scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script>
+        // Initialize Lenis smooth scrolling
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    </script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93675652-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-93675652-1');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 304470134 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-304470134"></script>
+
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-304470134');
+    </script>
+
+    <!-- Event snippet for Website traffic conversion page -->
+    <script>
+    gtag('event', 'conversion', {'send_to': 'AW-304470134/6vGbCNrqmfICEPawl5EB'});
+    </script>
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '387351306338600');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=387351306338600&ev=PageView&noscript=1"/></noscript>
+    <!-- End Facebook Pixel Code -->
+
+
+    <!-- Google 19sept2021 Tag Manager -->
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+    })(window,document,'script','dataLayer','GTM-T2XBGZ4');</script>
+
+    <!-- End Google Tag Manager -->
+
+
+    <meta name="facebook-domain-verification" content="pognb9mgkrukvqi84431jr4q18r62l" />
+</head>
+<body id="bodycontainer">
+    <div class="body_wrapper">
+        <!-- Header -->
+        <header class="header sticky top-0 left-0 right-0 z-50">
+            <div class="container flex justify-between items-center">
+                <div class="logo">
+                    <a href="index.php">
+                        <img src="images/2025/MAIA-logo.png" alt="Logo">
+                    </a>
+                </div>
+                <!-- Links: Home, About, Projects, Contact -->
+                <nav>
+                    <ul class="flex gap-8 text-xs font-medium">
+                        <li><a class="text-green uppercase" href="#">About Us</a></li>
+                        <li><a class="text-green uppercase" href="#">Services</a></li>
+                        <li><a class="text-green uppercase" href="#">Developments</a></li>
+                    </ul>
+                </nav>
+                <!-- Menu Bar -->
+                <div class="menu-bar flex items-center gap-4">
+                    <button class="btn-primary bg-green text-white uppercase px-6 py-3 rounded-full flex gap-2 items-center">
+                        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
+                        </svg>
+                        <span class="text-xs font-medium">Contact Us</span>
+                    </button>
+
+                    <button id="menu-bar-button" class="menu-bar-button cursor-pointer">
+                        <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4.74737" y="4.44073" width="38.1426" height="38.1426" rx="19.0713" stroke="#00362A" stroke-width="0.756465"/>
+                            <rect x="15.1035" y="19.9844" width="17.429" height="1" fill="#00362A"/>
+                            <rect x="15.1035" y="26.0391" width="17.429" height="1" fill="#00362A"/>
+                        </svg>
+                    </button>
+                </div> 
+            </div>   
+        </header>
+
+
+        <!-- Section 1: Hero Banner -->
+        <section class="hero-banner py-20">
+            <div class="container">
+                <div class="hero-content pb-12">
+                    <div class="flex items-end justify-between mb-20">
+                        <h1 class="text-4xl font-normal text-green">Our <br /> Developments</h1>
+                        <p class="font-medium text-black opacity-70" style="max-width: 325px;">
+                        A curated portfolio of completed and upcoming icons, each exemplifying artistry, innovation, and an enduring legacy.
+                        </p>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <p class="text-sm font-medium text-black uppercase">(Scroll to explore)</p>
+                        <div class="scroll-down cursor-pointer">
+                            <svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.378906" width="61.44" height="61.44" rx="30.72" fill="#014E3C"/>
+                                <path d="M25.0039 31.1746L26.2834 29.921L30.6336 34.3981V23.0391L32.5016 23.0391V34.3981L36.8774 29.921L38.1313 31.1746L31.5804 37.7495L25.0039 31.1746Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="images/2025/developments/hero-banner-image--dev.png" alt="Hero Banner Image" class="hero-banner-image">
+            </div>
+        </section>
+
+
+
+
+        <!-- Section 2: Brand Ethos -->
+        <section class="brand-ethos py-40 bg-green text-white">
+            <div class="container">
+                <div class="brand-ethos-content grid grid-cols-2 gap-24 pb-30 pt-10">
+                    <div class="brand-ethos-content-left mt-10">
+                        <div class="section-subheader uppercase text-white mb-3">
+                            BRAND ETHOS
+                        </div>
+                        <h2 class="text-6xl font-normal mb-18 text-white">
+                            Driven by Vision, <br />
+                            Defined by Craft
+                        </h2>
+                        <p class="mb-12 max-w-lg text-white opacity-70">
+                            We practice the principles of perfection, precision, <br />
+                            innovative design and commitment to the highest quality <br />
+                            at each stage of the development process.
+                        </p>
+                    </div>
+                    <div class="brand-ethos-content-right">
+                        <img src="images/2025/developments/brand-ethos.png" alt="Brand Ethos" class="brand-ethos-image">
+                    </div>
+                </div>
+                <div class="line-divider-light"></div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Section 3: MAIA Developments -->
+        <section class="maia-developments pt-20 bg-white">
+            <div class="container maia-developments-content text-center">
+                <div class="section-subheader uppercase text-green mb-3">
+                    MAIA DEVELOPMENTS
+                </div>
+                <h2 class="text-6xl font-normal mb-8">
+                    Defining the Skyline
+                </h2>
+                <p>
+                Our developments reflect a deep commitment to craftsmanship, context,<br />and quality, creating spaces that stand the test of time.
+                </p>
+            </div>
+
+            <!-- Development Project List -->
+            <div class="development-project-list mt-20">
+                <!-- 1. 27 Summit -->
+                <div class="development-project-item mb-30">
+                    <div class="development-project-item-image relative">
+                        <div class="development-slider development-slider-1 bg-dark-grey">
+                            <div class="development-slider-container">
+                                <div class="development-slider-dots development-slider-dots-1"></div>
+                                <div class="development-slider-images development-slider-images-1">
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--11.png" alt="27 Summit">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--12.png" alt="27 Summit">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--13.png" alt="27 Summit">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--14.png" alt="27 Summit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-20 left-20" style="max-width: 430px;">
+                            <div class="development-badge mb-5">
+                                Ongoing Delivery
+                            </div>
+                            <h4 class="text-white text-6xl font-normal mb-5">
+                                27 Summit
+                            </h4>
+                            <p class="flex items-center gap-2 mb-10">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="text-white font-medium">
+                                    Central Bangalore - Off Richmond Road
+                                </span>
+                            </p>
+                            <p class="text-white font-medium">
+                                Ascend to Bangalore’s skyline at 27 Summit, where visionary design meets all-encompassing, sky-high amenities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Casa Sia -->
+                <div class="development-project-item mb-30">
+                    <div class="development-project-item-image relative">
+                        <div class="development-slider development-slider-2 bg-dark-grey">
+                            <div class="development-slider-container">
+                                <div class="development-slider-dots development-slider-dots-2"></div>
+                                <div class="development-slider-images development-slider-images-2">
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--21.png" alt="Casa Sia">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--22.png" alt="Casa Sia">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--23.png" alt="Casa Sia">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--24.png" alt="Casa Sia">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-20 left-20" style="max-width: 430px;">
+                            <div class="development-badge mb-5">
+                                Under construction
+                            </div>
+                            <h4 class="text-white text-6xl font-normal mb-5">
+                                Casa Sia
+                            </h4>
+                            <p class="flex items-center gap-2 mb-10">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="text-white font-medium">
+                                    Central Chennai - Parthasarathy Gardens
+                                </span>
+                            </p>
+                            <p class="text-white font-medium">
+                                Nestled in Parthasarathy Gardens, Casa Sia honours visionary legacy with bespoke residences blending artisanal craftsmanship and sustainable innovation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Pelican Gardens -->
+                <div class="development-project-item mb-30">
+                    <div class="development-project-item-image relative">
+                        <div class="development-slider development-slider-3 bg-dark-grey">
+                            <div class="development-slider-container">
+                                <div class="development-slider-dots development-slider-dots-3"></div>
+                                <div class="development-slider-images development-slider-images-3">
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--31.png" alt="Pelican Gardens">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--32.png" alt="Pelican Gardens">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--33.png" alt="Pelican Gardens">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--34.png" alt="Pelican Gardens">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-20 left-20" style="max-width: 430px;">
+                            <div class="development-badge mb-5">
+                                Under construction
+                            </div>
+                            <h4 class="text-white text-6xl font-normal mb-5">
+                                Pelican Gardens
+                            </h4>
+                            <p class="flex items-center gap-2 mb-10">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="text-white font-medium">
+                                    North Bangalore - Jakkur Lake
+                                </span>
+                            </p>
+                            <p class="text-white font-medium">
+                            Perched on Jakkur Lake, these residences blend serene waterfront living with curated amenities, visionary design, and ecological harmony.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 4. Pelican Grove -->
+                <div class="development-project-item">
+                    <div class="development-project-item-image relative">
+                        <div class="development-slider development-slider-4 bg-dark-grey">
+                            <div class="development-slider-container">
+                                <div class="development-slider-dots development-slider-dots-4"></div>
+                                <div class="development-slider-images development-slider-images-4">
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--41.png" alt="Pelican Grove">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--42.png" alt="Pelican Grove">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--43.png" alt="Pelican Grove">
+                                    </div>
+                                    <div class="development-slide-item">
+                                        <img class="development-slider-image" src="images/2025/developments/dev-project--44.png" alt="Pelican Grove">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-20 left-20" style="max-width: 430px;">
+                            <div class="development-badge mb-5">
+                                Delivered
+                            </div>
+                            <h4 class="text-white text-6xl font-normal mb-5">
+                                Pelican Grove
+                            </h4>
+                            <p class="flex items-center gap-2 mb-10">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="text-white font-medium">
+                                    North Bangalore - Jakkur Lake
+                                </span>
+                            </p>
+                            <p class="text-white font-medium">
+                            Rising along Jakkur Lake, Pelican Gardens blends abundant flora and fauna with seamless indoor-outdoor living and serene connectivity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Section 4: Next Developments -->
+        <section class="next-developments py-20 bg-white">
+            <div class="container">
+                <div class="section-subheader uppercase text-green mb-3">
+                    OUR DEVELOPMENTS
+                </div>
+                <h2 class="text-7xl font-normal mb-8">
+                    Shaping what's next
+                </h2>
+                <div class="flex items-center justify-between">
+                    <p class="mb-16">
+                    Designs in progress, destined to become <br /> tomorrow's most coveted addresses
+                    </p>
+
+                    <div class="slick-arrows flex items-center justify-end gap-6 mb-16">
+                        <div class="slick-arrow-prev cursor-pointer">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
+                                <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
+                            </svg>
+                        </div>
+                        <div class="slick-arrow-next cursor-pointer">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
+                                <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Next Developments Slider -->
+            <div class="next-developments-slider-container pl-20 pb-30">
+                
+                <div class="line-divider pr-20"></div>
+                <div class="next-developments-slider">
+                    <div class="next-developments-slide-item">
+                        <h4 class="text-gold text-4xl font-heading font-normal mb-2">
+                            Residential Development
+                            <br />
+                            - Basavanagudi
+                        </h4>
+                        <img src="images/2025/homepage/Next-development--1.png" alt="Next Development 1">
+                    </div>
+                    <div class="next-developments-slide-item">
+                        <h4 class="text-gold text-4xl font-heading font-normal mb-2">
+                            Commercial Development
+                            <br />
+                            - Nagawara Lake
+                        </h4>
+                        <img src="images/2025/homepage/Next-development--2.png" alt="Next Development 2">
+                    </div>
+                    <div class="next-developments-slide-item">
+                        <h4 class="text-gold text-4xl font-heading font-normal mb-2">
+                            Commercial Development
+                            <br />
+                            - Nagawara Lake
+                        </h4>
+                        <img src="images/2025/homepage/Next-development--3.png" alt="Next Development 3">
+                    </div>
+                </div>
+                <div class="line-divider pr-20"></div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Section 5: Contact Us -->
+        <section class="contact-us py-20 bg-white">
+            <div class="container">
+                <h2 class="text-7xl font-normal mb-8">
+                    Contact Us
+                </h2>
+            </div>
+        </section>
+        
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="footer pt-12 bg-green">
+            <div class="footer-content py-50 ">
+                <div class="container grid grid-cols-3 gap-20">
+                    <div class="footer-logo">
+                        <img src="images/2025/footer-logo.png" alt="Footer Logo" style="width: 200px;">
+                    </div>
+                    <div class="footer-links">
+                        <h3 class="text-grey text-4xl font-heading font-normal mb-8">
+                            Links
+                        </h3>
+                        <div class="grid grid-cols-2 gap-10">
+                            <ul class="text-white text-sm font-medium">
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        Our Story
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        Developments
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        Our Services
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="text-white text-sm font-medium">
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        MAIA Impact
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        In the News
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        Blogs
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-social">
+                        <h3 class="text-grey text-4xl font-heading font-normal mb-8">
+                            Info
+                        </h3>
+                        <div class="">
+                            <p class="mb-4 text-sm text-white opacity-40" >
+                                Maia Estates, 34 (New No. 84), Ulsoor Road, <br>
+                                Yellappa Chetty Layout, Sivanchetti Gardens, <br>
+                                Bengaluru, Karnataka 560042
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <a href="mailto:info@maia.com" class="footer-info-item text-white text-sm">
+                                    info@maia.com
+                                </a>
+                                <div class="text-white text-sm opacity-40">|</div>
+                                <a href="tel:+918041219231" class="footer-info-item text-white text-sm">
+                                    +91 80 4121 9231
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="mt-24">
+                            <h3 class="text-grey text-4xl font-heading font-normal mb-8">
+                                Social Icons
+                            </h3>
+                            <ul class="text-white text-sm font-medium">
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        Instagram
+                                        <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        LinkedIn
+                                        <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>  
+            </div>
+            <div class="footer-bottom py-8">
+                <div class="container flex items-center justify-between">
+                    <p class="text-white text-sm text-center font-heading opacity-50">
+                        &copy; MAIA Estates LLP, 2025. All rights reserved.
+                    </p>
+                    <div class="flex items-center gap-20">
+                        <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
+                            Privacy Policy
+                        </a>
+                        <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Slick Slider JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="sliders.js"></script>
+</body>
+</html>
