@@ -484,7 +484,7 @@
 
                 <div class="flex flex-col xl:flex-row items-start xl:items-end justify-between gap-12 mb-30">
                     <div class="flex items-center gap-3">
-                        <img src="images/2025/maia-laurel.png" alt="Our Vision 1">
+                        <img src="images/2025/maia-laurel.png" alt="Our Vision 1" style="width: 92px;">
                         <p class="text-white text-sm font-heading font-normal uppercase">
                             Years of <br />
                             delivering <br />
@@ -528,7 +528,7 @@
                     <div class="services-list-item flex flex-col xl:flex-row items-center justify-between gap-14 xl:gap-16 mb-20 xl:mb-30">
                         <img src="images/2025/homepage/maia-services--1.png" alt="Bespoke Services">
                         <div class="service-details text-gold">
-                            <!-- <img src="images/2025/maia-services-logo.svg" alt="Bespoke Services Logo"> -->
+                            <img src="images/2025/maia-services-logo.png" class="mb-3 xl:mb-5" style="width: 22px;" alt="Bespoke Services Logo">
                             <h3 class="text-4xl xl:text-5xl text-gold font-heading font-normal mb-4 xl:mb-5">
                                 Bespoke <br />
                                 Services
@@ -550,7 +550,7 @@
                     <div class="services-list-item flex flex-col xl:flex-row-reverse items-center justify-between gap-14 xl:gap-16 mb-30 xl:mb-30">
                         <img src="images/2025/homepage/maia-services--2.png" alt="Bespoke Services">
                         <div class="service-details text-gold">
-                            <!-- <img src="images/2025/maia-services-logo.svg" alt="Bespoke Services Logo"> -->
+                            <img src="images/2025/maia-life-logo.png" class="mb-3 xl:mb-5" style="width: 22px;" alt="Bespoke Services Logo">
                             <h3 class="text-4xl xl:text-5xl text-gold font-heading font-normal mb-4 xl:mb-5">
                                 MAIA Life
                             </h3>
@@ -747,7 +747,27 @@
 
         <!-- Footer -->
         <footer class="footer pt-12 bg-green">
-            <div class="footer-content py-8 xl:py-50 ">
+            <div class="footer-content py-8 xl:py-50 relative">
+                <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
+                    <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1138_411)">
+                        <g style="mix-blend-mode:exclusion">
+                        <path d="M309.166 259.911L65.8848 -0.261719V96.5583L285.334 259.911H309.166Z" fill="white" fill-opacity="0.03"/>
+                        </g>
+                        <g style="mix-blend-mode:exclusion">
+                        <path d="M309.168 259.911L65.8867 -0.261719V96.5583L285.336 259.911H309.168Z" fill="white" fill-opacity="0.03"/>
+                        </g>
+                        <g style="mix-blend-mode:exclusion">
+                        <path d="M-177.396 259.911L65.8848 -0.261719V96.5583L-153.565 259.911H-177.396Z" fill="white" fill-opacity="0.03"/>
+                        </g>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1138_411">
+                        <rect width="309" height="260" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
                 <div class="container grid grid-cols-1 xl:grid-cols-3 gap-20">
                     <div class="footer-logo">
                         <img src="images/2025/footer-logo.png" alt="Footer Logo">

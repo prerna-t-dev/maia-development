@@ -121,6 +121,7 @@
 .pb-0 { padding-bottom: 0; }
 .pb-10 { padding-bottom: 2.5rem; }
 .pb-12 { padding-bottom: 3rem; }
+.pb-16 { padding-bottom: 4rem; }
 .pb-20 { padding-bottom: 5rem; }
 .pb-30 { padding-bottom: 7.5rem; }
 .pb-40 { padding-bottom: 10rem; }
@@ -303,6 +304,8 @@
 .right-0 { right: 0; }
 .bottom-0 { bottom: 0; }
 .left-0 { left: 0; }
+.bottom-8 { bottom: 2rem; }
+.left-8 { left: 2rem; }
 .top-20 { top: 5rem; }
 .left-20 { left: 5rem; }
 .bottom-20 { bottom: 5rem; }
@@ -352,6 +355,7 @@
 .scale-50 { transform: scale(0.5); }
 .scale-60 { transform: scale(0.6); }
 .scale-65 { transform: scale(0.65); }
+.scale-70 { transform: scale(0.7); }
 .scale-75 { transform: scale(0.75); }
 .scale-90 { transform: scale(0.9); }
 .scale-100 { transform: scale(1); }
@@ -682,6 +686,10 @@
     .xl\:fixed { position: fixed; }
     .xl\:sticky { position: sticky; }
     .xl\:top-20 { top: 5rem; }
+    .xl\:left-20 { left: 5rem; }
+    .xl\:bottom-8 { bottom: 2rem; }
+    .xl\:left-8 { left: 2rem; }
+    .xl\:bottom-20 { bottom: 5rem; }
     .xl\:left-20 { left: 5rem; }
 
     /* Border - XL */
