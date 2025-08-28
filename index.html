@@ -57,6 +57,17 @@
         requestAnimationFrame(raf);
     </script>
 
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        // GSAP ScrollTrigger integration with Lenis
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+    </script>
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93675652-1"></script>
@@ -187,31 +198,33 @@
 
         <!-- Section 2: About MAIA -->
         <section class="about-maia py-20">
-            <div class="container about-maia-content grid grid-cols-1 xl:grid-cols-2 gap-16 xl:gap-24">
-                <div class="about-maia-content-left">
-                    <div class="section-subheader uppercase text-green mb-3">
-                        ABOUT MAIA
-                    </div>
-                    <h2 class="text-40px xl:text-6xl font-normal mb-16 xl:mb-18">
-                        Crafting iconic spaces <br>
-                        for inspired living.
-                    </h2>
-                    <div class="font-heading text-green flex items-center gap-2 mb-8 xl:hidden">
-                        <div class="w-sm h-sm bg-green-light rounded-full"> 
+            <div class="container about-maia-content grid grid-cols-1 xl:grid-cols-2 gap-16 xl:gap-4">
+                <div class="about-maia-content-left xl:pr-4 flex flex-col justify-between">
+                    <div class="about-maia-content-left-inner">
+                        <div class="section-subheader uppercase text-green mb-3">
+                            ABOUT MAIA
                         </div>
-                        <span class="text-sm font-medium text-green uppercase">
-                            ( Since 2016 )
-                        </span>
+                        <h2 class="text-40px xl:text-6xl font-normal mb-16 xl:mb-18">
+                            Crafting iconic spaces <br>
+                            for inspired living.
+                        </h2>
+                        <div class="font-heading text-green flex items-center gap-2 mb-8 xl:hidden">
+                            <div class="w-sm h-sm bg-green-light rounded-full"> 
+                            </div>
+                            <span class="text-sm font-medium text-green uppercase">
+                                ( Since 2016 )
+                            </span>
+                        </div>
+                        <p class="mb-12 xl:mb-14 max-w-lg font-medium text-black opacity-70 text-sm xl:text-base xl:pr-24">
+                            We create landmark residences and commercial developments that embody design excellence, lasting value, and a sense of place. Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity, and context — shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
+                        </p>
+                        <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                            <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
+                            </svg>
+                            <span class="text-xs font-medium uppercase">About Us</span>
+                        </a>
                     </div>
-                    <p class="mb-12 xl:mb-14 max-w-lg font-medium text-black opacity-70 text-sm xl:text-base">
-                        We create landmark residences and commercial developments that embody design excellence, lasting value, and a sense of place. Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity, and context — shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
-                    </p>
-                    <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
-                        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
-                        </svg>
-                        <span class="text-xs font-medium uppercase">About Us</span>
-                    </a>
                     <div class="mt-20 font-heading text-green flex items-center gap-2 hidden xl:flex">
                         <div class="w-sm h-sm bg-green-light rounded-full"> 
                         </div>
@@ -221,7 +234,9 @@
                     </div>
                 </div>
                 <div class="about-maia-content-right">
-                    <img src="images/2025/homepage/about-maia-image.png" alt="About MAIA Image" class="about-maia-image">
+                    <div class="image-reveal--wrapper">
+                        <img src="images/2025/homepage/about-maia-image.png" alt="About MAIA Image" class="h-full w-full object-cover">
+                    </div>
                 </div>
                 
             </div>
@@ -229,7 +244,7 @@
 
 
         <!-- Section 3: MAIA Developments -->
-        <section class="maia-developments pt-20 bg-white">
+        <section class="maia-developments pt-20 xl:pt-30 bg-white">
             <div class="container maia-developments-content text-center">
                 <div class="section-subheader uppercase text-green mb-3">
                     MAIA DEVELOPMENTS
@@ -349,7 +364,7 @@
 
             <div class="bg-beige py-20">
                 <div class="container flex flex-col items-center">
-                    <div class="mt-20 xl:mt-0">
+                    <div class="mt-20 xl:mt-4">
                         <svg width="86" height="43" viewBox="0 0 86 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_632_1371)">
                             <path d="M47.8651 41.5505C47.9957 41.1121 48.0623 40.6527 48.0623 40.175C48.0623 40.1172 48.0623 40.0569 48.0596 39.9991C48.0383 39.4032 47.9104 38.8336 47.6919 38.3086C47.4548 37.7259 47.1084 37.1983 46.6767 36.752C46.6474 36.7179 46.6127 36.6838 46.5781 36.6496C46.1518 36.227 45.6455 35.8805 45.0833 35.6311C44.4864 35.3634 43.8256 35.2059 43.1328 35.1901C43.0875 35.1875 43.0449 35.1875 42.9996 35.1875C42.3494 35.1875 41.7259 35.3082 41.1557 35.5314C40.5295 35.7702 39.9646 36.1325 39.4903 36.584C39.4664 36.605 39.4424 36.6286 39.4211 36.6496C38.9921 37.0696 38.6403 37.571 38.3872 38.1249C38.1394 38.6551 37.9875 39.2405 37.9475 39.8521C37.9396 39.9597 37.9369 40.0674 37.9369 40.175C37.9369 40.6265 37.9982 41.0596 38.1128 41.4744C38.2406 41.9469 38.4378 42.3931 38.6963 42.8H0.632812C0.632812 39.0515 1.13375 35.4185 2.07701 31.9614C3.04958 28.3861 4.49378 24.9999 6.33767 21.8709C8.20554 18.6999 10.4864 15.794 13.1084 13.2215C15.7276 10.6542 18.6853 8.42037 21.9121 6.59337H21.9148C25.091 4.79 28.5283 3.38562 32.1574 2.44325C35.6187 1.54288 39.2532 1.0625 42.9996 1.0625H43.1328C46.9245 1.073 50.599 1.577 54.0922 2.50887C57.7054 3.47225 61.124 4.89237 64.2842 6.70625C67.487 8.54112 70.4234 10.7802 73.024 13.3527C75.6193 15.9226 77.8789 18.8232 79.7281 21.9864C81.5533 25.1022 82.9789 28.4701 83.9408 32.027C84.8707 35.4631 85.3664 39.0751 85.3664 42.8H47.3002C47.5454 42.4167 47.7372 41.9967 47.8651 41.5505Z" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
@@ -473,7 +488,7 @@
 
 
         <!-- Section 5: Our Vision -->
-        <section class="our-vision py-20 bg-green text-white">
+        <section class="our-vision py-20 xl:py-50 bg-green text-white">
             <div class="container">
                 <div class="section-subheader uppercase text-white mb-5">
                     OUR VISION
@@ -504,7 +519,7 @@
                     </div>
                 </div>
                 
-                <div class="line-divider-light xl:mb-30"></div>
+                <div class="line-divider-light"></div>
             </div>
         </section>
 
@@ -526,7 +541,12 @@
                 <div class="services-list">
                     <!-- 1. Bespoke Services -->
                     <div class="services-list-item flex flex-col xl:flex-row items-center justify-between gap-14 xl:gap-16 mb-20 xl:mb-30">
-                        <img src="images/2025/homepage/maia-services--1.png" alt="Bespoke Services">
+                        <div class="service-image-wrapper">
+                            <div class="image-reveal--wrapper">
+                                <img src="images/2025/homepage/maia-services--1.png" alt="Bespoke Services">
+                            </div>
+                        </div>
+                        
                         <div class="service-details text-gold">
                             <img src="images/2025/maia-services-logo.png" class="mb-3 xl:mb-5" style="width: 22px;" alt="Bespoke Services Logo">
                             <h3 class="text-4xl xl:text-5xl text-gold font-heading font-normal mb-4 xl:mb-5">
@@ -548,7 +568,11 @@
 
                     <!-- 2. MAIA Life -->
                     <div class="services-list-item flex flex-col xl:flex-row-reverse items-center justify-between gap-14 xl:gap-16 mb-30 xl:mb-30">
-                        <img src="images/2025/homepage/maia-services--2.png" alt="Bespoke Services">
+                        <div class="service-image-wrapper"> 
+                            <div class="image-reveal--wrapper">
+                                <img src="images/2025/homepage/maia-services--2.png" alt="Bespoke Services">
+                            </div>
+                        </div>
                         <div class="service-details text-gold">
                             <img src="images/2025/maia-life-logo.png" class="mb-3 xl:mb-5" style="width: 22px;" alt="Bespoke Services Logo">
                             <h3 class="text-4xl xl:text-5xl text-gold font-heading font-normal mb-4 xl:mb-5">
@@ -902,5 +926,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="sliders.js"></script>
+    <!-- Animation JavaScript -->
+    <script src="animation.js"></script>
 </body>
 </html>

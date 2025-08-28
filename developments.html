@@ -57,6 +57,17 @@
         requestAnimationFrame(raf);
     </script>
 
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        // GSAP ScrollTrigger integration with Lenis
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+    </script>
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93675652-1"></script>
@@ -194,8 +205,8 @@
         <!-- Section 2: Brand Ethos -->
         <section class="brand-ethos py-20 xl:py-40 bg-green text-white">
             <div class="container">
-                <div class="brand-ethos-content grid grid-cols-1 xl:grid-cols-2 gap-16 xl:gap-24 pb-16 xl:pb-30 xl:pt-10">
-                    <div class="brand-ethos-content-left xl:mt-10">
+                <div class="brand-ethos-content grid grid-cols-1 xl:grid-cols-2 gap-16 xl:gap-4 pb-16 xl:pb-30 xl:pt-10">
+                    <div class="brand-ethos-content-left xl:mt-10 xl:pr-4">
                         <div class="section-subheader uppercase text-white mb-3">
                             BRAND ETHOS
                         </div>
@@ -210,7 +221,9 @@
                         </p>
                     </div>
                     <div class="brand-ethos-content-right">
-                        <img src="images/2025/developments/brand-ethos.png" alt="Brand Ethos" class="brand-ethos-image">
+                        <div class="image-reveal--wrapper">
+                            <img src="images/2025/developments/brand-ethos.png" alt="Brand Ethos" class="brand-ethos-image w-full h-full object-cover">
+                        </div>
                     </div>
                 </div>
                 <div class="line-divider-light"></div>
@@ -221,7 +234,7 @@
 
 
         <!-- Section 3: MAIA Developments -->
-        <section class="maia-developments pt-30 xl:pt-20 bg-white">
+        <section class="maia-developments pt-30 bg-white">
             <div class="container maia-developments-content text-center">
                 <div class="section-subheader uppercase text-green mb-3">
                     MAIA DEVELOPMENTS
@@ -235,7 +248,7 @@
             </div>
 
             <!-- Development Project List -->
-            <div class="development-project-list mt-16 xl:mt-20">
+            <div class="development-project-list mt-16 xl:mt-30">
                 <!-- 1. 27 Summit -->
                 <div class="development-project-slider-item mb-10 xl:mb-30">
                     <div class="development-project-slider-item-image relative">
@@ -744,5 +757,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="sliders.js"></script>
+    <!-- Animation JavaScript -->
+    <script src="animation.js"></script>
 </body>
 </html>

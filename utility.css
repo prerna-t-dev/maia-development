@@ -49,6 +49,7 @@
 .flex-wrap { flex-wrap: wrap; }
 .flex-1 { flex: 1; }
 
+.gap-1 { gap: 0.25rem; }
 .gap-2 { gap: 0.5rem; }
 .gap-3 { gap: 0.75rem; }
 .gap-4 { gap: 1rem; }
@@ -111,6 +112,7 @@
 .py-50 { padding-top: 12.5rem; padding-bottom: 12.5rem; }
 
 .pt-0 { padding-top: 0; }
+.pt-1 { padding-top: 0.25rem; }
 .pt-10 { padding-top: 2.5rem; }
 .pt-12 { padding-top: 3rem; }
 .pt-20 { padding-top: 5rem; }
@@ -195,6 +197,7 @@
 .my-8 { margin-top: 2rem; margin-bottom: 2rem; }
 
 .mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.25rem; }
 .mt-2 { margin-top: 0.5rem; }
 .mt-4 { margin-top: 1rem; }
 .mt-6 { margin-top: 1.5rem; }
@@ -557,6 +560,7 @@
     .xl\:my-32 { margin-top: 8rem; margin-bottom: 8rem; }
 
     .xl\:mt-0 { margin-top: 0; }
+    .xl\:mt-1 { margin-top: 0.25rem; }
     .xl\:mt-2 { margin-top: 0.5rem; }
     .xl\:mt-4 { margin-top: 1rem; }
     .xl\:mt-6 { margin-top: 1.5rem; }
@@ -567,6 +571,7 @@
     .xl\:mt-16 { margin-top: 4rem; }
     .xl\:mt-20 { margin-top: 5rem; }
     .xl\:mt-24 { margin-top: 6rem; }
+    .xl\:mt-30 { margin-top: 7.5rem; }
     .xl\:mt-32 { margin-top: 8rem; }
 
     .xl\:mb-0 { margin-bottom: 0; }
@@ -579,6 +584,7 @@
     .xl\:mb-12 { margin-bottom: 3rem; }
     .xl\:mb-14 { margin-bottom: 3.5rem; }
     .xl\:mb-16 { margin-bottom: 4rem; }
+    .xl\:mb-18 { margin-bottom: 4.5rem; }
     .xl\:mb-20 { margin-bottom: 5rem; }
     .xl\:mb-24 { margin-bottom: 6rem; }
     .xl\:mb-30 { margin-bottom: 7.5rem; }
@@ -661,6 +667,7 @@
     .xl\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
 
     /* Gap - XL */
+    .xl\:gap-1 { gap: 0.25rem; }
     .xl\:gap-2 { gap: 0.5rem; }
     .xl\:gap-4 { gap: 1rem; }
     .xl\:gap-6 { gap: 1.5rem; }
