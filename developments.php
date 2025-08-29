@@ -602,7 +602,7 @@
 
 
         <!-- Footer -->
-        <footer class="footer pt-12 bg-green">
+        <footer class="footer pt-12 bg-green-footer">
             <div class="footer-content py-8 xl:py-50 relative">
                 <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
                     <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
