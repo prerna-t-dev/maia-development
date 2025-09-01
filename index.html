@@ -678,7 +678,9 @@
             <div class="news-article-slider px-1 xl:pl-20">
                 <div class="news-article-slide-item">
                     <a href="#">
-                        <img src="images/2025/homepage/news-article--1.png" alt="News Article 1">
+                        <div class="image-scale-down--wrapper">
+                            <img src="images/2025/homepage/news-article--1.png" alt="News Article 1">
+                        </div>
                         <div class="mt-8">
                             <h4 class="text-green text-3xl font-heading font-normal mb-4">
                                 News 18
@@ -691,7 +693,9 @@
                 </div>
                 <div class="news-article-slide-item">
                     <a href="#">
-                        <img src="images/2025/homepage/news-article--2.png" alt="News Article 2">
+                        <div class="image-scale-down--wrapper">
+                            <img src="images/2025/homepage/news-article--2.png" alt="News Article 2">
+                        </div>
                         <div class="mt-8">
                             <h4 class="text-green text-3xl font-heading font-normal mb-4">
                                 Real Estate News
@@ -704,7 +708,9 @@
                 </div>
                 <div class="news-article-slide-item">
                     <a href="#">
-                        <img src="images/2025/homepage/news-article--3.png" alt="News Article 3">
+                        <div class="image-scale-down--wrapper">
+                            <img src="images/2025/homepage/news-article--3.png" alt="News Article 3">
+                        </div>
                         <div class="mt-8">
                             <h4 class="text-green text-3xl font-heading font-normal mb-4">
                                 International Property Awards
@@ -717,7 +723,9 @@
                 </div>
                 <div class="news-article-slide-item">
                     <a href="#">
-                        <img src="images/2025/homepage/news-article--4.png" alt="News Article 4">
+                        <div class="image-scale-down--wrapper">
+                            <img src="images/2025/homepage/news-article--4.png" alt="News Article 4">
+                        </div>
                         <div class="mt-8">
                             <h4 class="text-green text-3xl font-heading font-normal mb-4">
                                 India Property Awards 2025
