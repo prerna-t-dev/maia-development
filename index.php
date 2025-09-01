@@ -26,6 +26,11 @@
     <!--<meta property="og:description" content="MAIA Estates - Top Real Estate Developer in Bangalore. We believe in the importance of responsible & sustainable designs and thus offer luxury homes, and residential apartments in Bangalore at the best price." />-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Google Fonts - Albert Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="utility.css">
     <link rel="stylesheet" type="text/css" href="maiaestates.css">
     
@@ -36,7 +41,7 @@
     <!-- Lenis Smooth Scrolling -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     <script>
-        // Initialize Lenis smooth scrolling
+        //Initialize Lenis smooth scrolling
         const lenis = new Lenis({
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -61,10 +66,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
-        // GSAP ScrollTrigger integration with Lenis
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 1000);
-        });
+        // GSAP ScrollTrigger configuration
         gsap.ticker.lagSmoothing(0);
     </script>
 
@@ -138,7 +140,7 @@
     <div class="body_wrapper overflow-x-hidden">
         <!-- Header -->
         <header class="header sticky top-0 left-0 right-0 z-50">
-            <div class="container flex justify-between items-center">
+            <div class="container header-container flex justify-between items-center">
                 <div class="logo">
                     <a href="index.php">
                         <img src="images/2025/MAIA-logo.png" alt="Logo">
@@ -178,10 +180,17 @@
         <section class="hero-banner py-20">
             <div class="container">
                 <div class="hero-content pb-12">
-                    <h1 class="text-60px xl:text-120px font-normal mb-16 xl:mb-20 text-green">Building Lives <br /> and Beyond</h1>
+                    <h1 class="text-60px xl:text-120px font-normal mb-16 xl:mb-20 text-green">
+                        <span class="line-wrapper">
+                            <span class="line">Building Lives</span>
+                        </span>
+                        <span class="line-wrapper">
+                            <span class="line">and Beyond</span>
+                        </span>
+                    </h1>
 
                     <div class="flex items-center justify-between">
-                        <p class="text-sm font-medium text-dark uppercase tracking-10">(Scroll to explore)</p>
+                        <p class="text-xs font-medium text-dark uppercase tracking-10">(Scroll to explore)</p>
                         <div class="scroll-down cursor-pointer scale-65 xl:scale-100">
                             <svg class="w-full h-auto" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.378906" width="61.44" height="61.44" rx="30.72" fill="#014E3C"/>
@@ -191,7 +200,9 @@
                     </div>
                 </div>
 
-                <img src="images/2025/homepage/hero-banner-image.png" alt="Hero Banner Image" class="hero-banner-image">
+                <div class="hero-image-wrapper">
+                    <img src="images/2025/homepage/hero-banner-image.png" alt="Hero Banner Image" class="hero-banner-image">
+                </div>
             </div>
         </section>
 
@@ -204,10 +215,12 @@
                         <div class="section-subheader uppercase text-green mb-3">
                             ABOUT MAIA
                         </div>
-                        <h2 class="text-40px xl:text-6xl font-normal mb-16 xl:mb-18">
-                            Crafting iconic spaces <br>
-                            for inspired living.
-                        </h2>
+                        <div class="text-reveal--wrapper">
+                            <h2 class="text-40px xl:text-6xl font-normal mb-16 xl:mb-18">
+                                Crafting iconic spaces <br>
+                                for inspired living.
+                            </h2>
+                        </div>
                         <div class="font-heading text-green flex items-center gap-2 mb-8 xl:hidden">
                             <div class="w-sm h-sm bg-green-light rounded-full"> 
                             </div>
@@ -249,117 +262,130 @@
                 <div class="section-subheader uppercase text-green mb-3">
                     MAIA DEVELOPMENTS
                 </div>
-                <h2 class="text-40px xl:text-6xl font-normal mb-8">
-                    Defining the Skyline
-                </h2>
+                <div class="text-reveal--wrapper">
+                    <h2 class="text-40px xl:text-6xl font-normal mb-8 text-center">
+                        Defining the Skyline
+                    </h2>
+                </div>
                 <p>
                     Our developments reflect a deep commitment to craftsmanship, context,<br />and quality, creating spaces that stand the test of time.
                 </p>
             </div>
 
             <!-- Development Project List -->
-            <div class="development-project-list mt-20">
+            <div class="development-project-list development-projects-wrapper mt-20">
                 <!-- 1. 27 Summit -->
-                <div class="development-project-item mt-34 xl:mt-0">
-                    <div class="development-project-item-image relative">
-                        <div class="xl:absolute top-20 left-20 pl-5 xl:pl-0 mb-4">
-                            <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
-                                27 Summit
-                            </h4>
-                            <p class="flex items-center gap-2">
-                                <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                    <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                <!-- <div class="development-item-wrapper overflow-hidden"> -->
+                    <div class="development-project-item mt-34_ xl:mt-0">
+                        <div class="development-project-item-image bg-white xl:bg-transparent relative">
+                            <div class="bg-white xl:bg-transparent xl:absolute top-20 left-20 pl-5 xl:pl-0 py-4">
+                                <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
+                                    27 Summit
+                                </h4>
+                                <p class="flex items-center gap-2">
+                                    <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                        <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
+                                        <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
 
-                                <span class="text-green xl:text-white font-medium text-base">
-                                    Central Bangalore - Richmond Road
-                                </span>
-                            </p>
+                                    <span class="text-green xl:text-white font-medium text-base">
+                                        Central Bangalore - Richmond Road
+                                    </span>
+                                </p>
+                            </div>
+                            <img src="images/2025/homepage/dev-project--1.png" alt="27 Summit">
                         </div>
-                        <img src="images/2025/homepage/dev-project--1.png" alt="27 Summit">
                     </div>
-                </div>
+                <!-- </div> -->
 
                 <!-- 2. Casa Sia -->
-                <div class="development-project-item mt-34 xl:mt-0">
-                    <div class="development-project-item-image relative">
-                        <div class="xl:absolute top-20 left-20 pl-5 xl:pl-0 mb-4">
-                            <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
-                                Casa Sia
-                            </h4>
-                            <p class="flex items-center gap-2">
-                                <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                    <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-green xl:text-white font-medium text-base">
-                                    Central Chennai - Parthasarathy Gardens
-                                </span>
-                            </p>
+                <!-- <div class="development-item-wrapper overflow-hidden"> -->
+                    <div class="development-project-item mt-34_ xl:mt-0">
+                        <div class="development-project-item-image bg-white xl:bg-transparent relative">
+                            <div class="bg-white xl:bg-transparent xl:absolute top-20 left-20 pl-5 xl:pl-0 py-4">
+                                <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
+                                    Casa Sia
+                                </h4>
+                                <p class="flex items-center gap-2">
+                                    <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                        <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
+                                        <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="text-green xl:text-white font-medium text-base">
+                                        Central Chennai - Parthasarathy Gardens
+                                    </span>
+                                </p>
+                            </div>
+                            <img src="images/2025/homepage/dev-project--2.png" alt="Casa Sia">
                         </div>
-                        <img src="images/2025/homepage/dev-project--2.png" alt="Casa Sia">
                     </div>
-                </div>
+                <!-- </div> -->
 
                 <!-- 3. Pelican Gardens -->
-                <div class="development-project-item mt-34 xl:mt-0">
-                    <div class="development-project-item-image relative">
-                        <div class="xl:absolute top-20 left-20 pl-5 xl:pl-0 mb-4">
-                            <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
-                                Pelican Gardens
-                            </h4>
-                            <p class="flex items-center gap-2">
-                                <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                    <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-green xl:text-white font-medium text-base">
-                                    North Bangalore - Jakkur Road
-                                </span>
-                            </p>
+                <!-- <div class="development-item-wrapper overflow-hidden"> -->
+                    <div class="development-project-item mt-34_ xl:mt-0">
+                        <div class="development-project-item-image bg-white xl:bg-transparent relative">
+                            <div class="bg-white xl:bg-transparent xl:absolute top-20 left-20 pl-5 xl:pl-0 py-4">
+                                <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
+                                    Pelican Gardens
+                                </h4>
+                                <p class="flex items-center gap-2">
+                                    <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                        <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
+                                        <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="text-green xl:text-white font-medium text-base">
+                                        North Bangalore - Jakkur Road
+                                    </span>
+                                </p>
+                            </div>
+                            <img src="images/2025/homepage/dev-project--3.png" alt="Pelican Gardens">
                         </div>
-                        <img src="images/2025/homepage/dev-project--3.png" alt="Pelican Gardens">
                     </div>
-                </div>
+                <!-- </div> -->
 
 
                 <!-- 4. Pelican Grove -->
-                <div class="development-project-item mt-34 xl:mt-0">
-                    <div class="development-project-item-image relative">
-                        <div class="xl:absolute top-20 left-20 pl-5 xl:pl-0 mb-4">
-                            <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
-                                Pelican Grove
-                            </h4>
-                            <p class="flex items-center gap-2">
-                                <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                    <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-green xl:text-white font-medium text-base">
-                                    North Bangalore - Jakkur
-                                </span>
-                            </p>
+                <!-- <div class="development-item-wrapper overflow-hidden"> -->
+                    <div class="development-project-item mt-34 xl:mt-0">
+                        <div class="development-project-item-image bg-white xl:bg-transparent relative">
+                            <div class="bg-white xl:bg-transparent xl:absolute top-20 left-20 pl-5 xl:pl-0 py-4">
+                                <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
+                                    Pelican Grove
+                                </h4>
+                                <p class="flex items-center gap-2">
+                                    <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                        <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
+                                        <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="text-green xl:text-white font-medium text-base">
+                                        North Bangalore - Jakkur
+                                    </span>
+                                </p>
+                            </div>
+                            <img src="images/2025/homepage/dev-project--4.png" alt="Pelican Grove">
                         </div>
-                        <img src="images/2025/homepage/dev-project--4.png" alt="Pelican Grove">
                     </div>
-                </div>
+                <!-- </div> -->
+
+
+                
             </div>
 
             <div class="bg-beige py-20">
@@ -388,9 +414,28 @@
                             </defs>
                         </svg>
                     </div>
-                    <div class="mt-8 mb-14 text-gold text-4xl xl:text-6xl leading-11 text-center font-heading px-4 xl:px-30">
-                        Embracing the highest standards of design, execution, sustainability and professionalism, We create spaces that enhance our ecosystem.
+
+                    <!-- Desktop Paragraph -->
+                    <div class="hidden xl:block">
+                        <div class="text-reveal--wrapper">
+                            <h3 class="mt-8 mb-14 text-gold text-4xl xl:text-6xl leading-11 text-center font-heading font-normal px-4 xl:px-0">
+                                Embracing the highest standards of <br />
+                                design, execution, sustainability and <br />
+                                professionalism, We create spaces that <br />
+                                enhance our ecosystem.
+                            </h3>
+                        </div>
                     </div>
+
+                    <!-- Mobile Paragraph -->
+                    <div class="xl:hidden">
+                        <div class="text-reveal--wrapper">
+                            <h3 class="mt-8 mb-14 text-gold text-4xl xl:text-6xl leading-11 text-center font-heading font-normal px-4 xl:px-10">
+                                Embracing the highest standards of design, execution, sustainability and professionalism, We create spaces that enhance our ecosystem.
+                            </h3>
+                        </div>
+                    </div>
+                    
                     <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center mb-20 xl:mb-16">
                         <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
@@ -409,12 +454,14 @@
                 <div class="section-subheader uppercase text-green mb-3">
                     OUR DEVELOPMENTS
                 </div>
-                <h2 class="text-40px xl:text-7xl font-normal mb-6 xl:mb-8">
-                    Shaping what's next
-                </h2>
+                <div class="text-reveal--wrapper">
+                    <h2 class="text-40px xl:text-7xl font-normal mb-6 xl:mb-8">
+                        Shaping what's next
+                    </h2>
+                </div>
                 <div class="flex items-center justify-between">
                     <p class="mb-16">
-                    Designs in progress, destined to become <br /> tomorrow's most coveted addresses
+                        Designs in progress, destined to become <br /> tomorrow's most coveted addresses
                     </p>
 
                     <!-- Slick Arrows: Desktop -->
@@ -469,7 +516,7 @@
                 <div class="line-divider pr-20"></div>
             </div>
 
-            <!-- Slick Arrows: Desktop -->
+            <!-- Slick Arrows: Mobile -->
             <div class="slick-arrows flex items-center justify-start gap-6 xl:hidden px-5">
                 <div class="slick-arrow-prev cursor-pointer">
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -488,14 +535,18 @@
 
 
         <!-- Section 5: Our Vision -->
-        <section class="our-vision py-20 xl:py-50 bg-green text-white">
+        <section class="our-vision py-20 xl:py-50 bg-green-dark text-white">
             <div class="container">
                 <div class="section-subheader uppercase text-white mb-5">
                     OUR VISION
                 </div>
-                <h2 class="text-40px xl:text-7xl font-normal mb-18 text-white xl:pr-24">
-                    Together we step outside the boundaries of yesterday and set new standards for our shared tomorrow.
-                </h2>
+                <div class="text-reveal--wrapper">
+                    <h2 class="text-40px xl:text-7xl font-normal mb-18 text-white xl:pr-24">
+                        Together we step outside the boundaries <br />
+                        of yesterday and set new standards for <br />
+                        our shared tomorrow.
+                    </h2>
+                </div>
 
                 <div class="flex flex-col xl:flex-row items-start xl:items-end justify-between gap-12 mb-30">
                     <div class="flex items-center gap-3">
@@ -531,10 +582,12 @@
                 <div class="section-subheader uppercase text-green mb-5 text-center">
                     OUR SERVICES
                 </div>
-                <h2 class="text-40px xl:text-7xl font-normal mb-20 xl:mb-30 text-green text-center">
-                    Tailored to your lifestyle. <br />
-                    Delivered with precision.
-                </h2>
+                <div class="text-reveal--wrapper">
+                    <h2 class="text-40px xl:text-7xl font-normal mb-20 xl:mb-30 text-green text-center">
+                        Tailored to your lifestyle. <br />
+                        Delivered with precision.
+                    </h2>
+                </div>
 
 
                 <!-- Services List -->
@@ -603,9 +656,11 @@
                 <div class="section-subheader uppercase text-green mb-5">
                     IN THE NEWS
                 </div>
-                <h2 class="text-40px xl:text-7xl font-normal mb-7 text-green">
-                    In the News
-                </h2>
+                <div class="text-reveal--wrapper">
+                    <h2 class="text-40px xl:text-7xl font-normal mb-7 text-green">
+                        In the News
+                    </h2>
+                </div>
                 <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-12 xl:gap-20 mb-20">
                     <p class="">
                         MAIA’s recent features, exclusive interviews, and industry <br />
@@ -694,8 +749,11 @@
 
 
         <!-- Section 8: Contact Us -->
-        <section class="contact-us py-20 bg-white">
-            <div class="container">
+        <section class="contact-us py-20 bg-white relative overflow-hidden">
+            <div class="image-scale-down--wrapper absolute top-0 left-0 w-full h-full">
+                <img src="images/2025/homepage/contact-us-bg.png" alt="Contact Us Bg Image" class="contact-us-bg-image w-full h-full object-cover">
+            </div>
+            <div class="container relative">
                 <div class="contact-form-container bg-white p-10 py-20 xl:px-14">
                     <div class="grid grid-cols-1 xl:grid-cols-2 items-center gap-20">
                         <!-- Left Section: Contact Form -->
@@ -797,9 +855,11 @@
                         <img src="images/2025/footer-logo.png" alt="Footer Logo">
                     </div>
                     <div class="footer-links">
-                        <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                            Links
-                        </h3>
+                        <div class="text-reveal--wrapper">
+                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                Links
+                            </h3>
+                        </div>
                         <div class="grid grid-cols-2 xl:gap-10">
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
@@ -843,9 +903,11 @@
                         </div>
                     </div>
                     <div class="info-social">
-                        <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                            Info
-                        </h3>
+                        <div class="text-reveal--wrapper">
+                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                Info
+                            </h3>
+                        </div>
                         <div class="">
                             <p class="mb-4 text-sm text-white opacity-40" >
                                 Maia Estates, 34 (New No. 84), Ulsoor Road, <br>
@@ -865,9 +927,11 @@
 
 
                         <div class="mt-24">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                                Social Icons
-                            </h3>
+                            <div class="text-reveal--wrapper">
+                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                    Social Icons
+                                </h3>
+                            </div>
                             <ul class="text-white text-sm font-medium">
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">

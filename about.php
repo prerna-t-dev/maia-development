@@ -26,6 +26,11 @@
     <!--<meta property="og:description" content="MAIA Estates - Top Real Estate Developer in Bangalore. We believe in the importance of responsible & sustainable designs and thus offer luxury homes, and residential apartments in Bangalore at the best price." />-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Google Fonts - Albert Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="utility.css">
     <link rel="stylesheet" type="text/css" href="maiaestates.css">
     
@@ -400,7 +405,7 @@
 
 
             <!-- Sustainability Initiatives Slider -->
-            <div class="pl-5 xl:pl-12">
+            <div class="pl-5 xl:pl-20">
                 <div class="sustainability-initiatives-slider">
                     <div class="sustainability-initiatives-slider-item">
                         <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--1.png" alt="Sustainability Initiatives Image 1">

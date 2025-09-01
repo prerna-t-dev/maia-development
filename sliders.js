@@ -89,7 +89,7 @@ $(document).ready(function(){
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         pauseOnHover: false,
         centerMode: false,
@@ -102,7 +102,7 @@ $(document).ready(function(){
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    autoplay: true,
+                    autoplay: false,
                     autoplaySpeed: 3000,
                     pauseOnHover: false,
                     fade: true
@@ -113,7 +113,7 @@ $(document).ready(function(){
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    autoplay: true,
+                    autoplay: false,
                     autoplaySpeed: 3000,
                     pauseOnHover: false,
                     fade: true
@@ -131,7 +131,7 @@ $(document).ready(function(){
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 3000,
             pauseOnHover: false,
             centerMode: false,
@@ -144,7 +144,7 @@ $(document).ready(function(){
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        autoplay: true,
+                        autoplay: false,
                         autoplaySpeed: 3000,
                         pauseOnHover: false,
                         fade: true
@@ -155,7 +155,7 @@ $(document).ready(function(){
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        autoplay: true,
+                        autoplay: false,
                         autoplaySpeed: 3000,
                         pauseOnHover: false,
                         fade: true
@@ -174,7 +174,7 @@ $(document).ready(function(){
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 3000,
             pauseOnHover: false,
             centerMode: false,
@@ -187,7 +187,7 @@ $(document).ready(function(){
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        autoplay: true,
+                        autoplay: false,
                         autoplaySpeed: 3000,
                         pauseOnHover: false,
                         fade: true
@@ -198,7 +198,7 @@ $(document).ready(function(){
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        autoplay: true,
+                        autoplay: false,
                         autoplaySpeed: 3000,
                         pauseOnHover: false,
                         fade: true
@@ -217,7 +217,7 @@ $(document).ready(function(){
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 3000,
             pauseOnHover: false,
             centerMode: false,
@@ -230,7 +230,7 @@ $(document).ready(function(){
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        autoplay: true,
+                        autoplay: false,
                         autoplaySpeed: 3000,
                         pauseOnHover: false,
                         fade: true
@@ -241,7 +241,7 @@ $(document).ready(function(){
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        autoplay: true,
+                        autoplay: false,
                         autoplaySpeed: 3000,
                         pauseOnHover: false,
                         fade: true
@@ -403,6 +403,120 @@ $(document).ready(function(){
         }
     });
 
+    // MAIA Life Purpose Slider
+    $('.maialife-purpose-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: false, // No looping
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        pauseOnHover: false,
+        centerMode: false,
+        centerPadding: '0px',
+        // Custom arrows
+        prevArrow: $('.our-purpose-mission-vision .slick-arrow-prev'),
+        nextArrow: $('.our-purpose-mission-vision .slick-arrow-next'),
+        // Touch and Swipe Settings
+        touchMove: true,
+        swipe: true,
+        swipeToSlide: true,
+        touchThreshold: 10,
+        swipeEvent: true,
+        // Pause autoplay on touch/swipe
+        pauseOnFocus: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    pauseOnHover: false,
+                    touchMove: true,
+                    swipe: true,
+                    swipeToSlide: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    pauseOnHover: false,
+                    touchMove: true,
+                    swipe: true,
+                    swipeToSlide: true
+                }
+            }
+        ]
+    });
+
+    // Progress Bar Functionality for MAIA Life Purpose Slider
+    $('.maialife-purpose-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        updateProgressBar(nextSlide, slick.slideCount);
+    });
+
+    // Also update on afterChange to ensure accuracy
+    $('.maialife-purpose-slider').on('afterChange', function(event, slick, currentSlide) {
+        updateProgressBar(currentSlide, slick.slideCount);
+    });
+
+    // Initialize progress bar for MAIA Life Purpose Slider
+    function initializeMAIALifeProgressBar() {
+        const totalSlides = $('.maialife-purpose-slider .slick-slide').length;
+        if (totalSlides > 0) {
+            // Get current slidesToShow setting based on screen size
+            let slidesToShow = 3; // Default for desktop
+            
+            if (window.innerWidth <= 768) {
+                slidesToShow = 1; // Mobile
+            } else if (window.innerWidth <= 1024) {
+                slidesToShow = 2; // Tablet
+            }
+            
+            // Calculate completion point using your formula
+            const progressCompleteSlide = totalSlides - slidesToShow + 1;
+            
+            // Calculate initial progress: 1 / completion slides * 100
+            const progressPercentage = (1 / progressCompleteSlide) * 100;
+            
+            $('.maialife-purpose-slider .purpose-slider-progress-fill').css('width', progressPercentage + '%');
+        }
+    }
+
+    // Set initial progress for MAIA Life Purpose Slider
+    initializeMAIALifeProgressBar();
+
+    // Also set it after slider initialization
+    $('.maialife-purpose-slider').on('init', function(event, slick) {
+        updateProgressBar(0, slick.slideCount);
+    });
+
+    // Manual progress check for MAIA Life Purpose Slider
+    $('.maialife-purpose-slider').on('swipe', function(event, slick, direction) {
+        const currentSlide = slick.currentSlide;
+        const totalSlides = slick.slideCount;
+        
+        // Get current slidesToShow setting
+        let slidesToShow = 3; // Default for desktop
+        if (window.innerWidth <= 768) {
+            slidesToShow = 1; // Mobile
+        } else if (window.innerWidth <= 1024) {
+            slidesToShow = 2; // Tablet
+        }
+        
+        // Check if we're at the completion point using your formula
+        const progressCompleteSlide = totalSlides - slidesToShow + 1;
+        
+        if (currentSlide >= progressCompleteSlide) {
+            // We're at or past the completion point
+            $('.maialife-purpose-slider .purpose-slider-progress-fill').css('width', '100%');
+        }
+    });
+
     
     // Sustainability Initiatives Slider
     $('.sustainability-initiatives-slider').slick({
@@ -474,6 +588,74 @@ $(document).ready(function(){
         const teamMemberId = $(this).data('team-member-button');
         openTeamMemberDrawer(teamMemberId);
     });
+
+
+
+
+    // Maialife Services Slider
+    $('.maialife-services-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true, // Enable looping
+        speed: 800,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        pauseOnHover: false,
+        centerMode: false,
+        centerPadding: '0px',
+        // Custom arrows
+        prevArrow: $('.maialife-services-arrow-prev'),
+        nextArrow: $('.maialife-services-arrow-next'),
+        // Touch and Swipe Settings
+        touchMove: true,
+        swipe: true,
+        swipeToSlide: true,
+        touchThreshold: 10,
+        swipeEvent: true,
+        // Pause autoplay on touch/swipe
+        pauseOnFocus: true,
+        // Smooth easing
+        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)', // Smooth ease-in-out
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    pauseOnHover: false,
+                    arrows: true,
+                    prevArrow: $('.maialife-services-arrow-prev'),
+                    nextArrow: $('.maialife-services-arrow-next'),
+                    infinite: true, // Enable looping
+                    touchMove: true,
+                    swipe: true,
+                    swipeToSlide: true,
+                    speed: 800,
+                    cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)'
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    pauseOnHover: false,
+                    arrows: true,
+                    prevArrow: $('.maialife-services-arrow-prev'),
+                    nextArrow: $('.maialife-services-arrow-next'),
+                    infinite: true, // Enable looping
+                    touchMove: true,
+                    swipe: true,
+                    swipeToSlide: true,
+                    speed: 800,
+                    cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)'
+                }
+            }
+        ]
+    });
 });
 
 
@@ -485,9 +667,12 @@ $(document).ready(function(){
 function scrollToContact() {
     const contactSection = document.querySelector('.contact-us');
     if (contactSection) {
-        contactSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+        const elementTop = contactSection.offsetTop;
+        const offset = 45; // 85px from top
+        
+        window.scrollTo({
+            top: elementTop - offset,
+            behavior: 'smooth'
         });
     }
 }

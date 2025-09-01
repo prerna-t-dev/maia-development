@@ -26,6 +26,11 @@
     <!--<meta property="og:description" content="MAIA Estates - Top Real Estate Developer in Bangalore. We believe in the importance of responsible & sustainable designs and thus offer luxury homes, and residential apartments in Bangalore at the best price." />-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Google Fonts - Albert Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="utility.css">
     <link rel="stylesheet" type="text/css" href="maiaestates.css">
     
@@ -185,7 +190,7 @@
                     </div>
 
                     <div class="flex items-center justify-between">
-                        <p class="text-sm font-medium text-black uppercase">(Scroll to explore)</p>
+                        <p class="text-xs font-medium text-black uppercase">(Scroll to explore)</p>
                         <div class="scroll-down cursor-pointer scale-65 xl:scale-100">
                             <svg class="w-full h-auto" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.378906" width="61.44" height="61.44" rx="30.72" fill="#014E3C"/>
@@ -203,7 +208,7 @@
 
 
         <!-- Section 2: Brand Ethos -->
-        <section class="brand-ethos py-20 xl:py-40 bg-green text-white">
+        <section class="brand-ethos py-20 xl:py-40 bg-green-dark text-white">
             <div class="container">
                 <div class="brand-ethos-content grid grid-cols-1 xl:grid-cols-2 gap-16 xl:gap-4 pb-16 xl:pb-30 xl:pt-10">
                     <div class="brand-ethos-content-left xl:mt-10 xl:pr-4">
@@ -522,8 +527,11 @@
 
 
         <!-- Section 5: Contact Us -->
-        <section class="contact-us py-20 bg-white">
-            <div class="container">
+        <section class="contact-us py-20 bg-white relative overflow-hidden">
+            <div class="image-scale-down--wrapper absolute top-0 left-0 w-full h-full">
+                <img src="images/2025/homepage/contact-us-bg.png" alt="Contact Us Bg Image" class="contact-us-bg-image w-full h-full object-cover">
+            </div>
+            <div class="container relative">
                 <div class="contact-form-container bg-white p-10 py-20 xl:px-14">
                     <div class="grid grid-cols-1 xl:grid-cols-2 items-center gap-20">
                         <!-- Left Section: Contact Form -->

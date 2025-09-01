@@ -10,9 +10,171 @@
   --dark-grey: #454543;
   --grey: #F2F1EB;
   --dark: #212121;
+  --brown: #403524;
+  --brown-body: #333333B2;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* ========Animation CSS */
+/* Text Reveal Animation Styles */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.lh-fix,
+.hero-banner .line {
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure text reveal animations don't add extra spacing */
+.text-reveal--wrapper .overflow-hidden {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.text-reveal--wrapper .overflow-hidden > div {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: inherit !important;
+}
+
+/* Force remove any extra spacing from dynamically created elements */
+.text-reveal--wrapper .lh-fix {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.1 !important;
+}
+
+.text-reveal--wrapper .lh-fix > div {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: inherit !important;
+}
+
+/* Development project text animations */
+.development-project-item .overflow-hidden {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.development-project-item .overflow-hidden > div {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: inherit !important;
+}
+
+.development-project-item .lh-fix {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.1 !important;
+}
+
+.development-project-item .lh-fix > div {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: inherit !important;
+}
+
+
+
+/* Hero Image Parallax Wrapper */
+.hero-image-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    /* height: 80vh; */
+    aspect-ratio: 1.7;
+    min-height: 700px; 
+    display: block;
+}
+
+@media (max-width: 1023px) {
+    .hero-image-wrapper {
+        aspect-ratio: 1.4;
+        min-height: 210px;
+    }
+}
+
+/* Hero Banner Fade In */
+.hero-banner {
+    opacity: 0; /* Start hidden for fade-in effect */
+}
+
+/* Hero Heading Text Reveal */
+.hero-banner h1 {
+    opacity: 1; /* Keep heading visible, individual lines will be hidden */
+}
+
+.hero-banner .line-wrapper {
+    display: block;
+    overflow: hidden;
+}
+
+.hero-banner .line {
+    display: block;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+/* Header Slide In Animation */
+.header {
+    opacity: 0; /* Start hidden */
+    will-change: opacity; /* Optimize for animation */
+    transition: none; /* Remove any CSS transitions that might interfere */
+}
+
+.hero-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scale(1.2); /* Scale up the image to ensure full coverage */
+    will-change: transform;
+}
+
+/* Teodor Font Family */
+@font-face {
+    font-family: 'Teodor';
+    src: url('./fonts/Teodor-Light.woff2') format('woff2'),
+         url('./fonts/Teodor-Light.woff') format('woff'),
+         url('./fonts/Teodor-Light.ttf') format('truetype'),
+         url('./fonts/Teodor-Light.eot') format('embedded-opentype'),
+         url('./fonts/Teodor-Light.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Teodor';
+    src: url('./fonts/Teodor-Regular.woff2') format('woff2'),
+         url('./fonts/Teodor-Regular.woff') format('woff'),
+         url('./fonts/Teodor-Regular.ttf') format('truetype'),
+         url('./fonts/Teodor-Regular.eot') format('embedded-opentype'),
+         url('./fonts/Teodor-Regular.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Teodor';
+    src: url('./fonts/Teodor-Medium.woff2') format('woff2'),
+         url('./fonts/Teodor-Medium.woff') format('woff'),
+         url('./fonts/Teodor-Medium.ttf') format('truetype'),
+         url('./fonts/Teodor-Medium.eot') format('embedded-opentype'),
+         url('./fonts/Teodor-Medium.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 *{
@@ -22,11 +184,11 @@
 }
 
 .font-heading{
-    font-family: 'teodora', serif;
+    font-family: 'Teodor', serif;
 }
 
 .font-body{
-    font-family: "Albert Sans", sans-serif;
+    font-family: "Albert Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 
@@ -34,14 +196,14 @@
 body{
     background-color: var(--beige);
     color: var(--bodycolor);
-    font-family: "Albert Sans", sans-serif;
+    font-family: "Albert Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-family: 'teodora', serif;
+    font-family: 'Teodor', serif;
     color: var(--green);
     line-height: 96%;
 }
@@ -186,6 +348,12 @@ p{
 }
 
 
+.line-divider-plain-beige{
+    background-color: #847B5E38;
+    width: 100%;
+    height: 1px;
+}
+
 
 
 /* Decorative Lines with Left and Right Lines */
@@ -254,6 +422,10 @@ p{
     margin-bottom: 0px;
 } */
 
+/* .development-item-wrapper .development-project-item{
+    height: calc(100vh - 80px);
+} */
+
 .development-project-item-image {
     position: relative;
     width: 100%;
@@ -261,9 +433,13 @@ p{
 
 .development-project-item img {
     width: 100%;
-    height: auto;
+    height: 780px;
     display: block;
     object-fit: cover;
+}
+
+.development-project-item img{
+    
 }
 
 
@@ -297,10 +473,10 @@ p{
 
 /* Homepage - Contact Us */
 section.contact-us{
-    background-image: url('images/2025/homepage/contact-us-bg.png');
+    /* background-image: url('images/2025/homepage/contact-us-bg.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
 .contact-form-container input,
@@ -717,6 +893,70 @@ section.contact-us{
     }
 
 }
+
+
+
+
+
+
+
+
+/*************** ========= Maia Life Page ========= ***************/
+.maialife-purpose-slider-item{
+    margin-right: 28px;
+    cursor: pointer;
+}
+
+.maialife-purpose-slider-item img{
+    max-height: 270px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.maialife-purpose-slider .slick-list {
+    padding: 0 10% 0 0 !important;
+}
+
+.maialife-purpose-slider-item.slick-current::before{
+    display: none;
+}
+
+.maialife-purpose-slider-progress .purpose-slider-progress-fill{
+    width: 50%;
+}
+
+
+.maialife-services-slider .slick-list{
+    padding: 0 25% 0 0 !important;
+    margin: 0 -50px;
+}
+
+
+
+.maialife-services-slider-item{
+    margin: 0 50px;
+}
+
+.maia-life--logo{
+    width: 170px;
+}
+
+@media (max-width: 1023px) {
+
+    .maia-life--logo{
+        width: 150px;
+    }
+
+    .maialife-services-slider .slick-list{
+        padding: 0 25% 0 0 !important;
+        margin: 0 -20px;
+    }
+
+    .maialife-services-slider-item{
+        margin: 0 20px;
+    }
+}
+
 
 
 
