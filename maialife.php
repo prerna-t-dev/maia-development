@@ -218,7 +218,7 @@
 
 
                 <div class="maialife-hero-img--desktop hidden xl:block">
-                    <img src="images/2025/maialife/hero-banner-image--desktop.png" alt="Hero Banner Image">
+                    <img src="images/2025/maialife/hero-banner-image--maialife.png" alt="Hero Banner Image">
                 </div>
 
                 <div class="maialife-hero-img--mobile block xl:hidden">
