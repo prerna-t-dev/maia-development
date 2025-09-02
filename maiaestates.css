@@ -11,6 +11,8 @@
   --grey: #F2F1EB;
   --dark: #212121;
   --brown: #403524;
+  --brown-beige: #ECEAE3;
+  --brown-light: #40352412;
   --brown-body: #333333B2;
 }
 
@@ -99,21 +101,21 @@
 }
 
 /* Hero Banner Fade In */
-.hero-banner {
+.hero-banner-animation {
     opacity: 0; /* Start hidden for fade-in effect */
 }
 
 /* Hero Heading Text Reveal */
-.hero-banner h1 {
+.hero-banner-animation h1 {
     opacity: 1; /* Keep heading visible, individual lines will be hidden */
 }
 
-.hero-banner .line-wrapper {
+.hero-banner-animation .line-wrapper {
     display: block;
     overflow: hidden;
 }
 
-.hero-banner .line {
+.hero-banner-animation .line {
     display: block;
     opacity: 0;
     transform: translateY(100%);
@@ -126,7 +128,7 @@
     transition: none; /* Remove any CSS transitions that might interfere */
 }
 
-.hero-banner-image {
+.hero-banner-image-animation {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -202,6 +204,10 @@ body{
     -moz-osx-font-smoothing: grayscale;
 }
 
+body.bespoke-services{
+    background-color: var(--brown-beige);
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: 'Teodor', serif;
     color: var(--green);
@@ -228,6 +234,10 @@ p{
 .header{
     padding: 6px 0;
     background-color: var(--beige);
+}
+
+body.bespoke-services .header{
+    background-color: var(--brown-beige);
 }
 
 .header-transparent{
@@ -347,9 +357,21 @@ p{
     height: 1px;
 }
 
+.line-divider-green-light{
+    background:#014E3C2E;
+    width: 100%;
+    height: 1px;
+}
+
 
 .line-divider-plain-beige{
     background-color: #847B5E38;
+    width: 100%;
+    height: 1px;
+}
+
+.line-divider-brown{
+    background-color: #4035241F;
     width: 100%;
     height: 1px;
 }
@@ -941,9 +963,14 @@ section.contact-us{
     width: 170px;
 }
 
+.maia-bespoke--logo{
+    width: 162px;
+}
+
 @media (max-width: 1023px) {
 
-    .maia-life--logo{
+    .maia-life--logo,
+    .maia-bespoke--logo{
         width: 150px;
     }
 
@@ -961,3 +988,31 @@ section.contact-us{
 
 
 
+
+
+
+/*************** ========= Bespoke Services Page ========= ***************/
+.bespoke-experience-slider-item{
+    /* margin-left: 24px; */
+    margin: 0;
+    padding: 0 48px 0 24px;
+    position: relative;
+}
+
+.bespoke-experience-slider-item img{
+    aspect-ratio: 1.6;
+}
+
+.bespoke-experience-slider-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ECEAE314;
+}
+
+.why-bespoke-slider-item .border-t{
+    border-top: 1px solid #40352412;
+}

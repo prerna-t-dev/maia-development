@@ -116,6 +116,7 @@
 .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
 .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
 .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
 .py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
 .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
 .py-10 { padding-top: 2.5rem; padding-bottom: 2.5rem; }
@@ -759,8 +760,10 @@
     .xl\:mb-30 { margin-bottom: 7.5rem; }
     .xl\:mb-32 { margin-bottom: 8rem; }
     .xl\:mb-32 { margin-bottom: 8rem; }
+    .xl\:mb-40 { margin-bottom: 10rem; }
 
     .xl\:ml-24 { margin-left: 6rem; }
+    .xl\:mr-30 { margin-right: 7.5rem; }
 
     /* Typography - XL */
     .xl\:text-xs { font-size: 12px; }
@@ -997,6 +1000,10 @@
     .xl\:.-translate-y-1\/2 { 
         --tw-translate-y: -50%;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y));
+    }
+    .xl\:translate-y-200 { 
+        --tw-translate-y: -200%;
+        transform: translate(0, var(--tw-translate-y));
      }
 
     /* Border - XL */

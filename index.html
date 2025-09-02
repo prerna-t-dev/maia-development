@@ -177,7 +177,7 @@
 
 
         <!-- Section 1: Hero Banner -->
-        <section class="hero-banner py-20">
+        <section class="hero-banner hero-banner-animation py-20">
             <div class="container">
                 <div class="hero-content pb-12">
                     <h1 class="text-60px xl:text-120px font-normal mb-16 xl:mb-20 text-green">
@@ -201,7 +201,7 @@
                 </div>
 
                 <div class="hero-image-wrapper">
-                    <img src="images/2025/homepage/hero-banner-image.png" alt="Hero Banner Image" class="hero-banner-image">
+                    <img src="images/2025/homepage/hero-banner-image.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation">
                 </div>
             </div>
         </section>

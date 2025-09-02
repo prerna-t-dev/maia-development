@@ -217,8 +217,8 @@ window.addEventListener('load', function() {
             }
 
             // Hero Banner Fade In and Parallax Animation
-            const heroBanner = document.querySelector('.hero-banner');
-            const heroImage = document.querySelector('.hero-banner-image');
+            const heroBanner = document.querySelector('.hero-banner-animation');
+            const heroImage = document.querySelector('.hero-banner-image-animation');
             
             if (heroBanner && heroImage) {
                 // Wait for image to load before setting up animation

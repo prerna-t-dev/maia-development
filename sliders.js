@@ -656,6 +656,22 @@ $(document).ready(function(){
             }
         ]
     });
+
+    // Why Bespoke Slider
+    $('.why-bespoke-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        centerMode: false,
+        centerPadding: '0px',
+        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)',
+        prevArrow: $('.why-bespoke-slider-nav .slick-arrow-prev'),
+        nextArrow: $('.why-bespoke-slider-nav .slick-arrow-next')
+    });
 });
 
 
