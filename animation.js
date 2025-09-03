@@ -424,6 +424,8 @@ window.addEventListener('load', function() {
 
 
             
+            // HOMEPAGE - PINNING - START
+            
             // Create text animation structure immediately (before any other animations)
             const developmentTexts = gsap.utils.toArray('.development-project-item h4, .development-project-item span');
             
@@ -518,6 +520,8 @@ window.addEventListener('load', function() {
                     }
                 });
             });
+
+            // HOMEPAGE - PINNING - END
             
 
 
