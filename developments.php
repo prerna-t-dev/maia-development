@@ -54,8 +54,15 @@
             infinite: false,
         });
 
+        // function raf(time) {
+        //     lenis.raf(time);
+        //     requestAnimationFrame(raf);
+        // }
+
         function raf(time) {
             lenis.raf(time);
+            // Keep ScrollTrigger in sync with Lenis
+            ScrollTrigger.update();
             requestAnimationFrame(raf);
         }
 
@@ -65,11 +72,16 @@
     <!-- GSAP for animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script>
+    <!-- <script>
         // GSAP ScrollTrigger integration with Lenis
         gsap.ticker.add((time) => {
             lenis.raf(time * 1000);
         });
+        gsap.ticker.lagSmoothing(0);
+    </script> -->
+
+    <script>
+        // GSAP ScrollTrigger configuration
         gsap.ticker.lagSmoothing(0);
     </script>
 
@@ -140,7 +152,7 @@
     <meta name="facebook-domain-verification" content="pognb9mgkrukvqi84431jr4q18r62l" />
 </head>
 <body id="bodycontainer">
-    <div class="body_wrapper overflow-x-hidden">
+    <div class="body_wrapper scroll-section overflow-x-hidden">
         <!-- Header -->
         <header class="header sticky top-0 left-0 right-0 z-50">
             <div class="container flex justify-between items-center">
@@ -179,14 +191,27 @@
 
 
         <!-- Section 1: Hero Banner -->
-        <section class="hero-banner py-20">
+        <section class="hero-banner hero-banner-animation py-20">
             <div class="container">
                 <div class="hero-content pb-10 xl:pb-12">
                     <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-6 mb-16 xl:mb-20">
-                        <h1 class="text-60px xl:text-120px font-normal text-green">Our <br /> Developments</h1>
-                        <p class="font-medium text-black opacity-70" style="max-width: 325px;">
-                        A curated portfolio of completed and upcoming icons, each exemplifying artistry, innovation, and an enduring legacy.
-                        </p>
+                        <!-- <h1 class="text-60px xl:text-120px font-normal text-green">
+                            Our <br /> Developments
+                        </h1> -->
+                        <h1 class="text-60px xl:text-120px font-normal text-green">
+                            <span class="line-wrapper">
+                                <span class="line">Our</span>
+                            </span>
+                            <span class="line-wrapper">
+                                <span class="line">Developments</span>
+                            </span>
+                        </h1>
+                        <div class="fade-in" data-delay="0.8">
+                            <p class="font-medium text-black opacity-70" style="max-width: 325px;">
+                                A curated portfolio of completed and upcoming icons, each exemplifying artistry, innovation, and an enduring legacy.
+                            </p>
+                        </div>
+                        
                     </div>
 
                     <div class="flex items-center justify-between">
@@ -200,7 +225,9 @@
                     </div>
                 </div>
 
-                <img src="images/2025/developments/hero-banner-image--dev.png" alt="Hero Banner Image" class="hero-banner-image">
+                <div class="hero-image-wrapper">
+                    <img src="images/2025/developments/hero-banner-image--dev.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation">
+                </div>
             </div>
         </section>
 
@@ -212,13 +239,17 @@
             <div class="container">
                 <div class="brand-ethos-content grid grid-cols-1 xl:grid-cols-2 gap-16 xl:gap-4 pb-16 xl:pb-30 xl:pt-10">
                     <div class="brand-ethos-content-left xl:mt-10 xl:pr-4">
-                        <div class="section-subheader uppercase text-white mb-3">
-                            BRAND ETHOS
+                        <div class="text-reveal--wrapper">  
+                            <div class="section-subheader uppercase text-white mb-3">
+                                BRAND ETHOS
+                            </div>
                         </div>
-                        <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-18 text-white">
-                            Driven by Vision, <br />
-                            Defined by Craft
-                        </h2>
+                        <div class="text-reveal--wrapper">
+                            <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-18 text-white">
+                                Driven by Vision, <br />
+                                Defined by Craft
+                            </h2>
+                        </div>
                         <p class="xl:mb-12 max-w-lg text-white opacity-70">
                             We practice the principles of perfection, precision, <br />
                             innovative design and commitment to the highest quality <br />
@@ -241,15 +272,21 @@
         <!-- Section 3: MAIA Developments -->
         <section class="maia-developments pt-30 bg-white">
             <div class="container maia-developments-content text-center">
-                <div class="section-subheader uppercase text-green mb-3">
-                    MAIA DEVELOPMENTS
+                <div class="text-reveal--wrapper">
+                    <div class="section-subheader uppercase text-green mb-3">
+                        MAIA DEVELOPMENTS
+                    </div>
                 </div>
-                <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-8">
-                    Defining the Skyline
-                </h2>
-                <p>
-                    Our developments reflect a deep commitment to craftsmanship, context,<br />and quality, creating spaces that stand the test of time.
-                </p>
+                <div class="text-reveal--wrapper">
+                    <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-8">
+                        Defining the Skyline
+                    </h2>
+                </div>
+                <!-- <div class="text-reveal--wrapper developments-text-line-paragraph"> -->
+                    <p>
+                        Our developments reflect a deep commitment to craftsmanship, context,<br />and quality, creating spaces that stand the test of time.
+                    </p>
+                <!-- </div> -->
             </div>
 
             <!-- Development Project List -->
@@ -257,21 +294,25 @@
                 <!-- 1. 27 Summit -->
                 <div class="development-project-slider-item mb-10 xl:mb-30">
                     <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-1 bg-dark-grey">
-                            <div class="development-slider-container">
-                                <div class="development-slider-dots development-slider-dots-1"></div>
-                                <div class="development-slider-images development-slider-images-1">
-                                    <div class="development-slide-item">
+                        <div class="development-slider development-slider-1 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
+                            <div class="custom-development-slider-container development-slider-container relative">
+                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-1">
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                </div>
+                                <div class="custom-development-slider-images development-slider-images development-slider-images-1">
+                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
                                         <img class="development-slider-image" src="images/2025/developments/dev-project--11.png" alt="27 Summit">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--12.jpg" alt="27 Summit">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--13.jpg" alt="27 Summit">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--14.jpg" alt="27 Summit">
                                     </div>
                                 </div>
                             </div>
@@ -302,21 +343,25 @@
                 <!-- 2. Casa Sia -->
                 <div class="development-project-slider-item mb-10 xl:mb-30">
                     <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-2 bg-dark-grey">
-                            <div class="development-slider-container">
-                                <div class="development-slider-dots development-slider-dots-2"></div>
-                                <div class="development-slider-images development-slider-images-2">
-                                    <div class="development-slide-item">
+                        <div class="development-slider development-slider-2 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
+                            <div class="custom-development-slider-container development-slider-container relative">
+                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-2">
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                </div>
+                                <div class="custom-development-slider-images development-slider-images development-slider-images-2">
+                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
                                         <img class="development-slider-image" src="images/2025/developments/dev-project--21.png" alt="Casa Sia">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--12.jpg" alt="Casa Sia">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--13.jpg" alt="Casa Sia">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--14.jpg" alt="Casa Sia">
                                     </div>
                                 </div>
                             </div>
@@ -347,21 +392,25 @@
                 <!-- 3. Pelican Gardens -->
                 <div class="development-project-slider-item mb-10 xl:mb-30">
                     <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-3 bg-dark-grey">
-                            <div class="development-slider-container">
-                                <div class="development-slider-dots development-slider-dots-3"></div>
-                                <div class="development-slider-images development-slider-images-3">
-                                    <div class="development-slide-item">
+                        <div class="development-slider development-slider-3 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
+                            <div class="custom-development-slider-container development-slider-container relative">
+                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-3">
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                </div>
+                                <div class="custom-development-slider-images development-slider-images development-slider-images-3">
+                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
                                         <img class="development-slider-image" src="images/2025/developments/dev-project--31.png" alt="Pelican Gardens">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--12.jpg" alt="Pelican Gardens">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--13.jpg" alt="Pelican Gardens">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--14.jpg" alt="Pelican Gardens">
                                     </div>
                                 </div>
                             </div>
@@ -393,21 +442,25 @@
                 <!-- 4. Pelican Grove -->
                 <div class="development-project-slider-item">
                     <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-4 bg-dark-grey">
-                            <div class="development-slider-container">
-                                <div class="development-slider-dots development-slider-dots-4"></div>
-                                <div class="development-slider-images development-slider-images-4">
-                                    <div class="development-slide-item">
+                        <div class="development-slider development-slider-4 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
+                            <div class="custom-development-slider-container development-slider-container relative">
+                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-4">
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                    <div class="dot-wrapper">
+                                        <div class="dot-progress"></div>
+                                    </div>
+                                </div>
+                                <div class="custom-development-slider-images development-slider-images development-slider-images-4">
+                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
                                         <img class="development-slider-image" src="images/2025/developments/dev-project--41.png" alt="Pelican Grove">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--12.jpg" alt="Pelican Grove">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--13.jpg" alt="Pelican Grove">
-                                    </div>
-                                    <div class="development-slide-item">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--14.jpg" alt="Pelican Grove">
                                     </div>
                                 </div>
                             </div>
@@ -434,6 +487,9 @@
                         </div>
                     </div>
                 </div>
+
+
+
             </div>
         </section>
 
@@ -441,18 +497,25 @@
 
 
         <!-- Section 4: Next Developments -->
-        <section class="next-developments py-20 bg-white">
+        <section class="next-developments py-30 xl:py-40 bg-white">
             <div class="container">
-                <div class="section-subheader uppercase text-green mb-3">
-                    OUR DEVELOPMENTS
+                <div class="text-reveal--wrapper">
+                    <div class="section-subheader uppercase text-green mb-3">
+                        OUR DEVELOPMENTS
+                    </div>
                 </div>
-                <h2 class="text-40px xl:text-7xl font-normal mb-6 xl:mb-8">
-                    Shaping what's next
-                </h2>
+                <div class="text-reveal--wrapper">
+                    <h2 class="text-40px xl:text-7xl font-normal mb-6 xl:mb-8">
+                        Shaping what's next
+                    </h2>
+                </div>
                 <div class="flex items-center justify-between">
-                    <p class="mb-16">
-                    Designs in progress, destined to become <br /> tomorrow's most coveted addresses
-                    </p>
+                    <div class="text-reveal--wrapper developments-text-line-paragraph">
+                        <p class="mb-16">
+                            Designs in progress, destined to become <br /> 
+                            tomorrow's most coveted addresses
+                        </p>
+                    </div>
 
                     <!-- Slick Arrows: Desktop -->
                     <div class="slick-arrows flex items-center justify-end gap-6 mb-16 hidden xl:flex">
@@ -474,7 +537,7 @@
             </div>
 
             <!-- Next Developments Slider -->
-            <div class="next-developments-slider-container pl-5 xl:pl-20 pb-12 xl:pb-30">
+            <div class="next-developments-slider-container pl-5 xl:pl-20 pb-12">
                 
                 <div class="line-divider pr-20"></div>
                 <div class="next-developments-slider">
@@ -609,156 +672,158 @@
 
 
 
-        <!-- Footer -->
-        <footer class="footer pt-12 bg-green-footer">
-            <div class="footer-content py-8 xl:py-50 relative">
-                <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
-                    <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1138_411)">
-                        <g style="mix-blend-mode:exclusion">
-                        <path d="M309.166 259.911L65.8848 -0.261719V96.5583L285.334 259.911H309.166Z" fill="white" fill-opacity="0.03"/>
-                        </g>
-                        <g style="mix-blend-mode:exclusion">
-                        <path d="M309.168 259.911L65.8867 -0.261719V96.5583L285.336 259.911H309.168Z" fill="white" fill-opacity="0.03"/>
-                        </g>
-                        <g style="mix-blend-mode:exclusion">
-                        <path d="M-177.396 259.911L65.8848 -0.261719V96.5583L-153.565 259.911H-177.396Z" fill="white" fill-opacity="0.03"/>
-                        </g>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1138_411">
-                        <rect width="309" height="260" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
+        
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer sticky-section pt-12 bg-green-footer">
+        <div class="footer-content py-8 xl:py-50 relative">
+            <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
+                <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1138_411)">
+                    <g style="mix-blend-mode:exclusion">
+                    <path d="M309.166 259.911L65.8848 -0.261719V96.5583L285.334 259.911H309.166Z" fill="white" fill-opacity="0.03"/>
+                    </g>
+                    <g style="mix-blend-mode:exclusion">
+                    <path d="M309.168 259.911L65.8867 -0.261719V96.5583L285.336 259.911H309.168Z" fill="white" fill-opacity="0.03"/>
+                    </g>
+                    <g style="mix-blend-mode:exclusion">
+                    <path d="M-177.396 259.911L65.8848 -0.261719V96.5583L-153.565 259.911H-177.396Z" fill="white" fill-opacity="0.03"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1138_411">
+                    <rect width="309" height="260" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="container grid grid-cols-1 xl:grid-cols-3 gap-20">
+                <div class="footer-logo">
+                    <img src="images/2025/footer-logo.png" alt="Footer Logo">
                 </div>
-                <div class="container grid grid-cols-1 xl:grid-cols-3 gap-20">
-                    <div class="footer-logo">
-                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
+                <div class="footer-links">
+                    <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                        Links
+                    </h3>
+                    <div class="grid grid-cols-2 xl:gap-10">
+                        <ul class="text-white text-sm font-medium">
+                            <li class="mb-3">
+                                <a href="#" class="footer-menu-item text-white text-sm">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="footer-menu-item text-white text-sm">
+                                    Our Story
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="footer-menu-item text-white text-sm">
+                                    Developments
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="footer-menu-item text-white text-sm">
+                                    Our Services
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="text-white text-sm font-medium">
+                            <li class="mb-3">
+                                <a href="#" class="footer-menu-item text-white text-sm">
+                                    MAIA Impact
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="footer-menu-item text-white text-sm">
+                                    In the News
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="footer-menu-item text-white text-sm">
+                                    Blogs
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="footer-links">
-                        <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                            Links
-                        </h3>
-                        <div class="grid grid-cols-2 xl:gap-10">
-                            <ul class="text-white text-sm font-medium">
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        Our Story
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        Developments
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        Our Services
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="text-white text-sm font-medium">
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        MAIA Impact
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        In the News
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        Blogs
-                                    </a>
-                                </li>
-                            </ul>
+                </div>
+                <div class="info-social">
+                    <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                        Info
+                    </h3>
+                    <div class="">
+                        <p class="mb-4 text-sm text-white opacity-40" >
+                            Maia Estates, 34 (New No. 84), Ulsoor Road, <br>
+                            Yellappa Chetty Layout, Sivanchetti Gardens, <br>
+                            Bengaluru, Karnataka 560042
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <a href="mailto:info@maia.com" class="footer-info-item text-white text-sm">
+                                info@maia.com
+                            </a>
+                            <div class="text-white text-sm opacity-40">|</div>
+                            <a href="tel:+918041219231" class="footer-info-item text-white text-sm">
+                                +91 80 4121 9231
+                            </a>
                         </div>
                     </div>
-                    <div class="info-social">
+
+
+                    <div class="mt-24">
                         <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                            Info
+                            Social Icons
                         </h3>
-                        <div class="">
-                            <p class="mb-4 text-sm text-white opacity-40" >
-                                Maia Estates, 34 (New No. 84), Ulsoor Road, <br>
-                                Yellappa Chetty Layout, Sivanchetti Gardens, <br>
-                                Bengaluru, Karnataka 560042
-                            </p>
-                            <div class="flex items-center gap-3">
-                                <a href="mailto:info@maia.com" class="footer-info-item text-white text-sm">
-                                    info@maia.com
-                                </a>
-                                <div class="text-white text-sm opacity-40">|</div>
-                                <a href="tel:+918041219231" class="footer-info-item text-white text-sm">
-                                    +91 80 4121 9231
+                        <ul class="text-white text-sm font-medium">
+                            <div class="grid grid-cols-2 gap-0">
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        Instagram
+                                        <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
+                                    Privacy Policy
                                 </a>
                             </div>
-                        </div>
-
-
-                        <div class="mt-24">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                                Social Icons
-                            </h3>
-                            <ul class="text-white text-sm font-medium">
-                                <div class="grid grid-cols-2 gap-0">
-                                    <li class="mb-3">
-                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
-                                            Instagram
-                                            <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
-                                        Privacy Policy
+                            
+                            <div class="grid grid-cols-2 gap-0">
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        LinkedIn
+                                        <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
+                                        </svg>
                                     </a>
-                                </div>
-                                
-                                <div class="grid grid-cols-2 gap-0">
-                                    <li class="mb-3">
-                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
-                                            LinkedIn
-                                            <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
-                                        Terms of Service
-                                    </a>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>  
-            </div>
-            <div class="footer-bottom py-8 pb-20 xl:pb-8">
-                <div class="container flex items-center justify-between">
-                    <p class="text-white text-sm text-center font-heading opacity-50">
-                        &copy; MAIA Estates LLP, 2025. All rights reserved.
-                    </p>
-                    <div class="flex items-center gap-20 hidden xl:flex">
-                        <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
-                            Privacy Policy
-                        </a>
-                        <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
-                            Terms of Service
-                        </a>
+                                </li>
+                                <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
+                                    Terms of Service
+                                </a>
+                            </div>
+                        </ul>
                     </div>
                 </div>
+
+            </div>  
+        </div>
+        <div class="footer-bottom py-8 pb-20 xl:pb-8">
+            <div class="container flex items-center justify-between">
+                <p class="text-white text-sm text-center font-heading opacity-50">
+                    &copy; MAIA Estates LLP, 2025. All rights reserved.
+                </p>
+                <div class="flex items-center gap-20 hidden xl:flex">
+                    <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
+                        Privacy Policy
+                    </a>
+                    <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
+                        Terms of Service
+                    </a>
+                </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
 
     <!-- Slick Slider JavaScript -->

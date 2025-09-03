@@ -24,12 +24,28 @@
     overflow: hidden;
 }
 
-.lh-fix,
-.hero-banner .line {
-    line-height: 1.1;
+.lh-fix {
+    /* line-height: 1.1; */
+    /* line-height: 0.96; */
     margin: 0;
     padding: 0;
 }
+
+.hero-banner .line{
+    /* line-height: 0.96;  */
+}
+
+.hero-banner .line-wrapper {
+    overflow: hidden;
+    padding-bottom: 0.3em;    /* adjust value as needed */
+    margin-bottom: -0.3em;
+}
+
+
+
+
+
+
 
 /* Ensure text reveal animations don't add extra spacing */
 .text-reveal--wrapper .overflow-hidden {
@@ -47,7 +63,17 @@
 .text-reveal--wrapper .lh-fix {
     margin: 0 !important;
     padding: 0 !important;
-    line-height: 1.1 !important;
+    line-height: 0.96 !important;
+    padding-bottom: 0.2em !important;
+    margin-bottom: -0.2em !important;
+}
+
+.text-reveal--wrapper.developments-text-line .lh-fix{
+    line-height: 1.06 !important;
+}
+
+.text-reveal--wrapper.developments-text-line-paragraph .lh-fix{
+    line-height: 1.56 !important;
 }
 
 .text-reveal--wrapper .lh-fix > div {
@@ -281,6 +307,42 @@ body.bespoke-services .header{
 .footer .footer-logo{
     width: 198px;
 }
+
+/* ======== Sticky Section Layout ======== */
+/* Sticky section styling */
+.sticky-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    pointer-events: none; /* Allow scrolling through it */
+}
+
+.sticky-section .footer {
+    pointer-events: auto; /* Re-enable interactions for footer content */
+}
+
+/* Scroll section styling */
+.scroll-section {
+    position: relative;
+    z-index: 20;
+    background: inherit;
+    min-height: 100vh;
+    margin-bottom: 100vh; /* Create space for the sticky footer */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -588,6 +650,27 @@ section.contact-us{
 
 .development-slider-images{
     margin-bottom: 0px !important;
+    /* overflow: hidden !important; */
+    position: relative;
+}
+
+.custom-development-slide-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.1) 30%,
+        rgba(0, 0, 0, 0.02) 60%,
+        rgba(0, 0, 0, 0) 100%
+    ); */
+    background: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 1;
 }
 
 .development-slider-dots {
@@ -652,6 +735,37 @@ section.contact-us{
 }
 
 
+
+
+/* Developments Page Custom Progress Animation CSS */
+.custom-development-slider-dots{
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: calc(100% - 160px);
+    justify-content: space-between;
+}
+.custom-development-slider-dots .dot-wrapper{
+    width: 100%;
+    height: 8px;
+    background-color: #FFFFFF52;
+    width: 25%;
+}
+
+.custom-development-slider-dots .dot-progress{
+    height: 8px;
+    background-color: #FFFFFF;
+    width: 0%;
+}
+
+
+
+
+
+
+
 .development-badge{
     background-color: #FFFFFF;
     border-radius: 4px;
@@ -669,6 +783,7 @@ section.contact-us{
 
 .project-slider-content{
     max-width: 430px;
+    z-index: 2;
 }
 
 /* Developments Page Mobile */
@@ -1016,3 +1131,4 @@ section.contact-us{
 .why-bespoke-slider-item .border-t{
     border-top: 1px solid #40352412;
 }
+

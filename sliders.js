@@ -1,4 +1,43 @@
 $(document).ready(function(){
+    // Responsive Breakpoint Detection and Page Reload
+    let currentBreakpoint = getCurrentBreakpoint();
+    
+    // Check for breakpoint changes on window resize
+    $(window).on('resize', function() {
+        const newBreakpoint = getCurrentBreakpoint();
+        if (newBreakpoint !== currentBreakpoint) {
+            // Breakpoint changed, reload the page
+            location.reload();
+        }
+    });
+    
+    // Function to determine current breakpoint
+    function getCurrentBreakpoint() {
+        const width = $(window).width();
+        if (width <= 768) {
+            return 'mobile';
+        } else if (width <= 1024) {
+            return 'tablet';
+        } else {
+            return 'desktop';
+        }
+    }
+    
+    // Scroll to top on page load/refresh using Lenis
+    // $(window).on('load', function() {
+    //     if (typeof lenis !== 'undefined') {
+    //         lenis.scrollTo(0, {
+    //             duration: 1,
+    //             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+    //         });
+    //     } else {
+    //         // Fallback to jQuery animate if Lenis not available
+    //         $('html, body').animate({
+    //             scrollTop: 0
+    //         }, 500);
+    //     }
+    // });
+    
     // Header Scroll Effect
     $(window).on('scroll', function() {
         const header = $('.header');
@@ -81,175 +120,448 @@ $(document).ready(function(){
         ]
     });
 
-    // Development Slider 1 (27 Summit) - Starts immediately
-    $('.development-slider-images-1').slick({
-        dots: true,
-        arrows: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 3000,
-        pauseOnHover: false,
-        centerMode: false,
-        centerPadding: '0px',
-        fade: true,
-        appendDots: $('.development-slider-dots-1'),
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplay: false,
-                    autoplaySpeed: 3000,
-                    pauseOnHover: false,
-                    fade: true
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplay: false,
-                    autoplaySpeed: 3000,
-                    pauseOnHover: false,
-                    fade: true
-                }
+    // Development Slider 1 (27 Summit) - Optimized for performance
+    // function initCustomSlider1() {
+    //     const sliderContainer = $('.development-slider-images-1');
+    //     const imageEl = sliderContainer.find('.development-slider-image');
+    //     const progressBars = $('.development-slider-dots-1 .dot-progress');
+    //     const images = [
+    //         'images/2025/developments/dev-project--11.png',
+    //         'images/2025/developments/dev-project--12.jpg',
+    //         'images/2025/developments/dev-project--13.jpg',
+    //         'images/2025/developments/dev-project--14.jpg'
+    //     ];
+    
+    //     let currentIndex = 0;
+    //     const rotationTime = 5000; // 5 seconds per image
+    //     const fadeDuration = 900; // Smooth fade (can try 1200 for ultra-smooth)
+    
+    //     function showImage(index) {
+    //         imageEl.stop(true, true).fadeOut(fadeDuration, 'swing', function () {
+    //             $(this).attr('src', images[index]).fadeIn(fadeDuration, 'swing');
+    //         });
+    //     }
+    
+    //     function startProgressBar(index) {
+    //         progressBars.eq(index).css({
+    //             'transition': 'width 5s linear',
+    //             'width': '100%'
+    //         });
+    //     }
+    
+    //     function resetAllDots() {
+    //         progressBars.css({
+    //             'transition': 'none',
+    //             'width': '0%'
+    //         });
+    //         setTimeout(() => {
+    //             progressBars.css('transition', 'width 5s linear');
+    //         }, 30);
+    //     }
+    
+    //     function nextSlide() {
+    //         currentIndex++;
+    //         if (currentIndex >= images.length) {
+    //             resetAllDots();
+    //             currentIndex = 0;
+    //         }
+    //         showImage(currentIndex);
+    //         startProgressBar(currentIndex);
+    //     }
+    
+    //     // Initial setup
+    //     resetAllDots();
+    //     showImage(currentIndex);
+    //     startProgressBar(currentIndex);
+    
+    //     // Start auto rotation (clear before re-initializing, if needed)
+    //     if (window.devSlider1Interval) clearInterval(window.devSlider1Interval);
+    //     window.devSlider1Interval = setInterval(nextSlide, rotationTime);
+    // }
+    // // Place this call at the point where your sliders are initialized:
+    // initCustomSlider1();
+
+
+
+    // Generic Development Slider
+
+    //1. Iteration 1 -- With Image Parallax(laggy performance)
+    // function setupFadeSlider({
+    //     containerSelector,
+    //     imageSelector,
+    //     progressSelector,
+    //     imageSources,
+    //     rotationTime = 5000,
+    //     fadeDuration = 900,
+    //     enableParallax = true
+    // }) {
+    //     const sliderContainer = $(containerSelector);
+    //     const imageEl = sliderContainer.find(imageSelector);
+    //     const progressBars = $(progressSelector);
+    //     const images = imageSources;
+    //     let currentIndex = 0;
+    //     let rotationInterval;
+    
+    //     function showImage(index) {
+    //         imageEl.stop(true, true).fadeOut(fadeDuration, 'swing', function () {
+    //             $(this).attr('src', images[index]).fadeIn(fadeDuration, 'swing');
+    //         });
+    //     }
+    
+    //     function startProgressBar(index) {
+    //         progressBars.eq(index).css({
+    //             'transition': `width ${rotationTime / 1000}s linear`,
+    //             'width': '100%'
+    //         });
+    //     }
+    
+    //     function resetAllDots() {
+    //         progressBars.css({
+    //             'transition': 'none',
+    //             'width': '0%'
+    //         });
+    //         setTimeout(() => {
+    //             progressBars.css('transition', `width ${rotationTime / 1000}s linear`);
+    //         }, 30);
+    //     }
+    
+    //     function nextSlide() {
+    //         currentIndex++;
+    //         if (currentIndex >= images.length) {
+    //             resetAllDots();
+    //             currentIndex = 0;
+    //         }
+    //         showImage(currentIndex);
+    //         startProgressBar(currentIndex);
+    //     }
+    
+    //     // Initial load
+    //     resetAllDots();
+    //     showImage(currentIndex);
+    //     startProgressBar(currentIndex);
+    
+    //     // Clear previous interval if needed
+    //     if (sliderContainer.data('rotationInterval')) {
+    //         clearInterval(sliderContainer.data('rotationInterval'));
+    //     }
+    //     rotationInterval = setInterval(nextSlide, rotationTime);
+    //     sliderContainer.data('rotationInterval', rotationInterval);
+
+    //     // Setup parallax effect if enabled
+    //     if (enableParallax && typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    //         const slideItem = sliderContainer.find('.custom-development-slide-item')[0];
+            
+    //         if (slideItem) {
+    //             // Add overflow hidden to container to contain the parallax
+    //             sliderContainer.css('overflow', 'hidden !important');
+                
+    //             // Pre-set will-change for better performance
+    //             gsap.set(slideItem, { 
+    //                 willChange: "transform",
+    //                 scale: 1.4 // Start slightly scaled up
+    //             });
+                
+    //             // Create parallax effect
+    //             ScrollTrigger.create({
+    //                 trigger: sliderContainer[0],
+    //                 start: 'top bottom',
+    //                 end: 'bottom top',
+    //                 scrub: true,
+    //                 onUpdate: (self) => {
+    //                     // Calculate parallax movement
+    //                     const progress = self.progress;
+    //                     const parallaxDistance = 100; // Adjust this for more/less movement
+    //                     const yOffset = progress * parallaxDistance;
+                        
+    //                     // Apply parallax movement and scale to the slide item
+    //                     gsap.set(slideItem, { 
+    //                         y: yOffset,
+    //                         scale: 1.1 + (progress * 0.1) // Scale from 1.1 to 1.2
+    //                     });
+    //                 }
+    //             });
+    //         }
+    //     }
+    // }
+
+
+    //2. Iteration 2 -- With Image Parallax(lil better performance)
+    function setupFadeSlider({
+        containerSelector,
+        imageSelector,
+        progressSelector,
+        imageSources,
+        rotationTime = 5000,
+        fadeDuration = 900,
+        enableParallax = false,
+        parallaxDistance = 100,
+        scaleStart = 1.1,
+        scaleEnd = 1.2
+    }) {
+        const sliderContainer = $(containerSelector);
+        const imageEl = sliderContainer.find(imageSelector);
+        const progressBars = $(progressSelector);
+        const images = imageSources;
+        let currentIndex = 0;
+        let rotationInterval;
+    
+        // --- Fade & Progress ---
+        function showImage(index) {
+            imageEl.stop(true, true).fadeOut(fadeDuration, 'swing', function () {
+                $(this).attr('src', images[index]).fadeIn(fadeDuration, 'swing');
+            });
+        }
+        function startProgressBar(index) {
+            progressBars.eq(index).css({
+                'transition': `width ${rotationTime / 1000}s linear`,
+                'width': '100%'
+            });
+        }
+        function resetAllDots() {
+            progressBars.css({ 'transition': 'none', 'width': '0%' });
+            setTimeout(() => {
+                progressBars.css('transition', `width ${rotationTime / 1000}s linear`);
+            }, 30);
+        }
+        function nextSlide() {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                resetAllDots();
+                currentIndex = 0;
             }
+            showImage(currentIndex);
+            startProgressBar(currentIndex);
+        }
+        resetAllDots();
+        showImage(currentIndex);
+        startProgressBar(currentIndex);
+    
+        // --- Interval ---
+        if (sliderContainer.data('rotationInterval')) {
+            clearInterval(sliderContainer.data('rotationInterval'));
+        }
+        rotationInterval = setInterval(nextSlide, rotationTime);
+        sliderContainer.data('rotationInterval', rotationInterval);
+    
+        // --- Parallax ---
+        if (
+            enableParallax &&
+            typeof gsap !== 'undefined' &&
+            typeof ScrollTrigger !== 'undefined'
+        ) {
+            const slideItem = sliderContainer.find('.custom-development-slide-item') || imageEl;
+            if (slideItem) {
+                // Hardware acceleration and overflow optimization
+                sliderContainer.css('overflow', 'hidden');
+                gsap.set(slideItem, { willChange: "transform", scale: scaleStart });
+    
+                ScrollTrigger.create({
+                    trigger: sliderContainer,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: 0.8, // Smoother scrub
+                    onUpdate: (self) => {
+                        const progress = self.progress;
+                        const yOffset = progress * parallaxDistance;
+                        const scaleValue = scaleStart + (progress * (scaleEnd - scaleStart));
+                        gsap.to(slideItem, {
+                            y: yOffset,
+                            scale: scaleValue,
+                            duration: 0.2, // Animate for smoothness
+                            ease: "power4.out",
+                            overwrite: "auto"
+                        });
+                    }
+                });
+            }
+        }
+    }
+    
+
+    // Fade slider 1
+    setupFadeSlider({
+        containerSelector: '.development-slider-images-1',
+        imageSelector: '.development-slider-image', // Adjust if your selector is different per slider
+        progressSelector: '.development-slider-dots-1 .dot-progress',
+        imageSources: [
+            'images/2025/developments/dev-project--11.png',
+            'images/2025/developments/dev-project--12.jpg',
+            'images/2025/developments/dev-project--13.jpg',
+            'images/2025/developments/dev-project--14.jpg'
         ]
-    });
+    });    
 
-    // Development Slider 2 (Casa Sia) - Starts after 1 second
-    setTimeout(function() {
-        $('.development-slider-images-2').slick({
-            dots: true,
-            arrows: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 3000,
-            pauseOnHover: false,
-            centerMode: false,
-            centerPadding: '0px',
-            fade: true,
-            appendDots: $('.development-slider-dots-2'),
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        autoplay: false,
-                        autoplaySpeed: 3000,
-                        pauseOnHover: false,
-                        fade: true
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        autoplay: false,
-                        autoplaySpeed: 3000,
-                        pauseOnHover: false,
-                        fade: true
-                    }
-                }
+    // Fade slider 2 - with slight delay
+    setTimeout(() => {
+        setupFadeSlider({
+            containerSelector: '.development-slider-images-2',
+            imageSelector: '.development-slider-image',
+            progressSelector: '.development-slider-dots-2 .dot-progress',
+            imageSources: [
+                'images/2025/developments/dev-project--21.png',
+                'images/2025/developments/dev-project--12.jpg',
+                'images/2025/developments/dev-project--13.jpg',
+                'images/2025/developments/dev-project--14.jpg'
             ]
         });
-    }, 1000);
+    }, 1000); // 1 second delay
 
-    // Development Slider 3 (Pelican Gardens) - Starts after 2 seconds
-    setTimeout(function() {
-        $('.development-slider-images-3').slick({
-            dots: true,
-            arrows: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 3000,
-            pauseOnHover: false,
-            centerMode: false,
-            centerPadding: '0px',
-            fade: true,
-            appendDots: $('.development-slider-dots-3'),
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        autoplay: false,
-                        autoplaySpeed: 3000,
-                        pauseOnHover: false,
-                        fade: true
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        autoplay: false,
-                        autoplaySpeed: 3000,
-                        pauseOnHover: false,
-                        fade: true
-                    }
-                }
+    // Fade slider 3
+    setTimeout(() => {
+        setupFadeSlider({
+            containerSelector: '.development-slider-images-3',
+            imageSelector: '.development-slider-image',
+            progressSelector: '.development-slider-dots-3 .dot-progress',
+            imageSources: [
+                'images/2025/developments/dev-project--31.png',
+                'images/2025/developments/dev-project--12.jpg',
+                'images/2025/developments/dev-project--13.jpg',
+                'images/2025/developments/dev-project--14.jpg'
             ]
         });
-    }, 2000);
+    }, 2000); // 2 second delay
 
-    // Development Slider 4 (Pelican Grove) - Starts after 3 seconds
-    setTimeout(function() {
-        $('.development-slider-images-4').slick({
-            dots: true,
-            arrows: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 3000,
-            pauseOnHover: false,
-            centerMode: false,
-            centerPadding: '0px',
-            fade: true,
-            appendDots: $('.development-slider-dots-4'),
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        autoplay: false,
-                        autoplaySpeed: 3000,
-                        pauseOnHover: false,
-                        fade: true
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        autoplay: false,
-                        autoplaySpeed: 3000,
-                        pauseOnHover: false,
-                        fade: true
-                    }
-                }
-            ]
+
+    // Fade slider 4
+    setTimeout(() => {
+        setupFadeSlider({
+            containerSelector: '.development-slider-images-4',
+            imageSelector: '.development-slider-image',
+            progressSelector: '.development-slider-dots-4 .dot-progress',
+            imageSources: [
+                'images/2025/developments/dev-project--41.png',
+                'images/2025/developments/dev-project--12.jpg',
+                'images/2025/developments/dev-project--13.jpg',
+                'images/2025/developments/dev-project--14.jpg'
+            ]   
         });
-    }, 3000);
+    }, 3000); // 3 second delay
+    
+    
+    
+
+
+
+    
+
+    // // Development Slider 2 (Casa Sia) - Optimized
+    // $('.development-slider-images-2').slick({
+    //     dots: true,
+    //     arrows: false,
+    //     infinite: true,
+    //     speed: 300,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: false,
+    //     pauseOnHover: false,
+    //     centerMode: false,
+    //     centerPadding: '0px',
+    //     fade: false,
+    //     appendDots: $('.development-slider-dots-2'),
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 autoplay: false,
+    //                 pauseOnHover: false,
+    //                 fade: false
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 autoplay: false,
+    //                 pauseOnHover: false,
+    //                 fade: false
+    //             }
+    //         }
+    //     ]
+    // });
+
+    // // Development Slider 3 (Pelican Gardens) - Optimized
+    // $('.development-slider-images-3').slick({
+    //     dots: true,
+    //     arrows: false,
+    //     infinite: true,
+    //     speed: 300,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: false,
+    //     pauseOnHover: false,
+    //     centerMode: false,
+    //     centerPadding: '0px',
+    //     fade: false,
+    //     appendDots: $('.development-slider-dots-3'),
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 autoplay: false,
+    //                 pauseOnHover: false,
+    //                 fade: false
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 autoplay: false,
+    //                 pauseOnHover: false,
+    //                 fade: false
+    //             }
+    //         }
+    //     ]
+    // });
+
+    // // Development Slider 4 (Pelican Grove) - Optimized
+    // $('.development-slider-images-4').slick({
+    //     dots: true,
+    //     arrows: false,
+    //     infinite: true,
+    //     speed: 300,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: false,
+    //     pauseOnHover: false,
+    //     centerMode: false,
+    //     centerPadding: '0px',
+    //     fade: false,
+    //     appendDots: $('.development-slider-dots-4'),
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 autoplay: false,
+    //                 pauseOnHover: false,
+    //                 fade: false
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 autoplay: false,
+    //                 pauseOnHover: false,
+    //                 fade: false
+    //             }
+    //         }
+    //     ]
+    // });
+
+
+    
+
+
 
     // Purpose Slider
     $('.purpose-slider').slick({

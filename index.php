@@ -137,7 +137,7 @@
     <meta name="facebook-domain-verification" content="pognb9mgkrukvqi84431jr4q18r62l" />
 </head>
 <body id="bodycontainer">
-    <div class="body_wrapper overflow-x-hidden">
+    <div class="body_wrapper scroll-section overflow-x-hidden">
         <!-- Header -->
         <header class="header sticky top-0 left-0 right-0 z-50">
             <div class="container header-container flex justify-between items-center">
@@ -228,26 +228,41 @@
                                 ( Since 2016 )
                             </span>
                         </div>
-                        <p class="mb-12 xl:mb-14 max-w-lg font-medium text-black opacity-70 text-sm xl:text-base xl:pr-24">
+                        <div class="xl:pr-24">
+                            <div class="text-reveal--paragraph">
+                                <p class="mb-12 xl:mb-14 max-w-lg font-medium text-black opacity-70 text-sm xl:text-base">
+                                    We create landmark residences and commercial developments that embody design excellence, lasting value, and a sense of place. Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity, and context — shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- <p class="mb-12 xl:mb-14 max-w-lg font-medium text-black opacity-70 text-sm xl:text-base xl:pr-24">
                             We create landmark residences and commercial developments that embody design excellence, lasting value, and a sense of place. Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity, and context — shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
                         </p>
-                        <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
-                            <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
-                            </svg>
-                            <span class="text-xs font-medium uppercase">About Us</span>
-                        </a>
-                    </div>
-                    <div class="mt-20 font-heading text-green flex items-center gap-2 hidden xl:flex">
-                        <div class="w-sm h-sm bg-green-light rounded-full"> 
+                         -->
+
+                        <div class="fade-up">
+                            <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                                <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
+                                </svg>
+                                <span class="text-xs font-medium uppercase">About Us</span>
+                            </a>
                         </div>
-                        <span class="text-sm font-medium text-green uppercase">
-                            ( Since 2016 )
-                        </span>
+                    </div>
+
+                    <div class="fade-up">
+                        <div class="mt-20 font-heading text-green flex items-center gap-2 hidden xl:flex">
+                            <div class="w-sm h-sm bg-green-light rounded-full"> 
+                            </div>
+                            <span class="text-sm font-medium text-green uppercase">
+                                ( Since 2016 )
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="about-maia-content-right">
-                    <div class="image-reveal--wrapper">
+                    <div class="image-reveal--wrapper_ parallax-image">
                         <img src="images/2025/homepage/about-maia-image.png" alt="About MAIA Image" class="h-full w-full object-cover">
                     </div>
                 </div>
@@ -259,17 +274,21 @@
         <!-- Section 3: MAIA Developments -->
         <section class="maia-developments pt-20 xl:pt-30 bg-white">
             <div class="container maia-developments-content text-center">
-                <div class="section-subheader uppercase text-green mb-3">
-                    MAIA DEVELOPMENTS
+                <div class="text-reveal--paragraph">
+                    <div class="section-subheader uppercase text-green mb-3">
+                        MAIA DEVELOPMENTS
+                    </div>
                 </div>
                 <div class="text-reveal--wrapper">
                     <h2 class="text-40px xl:text-6xl font-normal mb-8 text-center">
                         Defining the Skyline
                     </h2>
                 </div>
-                <p>
-                    Our developments reflect a deep commitment to craftsmanship, context,<br />and quality, creating spaces that stand the test of time.
-                </p>
+                <div class="text-reveal--wrapper developments-text-line-paragraph">
+                    <p>
+                        Our developments reflect a deep commitment to craftsmanship, context,<br />and quality, creating spaces that stand the test of time.
+                    </p>
+                </div>
             </div>
 
             <!-- Development Project List -->
@@ -416,9 +435,9 @@
                     </div>
 
                     <!-- Desktop Paragraph -->
-                    <div class="hidden xl:block">
-                        <div class="text-reveal--wrapper">
-                            <h3 class="mt-8 mb-14 text-gold text-4xl xl:text-6xl leading-11 text-center font-heading font-normal px-4 xl:px-0">
+                    <div class="hidden xl:block mt-8 mb-14">
+                        <div class="text-reveal--wrapper developments-text-line">
+                            <h3 class="text-gold text-4xl xl:text-6xl leading-11 text-center font-heading font-normal px-4 xl:px-0">
                                 Embracing the highest standards of <br />
                                 design, execution, sustainability and <br />
                                 professionalism, We create spaces that <br />
@@ -428,20 +447,22 @@
                     </div>
 
                     <!-- Mobile Paragraph -->
-                    <div class="xl:hidden">
-                        <div class="text-reveal--wrapper">
-                            <h3 class="mt-8 mb-14 text-gold text-4xl xl:text-6xl leading-11 text-center font-heading font-normal px-4 xl:px-10">
+                    <div class="xl:hidden mt-8 mb-14">
+                        <div class="text-reveal--wrapper developments-text-line">
+                            <h3 class="text-gold text-4xl xl:text-6xl leading-11 text-center font-heading font-normal px-4 xl:px-10">
                                 Embracing the highest standards of design, execution, sustainability and professionalism, We create spaces that enhance our ecosystem.
                             </h3>
                         </div>
                     </div>
                     
-                    <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center mb-20 xl:mb-16">
-                        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
-                        </svg>
-                        <span class="text-xs font-medium uppercase">View Our Developments</span>
-                    </a>
+                    <div class="fade-up">
+                        <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center mb-20 xl:mb-16">
+                            <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
+                            </svg>
+                            <span class="text-xs font-medium uppercase">View Our Developments</span>
+                        </a>
+                    </div>
                     <div class="line-divider"></div>
                 </div>
             </div>
@@ -451,8 +472,10 @@
         <!-- Section 4: Next Developments -->
         <section class="next-developments py-20 bg-white">
             <div class="container">
-                <div class="section-subheader uppercase text-green mb-3">
-                    OUR DEVELOPMENTS
+                <div class="text-reveal--wrapper">
+                    <div class="section-subheader uppercase text-green mb-3">
+                        OUR DEVELOPMENTS
+                    </div>
                 </div>
                 <div class="text-reveal--wrapper">
                     <h2 class="text-40px xl:text-7xl font-normal mb-6 xl:mb-8">
@@ -460,9 +483,11 @@
                     </h2>
                 </div>
                 <div class="flex items-center justify-between">
-                    <p class="mb-16">
-                        Designs in progress, destined to become <br /> tomorrow's most coveted addresses
-                    </p>
+                    <div class="text-reveal--wrapper developments-text-line-paragraph">
+                        <p class="mb-16">
+                            Designs in progress, destined to become <br /> tomorrow's most coveted addresses
+                        </p>
+                    </div>
 
                     <!-- Slick Arrows: Desktop -->
                     <div class="slick-arrows flex items-center justify-end gap-6 mb-16 hidden xl:flex">
@@ -537,15 +562,19 @@
         <!-- Section 5: Our Vision -->
         <section class="our-vision py-20 xl:py-50 bg-green-dark text-white">
             <div class="container">
-                <div class="section-subheader uppercase text-white mb-5">
-                    OUR VISION
-                </div>
                 <div class="text-reveal--wrapper">
-                    <h2 class="text-40px xl:text-7xl font-normal mb-18 text-white xl:pr-24">
-                        Together we step outside the boundaries <br />
-                        of yesterday and set new standards for <br />
-                        our shared tomorrow.
-                    </h2>
+                    <div class="section-subheader uppercase text-white mb-5">
+                        OUR VISION
+                    </div>
+                </div>
+                <div class="mb-18 xl:pr-24">
+                    <div class="text-reveal--wrapper">
+                        <h2 class="text-40px xl:text-7xl font-normal text-white ">
+                            Together we step outside the boundaries <br />
+                            of yesterday and set new standards for <br />
+                            our shared tomorrow.
+                        </h2>
+                    </div>
                 </div>
 
                 <div class="flex flex-col xl:flex-row items-start xl:items-end justify-between gap-12 mb-30">
@@ -558,15 +587,20 @@
                         </p>
                     </div>
                     <div class="flex-1" style="max-width: 400px;">
-                        <p class="text-white mb-18 opacity-70">
-                            Anchored in integrity, transparency, and innovation, our purpose and vision guide every development toward timeless excellence.
-                        </p>
-                        <a href="#" class="btn-secondary bg-white w-fit text-green uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
-                            <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.7332" cy="3.47538" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
-                            </svg>
-                            <span class="text-xs font-medium uppercase">Know our vision</span>
-                        </a>
+                        <div class="text-reveal--paragraph">
+                            <p class="text-white mb-18 opacity-70">
+                                Anchored in integrity, transparency, and innovation, our purpose and vision guide every development toward timeless excellence.
+                            </p>
+                        </div>
+
+                        <div class="fade-up">
+                            <a href="#" class="btn-secondary bg-white w-fit text-green uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                                <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.7332" cy="3.47538" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
+                                </svg>
+                                <span class="text-xs font-medium uppercase">Know our vision</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -579,8 +613,10 @@
         <!-- Section 6: Our Services -->
         <section class="our-services pt-20 xl:pt-50 pb-20 bg-white">
             <div class="container">
-                <div class="section-subheader uppercase text-green mb-5 text-center">
-                    OUR SERVICES
+                <div class="text-reveal--wrapper">
+                    <div class="section-subheader uppercase text-green mb-5 text-center">
+                        OUR SERVICES
+                    </div>
                 </div>
                 <div class="text-reveal--wrapper">
                     <h2 class="text-40px xl:text-7xl font-normal mb-20 xl:mb-30 text-green text-center">
@@ -662,16 +698,20 @@
                     </h2>
                 </div>
                 <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-12 xl:gap-20 mb-20">
-                    <p class="">
-                        MAIA’s recent features, exclusive interviews, and industry <br />
-                        insights shaping tomorrow’s real estate narrative.
-                    </p>
-                    <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
-                        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
-                        </svg>
-                        <span class="text-xs font-medium uppercase">Explore Now</span>
-                    </a>
+                    <div class="text-reveal--wrapper">
+                        <p class="">
+                            MAIA’s recent features, exclusive interviews, and industry <br />
+                            insights shaping tomorrow’s real estate narrative.
+                        </p>
+                    </div>
+                    <div class="fade-up">
+                        <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                            <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
+                            </svg>
+                            <span class="text-xs font-medium uppercase">Explore Now</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <!-- News Article Slider -->
@@ -832,11 +872,12 @@
                 </div>
             </div>
         </section>
+    </div>
 
 
-
-        <!-- Footer -->
-        <footer class="footer pt-12 bg-green-footer">
+    <!-- Footer -->
+    <div class="sticky-section">
+        <footer class="footer sticky-content pt-12 bg-green-footer">
             <div class="footer-content py-8 xl:py-50 relative">
                 <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
                     <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">

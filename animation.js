@@ -9,6 +9,7 @@ window.addEventListener('load', function() {
             console.log('ScrollTrigger found')
             gsap.registerPlugin(ScrollTrigger);
             
+            
             // Generic clip-path reveal from top to bottom with scale contained within mask
             // Target ALL image reveal wrappers
             gsap.utils.toArray(".image-reveal--wrapper").forEach(wrapper => {
@@ -198,6 +199,86 @@ window.addEventListener('load', function() {
                 }
             });
             
+            // Simple Fade Up Animation for any element
+            gsap.utils.toArray(".fade-up").forEach(element => {
+                // Set initial state
+                gsap.set(element, {
+                    opacity: 0,
+                    y: 50,
+                    willChange: "transform, opacity"
+                });
+                
+                // Animate on scroll
+                gsap.to(element, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.9,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 90%",
+                        toggleActions: "play none none reverse",
+                        once: true
+                    }
+                });
+            });
+
+             // Simple Fade In Animation for any element
+            gsap.utils.toArray(".fade-in").forEach(element => {
+                // Get custom delay from data attribute (default: 0)
+                const delay = parseFloat(element.dataset.delay) || 0;
+                
+                // Set initial state
+                gsap.set(element, {
+                    opacity: 0,
+                    willChange: "opacity"
+                });
+                
+                // Animate on scroll
+                gsap.to(element, {
+                    opacity: 1,
+                    duration: 0.8,
+                    delay: delay,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 90%",
+                        toggleActions: "play none none reverse",
+                        once: true
+                    }
+                });
+            });
+            
+
+            // General Image Parallax Animation
+            gsap.utils.toArray(".parallax-image").forEach(wrapper => {
+                // Find the image inside the wrapper
+                const image = wrapper.querySelector('img') || wrapper;
+                
+                // Pre-set will-change for better performance
+                gsap.set(image, { willChange: "transform" });
+                
+                // Create parallax effect
+                ScrollTrigger.create({
+                    trigger: wrapper,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: true,
+                    onUpdate: (self) => {
+                        // Calculate parallax movement
+                        const progress = self.progress;
+                        const parallaxDistance = 150; // Adjust this for more/less movement
+                        const yOffset = progress * parallaxDistance;
+                        
+                        // Apply parallax movement to the image
+                        gsap.set(image, { y: yOffset });
+                    }
+                });
+            });
+
+            
+
+            
 
 
 
@@ -214,61 +295,135 @@ window.addEventListener('load', function() {
                     ease: "power1.out",
                     delay: 0.05 // Almost no delay
                 });
+
+                // Header Hide/Show on Scroll  ---- use only if required
+                // let lastScrollY = window.scrollY;
+                // let isHeaderVisible = true;
+
+                // // Create ScrollTrigger for header animation
+                // ScrollTrigger.create({
+                //     trigger: "body",
+                //     start: "top top",
+                //     end: "bottom bottom",
+                //     onUpdate: (self) => {
+                //         const currentScrollY = window.scrollY;
+                //         const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+                        
+                //         // Only trigger if scroll direction changed and we're past the top
+                //         if (currentScrollY > 100) {
+                //             if (scrollDirection === 'down' && isHeaderVisible) {
+                //                 // Hide header by moving it up
+                //                 gsap.to(header, {
+                //                     y: '-100%',
+                //                     duration: 0.3,
+                //                     ease: "power2.out"
+                //                 });
+                //                 isHeaderVisible = false;
+                //             } else if (scrollDirection === 'up' && !isHeaderVisible) {
+                //                 // Show header by moving it back down
+                //                 gsap.to(header, {
+                //                     y: '0%',
+                //                     duration: 0.3,
+                //                     ease: "power2.out"
+                //                 });
+                //                 isHeaderVisible = true;
+                //             }
+                //         } else if (currentScrollY <= 100 && !isHeaderVisible) {
+                //             // Always show header when near the top
+                //             gsap.to(header, {
+                //                 y: '0%',
+                //                 duration: 0.3,
+                //                 ease: "power2.out"
+                //             });
+                //             isHeaderVisible = true;
+                //         }
+                        
+                //         lastScrollY = currentScrollY;
+                //     }
+                // });
             }
 
             // Hero Banner Fade In and Parallax Animation
             const heroBanner = document.querySelector('.hero-banner-animation');
             const heroImage = document.querySelector('.hero-banner-image-animation');
             
-            if (heroBanner && heroImage) {
+            // Setup hero banner fade and text animation
+            if (heroBanner) {
                 // Wait for image to load before setting up animation
-                if (heroImage.complete) {
+                if (heroImage && heroImage.complete) {
                     setupHeroAnimations();
-                } else {
+                } else if (heroImage) {
                     heroImage.addEventListener('load', setupHeroAnimations);
+                } else {
+                    // If no image, just setup banner and text
+                    setupHeroBannerFade();
                 }
-                
-                function setupHeroAnimations() {
-                    // Fade in the entire hero banner
-                    gsap.to(heroBanner, {
+            }
+            
+            // Setup parallax animation (independent of banner)
+            if (heroImage) {
+                if (heroImage.complete) {
+                    setupParallaxAnimation();
+                } else {
+                    heroImage.addEventListener('load', setupParallaxAnimation);
+                }
+            }
+            
+            // Define functions within the proper scope
+            function setupHeroBannerFade() {
+                // Fade in the entire hero banner
+                gsap.to(heroBanner, {
+                    opacity: 1,
+                    duration: 0.5,
+                    ease: "power2.out",
+                    delay: 0.1, // Same delay as header
+                    onComplete: () => {
+                        // After hero banner fades in, start text animation
+                        setupTextAnimation();
+                    }
+                });
+            }
+            
+            function setupTextAnimation() {
+                // Reveal the heading text lines
+                const heroLines = heroBanner.querySelectorAll('.line');
+                if (heroLines.length > 0) {
+                    gsap.to(heroLines, {
                         opacity: 1,
-                        duration: 0.5,
+                        y: 0,
+                        duration: 0.8,
                         ease: "power2.out",
-                        delay: 0.1, // Same delay as header
-                        onComplete: () => {
-                            // After hero banner fades in, reveal the heading text lines
-                            const heroLines = heroBanner.querySelectorAll('.line');
-                            if (heroLines.length > 0) {
-                                gsap.to(heroLines, {
-                                    opacity: 1,
-                                    y: 0,
-                                    duration: 0.8,
-                                    ease: "power2.out",
-                                    stagger: 0.3 // Stagger each line by 0.2 seconds
-                                });
-                            }
-                        }
-                    });
-                    
-                    // Create parallax effect
-                    ScrollTrigger.create({
-                        trigger: '.hero-image-wrapper',
-                        start: 'top bottom',
-                        end: 'bottom top',
-                        scrub: true,
-                        onUpdate: (self) => {
-                            // Calculate parallax movement
-                            const progress = self.progress;
-                            const parallaxDistance = 150; // Adjust this for more/less movement
-                            const yOffset = progress * parallaxDistance;
-                            
-                            // Apply parallax movement
-                            gsap.set(heroImage, { y: yOffset });
-                        }
+                        stagger: 0.3
                     });
                 }
             }
+            
+            function setupParallaxAnimation() {
+                // Create parallax effect
+                ScrollTrigger.create({
+                    trigger: '.hero-image-wrapper',
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: true,
+                    onUpdate: (self) => {
+                        // Calculate parallax movement
+                        const progress = self.progress;
+                        const parallaxDistance = 250; // Adjust this for more/less movement
+                        const yOffset = progress * parallaxDistance;
+                        
+                        // Apply parallax movement
+                        gsap.set(heroImage, { y: yOffset });
+                    }
+                });
+            }
+            
+            function setupHeroAnimations() {
+                setupHeroBannerFade();
+                setupParallaxAnimation();
+            }
 
+
+            
             // Create text animation structure immediately (before any other animations)
             const developmentTexts = gsap.utils.toArray('.development-project-item h4, .development-project-item span');
             
@@ -566,7 +721,6 @@ window.addEventListener('load', function() {
             // ScrollTrigger.refresh();
 
 
-
             
 
 
@@ -574,6 +728,7 @@ window.addEventListener('load', function() {
             
 
 
+           
 
             
 
