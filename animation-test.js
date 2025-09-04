@@ -487,246 +487,456 @@ window.addEventListener('load', function() {
 
 
 
-            // Select wrapper and sections
 
 
 
-            const wrapper = document.querySelector(".animation-test-section--wrapper");
-            const sections = gsap.utils.toArray(".animation-test-section");
-            const outerWrappers = gsap.utils.toArray(".outer");
-            const innerWrappers = gsap.utils.toArray(".inner");
-            let currentIndex = 0;
-            let animating = false;
-            let observerInstance = null;
-            let animationActive = false;
-            
-            // Initially hide all sections except the first
-            gsap.set(sections, { 
-                autoAlpha: 0, 
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100vh"
-            });
-            gsap.set(sections[0], { autoAlpha: 1 });
-            
-            // Set up wrapper initial positions like the example
-            gsap.set(outerWrappers, { yPercent: 100 });
-            gsap.set(innerWrappers, { yPercent: -100 });
-            
-            // Set section 1 wrappers to be in position (visible)
-            gsap.set([outerWrappers[0], innerWrappers[0]], { yPercent: 0 });
-            
-            // ScrollTrigger pins the wrapper when section 1 reaches top + 88px
-            ScrollTrigger.create({
-              trigger: sections[0],
-              start: "top top+=88px",
-              end: "+=1000",
-              pin: wrapper,
-              pinSpacing: true,
-              onEnter: () => {
-                console.log("Section 1 pinned - starting animation control");
-                animationActive = true;
-                activateScrollControl();
-              },
-              onEnterBack: () => {
-                console.log("Section 1 pinned back - reactivating animation control");
-                animationActive = true;
-                activateScrollControl();
-              },
-              onLeave: () => {
-                console.log("Section 1 unpinned - ending animation control");
-                animationActive = false;
-                deactivateScrollControl();
-              },
-              onLeaveBack: () => {
-                console.log("Section 1 unpinned back - ending animation control");
-                animationActive = false;
-                deactivateScrollControl();
-              }
-            });
-            
-            function activateScrollControl() {
-              if (observerInstance) return;
-              console.log("Activating scroll control");
+
+
+
+
+            //Pinner observer and scrolling
+
+                        // Swipe Section Animation (Lenis Compatible)
+                        let swipeCurrentIndex = 0;
+                        let swipeAnimating = false;
+                        let swipeObserverInstance = null;
+                        let swipeAnimationActive = false;
+                        let swipePanels = gsap.utils.toArray(".swipe-section .panel");
+
+                        // Set z-index levels for the swipe panels
+                        gsap.set(swipePanels, { zIndex: i => swipePanels.length - i });
+
+                        // Set up swipe section to take full viewport
+                        gsap.set(".swipe-section", {
+                            position: "relative",
+                            width: "100vw",
+                            height: "100vh",
+                            overflow: "hidden"
+                        });
+
+                        // Initially hide all panels except the first
+                        gsap.set(swipePanels, { 
+                            autoAlpha: 0, 
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100vh",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center"
+                        });
+                        gsap.set(swipePanels[0], { autoAlpha: 1 });
+
+                        // ScrollTrigger pins the swipe section
+                        ScrollTrigger.create({
+                                        trigger: ".swipe-section",
+                        start: "top top+=88px",
+                                        end: "+=200",
+                                        pin: true,
+                        pinSpacing: true,
+                        onEnter: () => {
+                                            console.log("Swipe section pinned - starting animation control");
+                                            swipeAnimationActive = true;
+                                            activateSwipeScrollControl();
+                        },
+                        onEnterBack: () => {
+                                            console.log("Swipe section pinned back - reactivating animation control");
+                                            swipeAnimationActive = true;
+                                            activateSwipeScrollControl();
+                        },
+                        onLeave: () => {
+                                            console.log("Swipe section unpinned - ending animation control");
+                                            swipeAnimationActive = false;
+                                            deactivateSwipeScrollControl();
+                        },
+                        onLeaveBack: () => {
+                                            console.log("Swipe section unpinned back - ending animation control");
+                                            swipeAnimationActive = false;
+                                            deactivateSwipeScrollControl();
+                            }
+                        });
+
+                        function activateSwipeScrollControl() {
+                            if (swipeObserverInstance) return;
+                            console.log("Activating swipe scroll control");
               
-              // Disable scroll when animating is true
-              const preventScroll = (e) => {
-                if (animating) {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  return false;
-                }
-              };
+                        // Disable scroll when animating is true
+                                        const preventSwipeScroll = (e) => {
+                                            if (swipeAnimating) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            return false;
+                            }
+                        };
               
               // Add multiple event listeners to catch all scroll types
-              window.addEventListener('wheel', preventScroll, { passive: false, capture: true });
-              window.addEventListener('touchmove', preventScroll, { passive: false, capture: true });
-              window.addEventListener('scroll', preventScroll, { passive: false, capture: true });
-              window.addEventListener('touchstart', preventScroll, { passive: false, capture: true });
-              window.addEventListener('touchend', preventScroll, { passive: false, capture: true });
-              document.addEventListener('wheel', preventScroll, { passive: false, capture: true });
-              document.addEventListener('touchmove', preventScroll, { passive: false, capture: true });
-              document.addEventListener('touchstart', preventScroll, { passive: false, capture: true });
-              document.addEventListener('touchend', preventScroll, { passive: false, capture: true });
-            
-              observerInstance = Observer.create({
+                            window.addEventListener('wheel', preventSwipeScroll, { passive: false, capture: true });
+                            window.addEventListener('touchmove', preventSwipeScroll, { passive: false, capture: true });
+                            window.addEventListener('scroll', preventSwipeScroll, { passive: false, capture: true });
+                            window.addEventListener('touchstart', preventSwipeScroll, { passive: false, capture: true });
+                            window.addEventListener('touchend', preventSwipeScroll, { passive: false, capture: true });
+                            document.addEventListener('wheel', preventSwipeScroll, { passive: false, capture: true });
+                            document.addEventListener('touchmove', preventSwipeScroll, { passive: false, capture: true });
+                            document.addEventListener('touchstart', preventSwipeScroll, { passive: false, capture: true });
+                            document.addEventListener('touchend', preventSwipeScroll, { passive: false, capture: true });
+                            
+                            swipeObserverInstance = Observer.create({
                 target: window,
                 type: "wheel,touch,pointer",
                 wheelSpeed: -1,
-                tolerance: 15,
+                                tolerance: 15,
                 preventDefault: true,
-                ignoreMobile: false,
+                                ignoreMobile: false,
                 onUp: () => {
-                  if (!animating && animationActive) {
-                    console.log(`Current index: ${currentIndex}, attempting to go to ${currentIndex + 1}`);
-                    
-                    // Hardcoded logic for 4 sections
-                    if (currentIndex === 0) {
-                      // Section 1 → Section 2
-                      transitionSection(1);
-                    } else if (currentIndex === 1) {
-                      // Section 2 → Section 3
-                      transitionSection(2);
-                    } else if (currentIndex === 2) {
-                      // Section 3 → Section 4
-                      transitionSection(3);
-                    } else if (currentIndex === 3) {
-                      // Section 4 → Break out of animation
-                      console.log("Breaking out of animation at section 4");
-                      deactivateScrollControl();
-                    }
-                  } else if (animating) {
-                    console.log("Animation in progress - ignoring scroll");
+                                    if (!swipeAnimating && swipeAnimationActive) {
+                                        console.log(`Swipe current index: ${swipeCurrentIndex}, attempting to go to ${swipeCurrentIndex + 1}`);
+                                        
+                                        if (swipeCurrentIndex < swipePanels.length - 1) {
+                                            transitionSwipePanel(swipeCurrentIndex + 1);
+                                        } else {
+                                            console.log("Reached last swipe panel - deactivating");
+                                            deactivateSwipeScrollControl();
+                                        }
+                                    } else if (swipeAnimating) {
+                                        console.log("Swipe animation in progress - ignoring scroll");
                   }
                 },
                 onDown: () => {
-                  if (!animating && animationActive) {
-                    console.log(`Current index: ${currentIndex}, attempting to go to ${currentIndex - 1}`);
-                    
-                    // Hardcoded logic for reverse
-                    if (currentIndex === 1) {
-                      // Section 2 → Section 1
-                      transitionSection(0);
-                    } else if (currentIndex === 2) {
-                      // Section 3 → Section 2
-                      transitionSection(1);
-                    } else if (currentIndex === 3) {
-                      // Section 4 → Section 3
-                      transitionSection(2);
-                    }
-                  } else if (animating) {
-                    console.log("Animation in progress - ignoring scroll");
+                                    if (!swipeAnimating && swipeAnimationActive) {
+                                        console.log(`Swipe current index: ${swipeCurrentIndex}, attempting to go to ${swipeCurrentIndex - 1}`);
+                                        
+                                        if (swipeCurrentIndex > 0) {
+                                            transitionSwipePanel(swipeCurrentIndex - 1);
+                                        }
+                                    } else if (swipeAnimating) {
+                                        console.log("Swipe animation in progress - ignoring scroll");
                   }
                 },
               });
             }
             
-            // Add a separate Observer to detect when scrolling back up from outside
-            Observer.create({
-              target: window,
-              type: "wheel,touch,pointer",
-              wheelSpeed: -1,
-              tolerance: 15,
-              preventDefault: false, // Don't prevent default for this one
-              ignoreMobile: false,
-              onDown: () => {
-                // If we're not in animation mode but scrolling up, check if we should reactivate
-                if (!animationActive && !observerInstance) {
-                  const scrollY = window.scrollY;
-                  const section1Top = sections[0].offsetTop;
-                  
-                  // If we're scrolling up and near section 1, reactivate
-                  if (scrollY < section1Top + 200) {
-                    console.log("Scrolling back up near section 1 - reactivating animation");
-                    animationActive = true;
-                    activateScrollControl();
-                  }
-                }
-              }
-            });
-            
-            function deactivateScrollControl() {
-              if (!observerInstance) return;
-              console.log("Deactivating scroll control");
-              observerInstance.kill();
-              observerInstance = null;
+                        function deactivateSwipeScrollControl() {
+                            if (!swipeObserverInstance) return;
+                            console.log("Deactivating swipe scroll control");
+                            swipeObserverInstance.kill();
+                            swipeObserverInstance = null;
               
               // Remove scroll prevention
-              const preventScroll = (e) => {
-                if (animating) {
+                            const preventSwipeScroll = (e) => {
+                                if (swipeAnimating) {
                   e.preventDefault();
                   e.stopPropagation();
                   return false;
                 }
               };
               
-              window.removeEventListener('wheel', preventScroll, { capture: true });
-              window.removeEventListener('touchmove', preventScroll, { capture: true });
-              window.removeEventListener('scroll', preventScroll, { capture: true });
-              window.removeEventListener('touchstart', preventScroll, { capture: true });
-              window.removeEventListener('touchend', preventScroll, { capture: true });
-              document.removeEventListener('wheel', preventScroll, { capture: true });
-              document.removeEventListener('touchmove', preventScroll, { capture: true });
-              document.removeEventListener('touchstart', preventScroll, { capture: true });
-              document.removeEventListener('touchend', preventScroll, { capture: true });
-            }
-            
-            function transitionSection(newIndex) {
-              if (animating || newIndex === currentIndex) return;
-              animating = true;
-              console.log(`Transitioning from section ${currentIndex} to section ${newIndex}`);
-            
-              const prevSection = sections[currentIndex];
-              const nextSection = sections[newIndex];
-              const direction = newIndex > currentIndex ? 1 : -1;
-              
-              // Position the new section absolutely to take full viewport
-              gsap.set(nextSection, { 
+                            window.removeEventListener('wheel', preventSwipeScroll, { capture: true });
+                            window.removeEventListener('touchmove', preventSwipeScroll, { capture: true });
+                            window.removeEventListener('scroll', preventSwipeScroll, { capture: true });
+                            window.removeEventListener('touchstart', preventSwipeScroll, { capture: true });
+                            window.removeEventListener('touchend', preventSwipeScroll, { capture: true });
+                            document.removeEventListener('wheel', preventSwipeScroll, { capture: true });
+                            document.removeEventListener('touchmove', preventSwipeScroll, { capture: true });
+                            document.removeEventListener('touchstart', preventSwipeScroll, { capture: true });
+                            document.removeEventListener('touchend', preventSwipeScroll, { capture: true });
+                        }
+
+                        function transitionSwipePanel(newIndex) {
+                            if (swipeAnimating || newIndex === swipeCurrentIndex) return;
+                            swipeAnimating = true;
+                            console.log(`Transitioning swipe from panel ${swipeCurrentIndex} to panel ${newIndex}`);
+                            
+                            const prevPanel = swipePanels[swipeCurrentIndex];
+                            const nextPanel = swipePanels[newIndex];
+                            
+                            // Position the new panel absolutely
+                            gsap.set(nextPanel, { 
                 autoAlpha: 0, 
                 position: "absolute",
                 top: 0,
                 left: 0,
                 width: "100%",
                 height: "100vh",
-                zIndex: 1 
+                                zIndex: swipePanels.length - newIndex
               });
               
               // Create timeline for coordinated animations
               const tl = gsap.timeline({
-                defaults: { duration: 1.2, ease: "power1.inOut" },
+                                defaults: { duration: 0.75, ease: "power2.out" },
                 onComplete: () => {
-                  currentIndex = newIndex;
-                  animating = false;
-                  console.log(`Completed transition to section ${newIndex}`);
-                }
-              });
-              
-              // Show the next section
-              tl.to(nextSection, { autoAlpha: 1 }, 0);
-              
-              // Animate the wrappers for the next section
-              tl.fromTo([outerWrappers[newIndex], innerWrappers[newIndex]], 
-                { 
-                  yPercent: i => i ? -100 * direction : 100 * direction
-                }, 
-                { 
-                  yPercent: 0 
-                }, 0);
-              
-              // Animate the image for the next section (like the reference)
-              const nextImage = nextSection.querySelector('.bg');
-              if (nextImage) {
-                tl.fromTo(nextImage, 
-                  { yPercent: 15 * direction }, 
-                  { yPercent: 0 }, 0);
-              }
-              
-              // Hide the previous section
-              tl.to(prevSection, { autoAlpha: 0 }, 0);
-            }
+                                    swipeCurrentIndex = newIndex;
+                                    swipeAnimating = false;
+                                    console.log(`Completed swipe transition to panel ${newIndex}`);
+                                }
+                            });
+                            
+                            // Show the next panel
+                            tl.to(nextPanel, { autoAlpha: 1 }, 0);
+                            
+                            // Hide the previous panel
+                            tl.to(prevPanel, { autoAlpha: 0 }, 0);
+                        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // Select wrapper and sections
+            // const wrapper = document.querySelector(".animation-test-section--wrapper");
+            // const sections = gsap.utils.toArray(".animation-test-section");
+            // const outerWrappers = gsap.utils.toArray(".outer");
+            // const innerWrappers = gsap.utils.toArray(".inner");
+            // let currentIndex = 0;
+            // let animating = false;
+            // let observerInstance = null;
+            // let animationActive = false;
             
+            // // Initially hide all sections except the first
+            // gsap.set(sections, { 
+            //     autoAlpha: 0, 
+            //     position: "absolute",
+            //     top: 0,
+            //     left: 0,
+            //     width: "100%",
+            //     height: "100vh"
+            // });
+            // gsap.set(sections[0], { autoAlpha: 1 });
+            
+            // // Set up wrapper initial positions like the example
+            // gsap.set(outerWrappers, { yPercent: 100 });
+            // gsap.set(innerWrappers, { yPercent: -100 });
+            
+            // // Set section 1 wrappers to be in position (visible)
+            // gsap.set([outerWrappers[0], innerWrappers[0]], { yPercent: 0 });
+            
+            // // ScrollTrigger pins the wrapper when section 1 reaches top + 88px
+            // ScrollTrigger.create({
+            //   trigger: sections[0],
+            //   start: "top top+=88px",
+            //   end: "+=1000",
+            //   pin: wrapper,
+            //   pinSpacing: true,
+            //   onEnter: () => {
+            //     console.log("Section 1 pinned - starting animation control");
+            //     animationActive = true;
+            //     activateScrollControl();
+            //   },
+            //   onEnterBack: () => {
+            //     console.log("Section 1 pinned back - reactivating animation control");
+            //     animationActive = true;
+            //     activateScrollControl();
+            //   },
+            //   onLeave: () => {
+            //     console.log("Section 1 unpinned - ending animation control");
+            //     animationActive = false;
+            //     deactivateScrollControl();
+            //   },
+            //   onLeaveBack: () => {
+            //     console.log("Section 1 unpinned back - ending animation control");
+            //     animationActive = false;
+            //     deactivateScrollControl();
+            //   }
+            // });
+            
+            // function activateScrollControl() {
+            //   if (observerInstance) return;
+            //   console.log("Activating scroll control");
+              
+            //   // Disable scroll when animating is true
+            //   const preventScroll = (e) => {
+            //     if (animating) {
+            //       e.preventDefault();
+            //       e.stopPropagation();
+            //       return false;
+            //     }
+            //   };
+              
+            //   // Add multiple event listeners to catch all scroll types
+            //   window.addEventListener('wheel', preventScroll, { passive: false, capture: true });
+            //   window.addEventListener('touchmove', preventScroll, { passive: false, capture: true });
+            //   window.addEventListener('scroll', preventScroll, { passive: false, capture: true });
+            //   window.addEventListener('touchstart', preventScroll, { passive: false, capture: true });
+            //   window.addEventListener('touchend', preventScroll, { passive: false, capture: true });
+            //   document.addEventListener('wheel', preventScroll, { passive: false, capture: true });
+            //   document.addEventListener('touchmove', preventScroll, { passive: false, capture: true });
+            //   document.addEventListener('touchstart', preventScroll, { passive: false, capture: true });
+            //   document.addEventListener('touchend', preventScroll, { passive: false, capture: true });
+            
+            //   observerInstance = Observer.create({
+            //     target: window,
+            //     type: "wheel,touch,pointer",
+            //     wheelSpeed: -1,
+            //     tolerance: 15,
+            //     preventDefault: true,
+            //     ignoreMobile: false,
+            //     onUp: () => {
+            //       if (!animating && animationActive) {
+            //         console.log(`Current index: ${currentIndex}, attempting to go to ${currentIndex + 1}`);
+                    
+            //         // Hardcoded logic for 4 sections
+            //         if (currentIndex === 0) {
+            //           // Section 1 → Section 2
+            //           transitionSection(1);
+            //         } else if (currentIndex === 1) {
+            //           // Section 2 → Section 3
+            //           transitionSection(2);
+            //         } else if (currentIndex === 2) {
+            //           // Section 3 → Section 4
+            //           transitionSection(3);
+            //         } else if (currentIndex === 3) {
+            //           // Section 4 → Break out of animation
+            //           console.log("Breaking out of animation at section 4");
+            //           deactivateScrollControl();
+            //         }
+            //       } else if (animating) {
+            //         console.log("Animation in progress - ignoring scroll");
+            //       }
+            //     },
+            //     onDown: () => {
+            //       if (!animating && animationActive) {
+            //         console.log(`Current index: ${currentIndex}, attempting to go to ${currentIndex - 1}`);
+                    
+            //         // Hardcoded logic for reverse
+            //         if (currentIndex === 1) {
+            //           // Section 2 → Section 1
+            //           transitionSection(0);
+            //         } else if (currentIndex === 2) {
+            //           // Section 3 → Section 2
+            //           transitionSection(1);
+            //         } else if (currentIndex === 3) {
+            //           // Section 4 → Section 3
+            //           transitionSection(2);
+            //         }
+            //       } else if (animating) {
+            //         console.log("Animation in progress - ignoring scroll");
+            //       }
+            //     },
+            //   });
+            // }
+            
+            // // Add a separate Observer to detect when scrolling back up from outside
+            // Observer.create({
+            //   target: window,
+            //   type: "wheel,touch,pointer",
+            //   wheelSpeed: -1,
+            //   tolerance: 15,
+            //   preventDefault: false, // Don't prevent default for this one
+            //   ignoreMobile: false,
+            //   onDown: () => {
+            //     // If we're not in animation mode but scrolling up, check if we should reactivate
+            //     if (!animationActive && !observerInstance) {
+            //       const scrollY = window.scrollY;
+            //       const section1Top = sections[0].offsetTop;
+                  
+            //       // If we're scrolling up and near section 1, reactivate
+            //       if (scrollY < section1Top + 200) {
+            //         console.log("Scrolling back up near section 1 - reactivating animation");
+            //         animationActive = true;
+            //         activateScrollControl();
+            //       }
+            //     }
+            //   }
+            // });
+            
+            // function deactivateScrollControl() {
+            //   if (!observerInstance) return;
+            //   console.log("Deactivating scroll control");
+            //   observerInstance.kill();
+            //   observerInstance = null;
+              
+            //   // Remove scroll prevention
+            //   const preventScroll = (e) => {
+            //     if (animating) {
+            //       e.preventDefault();
+            //       e.stopPropagation();
+            //       return false;
+            //     }
+            //   };
+              
+            //   window.removeEventListener('wheel', preventScroll, { capture: true });
+            //   window.removeEventListener('touchmove', preventScroll, { capture: true });
+            //   window.removeEventListener('scroll', preventScroll, { capture: true });
+            //   window.removeEventListener('touchstart', preventScroll, { capture: true });
+            //   window.removeEventListener('touchend', preventScroll, { capture: true });
+            //   document.removeEventListener('wheel', preventScroll, { capture: true });
+            //   document.removeEventListener('touchmove', preventScroll, { capture: true });
+            //   document.removeEventListener('touchstart', preventScroll, { capture: true });
+            //   document.removeEventListener('touchend', preventScroll, { capture: true });
+            // }
+            
+            // function transitionSection(newIndex) {
+            //   if (animating || newIndex === currentIndex) return;
+            //   animating = true;
+            //   console.log(`Transitioning from section ${currentIndex} to section ${newIndex}`);
+            
+            //   const prevSection = sections[currentIndex];
+            //   const nextSection = sections[newIndex];
+            //   const direction = newIndex > currentIndex ? 1 : -1;
+              
+            //   // Position the new section absolutely to take full viewport
+            //   gsap.set(nextSection, { 
+            //     autoAlpha: 0, 
+            //     position: "absolute",
+            //     top: 0,
+            //     left: 0,
+            //     width: "100%",
+            //     height: "100vh",
+            //     zIndex: 1 
+            //   });
+              
+            //   // Create timeline for coordinated animations
+            //   const tl = gsap.timeline({
+            //     defaults: { duration: 1.2, ease: "power1.inOut" },
+            //     onComplete: () => {
+            //       currentIndex = newIndex;
+            //       animating = false;
+            //       console.log(`Completed transition to section ${newIndex}`);
+            //     }
+            //   });
+              
+            //   // Show the next section
+            //   tl.to(nextSection, { autoAlpha: 1 }, 0);
+              
+            //   // Animate the wrappers for the next section
+            //   tl.fromTo([outerWrappers[newIndex], innerWrappers[newIndex]], 
+            //     { 
+            //       yPercent: i => i ? -100 * direction : 100 * direction
+            //     }, 
+            //     { 
+            //       yPercent: 0 
+            //     }, 0);
+              
+            //   // Animate the image for the next section (like the reference)
+            //   const nextImage = nextSection.querySelector('.bg');
+            //   if (nextImage) {
+            //     tl.fromTo(nextImage, 
+            //       { yPercent: 15 * direction }, 
+            //       { yPercent: 0 }, 0);
+            //   }
+              
+            //   // Hide the previous section
+            //   tl.to(prevSection, { autoAlpha: 0 }, 0);
+            // }
+            
+
+
+
+
+
+
+
 
 
 
