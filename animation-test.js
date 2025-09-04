@@ -516,11 +516,11 @@ window.addEventListener('load', function() {
 
                         // Initially hide all panels except the first
                         gsap.set(swipePanels, { 
-                            autoAlpha: 0, 
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            width: "100%",
+                autoAlpha: 0, 
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
                             height: "100vh",
                             display: "flex",
                             alignItems: "center",
@@ -529,46 +529,77 @@ window.addEventListener('load', function() {
                         gsap.set(swipePanels[0], { autoAlpha: 1 });
 
                         // ScrollTrigger pins the swipe section
-                        ScrollTrigger.create({
+            ScrollTrigger.create({
                                         trigger: ".swipe-section",
-                        start: "top top+=88px",
+              start: "top top+=88px",
                                         end: "+=200",
                                         pin: true,
-                        pinSpacing: true,
-                        onEnter: () => {
+              pinSpacing: true,
+              onEnter: () => {
                                             console.log("Swipe section pinned - starting animation control");
                                             swipeAnimationActive = true;
                                             activateSwipeScrollControl();
-                        },
-                        onEnterBack: () => {
+              },
+              onEnterBack: () => {
                                             console.log("Swipe section pinned back - reactivating animation control");
                                             swipeAnimationActive = true;
                                             activateSwipeScrollControl();
-                        },
-                        onLeave: () => {
+              },
+              onLeave: () => {
                                             console.log("Swipe section unpinned - ending animation control");
                                             swipeAnimationActive = false;
                                             deactivateSwipeScrollControl();
-                        },
-                        onLeaveBack: () => {
+              },
+              onLeaveBack: () => {
                                             console.log("Swipe section unpinned back - ending animation control");
                                             swipeAnimationActive = false;
                                             deactivateSwipeScrollControl();
                             }
                         });
 
+                        // Mobile-specific touch handling
+                        let touchStartY = 0;
+                        let touchEndY = 0;
+                        
+                        document.addEventListener('touchstart', (e) => {
+                            if (swipeAnimationActive) {
+                                touchStartY = e.touches[0].clientY;
+                            }
+                        }, { passive: true });
+                        
+                        document.addEventListener('touchend', (e) => {
+                            if (swipeAnimationActive && !swipeAnimating) {
+                                touchEndY = e.changedTouches[0].clientY;
+                                const touchDiff = touchStartY - touchEndY;
+                                
+                                if (Math.abs(touchDiff) > 50) { // Minimum swipe distance
+                                    if (touchDiff > 0) {
+                                        // Swipe up - next section
+                                        if (swipeCurrentIndex < swipePanels.length - 1) {
+                                            transitionSwipePanel(swipeCurrentIndex + 1);
+                                        }
+                                    } else {
+                                        // Swipe down - previous section
+                                        if (swipeCurrentIndex > 0) {
+                                            transitionSwipePanel(swipeCurrentIndex - 1);
+                                        }
+                                    }
+                                }
+                            }
+                        }, { passive: true });
+
                         function activateSwipeScrollControl() {
                             if (swipeObserverInstance) return;
                             console.log("Activating swipe scroll control");
               
-                        // Disable scroll when animating is true
+              // Disable scroll when animating is true
                                         const preventSwipeScroll = (e) => {
                                             if (swipeAnimating) {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            return false;
-                            }
-                        };
+                  e.preventDefault();
+                  e.stopPropagation();
+                  return false;
+                }
+              };
               
               // Add multiple event listeners to catch all scroll types
                             window.addEventListener('wheel', preventSwipeScroll, { passive: false, capture: true });
@@ -585,9 +616,10 @@ window.addEventListener('load', function() {
                 target: window,
                 type: "wheel,touch,pointer",
                 wheelSpeed: -1,
-                                tolerance: 15,
+                                tolerance: 10,
                 preventDefault: true,
                                 ignoreMobile: false,
+                                dragMinimum: 10,
                 onUp: () => {
                                     if (!swipeAnimating && swipeAnimationActive) {
                                         console.log(`Swipe current index: ${swipeCurrentIndex}, attempting to go to ${swipeCurrentIndex + 1}`);
