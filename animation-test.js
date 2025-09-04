@@ -564,15 +564,20 @@ window.addEventListener('load', function() {
               window.addEventListener('wheel', preventScroll, { passive: false, capture: true });
               window.addEventListener('touchmove', preventScroll, { passive: false, capture: true });
               window.addEventListener('scroll', preventScroll, { passive: false, capture: true });
+              window.addEventListener('touchstart', preventScroll, { passive: false, capture: true });
+              window.addEventListener('touchend', preventScroll, { passive: false, capture: true });
               document.addEventListener('wheel', preventScroll, { passive: false, capture: true });
               document.addEventListener('touchmove', preventScroll, { passive: false, capture: true });
+              document.addEventListener('touchstart', preventScroll, { passive: false, capture: true });
+              document.addEventListener('touchend', preventScroll, { passive: false, capture: true });
             
               observerInstance = Observer.create({
                 target: window,
                 type: "wheel,touch,pointer",
                 wheelSpeed: -1,
-                tolerance: 25,
+                tolerance: 15,
                 preventDefault: true,
+                ignoreMobile: false,
                 onUp: () => {
                   if (!animating && animationActive) {
                     console.log(`Current index: ${currentIndex}, attempting to go to ${currentIndex + 1}`);
@@ -623,8 +628,9 @@ window.addEventListener('load', function() {
               target: window,
               type: "wheel,touch,pointer",
               wheelSpeed: -1,
-              tolerance: 25,
+              tolerance: 15,
               preventDefault: false, // Don't prevent default for this one
+              ignoreMobile: false,
               onDown: () => {
                 // If we're not in animation mode but scrolling up, check if we should reactivate
                 if (!animationActive && !observerInstance) {
@@ -659,8 +665,12 @@ window.addEventListener('load', function() {
               window.removeEventListener('wheel', preventScroll, { capture: true });
               window.removeEventListener('touchmove', preventScroll, { capture: true });
               window.removeEventListener('scroll', preventScroll, { capture: true });
+              window.removeEventListener('touchstart', preventScroll, { capture: true });
+              window.removeEventListener('touchend', preventScroll, { capture: true });
               document.removeEventListener('wheel', preventScroll, { capture: true });
               document.removeEventListener('touchmove', preventScroll, { capture: true });
+              document.removeEventListener('touchstart', preventScroll, { capture: true });
+              document.removeEventListener('touchend', preventScroll, { capture: true });
             }
             
             function transitionSection(newIndex) {
