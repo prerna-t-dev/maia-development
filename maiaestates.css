@@ -308,30 +308,32 @@ body.bespoke-services .header{
     width: 198px;
 }
 
-/* ======== Sticky Section Layout ======== */
-/* Sticky section styling */
-.sticky-section {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    pointer-events: none; /* Allow scrolling through it */
-}
 
-.sticky-section .footer {
-    pointer-events: auto; /* Re-enable interactions for footer content */
-}
+@media (min-width: 1024px) {
+    /* ======== Sticky Section Layout ======== */
+    /* Sticky section styling */
+    .sticky-section {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        pointer-events: none; /* Allow scrolling through it */
+    }
 
-/* Scroll section styling */
-.scroll-section {
-    position: relative;
-    z-index: 20;
-    background: inherit;
-    min-height: 100vh;
-    margin-bottom: 100vh; /* Create space for the sticky footer */
-}
+    .sticky-section .footer {
+        pointer-events: auto; /* Re-enable interactions for footer content */
+    }
 
+    /* Scroll section styling */
+    .scroll-section {
+        position: relative;
+        z-index: 20;
+        background: inherit;
+        min-height: 100vh;
+        margin-bottom: 100vh; /* Create space for the sticky footer */
+    }
+}
 
 
 
