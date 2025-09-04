@@ -63,8 +63,11 @@
     </script>
 
     <!-- GSAP for animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
     <script>
         // GSAP ScrollTrigger configuration
         gsap.ticker.lagSmoothing(0);
@@ -292,118 +295,151 @@
             </div>
 
 
-            <!-- Development Project List -->
-            <div class="development-project-list development-projects-wrapper mt-20">
-                <!-- 1. 27 Summit -->
-                <!-- <div class="development-item-wrapper overflow-hidden"> -->
-                    <div class="development-project-item mt-34_ xl:mt-0">
-                        <div class="development-project-item-image bg-white xl:bg-transparent relative">
-                            <div class="bg-white xl:bg-transparent xl:absolute top-20 left-20 pl-5 xl:pl-0 py-4">
-                                <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
-                                    27 Summit
-                                </h4>
-                                <p class="flex items-center gap-2">
-                                    <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                        <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                        <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-
-                                    <span class="text-green xl:text-white font-medium text-base">
-                                        Central Bangalore - Richmond Road
-                                    </span>
-                                </p>
-                            </div>
-                            <img src="images/2025/homepage/dev-project--1.png" alt="27 Summit">
-                        </div>
+            <div class="animation-test-section--wrapper mt-20">
+                <!-- <header class="animation-test-header">
+                    <div>Animated Sections</div>
+                    <div><a href="https://codepen.io/BrianCross/pen/PoWapLP">Original Inspiration</a></div>
+                </header> -->
+                <section class="animation-test-section first" data-section-index="0" data-release-after="false">
+                <div class="outer">
+                    <div class="inner">
+                    <div class="bg one">
+                        <h2 class="section-heading">1. Scroll down</h2>
                     </div>
-                <!-- </div> -->
-
-                <!-- 2. Casa Sia -->
-                <!-- <div class="development-item-wrapper overflow-hidden"> -->
-                    <div class="development-project-item mt-34_ xl:mt-0">
-                        <div class="development-project-item-image bg-white xl:bg-transparent relative">
-                            <div class="bg-white xl:bg-transparent xl:absolute top-20 left-20 pl-5 xl:pl-0 py-4">
-                                <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
-                                    Casa Sia
-                                </h4>
-                                <p class="flex items-center gap-2">
-                                    <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                        <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                        <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    <span class="text-green xl:text-white font-medium text-base">
-                                        Central Chennai - Parthasarathy Gardens
-                                    </span>
-                                </p>
-                            </div>
-                            <img src="images/2025/homepage/dev-project--2.png" alt="Casa Sia">
-                        </div>
                     </div>
-                <!-- </div> -->
+                </div>
 
-                <!-- 3. Pelican Gardens -->
-                <!-- <div class="development-item-wrapper overflow-hidden"> -->
-                    <div class="development-project-item mt-34_ xl:mt-0">
-                        <div class="development-project-item-image bg-white xl:bg-transparent relative">
-                            <div class="bg-white xl:bg-transparent xl:absolute top-20 left-20 pl-5 xl:pl-0 py-4">
-                                <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
-                                    Pelican Gardens
-                                </h4>
-                                <p class="flex items-center gap-2">
-                                    <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                        <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                        <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    <span class="text-green xl:text-white font-medium text-base">
-                                        North Bangalore - Jakkur Road
-                                    </span>
-                                </p>
-                            </div>
-                            <img src="images/2025/homepage/dev-project--3.png" alt="Pelican Gardens">
-                        </div>
+                </section>
+                <section class="animation-test-section second" data-section-index="1" data-release-after="false">
+                <div class="outer">
+                    <div class="inner">
+                    <div class="bg">
+                        <h2 class="section-heading">2. Animated with GSAP</h2>
                     </div>
-                <!-- </div> -->
-
-
-                <!-- 4. Pelican Grove -->
-                <!-- <div class="development-item-wrapper overflow-hidden"> -->
-                    <div class="development-project-item mt-34 xl:mt-0">
-                        <div class="development-project-item-image bg-white xl:bg-transparent relative">
-                            <div class="bg-white xl:bg-transparent xl:absolute top-20 left-20 pl-5 xl:pl-0 py-4">
-                                <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
-                                    Pelican Grove
-                                </h4>
-                                <p class="flex items-center gap-2">
-                                    <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                        <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                        <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    <span class="text-green xl:text-white font-medium text-base">
-                                        North Bangalore - Jakkur
-                                    </span>
-                                </p>
-                            </div>
-                            <img src="images/2025/homepage/dev-project--4.png" alt="Pelican Grove">
-                        </div>
                     </div>
-                <!-- </div> -->  
+                </div>
+                </section>
+                <section class="animation-test-section third" data-section-index="2" data-release-after="false">
+                <div class="outer">
+                    <div class="inner">
+                    <div class="bg">
+                        <h2 class="section-heading">3. GreenSock</h2>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                <section class="animation-test-section fourth" data-section-index="3" data-release-after="true">
+                <div class="outer">
+                    <div class="inner">
+                    <div class="bg">
+                        <h2 class="section-heading">4. Animation platform</h2>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                
+
+
+                <style>
+
+                    .animation-test-section--wrapper{
+                        position: relative;
+                        width: 100%;
+                        height: 100vh;
+                    }
+                    .animation-test-header {
+                        /* position: fixed; */
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 5%;
+                        width: 100%;
+                        z-index: 3;
+                        height: 7em;
+                        font-size: clamp(0.66rem, 2vw, 1rem);
+                        letter-spacing: 0.5em;
+                    }
+
+                    .animation-test-section {
+                        height: 100vh;
+                        width: 100%;
+                        top: 0;
+                        position: relative;
+                        /* position: fixed; */
+                        /* visibility: hidden; */
+                    }
+
+                    .animation-test-section .outer,
+                    .animation-test-section .inner {
+                        width: 100%;
+                        height: 100%;
+                        overflow-y: hidden;
+                    }
+
+                    .animation-test-section .bg {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        top: 0;
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    .animation-test-section.first .bg {
+                        background: pink;
+                        background-image: url('images/2025/homepage/dev-project--1.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+
+                    .animation-test-section.second .bg {
+                        background: blue;
+                        background-image: url('images/2025/homepage/dev-project--2.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+
+                    .animation-test-section.third .bg {
+                        background: green;
+                        background-image: url('images/2025/homepage/dev-project--3.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+
+                    .animation-test-section.fourth .bg {
+                        background: orange;
+                        background-image: url('images/2025/homepage/dev-project--4.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+
+                    .animation-test-section.fifth .bg {
+                        background: purple;
+                        /* background-position: 50% 45%; */
+                    }
+
+                    .animation-test-section h2{
+                        color: white !important;
+                    }
+
+                    .animation-test-section h2 * {
+                        will-change: transform;
+                        color: white ;
+                    }
+                </style>
             </div>
+
+            <!-- Development Project List -->
+           
+
+            
 
             <div class="bg-beige py-20">
                 <div class="container flex flex-col items-center">
@@ -873,172 +909,13 @@
     </div>
 
 
-    <!-- Footer -->
-    <div class="sticky-section">
-        <footer class="footer sticky-content pt-12 bg-green-footer">
-            <div class="footer-content py-8 xl:py-50 relative">
-                <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
-                    <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1138_411)">
-                        <g style="mix-blend-mode:exclusion">
-                        <path d="M309.166 259.911L65.8848 -0.261719V96.5583L285.334 259.911H309.166Z" fill="white" fill-opacity="0.03"/>
-                        </g>
-                        <g style="mix-blend-mode:exclusion">
-                        <path d="M309.168 259.911L65.8867 -0.261719V96.5583L285.336 259.911H309.168Z" fill="white" fill-opacity="0.03"/>
-                        </g>
-                        <g style="mix-blend-mode:exclusion">
-                        <path d="M-177.396 259.911L65.8848 -0.261719V96.5583L-153.565 259.911H-177.396Z" fill="white" fill-opacity="0.03"/>
-                        </g>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_1138_411">
-                        <rect width="309" height="260" fill="white"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
-                </div>
-                <div class="container grid grid-cols-1 xl:grid-cols-3 gap-20">
-                    <div class="footer-logo">
-                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
-                    </div>
-                    <div class="footer-links">
-                        <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                                Links
-                            </h3>
-                        </div>
-                        <div class="grid grid-cols-2 xl:gap-10">
-                            <ul class="text-white text-sm font-medium">
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        Our Story
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        Developments
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        Our Services
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="text-white text-sm font-medium">
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        MAIA Impact
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        In the News
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
-                                        Blogs
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="info-social">
-                        <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                                Info
-                            </h3>
-                        </div>
-                        <div class="">
-                            <p class="mb-4 text-sm text-white opacity-40" >
-                                Maia Estates, 34 (New No. 84), Ulsoor Road, <br>
-                                Yellappa Chetty Layout, Sivanchetti Gardens, <br>
-                                Bengaluru, Karnataka 560042
-                            </p>
-                            <div class="flex items-center gap-3">
-                                <a href="mailto:info@maia.com" class="footer-info-item text-white text-sm">
-                                    info@maia.com
-                                </a>
-                                <div class="text-white text-sm opacity-40">|</div>
-                                <a href="tel:+918041219231" class="footer-info-item text-white text-sm">
-                                    +91 80 4121 9231
-                                </a>
-                            </div>
-                        </div>
-
-
-                        <div class="mt-24">
-                            <div class="text-reveal--wrapper">
-                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                                    Social Icons
-                                </h3>
-                            </div>
-                            <ul class="text-white text-sm font-medium">
-                                <div class="grid grid-cols-2 gap-0">
-                                    <li class="mb-3">
-                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
-                                            Instagram
-                                            <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
-                                        Privacy Policy
-                                    </a>
-                                </div>
-                                
-                                <div class="grid grid-cols-2 gap-0">
-                                    <li class="mb-3">
-                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
-                                            LinkedIn
-                                            <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
-                                        Terms of Service
-                                    </a>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>  
-            </div>
-            <div class="footer-bottom py-8 pb-20 xl:pb-8">
-                <div class="container flex items-center justify-between">
-                    <p class="text-white text-sm text-center font-heading opacity-50">
-                        &copy; MAIA Estates LLP, 2025. All rights reserved.
-                    </p>
-                    <div class="flex items-center gap-20 hidden xl:flex">
-                        <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
-                            Privacy Policy
-                        </a>
-                        <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
-                            Terms of Service
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-
 
     <!-- Slick Slider JavaScript -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="sliders.js"></script>
     <!-- Animation JavaScript -->
-    <script src="animation.js"></script>
-    <script src="animation-2.js"></script>
+    <script src="animation-test.js"></script>
+    <!-- <script src="animation-2.js"></script> -->
 </body>
 </html>
