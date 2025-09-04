@@ -5,9 +5,12 @@ window.addEventListener('load', function() {
         console.log('gsap found')
         
         // Check if ScrollTrigger is available
-        if (typeof ScrollTrigger !== 'undefined') {
+        if (typeof ScrollTrigger !== 'undefined' && typeof Observer !== 'undefined' && typeof ScrollToPlugin !== 'undefined') {
             console.log('ScrollTrigger found')
-            gsap.registerPlugin(ScrollTrigger);
+            console.log(gsap.version);
+            gsap.registerPlugin(ScrollTrigger, Observer, ScrollToPlugin);
+
+            // console.log(gsap.ScrollTrigger.static);
             
             
             // Generic clip-path reveal from top to bottom with scale contained within mask
@@ -343,6 +346,7 @@ window.addEventListener('load', function() {
                 // });
             }
 
+
             // Hero Banner Fade In and Parallax Animation
             const heroBanner = document.querySelector('.hero-banner-animation');
             const heroImage = document.querySelector('.hero-banner-image-animation');
@@ -423,102 +427,495 @@ window.addEventListener('load', function() {
             }
 
 
+
+
+
+
             
+            // HOMEPAGE - PINNING - START
+
             // Create text animation structure immediately (before any other animations)
-            const developmentTexts = gsap.utils.toArray('.development-project-item h4, .development-project-item span');
+            // const developmentTexts = gsap.utils.toArray('.development-project-item h4, .development-project-item span');
             
-            developmentTexts.forEach((textElement, index) => {
-                // Create text-reveal animation structure immediately
-                const originalHTML = textElement.innerHTML;
-                const originalTextAlign = window.getComputedStyle(textElement).textAlign;
+            // developmentTexts.forEach((textElement, index) => {
+            //     // Create text-reveal animation structure immediately
+            //     const originalHTML = textElement.innerHTML;
+            //     const originalTextAlign = window.getComputedStyle(textElement).textAlign;
                 
-                // Clear original content and create the proper structure
-                textElement.innerHTML = '';
-                const lineWrapper = document.createElement('div');
-                lineWrapper.className = 'overflow-hidden lh-fix';
-                lineWrapper.style.cssText = `display: block; text-align: ${originalTextAlign}; position: relative;`;
+            //     // Clear original content and create the proper structure
+            //     textElement.innerHTML = '';
+            //     const lineWrapper = document.createElement('div');
+            //     lineWrapper.className = 'overflow-hidden lh-fix';
+            //     lineWrapper.style.cssText = `display: block; text-align: ${originalTextAlign}; position: relative;`;
                 
-                const lineSpan = document.createElement('div');
-                lineSpan.innerHTML = originalHTML;
-                lineSpan.style.cssText = `display: block; text-align: ${originalTextAlign}; position: relative;`;
+            //     const lineSpan = document.createElement('div');
+            //     lineSpan.innerHTML = originalHTML;
+            //     lineSpan.style.cssText = `display: block; text-align: ${originalTextAlign}; position: relative;`;
                 
-                lineWrapper.appendChild(lineSpan);
-                textElement.appendChild(lineWrapper);
+            //     lineWrapper.appendChild(lineSpan);
+            //     textElement.appendChild(lineWrapper);
                 
-                // Set initial state to hidden
-                gsap.set(lineSpan, { y: '100%', opacity: 0 });
+            //     // Set initial state to hidden
+            //     gsap.set(lineSpan, { y: '100%', opacity: 0 });
                 
-                // Create ScrollTrigger for text animation
-                ScrollTrigger.create({
-                    trigger: textElement,
-                    start: "top 90%",
-                    onEnter: () => {
-                        gsap.to(lineSpan, {
-                            y: '0%',
-                            opacity: 1,
-                            duration: 1,
-                            ease: "power4",
-                            delay: index * 0.1 // Small stagger between text elements
-                        });
-                    },
-                    onLeaveBack: () => {
-                        gsap.to(lineSpan, {
-                            y: '100%',
-                            opacity: 0,
-                            duration: 0.5,
-                            ease: "power2"
-                        });
-                    },
-                    toggleActions: "play none none reverse"
-                });
-            });
+            //     // Create ScrollTrigger for text animation
+            //     ScrollTrigger.create({
+            //         trigger: textElement,
+            //         start: "top 90%",
+            //         onEnter: () => {
+            //             gsap.to(lineSpan, {
+            //                 y: '0%',
+            //                 opacity: 1,
+            //                 duration: 1,
+            //                 ease: "power4",
+            //                 delay: index * 0.1 // Small stagger between text elements
+            //             });
+            //         },
+            //         onLeaveBack: () => {
+            //             gsap.to(lineSpan, {
+            //                 y: '100%',
+            //                 opacity: 0,
+            //                 duration: 0.5,
+            //                 ease: "power2"
+            //             });
+            //         },
+            //         toggleActions: "play none none reverse"
+            //     });
+            // });
 
             // Section Stacking Animation with Wrapper Pinning
-            const sections = gsap.utils.toArray('.development-project-item');
-            
-            // Pin the development project items directly
-            sections.forEach((section, index) => {
-                // Pin the section directly
-                ScrollTrigger.create({
-                    trigger: section,
-                    start: 'top 80px',
-                    end: 'bottom top',
-                    pin: index !== sections.length - 1, // Don't pin the last item
-                    pinSpacing: false,
-                    onEnter: () => {
-                        // Smoothly animate section to center of pinned wrapper
-                        gsap.to(section, {
-                            y: 0, // Center in wrapper
-                            duration: 0.8, // Back to shorter duration for smooth feel
-                            ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
-                        });
-                        
-                        // Move previous sections up smoothly
-                        for (let i = 0; i < index; i++) {
-                            gsap.to(sections[i], {
-                                y: -(index - i) * 50,
-                                duration: 0.8, // Back to shorter duration for smooth feel
-                                ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
-                            });
-                        }
-                        
 
-                    },
-                    onLeave: () => {
-                        // Reset positions when leaving last section
-                        if (index === sections.length - 1) {
-                            sections.forEach((sect, i) => {
-                                gsap.to(sect, {
-                                    y: 0,
-                                    duration: 0.8, // Back to shorter duration for smooth feel
-                                    ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
-                                });
-                            });
-                        }
-                    }
-                });
+
+
+            // Select wrapper and sections
+
+
+
+            const wrapper = document.querySelector(".animation-test-section--wrapper");
+            const sections = gsap.utils.toArray(".animation-test-section");
+            const outerWrappers = gsap.utils.toArray(".outer");
+            const innerWrappers = gsap.utils.toArray(".inner");
+            let currentIndex = 0;
+            let animating = false;
+            let observerInstance = null;
+            let animationActive = false;
+            
+            // Initially hide all sections except the first
+            gsap.set(sections, { 
+                autoAlpha: 0, 
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100vh"
+            });
+            gsap.set(sections[0], { autoAlpha: 1 });
+            
+            // Set up wrapper initial positions like the example
+            gsap.set(outerWrappers, { yPercent: 100 });
+            gsap.set(innerWrappers, { yPercent: -100 });
+            
+            // Set section 1 wrappers to be in position (visible)
+            gsap.set([outerWrappers[0], innerWrappers[0]], { yPercent: 0 });
+            
+            // ScrollTrigger pins the wrapper when section 1 reaches top + 88px
+            ScrollTrigger.create({
+              trigger: sections[0],
+              start: "top top+=88px",
+              end: "+=1000",
+              pin: wrapper,
+              pinSpacing: true,
+              onEnter: () => {
+                console.log("Section 1 pinned - starting animation control");
+                animationActive = true;
+                activateScrollControl();
+              },
+              onEnterBack: () => {
+                console.log("Section 1 pinned back - reactivating animation control");
+                animationActive = true;
+                activateScrollControl();
+              },
+              onLeave: () => {
+                console.log("Section 1 unpinned - ending animation control");
+                animationActive = false;
+                deactivateScrollControl();
+              },
+              onLeaveBack: () => {
+                console.log("Section 1 unpinned back - ending animation control");
+                animationActive = false;
+                deactivateScrollControl();
+              }
             });
             
+            function activateScrollControl() {
+              if (observerInstance) return;
+              console.log("Activating scroll control");
+              
+              // Disable scroll when animating is true
+              const preventScroll = (e) => {
+                if (animating) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  return false;
+                }
+              };
+              
+              // Add multiple event listeners to catch all scroll types
+              window.addEventListener('wheel', preventScroll, { passive: false, capture: true });
+              window.addEventListener('touchmove', preventScroll, { passive: false, capture: true });
+              window.addEventListener('scroll', preventScroll, { passive: false, capture: true });
+              document.addEventListener('wheel', preventScroll, { passive: false, capture: true });
+              document.addEventListener('touchmove', preventScroll, { passive: false, capture: true });
+            
+              observerInstance = Observer.create({
+                target: window,
+                type: "wheel,touch,pointer",
+                wheelSpeed: -1,
+                tolerance: 25,
+                preventDefault: true,
+                onUp: () => {
+                  if (!animating && animationActive) {
+                    console.log(`Current index: ${currentIndex}, attempting to go to ${currentIndex + 1}`);
+                    
+                    // Hardcoded logic for 4 sections
+                    if (currentIndex === 0) {
+                      // Section 1 → Section 2
+                      transitionSection(1);
+                    } else if (currentIndex === 1) {
+                      // Section 2 → Section 3
+                      transitionSection(2);
+                    } else if (currentIndex === 2) {
+                      // Section 3 → Section 4
+                      transitionSection(3);
+                    } else if (currentIndex === 3) {
+                      // Section 4 → Break out of animation
+                      console.log("Breaking out of animation at section 4");
+                      deactivateScrollControl();
+                    }
+                  } else if (animating) {
+                    console.log("Animation in progress - ignoring scroll");
+                  }
+                },
+                onDown: () => {
+                  if (!animating && animationActive) {
+                    console.log(`Current index: ${currentIndex}, attempting to go to ${currentIndex - 1}`);
+                    
+                    // Hardcoded logic for reverse
+                    if (currentIndex === 1) {
+                      // Section 2 → Section 1
+                      transitionSection(0);
+                    } else if (currentIndex === 2) {
+                      // Section 3 → Section 2
+                      transitionSection(1);
+                    } else if (currentIndex === 3) {
+                      // Section 4 → Section 3
+                      transitionSection(2);
+                    }
+                  } else if (animating) {
+                    console.log("Animation in progress - ignoring scroll");
+                  }
+                },
+              });
+            }
+            
+            // Add a separate Observer to detect when scrolling back up from outside
+            Observer.create({
+              target: window,
+              type: "wheel,touch,pointer",
+              wheelSpeed: -1,
+              tolerance: 25,
+              preventDefault: false, // Don't prevent default for this one
+              onDown: () => {
+                // If we're not in animation mode but scrolling up, check if we should reactivate
+                if (!animationActive && !observerInstance) {
+                  const scrollY = window.scrollY;
+                  const section1Top = sections[0].offsetTop;
+                  
+                  // If we're scrolling up and near section 1, reactivate
+                  if (scrollY < section1Top + 200) {
+                    console.log("Scrolling back up near section 1 - reactivating animation");
+                    animationActive = true;
+                    activateScrollControl();
+                  }
+                }
+              }
+            });
+            
+            function deactivateScrollControl() {
+              if (!observerInstance) return;
+              console.log("Deactivating scroll control");
+              observerInstance.kill();
+              observerInstance = null;
+              
+              // Remove scroll prevention
+              const preventScroll = (e) => {
+                if (animating) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  return false;
+                }
+              };
+              
+              window.removeEventListener('wheel', preventScroll, { capture: true });
+              window.removeEventListener('touchmove', preventScroll, { capture: true });
+              window.removeEventListener('scroll', preventScroll, { capture: true });
+              document.removeEventListener('wheel', preventScroll, { capture: true });
+              document.removeEventListener('touchmove', preventScroll, { capture: true });
+            }
+            
+            function transitionSection(newIndex) {
+              if (animating || newIndex === currentIndex) return;
+              animating = true;
+              console.log(`Transitioning from section ${currentIndex} to section ${newIndex}`);
+            
+              const prevSection = sections[currentIndex];
+              const nextSection = sections[newIndex];
+              const direction = newIndex > currentIndex ? 1 : -1;
+              
+              // Position the new section absolutely to take full viewport
+              gsap.set(nextSection, { 
+                autoAlpha: 0, 
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100vh",
+                zIndex: 1 
+              });
+              
+              // Create timeline for coordinated animations
+              const tl = gsap.timeline({
+                defaults: { duration: 1.2, ease: "power1.inOut" },
+                onComplete: () => {
+                  currentIndex = newIndex;
+                  animating = false;
+                  console.log(`Completed transition to section ${newIndex}`);
+                }
+              });
+              
+              // Show the next section
+              tl.to(nextSection, { autoAlpha: 1 }, 0);
+              
+              // Animate the wrappers for the next section
+              tl.fromTo([outerWrappers[newIndex], innerWrappers[newIndex]], 
+                { 
+                  yPercent: i => i ? -100 * direction : 100 * direction
+                }, 
+                { 
+                  yPercent: 0 
+                }, 0);
+              
+              // Animate the image for the next section (like the reference)
+              const nextImage = nextSection.querySelector('.bg');
+              if (nextImage) {
+                tl.fromTo(nextImage, 
+                  { yPercent: 15 * direction }, 
+                  { yPercent: 0 }, 0);
+              }
+              
+              // Hide the previous section
+              tl.to(prevSection, { autoAlpha: 0 }, 0);
+            }
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+            //let gotoSectionFunction; // Declare in outer scope
+
+            // ScrollTrigger.create({
+            //     trigger: ".animation-test-section--wrapper",
+            //     start: "top 88px",
+            //     end: "bottom top",
+            //     onEnter: () => {
+            //         // document.querySelectorAll("section").forEach(section => {
+            //         //     section.style.position = "absolute";
+            //         //     section.style.top = "0";
+            //         //     section.style.height = "100vh";
+            //         //     section.style.width = "100%";
+            //         //     section.style.zIndex = "100";
+            //         //   });
+                      
+            //         setupSectionStackingAnimation();
+            //         // Start the animation when ScrollTrigger is reached
+            //         // setTimeout(() => {
+            //         //     if (gotoSectionFunction) {
+            //         //         gotoSectionFunction(0, 1);
+            //         //     }
+            //         // }, 100);
+            //     },
+            //     onLeave: () => {
+            //         //this.document.querySelector('.animation-test-section').style.position = 'relative';
+
+            //         // document.querySelectorAll("section").forEach(section => {
+            //         //     section.style.position = "relative";
+            //         //     section.style.top = "auto";
+            //         //     section.style.height = "auto";
+            //         //     section.style.width = "auto";
+            //         //     section.style.zIndex = "auto";
+            //         //   });
+            //     }
+            // });
+
+
+
+            // function setupSectionStackingAnimation() {
+            //     let sections = document.querySelectorAll(".animation-test-section"),
+            //     images = document.querySelectorAll(".animation-test-section .bg"),
+            //     headings = gsap.utils.toArray(".animation-test-section .section-heading"),
+            //     outerWrappers = gsap.utils.toArray(".animation-test-section .outer"),
+            //     innerWrappers = gsap.utils.toArray(".animation-test-section .inner"),
+            //     // splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
+            //     currentIndex = -1,
+            //     wrap = gsap.utils.wrap(0, sections.length),
+            //     animating;
+
+            //     // Set initial positions
+            //     gsap.set(sections, { autoAlpha: 0 });
+            //     gsap.set(sections[0], { autoAlpha: 1 });
+            //     gsap.set(outerWrappers, { yPercent: 100 });
+            //     gsap.set(innerWrappers, { yPercent: -100 });
+
+            //     function gotoSection(index, direction) {
+            //         console.log('gotoSection', index, direction);
+            //         // Don't wrap - keep index within bounds
+            //         if (index < 0 || index >= sections.length) return;
+                    
+            //         animating = true;
+            //         let fromTop = direction === -1,
+            //             dFactor = fromTop ? -1 : 1,
+            //             tl = gsap.timeline({
+            //               defaults: { duration: 1.25, ease: "power1.inOut" },
+            //               onComplete: () => animating = false
+            //             });
+                    
+            //         if (currentIndex >= 0) {
+            //           // The first time this function runs, current is -1
+            //           gsap.set(sections[currentIndex], { zIndex: 0 });
+            //           tl.to(images[currentIndex], { yPercent: -15 * dFactor })
+            //             .set(sections[currentIndex], { autoAlpha: 0 });
+            //         }
+                    
+            //         gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+            //         tl.fromTo([outerWrappers[index], innerWrappers[index]], { 
+            //             yPercent: i => i ? -100 * dFactor : 100 * dFactor
+            //           }, { 
+            //             yPercent: 0 
+            //           }, 0)
+            //           .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0);
+            //           // .fromTo(splitHeadings[index].chars, { 
+            //           //     autoAlpha: 0, 
+            //           //     yPercent: 150 * dFactor
+            //           // }, {
+            //           //     autoAlpha: 1,
+            //           //     yPercent: 0,
+            //           //     duration: 1,
+            //           //     ease: "power2",
+            //           //     stagger: {
+            //           //       each: 0.02,
+            //           //       from: "random"
+            //           //     }
+            //           //   }, 0.2);
+                  
+            //         currentIndex = index;
+            //     }
+                
+            //     // Assign function to outer scope so ScrollTrigger can access it
+            //     gotoSectionFunction = gotoSection;
+
+            //     Observer.create({
+            //         type: "wheel,touch,pointer",
+            //         wheelSpeed: -1,
+            //         onDown: () => {
+            //             if (!animating && currentIndex > 0) {
+            //                 gotoSection(currentIndex - 1, -1);
+            //             }
+            //         },
+            //         onUp: () => {
+            //             if (!animating && currentIndex < sections.length - 1) {
+            //                 gotoSection(currentIndex + 1, 1);
+            //             }
+            //         },
+            //         tolerance: 10,
+            //         preventDefault: true
+            //     });
+              
+            //     gotoSection(0, 1);
+
+            // }
+
+
+
+
+            //const sections = gsap.utils.toArray('.development-project-item');
+            // Pin the development project items directly
+            // sections.forEach((section, index) => {
+            //     // Pin the section directly
+            //     ScrollTrigger.create({
+            //         trigger: section,
+            //         start: 'top 80px',
+            //         end: 'bottom top',
+            //         pin: index !== sections.length - 1, // Don't pin the last item
+            //         pinSpacing: false,
+            //         onEnter: () => {
+            //             // Smoothly animate section to center of pinned wrapper
+            //             gsap.to(section, {
+            //                 y: 0, // Center in wrapper
+            //                 duration: 0.8, // Back to shorter duration for smooth feel
+            //                 ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
+            //             });
+                        
+            //             // Move previous sections up smoothly
+            //             for (let i = 0; i < index; i++) {
+            //                 gsap.to(sections[i], {
+            //                     y: -(index - i) * 50,
+            //                     duration: 0.8, // Back to shorter duration for smooth feel
+            //                     ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
+            //                 });
+            //             }
+                        
+
+            //         },
+            //         onLeave: () => {
+            //             // Reset positions when leaving last section
+            //             if (index === sections.length - 1) {
+            //                 sections.forEach((sect, i) => {
+            //                     gsap.to(sect, {
+            //                         y: 0,
+            //                         duration: 0.8, // Back to shorter duration for smooth feel
+            //                         ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
+            //                     });
+            //                 });
+            //             }
+            //         }
+            //     });
+            // });
+
+            // HOMEPAGE - PINNING - END
+            
+
+
+
 
 
 
