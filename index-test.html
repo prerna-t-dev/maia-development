@@ -295,11 +295,154 @@
             </div>
 
 
-            <div class="animation-test-section--wrapper mt-20">
-                <!-- <header class="animation-test-header">
-                    <div>Animated Sections</div>
-                    <div><a href="https://codepen.io/BrianCross/pen/PoWapLP">Original Inspiration</a></div>
-                </header> -->
+            <div class="pinned-observer--wrapper mt-10">
+                <!-- <div class="description panel blue text-center">
+                    <div><h1>Mixed observer and scrolling...</h1>
+                      <div class="scroll-down">Scroll down<div class="arrow"></div></div>
+                    </div>
+                  </div> -->
+                
+                <div class="swipe-section">
+                  <section class="panel red one">
+                    <div class="outer-wrapper">
+                      <div class="inner-wrapper">
+                        SWIPE SECTION 1 ScrollTrigger.observe() section
+                      </div>
+                    </div>
+                  </section>
+                  <section class="panel purple two">
+                    <div class="outer-wrapper">
+                      <div class="inner-wrapper">
+                        SWIPE SECTION 2
+                      </div>
+                    </div>
+                  </section>
+                  <section class="panel blue three">
+                    <div class="outer-wrapper">
+                      <div class="inner-wrapper">
+                        SWIPE SECTION 3
+                      </div>
+                    </div>
+                  </section>
+                  <section class="panel orange four">
+                    <div class="outer-wrapper">
+                      <div class="inner-wrapper">
+                        SWIPE SECTION 4 Last swipe section... continue scrolling
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                
+                 <!-- <div class="container horizontal">
+                  <section class="h-screen w-full" style="background-color: antiquewhite;">
+                    ONE
+                  </section>
+                  <section class="h-screen w-full" style="background-color: antiquewhite;">
+                    TWO
+                  </section>
+                  <section class="h-screen w-full" style="background-color: antiquewhite;">
+                    THREE
+                  </section>
+                  <section class="h-screen green" style="background-color: antiquewhite;">
+                    FOUR
+                  </section>
+                </div> -->
+
+
+                <style>
+                    .pinned-observer--wrapper{
+                    /* height: 100vh; */
+                    overflow-x: hidden;
+                    } 
+
+                    .pinned-observer--wrapper .panel h1 {
+                    color: var(--dark) !important;
+                    }
+
+                    .pinned-observer--wrapper .container {
+                    /*   overscroll-behavior: none; */
+                    /*   width: 400%;
+                    height: 100%;
+                    display: flex;
+                    flex-wrap: nowrap; */
+                    }
+
+                    .pinned-observer--wrapper .description{
+                        width: 100%;
+                        height:40vh;
+                    }
+
+                    .pinned-observer--wrapper .swipe-section {
+                    position: relative;
+                    height: 100vh;
+                    width: 100%;
+                    overflow: hidden;
+                    }
+
+                    .pinned-observer--wrapper .swipe-section .panel {
+                    position: absolute;
+                    height: 100vh;
+                    width: 100%;
+                    }
+
+                    
+
+                    .pinned-observer--wrapper .swipe-section .panel.red{
+                        background-color: red;
+                    }
+
+                    .pinned-observer--wrapper .swipe-section .panel.purple{
+                        background-color: purple;
+                        background-image: url('images/2025/homepage/dev-project--2.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+
+                    .pinned-observer--wrapper .swipe-section .panel.blue{
+                        background-color: blue;
+                    }
+
+                    .pinned-observer--wrapper .swipe-section .panel.orange{
+                        background-color: orange;
+                    }
+
+                    .pinned-observer--wrapper .swipe-section .panel.green{
+                        background-color: green;
+                    }
+
+                    .pinned-observer--wrapper .swipe-section .panel.one{
+                        background-image: url('images/2025/homepage/dev-project--1.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    .pinned-observer--wrapper .swipe-section .panel.two{
+                        background-image: url('images/2025/homepage/dev-project--2.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    .pinned-observer--wrapper .swipe-section .panel.three{
+                        background-image: url('images/2025/homepage/dev-project--3.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    .pinned-observer--wrapper .swipe-section .panel.four{
+                        background-image: url('images/2025/homepage/dev-project--4.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    
+                    
+                </style>
+                
+            </div>
+
+
+            <!-- <div class="animation-test-section--wrapper mt-20">
                 <section class="animation-test-section first" data-section-index="0" data-release-after="false">
                 <div class="outer">
                     <div class="inner">
@@ -434,14 +577,14 @@
                         color: white ;
                     }
                 </style>
-            </div>
+            </div> -->
 
             <!-- Development Project List -->
            
 
             
 
-            <div class="bg-beige py-20">
+            <div class="bg-beige py-20 pt-30">
                 <div class="container flex flex-col items-center">
                     <div class="mt-20 xl:mt-4">
                         <svg width="86" height="43" viewBox="0 0 86 43" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -906,6 +1049,164 @@
                 </div>
             </div>
         </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="sticky-section">
+        <footer class="footer sticky-content pt-12 bg-green-footer">
+            <div class="footer-content py-8 xl:py-50 relative">
+                <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
+                    <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1138_411)">
+                        <g style="mix-blend-mode:exclusion">
+                        <path d="M309.166 259.911L65.8848 -0.261719V96.5583L285.334 259.911H309.166Z" fill="white" fill-opacity="0.03"/>
+                        </g>
+                        <g style="mix-blend-mode:exclusion">
+                        <path d="M309.168 259.911L65.8867 -0.261719V96.5583L285.336 259.911H309.168Z" fill="white" fill-opacity="0.03"/>
+                        </g>
+                        <g style="mix-blend-mode:exclusion">
+                        <path d="M-177.396 259.911L65.8848 -0.261719V96.5583L-153.565 259.911H-177.396Z" fill="white" fill-opacity="0.03"/>
+                        </g>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1138_411">
+                        <rect width="309" height="260" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="container grid grid-cols-1 xl:grid-cols-3 gap-20">
+                    <div class="footer-logo">
+                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
+                    </div>
+                    <div class="footer-links">
+                        <div class="text-reveal--wrapper">
+                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                Links
+                            </h3>
+                        </div>
+                        <div class="grid grid-cols-2 xl:gap-10">
+                            <ul class="text-white text-sm font-medium">
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        Our Story
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        Developments
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        Our Services
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="text-white text-sm font-medium">
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        MAIA Impact
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        In the News
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                        Blogs
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-social">
+                        <div class="text-reveal--wrapper">
+                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                Info
+                            </h3>
+                        </div>
+                        <div class="">
+                            <p class="mb-4 text-sm text-white opacity-40" >
+                                Maia Estates, 34 (New No. 84), Ulsoor Road, <br>
+                                Yellappa Chetty Layout, Sivanchetti Gardens, <br>
+                                Bengaluru, Karnataka 560042
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <a href="mailto:info@maia.com" class="footer-info-item text-white text-sm">
+                                    info@maia.com
+                                </a>
+                                <div class="text-white text-sm opacity-40">|</div>
+                                <a href="tel:+918041219231" class="footer-info-item text-white text-sm">
+                                    +91 80 4121 9231
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="mt-24">
+                            <div class="text-reveal--wrapper">
+                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                    Social Icons
+                                </h3>
+                            </div>
+                            <ul class="text-white text-sm font-medium">
+                                <div class="grid grid-cols-2 gap-0">
+                                    <li class="mb-3">
+                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                            Instagram
+                                            <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
+                                        Privacy Policy
+                                    </a>
+                                </div>
+                                
+                                <div class="grid grid-cols-2 gap-0">
+                                    <li class="mb-3">
+                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                            LinkedIn
+                                            <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
+                                        Terms of Service
+                                    </a>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>  
+            </div>
+            <div class="footer-bottom py-8 pb-20 xl:pb-8">
+                <div class="container flex items-center justify-between">
+                    <p class="text-white text-sm text-center font-heading opacity-50">
+                        &copy; MAIA Estates LLP, 2025. All rights reserved.
+                    </p>
+                    <div class="flex items-center gap-20 hidden xl:flex">
+                        <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
+                            Privacy Policy
+                        </a>
+                        <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
 
