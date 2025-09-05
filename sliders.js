@@ -385,9 +385,9 @@ $(document).ready(function(){
         progressSelector: '.development-slider-dots-1 .dot-progress',
         imageSources: [
             'images/2025/developments/dev-project--11.png',
-            'images/2025/developments/dev-project--12.jpg',
-            'images/2025/developments/dev-project--13.jpg',
-            'images/2025/developments/dev-project--14.jpg'
+            'images/2025/developments/dev-project--12.png',
+            'images/2025/developments/dev-project--13.png',
+            'images/2025/developments/dev-project--14.png'
         ]
     });    
 
@@ -399,9 +399,9 @@ $(document).ready(function(){
             progressSelector: '.development-slider-dots-2 .dot-progress',
             imageSources: [
                 'images/2025/developments/dev-project--21.png',
-                'images/2025/developments/dev-project--12.jpg',
-                'images/2025/developments/dev-project--13.jpg',
-                'images/2025/developments/dev-project--14.jpg'
+                'images/2025/developments/dev-project--22.png',
+                'images/2025/developments/dev-project--23.png',
+                'images/2025/developments/dev-project--24.png'
             ]
         });
     }, 1000); // 1 second delay
@@ -414,9 +414,9 @@ $(document).ready(function(){
             progressSelector: '.development-slider-dots-3 .dot-progress',
             imageSources: [
                 'images/2025/developments/dev-project--31.png',
-                'images/2025/developments/dev-project--12.jpg',
-                'images/2025/developments/dev-project--13.jpg',
-                'images/2025/developments/dev-project--14.jpg'
+                'images/2025/developments/dev-project--32.png',
+                'images/2025/developments/dev-project--33.png',
+                'images/2025/developments/dev-project--34.png'
             ]
         });
     }, 2000); // 2 second delay
@@ -430,9 +430,9 @@ $(document).ready(function(){
             progressSelector: '.development-slider-dots-4 .dot-progress',
             imageSources: [
                 'images/2025/developments/dev-project--41.png',
-                'images/2025/developments/dev-project--12.jpg',
-                'images/2025/developments/dev-project--13.jpg',
-                'images/2025/developments/dev-project--14.jpg'
+                'images/2025/developments/dev-project--42.png',
+                'images/2025/developments/dev-project--43.png',
+                'images/2025/developments/dev-project--44.png'
             ]   
         });
     }, 3000); // 3 second delay
