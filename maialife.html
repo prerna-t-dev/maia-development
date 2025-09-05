@@ -67,9 +67,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
         // GSAP ScrollTrigger integration with Lenis
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 1000);
-        });
+        // gsap.ticker.add((time) => {
+        //     lenis.raf(time * 1000);
+        // });
         gsap.ticker.lagSmoothing(0);
     </script>
 
@@ -140,7 +140,7 @@
     <meta name="facebook-domain-verification" content="pognb9mgkrukvqi84431jr4q18r62l" />
 </head>
 <body id="bodycontainer">
-    <div class="body_wrapper overflow-x-hidden">
+    <div class="body_wrapper scroll-section overflow-x-hidden">
         <!-- Header -->
         <header class="header sticky top-0 left-0 right-0 z-50">
             <div class="container flex justify-between items-center">
@@ -180,32 +180,64 @@
 
 
         <!-- Section 1: Hero Banner -->
-        <section class="hero-banner py-20 xl:pt-20 xl:pb-30">
+        <section class="hero-banner hero-banner-animation py-20 xl:pt-20 xl:pb-30">
             <div class="container">
                 <div class="hero-content pb-10 xl:pb-12">
-                    <div class="maia-life--logo mb-10 xl:mb-30">
+                    <div class="maia-life--logo mb-10 xl:mb-14 fade-in" data-delay="0.8">
                         <img src="images/2025/maialife/maialife--logo.png" alt="Maia Life Logo">
                     </div>
                     <div class="flex flex-col xl:flex-row xl:items-end xl:justify-start gap-6 mb-16 xl:mb-20">
-                        <h1 class="text-60px xl:text-80px font-normal text-green">
-                            <span class="block xl:hidden">
-                            Personalised Hospitality <br />
-                            for Effortless <br />
-                            Daily Living
-                            </span>
-                            <span class="hidden xl:block relative">
-                                <span class="absolute top-0 left-0 whitespace-nowrap">Personalised Hospitality</span>
-                                 <br />
-                                for Effortless <br />
-                                Daily Living
-                            </span>
-                        </h1>
-                        <p class="font-medium text-black opacity-70 xl:ml-24" style="max-width: 380px;">
-                            Anchored in hospitality excellence and tech-driven operations, MAIA Life leverages resident feedback and efficient maintenance for seamless, sustainable living experiences.
-                        </p>
+                        <div class="h1-wrapper">
+                            <h1 class="block xl:hidden text-60px xl:text-80px font-normal text-green">
+                                <!-- Mobile Heading -->
+                                <div class="">
+                                    <span class="line-wrapper">
+                                        <span class="line">Personalised Hospitality</span>
+                                    </span>
+                                    <span class="line-wrapper">
+                                        <span class="line">for Effortless</span>
+                                    </span>
+                                    <span class="line-wrapper">
+                                        <span class="line">Daily Living</span>
+                                    </span> 
+                                </div>
+                            </h1>
+
+
+
+
+                            <h1 class="hidden xl:block text-60px xl:text-80px font-normal text-green">
+                                <!-- Desktop Heading -->
+                                <div class="inline">
+                                    <div class="relative">
+                                        <span class="!opacity-0">
+                                            Personalised
+                                        </span>
+                                        <span class="absolute top-0 left-0 whitespace-nowrap line-wrapper">
+                                            <span class="line">Personalised Hospitality</span>
+                                        </span>
+                                    </div>
+                                    <!-- <br /> -->
+                                    <span class="line-wrapper">
+                                        <span class="line">for Effortless</span>
+                                    </span>
+                                    <!-- <br /> -->
+                                    <span class="line-wrapper">
+                                        <span class="line">Daily Living</span>
+                                    </span>
+                                </div>
+                            </h1>
+                        </div>
+
+                        
+                        <div class="fade-in" data-delay="1">
+                            <p class="font-medium text-black opacity-70 xl:ml-24" style="max-width: 380px;">
+                                Anchored in hospitality excellence and tech-driven operations, MAIA Life leverages resident feedback and efficient maintenance for seamless, sustainable living experiences.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="flex items-center justify-between">
+                    <div class="scroll-to-explore flex items-center justify-between fade-in" data-delay="0.8">
                         <p class="text-xs font-medium text-black uppercase">(Scroll to explore)</p>
                         <div class="scroll-down cursor-pointer scale-65 xl:scale-100">
                             <svg class="w-full h-auto" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -217,13 +249,17 @@
                 </div>
 
 
-                <div class="maialife-hero-img--desktop hidden xl:block">
-                    <img src="images/2025/maialife/hero-banner-image--maialife.png" alt="Hero Banner Image">
-                </div>
+                    <div class="maialife-hero-img--desktop hidden xl:block">
+                        <div class="hero-image-wrapper hero-image-wrapper-desktop">
+                            <img src="images/2025/maialife/hero-banner-image--maialife.png" class="hero-banner-image hero-banner-image-animation" alt="Hero Banner Image">
+                        </div>
+                    </div>
 
-                <div class="maialife-hero-img--mobile block xl:hidden">
-                    <img src="images/2025/maialife/hero-banner-image--mobile.png" alt="Hero Banner Image">
-                </div>
+                    <div class="maialife-hero-img--mobile block xl:hidden">
+                        <div class="hero-image-wrapper hero-image-wrapper-mobile">
+                            <img src="images/2025/maialife/hero-banner-image--mobile.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation-mobile">
+                        </div>
+                    </div>
                 
             </div>
         </section>
@@ -232,21 +268,28 @@
         <!-- Section 2: Our Purpose, Mission & Vision -->
         <section class="our-purpose-mission-vision bg-green-dark pt-30 pb-20 xl:pt-44 xl:pb-40">
             <div class="container">
-                <div class="section-subheader uppercase text-white mb-5">
-                    OUR PURPOSE, MISSION & VISION
+                <div class="text-reveal--wrapper">  
+                    <div class="section-subheader uppercase text-white mb-5">
+                        OUR PURPOSE, MISSION & VISION
+                    </div>
                 </div>
                 <div class="flex items-center justify-between">
                     <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-32 text-white xl:pr-24">
-                        <span class="hidden xl:block">
-                            Designed around your life, <br />
-                            in every detail.
-                        </span>
-                        <span class="block xl:hidden">
-                            Designed around your life, in every detail.
-                        </span>
+                        <div class="text-reveal--wrapper">
+                            <span class="hidden xl:block">
+                                Designed around your life, <br />
+                                in every detail.
+                            </span>
+                        </div>
+                        <div class="text-reveal--wrapper">
+                            <span class="block xl:hidden">
+                                Designed around your <br />
+                                life, in every detail.
+                            </span>
+                        </div>
                     </h2>
                     <!-- Slick Arrows: Desktop -->
-                    <div class="slick-arrows flex items-center justify-end gap-6 mb-16 hidden xl:flex">
+                    <div class="slick-arrows flex items-center justify-end gap-6 mb-16 hidden xl:flex fade-up">
                         <div class="slick-arrow-prev cursor-pointer">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
@@ -370,22 +413,28 @@
         <!-- Section 3: Our Services -->
         <section class="pt-30 xl:pt-40 pb-0 xl:pb-20 bg-white overflow-hidden">
             <div class="container">
-                <div class="section-subheader uppercase text-green mb-5 text-center">
-                    Our services
+                <div class="text-reveal--wrapper">
+                    <div class="section-subheader uppercase text-green mb-5 text-center">
+                        Our services
+                    </div>
                 </div>
 
+                <div class="text-reveal--wrapper">
                 <h2 class="text-40px xl:text-7xl font-normal mb-3 xl:px-24 text-green text-center">
-                    Reclaim Your Time
-                </h2>
-                <p class="font-medium mb-12 xl:mb-16 text-center xl:w-1-2 mx-auto xl:px-12">
-                    Effortless living through 24/7 concierge, automated home care, and personalized support, freeing you to focus on what matters.
-                </p>
+                        Reclaim Your Time
+                    </h2>
+                </div>
+                <div class="text-reveal--paragraph developments-text-line-paragraph">
+                    <p class="font-medium mb-12 xl:mb-16 text-center xl:w-1-2 mx-auto xl:px-12">
+                        Effortless living through 24/7 concierge, automated home care, and personalized support, freeing you to focus on what matters.
+                    </p>
+                </div>
             </div>
 
 
             <!-- Maialife Services Slider -->
-            <div class="maialife-services-slider-container pl-5 xl:pl-20">
-                <div class="maialife-services-slider">
+            <div class="maialife-services-slider-container px-5 xl:xl-20">
+                <div class="maialife-services-slider" style="padding-right: 30vw">
                     <div class="maialife-services-slider-item">
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
                             <img class="w-full xl:w-3-5" src="images/2025/maialife/maialife-services--1.png" alt="Maialife 1">
@@ -443,11 +492,14 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- <div class="maialife-services-slider-item">
+                    </div> -->
                     
                 </div>
 
                 <!-- Slick Arrows -->
-                <div class="slick-arrows flex items-center justify-between xl:justify-end gap-6 my-14 xl:mb-16 pr-5 xl:pr-12">
+                <!-- <div class="slick-arrows flex items-center justify-between xl:justify-end gap-6 my-14 xl:mb-16 pr-5 xl:pr-12">
                     <div class="maialife-services-arrow-prev cursor-pointer">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
@@ -460,9 +512,9 @@
                             <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
                         </svg>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="pr-5 xl:pr-12">
+                <div class="pr-5 xl:pr-12 mt-20 xl:mt-30">
                     <div class="line-divider-green-light"></div>
                 </div>
             </div>
@@ -473,21 +525,29 @@
         <!-- Section 4: Founder's Note -->
         <section class="py-30 bg-white">
             <div class="container">
-                <div class="section-subheader uppercase text-green mb-5 text-center">
-                    Founder's Note
+                <div class="text-reveal--wrapper">
+                    <div class="section-subheader uppercase text-green mb-5 text-center">
+                        Founder's Note
+                    </div>
                 </div>
+
+                <div class="text-reveal--wrapper">
                 <h2 class="text-40px xl:text-7xl font-normal mb-3 text-green text-center">
                     Founders Note
                 </h2>
-                <p class="font-medium mb-12 xl:mb-16 text-center xl:w-1-2 mx-auto">
-                    A collective of industry-leading experts collaborating to deliver unparalleled design, sustainability, and client-centric excellence across every MAIA development.
+                </div>
+
+                <div class="text-reveal--paragraph developments-text-line-paragraph">
+                    <p class="font-medium mb-12 xl:mb-16 text-center xl:w-1-2 mx-auto">
+                        A collective of industry-leading experts collaborating to deliver unparalleled design, sustainability, and client-centric excellence across every MAIA development.
+                    </p>
                 </p>
 
 
                 <div class="bg-beige px-10 py-14 xl:px-14 xl:py-14">
-                    <img class="w-16 mb-10" src="images/2025/maialife/grey-quotes.png" alt="Quote">
+                    <img class="w-16 mb-10 fade-up" src="images/2025/maialife/grey-quotes.png" alt="Quote">
                     
-                    <p class="text-gold text-base mb-10">
+                    <p class="text-gold text-base mb-10 fade-in" data-delay="0.5">
                         I’m proud to introduce MAIA Life, our fully integrated hospitality arm designed around your aspirations. From orchestrating curated events to delivering a refreshing beverage poolside, our dedicated hospitality team anticipates every need with unwavering integrity and care. We’ve woven technology into every service touchpoint, streamlining maintenance, and listening closely to your feedback. MAIA Life isn’t an add-on; it’s the embodiment of our promise to elevate your daily living with effortless sophistication.
                     </p>
 
@@ -496,12 +556,16 @@
                             <img class="" src="images/2025/maialife/maialife-founder.png" alt="Maialife Founder">
                         </div>
                         <div>
-                            <h4 class="font-heading text-green text-3xl xl:text-36px font-normal leading-11 mb-3">
-                                Mayank Ruia
-                            </h4>
-                            <p class="text-gold text-base">
-                                Founder & CEO, MAIA Estates
-                            </p>
+                            <div class="text-reveal--wrapper">
+                                <h4 class="font-heading text-green text-3xl xl:text-36px font-normal leading-11 mb-3">
+                                    Mayank Ruia
+                                </h4>
+                            </div>
+                            <div class="text-reveal--wrapper">
+                                <p class="text-gold text-base">
+                                    Founder & CEO, MAIA Estates
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -520,8 +584,13 @@
 
 
 
-        <!-- Footer -->
-        <footer class="footer pt-12 bg-green-footer">
+        
+    </div>
+
+
+    <!-- Footer -->
+    <div class="sticky-section">
+        <footer class="footer sticky-content pt-12 bg-green-footer">
             <div class="footer-content py-8 xl:py-50 relative">
                 <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
                     <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -548,9 +617,11 @@
                         <img src="images/2025/footer-logo.png" alt="Footer Logo">
                     </div>
                     <div class="footer-links">
-                        <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                            Links
-                        </h3>
+                        <div class="text-reveal--wrapper">
+                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                Links
+                            </h3>
+                        </div>
                         <div class="grid grid-cols-2 xl:gap-10">
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
@@ -594,9 +665,11 @@
                         </div>
                     </div>
                     <div class="info-social">
-                        <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                            Info
-                        </h3>
+                        <div class="text-reveal--wrapper">
+                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                Info
+                            </h3>
+                        </div>
                         <div class="">
                             <p class="mb-4 text-sm text-white opacity-40" >
                                 Maia Estates, 34 (New No. 84), Ulsoor Road, <br>
@@ -616,9 +689,11 @@
 
 
                         <div class="mt-24">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                                Social Icons
-                            </h3>
+                            <div class="text-reveal--wrapper">
+                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                    Social Icons
+                                </h3>
+                            </div>
                             <ul class="text-white text-sm font-medium">
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">

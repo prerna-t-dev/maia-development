@@ -34,6 +34,8 @@
 
 
 /* Opacity */
+.opacity-0 { opacity: 0; }
+.\!opacity-0 { opacity: 0 !important; }
 .opacity-10 { opacity: 0.1; }
 .opacity-20 { opacity: 0.2; }
 .opacity-30 { opacity: 0.3; }
@@ -174,6 +176,7 @@
 .pr-16 { padding-right: 4rem; }
 .pr-20 { padding-right: 5rem; }
 .pr-30 { padding-right: 7.5rem; }
+.pr-50 { padding-right: 12.5rem; }
 
 .pt-0 { padding-top: 0; }
 .pt-1 { padding-top: 0.25rem; }

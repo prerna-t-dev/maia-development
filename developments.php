@@ -225,8 +225,15 @@
                     </div>
                 </div>
 
-                <div class="hero-image-wrapper">
-                    <img src="images/2025/developments/hero-banner-image--dev.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation">
+                <div class="hidden xl:block">
+                    <div class="hero-image-wrapper hero-image-wrapper-desktop">
+                        <img src="images/2025/developments/hero-banner-image--dev.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation">
+                    </div>
+                </div>
+                <div class="block xl:hidden">
+                    <div class="hero-image-wrapper hero-image-wrapper-mobile">
+                        <img src="images/2025/developments/hero-banner-image--dev.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation-mobile">
+                    </div>
                 </div>
             </div>
         </section>
@@ -829,8 +836,9 @@
     <!-- Slick Slider JavaScript -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="sliders.js"></script>
     <!-- Animation JavaScript -->
     <script src="animation.js"></script>
+    <script src="sliders.js"></script>
+    
 </body>
 </html>

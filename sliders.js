@@ -905,68 +905,113 @@ $(document).ready(function(){
 
 
     // Maialife Services Slider
-    $('.maialife-services-slider').slick({
-        dots: false,
-        arrows: true,
-        infinite: true, // Enable looping
-        speed: 800,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        pauseOnHover: false,
-        centerMode: false,
-        centerPadding: '0px',
-        // Custom arrows
-        prevArrow: $('.maialife-services-arrow-prev'),
-        nextArrow: $('.maialife-services-arrow-next'),
-        // Touch and Swipe Settings
-        touchMove: true,
-        swipe: true,
-        swipeToSlide: true,
-        touchThreshold: 10,
-        swipeEvent: true,
-        // Pause autoplay on touch/swipe
-        pauseOnFocus: true,
-        // Smooth easing
-        cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)', // Smooth ease-in-out
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    autoplay: false,
-                    pauseOnHover: false,
-                    arrows: true,
-                    prevArrow: $('.maialife-services-arrow-prev'),
-                    nextArrow: $('.maialife-services-arrow-next'),
-                    infinite: true, // Enable looping
-                    touchMove: true,
-                    swipe: true,
-                    swipeToSlide: true,
-                    speed: 800,
-                    cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)'
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplay: false,
-                    pauseOnHover: false,
-                    arrows: true,
-                    prevArrow: $('.maialife-services-arrow-prev'),
-                    nextArrow: $('.maialife-services-arrow-next'),
-                    infinite: true, // Enable looping
-                    touchMove: true,
-                    swipe: true,
-                    swipeToSlide: true,
-                    speed: 800,
-                    cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)'
-                }
+    // Original Slick Slider (Commented Out)
+    // $('.maialife-services-slider').slick({
+    //     dots: false,
+    //     arrows: true,
+    //     infinite: true, // Enable looping
+    //     speed: 800,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: false,
+    //     pauseOnHover: false,
+    //     centerMode: false,
+    //     centerPadding: '0px',
+    //     // Custom arrows
+    //     prevArrow: $('.maialife-services-arrow-prev'),
+    //     nextArrow: $('.maialife-services-arrow-next'),
+    //     // Touch and Swipe Settings
+    //     touchMove: true,
+    //     swipe: true,
+    //     swipeToSlide: true,
+    //     touchThreshold: 10,
+    //     swipeEvent: true,
+    //     // Pause autoplay on touch/swipe
+    //     pauseOnFocus: true,
+    //     // Smooth easing
+    //     cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)', // Smooth ease-in-out
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 1,
+    //                 autoplay: false,
+    //                 pauseOnHover: false,
+    //                 arrows: true,
+    //                 prevArrow: $('.maialife-services-arrow-prev'),
+    //                 nextArrow: $('.maialife-services-arrow-next'),
+    //                 infinite: true, // Enable looping
+    //                 touchMove: true,
+    //                 swipe: true,
+    //                 swipeToSlide: true,
+    //                 speed: 800,
+    //                 cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)'
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1,
+    //                 autoplay: false,
+    //                 pauseOnHover: false,
+    //                 arrows: true,
+    //                 prevArrow: $('.maialife-services-arrow-prev'),
+    //                 nextArrow: $('.maialife-services-arrow-next'),
+    //                 infinite: true, // Enable looping
+    //                 touchMove: true,
+    //                 swipe: true,
+    //                 swipeToSlide: true,
+    //                 speed: 800,
+    //                 cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)'
+    //             }
+    //         }
+    //     ]
+    // });
+
+    // GSAP Horizontal Scroll for Maialife Services (ScrollTrigger)
+    function initMaialifeServicesHorizontalScroll() {
+        const sliderContainer = document.querySelector('.maialife-services-slider-container');
+        const slider = document.querySelector('.maialife-services-slider');
+        const sliderItems = document.querySelectorAll('.maialife-services-slider-item');
+        
+        if (!sliderContainer || !slider || !sliderItems.length) return;
+        
+        // Set up initial styles for horizontal scroll
+        gsap.set(slider, {
+            display: 'flex',
+            flexDirection: 'row',
+            width: `${sliderItems.length * 100}%` // Total width = number of items * 100%
+        });
+        
+        gsap.set(sliderItems, {
+            flex: '0 0 auto',
+            width: `${100 / sliderItems.length}%` // Each item takes 1/nth of total width
+        });
+        
+        // Create horizontal scroll animation with ScrollTrigger
+        gsap.to(slider, {
+            x: () => -(slider.offsetWidth - sliderContainer.offsetWidth), // Scroll to show all content
+            // ease: "power1.inOut",
+            scrollTrigger: {
+                trigger: sliderContainer,
+                start: "top top+=150px", // Start when container is 40px before reaching top
+                end: () => `+=${slider.offsetWidth + sliderContainer.offsetWidth}`, // Extra distance to ensure last slide is fully visible
+                scrub: 1, // Smooth scrubbing
+                pin: true, // Pin the container while scrolling
+                anticipatePin: 1,
+                invalidateOnRefresh: true
             }
-        ]
+        });
+    }
+    
+    // Initialize when DOM is ready
+    $(document).ready(function() {
+        // Wait for GSAP to be available
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            initMaialifeServicesHorizontalScroll();
+        }
     });
 
     // Why Bespoke Slider
