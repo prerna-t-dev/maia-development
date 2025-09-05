@@ -496,105 +496,79 @@ window.addEventListener('load', function() {
 
             //Pinner observer and scrolling
 
-                        // Swipe Section Animation (Lenis Compatible)
-                        let swipeCurrentIndex = 0;
-                        let swipeAnimating = false;
-                        let swipeObserverInstance = null;
-                        let swipeAnimationActive = false;
-                        let swipePanels = gsap.utils.toArray(".swipe-section .panel");
+            // Swipe Section Animation (Lenis Compatible)
+            let swipeCurrentIndex = 0;
+            let swipeAnimating = false;
+            let swipeObserverInstance = null;
+            let swipeAnimationActive = false;
+            let swipePanels = gsap.utils.toArray(".swipe-section .panel");
+            let wrapper = document.querySelector(".swipe-section");
+            let lastScrollTime = 0;
+            let scrollCooldown = 150; // 150ms cooldown between scrolls
 
-                        // Set z-index levels for the swipe panels
-                        gsap.set(swipePanels, { zIndex: i => swipePanels.length - i });
+            // Set z-index levels for the swipe panels
+            gsap.set(swipePanels, { zIndex: i => swipePanels.length - i });
 
-                        // Set up swipe section to take full viewport
-                        gsap.set(".swipe-section", {
-                            position: "relative",
-                            width: "100vw",
-                            height: "100vh",
-                            overflow: "hidden"
-                        });
+            // Set up swipe section to take full viewport
+            gsap.set(".swipe-section", {
+                position: "relative",
+                width: "100vw",
+                height: "100vh",
+                overflow: "hidden"
+            });
 
-                        // Initially hide all panels except the first
-                        gsap.set(swipePanels, { 
+            // Initially hide all panels except the first
+            gsap.set(swipePanels, { 
                 autoAlpha: 0, 
                 position: "absolute",
                 top: 0,
                 left: 0,
                 width: "100%",
-                            height: "100vh",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center"
-                        });
-                        gsap.set(swipePanels[0], { autoAlpha: 1 });
+                height: "100vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+            });
+            gsap.set(swipePanels[0], { autoAlpha: 1 });
 
-                        // ScrollTrigger pins the swipe section
+            // ScrollTrigger pins the swipe section
             ScrollTrigger.create({
-                                        trigger: ".swipe-section",
-              start: "top top+=88px",
-                                        end: "+=200",
-                                        pin: true,
+                trigger: ".swipe-section",
+                start: "top top+=88px",
+                end: "+=200",
+                pin: true,
               pinSpacing: true,
               onEnter: () => {
-                                            console.log("Swipe section pinned - starting animation control");
-                                            swipeAnimationActive = true;
-                                            activateSwipeScrollControl();
+                    console.log("Swipe section pinned - starting animation control");
+                    swipeAnimationActive = true;
+                    activateSwipeScrollControl();
               },
               onEnterBack: () => {
-                                            console.log("Swipe section pinned back - reactivating animation control");
-                                            swipeAnimationActive = true;
-                                            activateSwipeScrollControl();
+                    console.log("Swipe section pinned back - reactivating animation control");
+                    swipeAnimationActive = true;
+                    activateSwipeScrollControl();
               },
               onLeave: () => {
-                                            console.log("Swipe section unpinned - ending animation control");
-                                            swipeAnimationActive = false;
-                                            deactivateSwipeScrollControl();
+                    console.log("Swipe section unpinned - ending animation control");
+                    swipeAnimationActive = false;
+                    deactivateSwipeScrollControl();
               },
               onLeaveBack: () => {
-                                            console.log("Swipe section unpinned back - ending animation control");
-                                            swipeAnimationActive = false;
-                                            deactivateSwipeScrollControl();
-                            }
-                        });
+                    console.log("Swipe section unpinned back - ending animation control");
+                    swipeAnimationActive = false;
+                    deactivateSwipeScrollControl();
+                }
+            });
 
-                        // Mobile-specific touch handling
-                        let touchStartY = 0;
-                        let touchEndY = 0;
-                        
-                        document.addEventListener('touchstart', (e) => {
-                            if (swipeAnimationActive) {
-                                touchStartY = e.touches[0].clientY;
-                            }
-                        }, { passive: true });
-                        
-                        document.addEventListener('touchend', (e) => {
-                            if (swipeAnimationActive && !swipeAnimating) {
-                                touchEndY = e.changedTouches[0].clientY;
-                                const touchDiff = touchStartY - touchEndY;
-                                
-                                if (Math.abs(touchDiff) > 50) { // Minimum swipe distance
-                                    if (touchDiff > 0) {
-                                        // Swipe up - next section
-                                        if (swipeCurrentIndex < swipePanels.length - 1) {
-                                            transitionSwipePanel(swipeCurrentIndex + 1);
-                                        }
-                                    } else {
-                                        // Swipe down - previous section
-                                        if (swipeCurrentIndex > 0) {
-                                            transitionSwipePanel(swipeCurrentIndex - 1);
-                                        }
-                                    }
-                                }
-                            }
-                        }, { passive: true });
-
-                        function activateSwipeScrollControl() {
-                            if (swipeObserverInstance) return;
-                            console.log("Activating swipe scroll control");
+            function activateSwipeScrollControl() {
+                if (swipeObserverInstance) return;
+                console.log("Activating swipe scroll control");
               
-              // Disable scroll when animating is true
-                                        const preventSwipeScroll = (e) => {
-                                            if (swipeAnimating) {
+                // Don't pause Lenis - work with it instead
+                // More targeted scroll prevention
+                const preventSwipeScroll = (e) => {
+                    // Only prevent during actual animation
+                    if (swipeAnimating) {
                   e.preventDefault();
                   e.stopPropagation();
                   return false;
@@ -602,113 +576,199 @@ window.addEventListener('load', function() {
               };
               
               // Add multiple event listeners to catch all scroll types
-                            window.addEventListener('wheel', preventSwipeScroll, { passive: false, capture: true });
-                            window.addEventListener('touchmove', preventSwipeScroll, { passive: false, capture: true });
-                            window.addEventListener('scroll', preventSwipeScroll, { passive: false, capture: true });
-                            window.addEventListener('touchstart', preventSwipeScroll, { passive: false, capture: true });
-                            window.addEventListener('touchend', preventSwipeScroll, { passive: false, capture: true });
-                            document.addEventListener('wheel', preventSwipeScroll, { passive: false, capture: true });
-                            document.addEventListener('touchmove', preventSwipeScroll, { passive: false, capture: true });
-                            document.addEventListener('touchstart', preventSwipeScroll, { passive: false, capture: true });
-                            document.addEventListener('touchend', preventSwipeScroll, { passive: false, capture: true });
+                window.addEventListener('wheel', preventSwipeScroll, { passive: false, capture: true });
+                window.addEventListener('touchmove', preventSwipeScroll, { passive: false, capture: true });
+                window.addEventListener('scroll', preventSwipeScroll, { passive: false, capture: true });
+                window.addEventListener('touchstart', preventSwipeScroll, { passive: false, capture: true });
+                window.addEventListener('touchend', preventSwipeScroll, { passive: false, capture: true });
+                document.addEventListener('wheel', preventSwipeScroll, { passive: false, capture: true });
+                document.addEventListener('touchmove', preventSwipeScroll, { passive: false, capture: true });
+                document.addEventListener('touchstart', preventSwipeScroll, { passive: false, capture: true });
+                document.addEventListener('touchend', preventSwipeScroll, { passive: false, capture: true });
+                
+                // Use Lenis scroll events instead of Observer
+                if (typeof lenis !== 'undefined') {
+                    lenis.on('scroll', (e) => {
+                        // Sync ScrollTrigger with Lenis
+                        ScrollTrigger.update();
+                        
+                        const maxScroll = wrapper.offsetTop + wrapper.offsetHeight - window.innerHeight;
+
+                        // Clamp scroll position to prevent leaving pinned section when animation active
+                        if (swipeAnimationActive) {
+                            if (lenis.scroll >= maxScroll) {
+                                lenis.scroll = maxScroll;
+                            }
+                            if (lenis.scroll <= wrapper.offsetTop) {
+                                lenis.scroll = wrapper.offsetTop;
+                            }
+                        }
+
+                        const currentTime = Date.now();
+                        
+                        // Debounce: ignore if too soon since last scroll
+                        if (currentTime - lastScrollTime < scrollCooldown) {
+                            return;
+                        }
+                        
+                        if (!swipeAnimating && swipeAnimationActive) {
+                            const direction = e.direction;
+                            const velocity = Math.abs(e.velocity);
                             
-                            swipeObserverInstance = Observer.create({
-                target: window,
-                type: "wheel,touch,pointer",
-                wheelSpeed: -1,
-                                tolerance: 10,
-                preventDefault: true,
-                                ignoreMobile: false,
-                                dragMinimum: 10,
-                onUp: () => {
-                                    if (!swipeAnimating && swipeAnimationActive) {
-                                        console.log(`Swipe current index: ${swipeCurrentIndex}, attempting to go to ${swipeCurrentIndex + 1}`);
-                                        
-                                        if (swipeCurrentIndex < swipePanels.length - 1) {
-                                            transitionSwipePanel(swipeCurrentIndex + 1);
-                                        } else {
-                                            console.log("Reached last swipe panel - deactivating");
-                                            deactivateSwipeScrollControl();
-                                        }
-                                    } else if (swipeAnimating) {
-                                        console.log("Swipe animation in progress - ignoring scroll");
-                  }
-                },
+                            // Only trigger if there's significant scroll velocity (normal person scroll)
+                            if (velocity < 0.01) {
+                                return;
+                            }
+                            
+                            lastScrollTime = currentTime;
+                            
+                            if (direction === 1) { // Scrolling down
+                                console.log(`Swipe current index: ${swipeCurrentIndex}, attempting to go to ${swipeCurrentIndex + 1}`);
+                                
+                                if (swipeCurrentIndex < swipePanels.length - 1) {
+                                    transitionSwipePanel(swipeCurrentIndex + 1);
+                                } else {
+                                    console.log("Reached last swipe panel - deactivating");
+                                    deactivateSwipeScrollControl();
+                                }
+                            } else if (direction === -1) { // Scrolling up
+                                console.log(`Swipe current index: ${swipeCurrentIndex}, attempting to go to ${swipeCurrentIndex - 1}`);
+                                
+                                if (swipeCurrentIndex > 0) {
+                                    transitionSwipePanel(swipeCurrentIndex - 1);
+                                }
+                            }
+                        } else if (swipeAnimating) {
+                            console.log("Swipe animation in progress - ignoring scroll");
+                        }
+                    });
+                } else {
+                    // Fallback to Observer if Lenis not available
+                    swipeObserverInstance = Observer.create({
+                    target: window,
+                    type: "wheel,touch,pointer",
+                    wheelSpeed: -1,
+                    tolerance: 25,
+                    preventDefault: true,
+                    ignoreMobile: false,
+                    dragMinimum: 5,
+                    onUp: () => {
+                                if (!swipeAnimating && swipeAnimationActive) {
+                                    console.log(`Swipe current index: ${swipeCurrentIndex}, attempting to go to ${swipeCurrentIndex + 1}`);
+                                    
+                                    if (swipeCurrentIndex < swipePanels.length - 1) {
+                                        transitionSwipePanel(swipeCurrentIndex + 1);
+                                    } else {
+                                        console.log("Reached last swipe panel - deactivating");
+                                        deactivateSwipeScrollControl();
+                                    }
+                                } else if (swipeAnimating) {
+                                    console.log("Swipe animation in progress - ignoring scroll");
+                    }
+                    },
                 onDown: () => {
-                                    if (!swipeAnimating && swipeAnimationActive) {
-                                        console.log(`Swipe current index: ${swipeCurrentIndex}, attempting to go to ${swipeCurrentIndex - 1}`);
-                                        
-                                        if (swipeCurrentIndex > 0) {
-                                            transitionSwipePanel(swipeCurrentIndex - 1);
-                                        }
-                                    } else if (swipeAnimating) {
-                                        console.log("Swipe animation in progress - ignoring scroll");
+                            if (!swipeAnimating && swipeAnimationActive) {
+                                console.log(`Swipe current index: ${swipeCurrentIndex}, attempting to go to ${swipeCurrentIndex - 1}`);
+                                
+                                if (swipeCurrentIndex > 0) {
+                                    transitionSwipePanel(swipeCurrentIndex - 1);
+                                }
+                            } else if (swipeAnimating) {
+                                console.log("Swipe animation in progress - ignoring scroll");
                   }
                 },
               });
+                }
             }
             
-                        function deactivateSwipeScrollControl() {
-                            if (!swipeObserverInstance) return;
-                            console.log("Deactivating swipe scroll control");
-                            swipeObserverInstance.kill();
-                            swipeObserverInstance = null;
+            function deactivateSwipeScrollControl() {
+                console.log("Deactivating swipe scroll control");
+                
+                // Remove Lenis event listener
+                if (typeof lenis !== 'undefined') {
+                    lenis.off('scroll');
+                }
+                
+                // Kill Observer if it exists
+                if (swipeObserverInstance) {
+                    swipeObserverInstance.kill();
+                    swipeObserverInstance = null;
+                }
               
               // Remove scroll prevention
-                            const preventSwipeScroll = (e) => {
-                                if (swipeAnimating) {
+                const preventSwipeScroll = (e) => {
+                    if (swipeAnimating) {
                   e.preventDefault();
                   e.stopPropagation();
                   return false;
                 }
               };
               
-                            window.removeEventListener('wheel', preventSwipeScroll, { capture: true });
-                            window.removeEventListener('touchmove', preventSwipeScroll, { capture: true });
-                            window.removeEventListener('scroll', preventSwipeScroll, { capture: true });
-                            window.removeEventListener('touchstart', preventSwipeScroll, { capture: true });
-                            window.removeEventListener('touchend', preventSwipeScroll, { capture: true });
-                            document.removeEventListener('wheel', preventSwipeScroll, { capture: true });
-                            document.removeEventListener('touchmove', preventSwipeScroll, { capture: true });
-                            document.removeEventListener('touchstart', preventSwipeScroll, { capture: true });
-                            document.removeEventListener('touchend', preventSwipeScroll, { capture: true });
-                        }
+                window.removeEventListener('wheel', preventSwipeScroll, { capture: true });
+                window.removeEventListener('touchmove', preventSwipeScroll, { capture: true });
+                window.removeEventListener('scroll', preventSwipeScroll, { capture: true });
+                window.removeEventListener('touchstart', preventSwipeScroll, { capture: true });
+                window.removeEventListener('touchend', preventSwipeScroll, { capture: true });
+                document.removeEventListener('wheel', preventSwipeScroll, { capture: true });
+                document.removeEventListener('touchmove', preventSwipeScroll, { capture: true });
+                document.removeEventListener('touchstart', preventSwipeScroll, { capture: true });
+                document.removeEventListener('touchend', preventSwipeScroll, { capture: true });
+            }
 
-                        function transitionSwipePanel(newIndex) {
-                            if (swipeAnimating || newIndex === swipeCurrentIndex) return;
-                            swipeAnimating = true;
-                            console.log(`Transitioning swipe from panel ${swipeCurrentIndex} to panel ${newIndex}`);
-                            
-                            const prevPanel = swipePanels[swipeCurrentIndex];
-                            const nextPanel = swipePanels[newIndex];
-                            
-                            // Position the new panel absolutely
-                            gsap.set(nextPanel, { 
+            function transitionSwipePanel(newIndex) {
+                if (swipeAnimating || newIndex === swipeCurrentIndex) return;
+                swipeAnimating = true;
+                console.log(`Transitioning swipe from panel ${swipeCurrentIndex} to panel ${newIndex}`);
+                
+                const prevPanel = swipePanels[swipeCurrentIndex];
+                const nextPanel = swipePanels[newIndex];
+                
+                // Position the new panel absolutely
+                gsap.set(nextPanel, { 
                 autoAlpha: 0, 
                 position: "absolute",
                 top: 0,
                 left: 0,
                 width: "100%",
                 height: "100vh",
-                                zIndex: swipePanels.length - newIndex
+                    zIndex: swipePanels.length - newIndex
               });
               
               // Create timeline for coordinated animations
               const tl = gsap.timeline({
-                                defaults: { duration: 0.75, ease: "power2.out" },
+                    defaults: { duration: 0.8, ease: "power1.inOut" },
                 onComplete: () => {
-                                    swipeCurrentIndex = newIndex;
-                                    swipeAnimating = false;
-                                    console.log(`Completed swipe transition to panel ${newIndex}`);
-                                }
-                            });
-                            
-                            // Show the next panel
-                            tl.to(nextPanel, { autoAlpha: 1 }, 0);
-                            
-                            // Hide the previous panel
-                            tl.to(prevPanel, { autoAlpha: 0 }, 0);
-                        }
+                        swipeCurrentIndex = newIndex;
+                        swipeAnimating = false;
+                        console.log(`Completed swipe transition to panel ${newIndex}`);
+                    }
+                });
+
+                // Show the next panel
+                tl.to(nextPanel, { autoAlpha: 1 }, 0);
+                
+                // Hide the previous panel
+                tl.to(prevPanel, { autoAlpha: 0 }, 0);
+                
+                // // Show the next panel
+                // tl.to(nextPanel, { autoAlpha: 1 }, 0);
+                
+                // // Calculate direction
+                // const direction = newIndex > swipeCurrentIndex ? 1 : -1;
+                
+                // // Hide the previous panel AND move its background
+                // const prevImage = prevPanel.querySelector('.bg');
+                // if (prevImage) {
+                //     tl.to(prevImage, { yPercent: -15 * direction }, 0);
+                // }
+                // tl.to(prevPanel, { autoAlpha: 0 }, 0);
+                
+                // // Move the new panel's background
+                // const nextImage = nextPanel.querySelector('.bg');
+                // if (nextImage) {
+                //     tl.fromTo(nextImage, { yPercent: 15 * direction }, { yPercent: 0 }, 0);
+                // }
+            }
 
 
 
