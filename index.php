@@ -1065,6 +1065,6 @@
     <script src="sliders.js"></script>
     <!-- Animation JavaScript -->
     <script src="animation.js"></script>
-    <script src="animation-2.js"></script>
+    <!-- <script src="animation-2.js"></script> -->
 </body>
 </html>
