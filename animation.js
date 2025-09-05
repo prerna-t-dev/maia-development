@@ -380,9 +380,33 @@ window.addEventListener('load', function() {
                     onComplete: () => {
                         // After hero banner fades in, start text animation
                         setupTextAnimation();
+                        
+                        // Fade in the hero video wrapper after a slight delay (if it exists)
+                        const heroVideoWrapper = document.querySelector('.hero-video-wrapper');
+                        if (heroVideoWrapper) {
+                            setupHeroVideoFade();
+                        }
                     }
                 });
             }
+            
+            function setupHeroVideoFade() {
+                const heroVideoWrapper = document.querySelector('.hero-video-wrapper');
+                if (heroVideoWrapper) {
+                    // Set initial state
+                    gsap.set(heroVideoWrapper, { opacity: 0 });
+                    
+                    // Fade in the video wrapper
+                    gsap.to(heroVideoWrapper, {
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power2.out",
+                        delay: 0.3 // Slight delay after hero banner
+                    });
+                }
+            }
+
+            
             
             function setupTextAnimation() {
                 // Reveal the heading text lines

@@ -189,7 +189,7 @@
                         </span>
                     </h1>
 
-                    <div class="flex items-center justify-between">
+                    <div class="scroll-to-explore flex items-center justify-between fade-in" data-delay="0.8">
                         <p class="text-xs font-medium text-dark uppercase tracking-10">(Scroll to explore)</p>
                         <div class="scroll-down cursor-pointer scale-65 xl:scale-100">
                             <svg class="w-full h-auto" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -200,9 +200,22 @@
                     </div>
                 </div>
 
-                <div class="hero-image-wrapper">
+                <!-- <div class="hero-image-wrapper">
                     <img src="images/2025/homepage/hero-banner-image.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation">
+                </div> -->
+
+                <div class="hero-video-wrapper">
+                    <!-- Desktop Video -->
+                    <video class="hero-video-desktop hidden xl:block" autoplay muted loop playsinline preload="metadata">
+                        <source src="images/2025/homepage/maia-home-hero-video--desktop.mp4" type="video/mp4">
+                    </video>
+                    
+                    <!-- Mobile Video -->
+                    <video class="hero-video-mobile block xl:hidden" autoplay muted loop playsinline preload="metadata">
+                        <source src="images/2025/homepage/maia-home-hero-video--mobile.mp4" type="video/mp4">
+                    </video>
                 </div>
+
             </div>
         </section>
 
@@ -637,11 +650,17 @@
                         </div>
                         
                         <div class="service-details text-gold">
-                            <img src="images/2025/maia-services-logo.png" class="mb-3 xl:mb-5" style="width: 22px;" alt="Bespoke Services Logo">
+                            <!-- <img src="images/2025/maia-services-logo.png" class="mb-3 xl:mb-5" style="width: 22px;" alt="Bespoke Services Logo">
                             <h3 class="text-4xl xl:text-5xl text-gold font-heading font-normal mb-4 xl:mb-5">
                                 Bespoke <br />
                                 Services
-                            </h3>
+                            </h3> -->
+
+
+                            <!-- Maia Bespoke Logo -->
+                            <div class="maia-bespoke--logo mb-3 xl:mb-5">
+                                <img src="images/2025/maia-bespoke-logo.png" alt="Maia Bespoke Logo">
+                            </div>
                             <p class="font-gold mb-12 xl:mb-26">
                                 End-to-end interior design, dedicated to discerning clients’ exact tastes. Transforming unique visions into tailored, exquisite environments.
                             </p>
@@ -663,10 +682,15 @@
                             </div>
                         </div>
                         <div class="service-details text-gold">
-                            <img src="images/2025/maia-life-logo.png" class="mb-3 xl:mb-5" style="width: 22px;" alt="Bespoke Services Logo">
+                            <!-- <img src="images/2025/maia-life-logo.png" class="mb-3 xl:mb-5" style="width: 22px;" alt="Bespoke Services Logo">
                             <h3 class="text-4xl xl:text-5xl text-gold font-heading font-normal mb-4 xl:mb-5">
                                 MAIA Life
-                            </h3>
+                            </h3> -->
+
+                            <!-- Maia Life Logo -->
+                            <div class="maia-life--logo mb-3 xl:mb-5">
+                                <img src="images/2025/maialife-logo.png" alt="Maia Life Logo">
+                            </div>
                             <p class="font-gold mb-12 xl:mb-26">
                                 With MAIA Life, your home extends beyond its walls, offering a seamless blend of hospitality-driven facility management and concierge-style living, where luxury meets effortless convenience.                            </p>
                             <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">

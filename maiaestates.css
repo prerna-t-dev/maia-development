@@ -41,6 +41,47 @@
     margin-bottom: -0.3em;
 }
 
+/* Hero Video Styles */
+.hero-video-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0; /* Start hidden for fade-in animation */
+}
+
+.hero-video-desktop,
+.hero-video-mobile {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Show desktop video by default, hide mobile */
+.hero-video-desktop {
+    display: block;
+}
+
+.hero-video-mobile {
+    display: none;
+}
+
+/* Show mobile video on mobile devices */
+@media (max-width: 1279px) {
+    .hero-video-desktop {
+        display: none;
+    }
+    
+    .hero-video-mobile {
+        display: block;
+    }
+}
+
+
+.scroll-to-explore{
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.8s ease;
+}
 
 
 
@@ -539,6 +580,28 @@ body.bespoke-services .header{
 .services-list-item .service-details{
     width: 30%;
 }
+
+
+.maia-bespoke--logo{
+    width: 222px;
+}
+
+.maia-life--logo{
+    width: 244px;
+}
+
+
+@media (max-width: 1023px) {
+    .maia-bespoke--logo{
+        width: 150px;
+    }
+
+    .maia-life--logo{
+        width: 162px;
+    }
+}
+
+
 
 
 
