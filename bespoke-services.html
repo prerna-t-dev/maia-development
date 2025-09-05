@@ -67,9 +67,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
         // GSAP ScrollTrigger integration with Lenis
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 1000);
-        });
         gsap.ticker.lagSmoothing(0);
     </script>
 
@@ -140,7 +137,7 @@
     <meta name="facebook-domain-verification" content="pognb9mgkrukvqi84431jr4q18r62l" />
 </head>
 <body id="bodycontainer" class="bespoke-services">
-    <div class="body_wrapper overflow-x-hidden">
+    <div class="body_wrapper scroll-section overflow-x-hidden">
         <!-- Header -->
         <header class="header sticky top-0 left-0 right-0 z-50">
             <div class="container flex justify-between items-center">
@@ -180,22 +177,26 @@
 
 
         <!-- Section 1: Hero Banner -->
-        <section class="hero-banner py-20">
+        <section class="hero-banner hero-banner-animation py-20">
             <div class="container">
                 <div class="hero-content pb-10 xl:pb-12">
-                    <div class="maia-bespoke--logo mb-6 xl:mb-5">
+                    <div class="maia-bespoke--logo mb-10 xl:mb-12 fade-in" data-delay="0.8">
                         <img src="images/2025/bespoke/bespoke--logo.png" alt="Bespoke Services Logo">
                     </div>
                     <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-6 mb-16 xl:mb-20">
                         <h1 class="text-60px xl:text-120px font-normal text-brown">
-                            Bespoke Services
+                            <span class="line-wrapper">
+                                <span class="line">Bespoke Services</span>
+                            </span>
                         </h1>
-                        <p class="font-medium text-brown-body" style="max-width: 325px;">
-                            End-to-end interior design, dedicated to discerning clients’ exact tastes. Transforming unique visions into tailored, exquisite environments.
-                        </p>
+                        <div class="fade-in" data-delay="1">
+                            <p class="font-medium text-brown-body" style="max-width: 325px;">
+                                End-to-end interior design, dedicated to discerning clients’ exact tastes. Transforming unique visions into tailored, exquisite environments.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="flex items-center justify-between">
+                    <div class="scroll-to-explore flex items-center justify-between fade-in" data-delay="0.8">
                         <p class="text-xs font-medium text-black uppercase">(Scroll to explore)</p>
                         <div class="scroll-down cursor-pointer scale-65 xl:scale-100">
                             <svg class="w-full h-auto"  width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -209,12 +210,17 @@
 
 
                 <div class="bespoke-hero-img--desktop hidden xl:block">
-                    <img src="images/2025/bespoke/hero-banner-image--bespoke.png" alt="Hero Banner Image" class="hero-banner-image">
+                    <div class="hero-image-wrapper hero-image-wrapper-desktop">
+                        <img src="images/2025/bespoke/hero-banner-image--bespoke.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation">
+                    </div>
                 </div>
 
                 <div class="bespoke-hero-img--mobile block xl:hidden">
-                    <img src="images/2025/bespoke/hero-banner-image--bespoke-mobile.png" alt="Hero Banner Image" class="hero-banner-image">
+                    <div class="hero-image-wrapper hero-image-wrapper-mobile">
+                        <img src="images/2025/bespoke/hero-banner-image--bespoke-mobile.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation-mobile">
+                    </div>
                 </div>
+
             </div>
         </section>
 
@@ -222,16 +228,20 @@
         <!-- Section 2: The Bespoke Experience -->
         <section class="our-purpose-mission-vision bg-brown pt-30 pb-20 xl:pt-44 xl:pb-50">
             <div class="container">
-                <div class="section-subheader uppercase text-white mb-5">
-                    THE BESPOKE EXPERIENCE
+                <div class="text-reveal--wrapper">
+                    <div class="section-subheader uppercase text-white mb-5">
+                        THE BESPOKE EXPERIENCE
+                    </div>
                 </div>
                 <div class="flex items-center justify-between">
-                    <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-30 text-white xl:pr-24">
-                    A collaboration unlike <br />
-                    any other.
-                    </h2>
+                    <div class="text-reveal--wrapper">
+                        <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-30 text-white xl:pr-24">
+                            A collaboration unlike <br />
+                            any other.
+                        </h2>
+                    </div>
                     <!-- Slick Arrows: Desktop -->
-                    <div class="slick-arrows flex items-center justify-end gap-6 mb-16 hidden xl:flex">
+                    <div class="slick-arrows flex items-center justify-end gap-6 mb-16 hidden xl:flex fade-up">
                         <div class="slick-arrow-prev cursor-pointer">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
@@ -333,7 +343,7 @@
                 </div>
 
                 <!-- Purpose Slider Progress Bar -->
-                <div class="pr-5 mt-10 mb-24 xl:mt-40 xl:mb-30 xl:hidden">
+                <div class="pr-5 mt-10 mb-24 xl:mt-40 xl:mb-30 xl:hidden_">
                     <div class="maialife-purpose-slider-progress purpose-slider-progress flex justify-center">
                         <div class="purpose-slider-progress-bar">
                             <div class="purpose-slider-progress-fill"></div>
@@ -355,16 +365,22 @@
         <!-- Section 3: Why Bespoke? -->
         <section class="why-bespoke bg-brown-beige py-30 xl:py-50">
             <div class="container">
-                <div class="section-subheader uppercase text-brown mb-5">
-                    The MAIA Bespoke Experience
+                <div class="text-reveal--wrapper">
+                    <div class="section-subheader uppercase text-brown mb-5">
+                        The MAIA Bespoke Experience
+                    </div>
                 </div>
-                <h2 class="text-40px xl:text-7xl font-normal mb-6 text-brown">
-                    Why Bespoke?
-                </h2>
-                <p class="text-sm xl:text-base font-medium text-brown xl:mb-12">
-                    Designs in progress, destined to become <br />
-                    tomorrow's most coveted addresses
-                </p>
+                <div class="text-reveal--wrapper">
+                    <h2 class="text-40px xl:text-7xl font-normal mb-6 text-brown">
+                        Why Bespoke?
+                    </h2>
+                </div>
+                <div class="text-reveal--paragraph developments-text-line-paragraph">
+                    <p class="text-sm xl:text-base font-medium text-brown xl:mb-12">
+                        Designs in progress, destined to become <br />
+                        tomorrow's most coveted addresses
+                    </p>
+                </div>
 
 
 
@@ -373,7 +389,7 @@
                     <div class="why-bespoke-slider-item">
                         <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 items-start">
                             <!-- Why Bespoke Slider Item 1 -->
-                            <div class="mt-14 xl:mt-24 border-t py-5 xl:p-5 xl:mr-30">
+                            <div class="mt-14 xl:mt-24 border-t py-5 xl:p-5 xl:mr-30 fade-up">
                                 <div class="flex items-center gap-8 mb-4">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.2104 15.1092L2.52339 12.4222C2.28908 12.1878 2.28908 11.808 2.52339 11.5736L5.2104 8.88667C5.44471 8.65236 5.82461 8.65236 6.05892 8.88667L8.74593 11.5736C8.98024 11.808 8.98024 12.1878 8.74593 12.4222L6.05892 15.1092C5.82461 15.3435 5.44471 15.3435 5.2104 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
@@ -567,10 +583,11 @@
         </section>
 
 
-    
+    </div>
 
-        <!-- Footer -->
-        <footer class="footer pt-12 bg-green-footer">
+    <!-- Footer -->
+    <div class="sticky-section">
+        <footer class="footer sticky-content pt-12 bg-green-footer">
             <div class="footer-content py-8 xl:py-50 relative">
                 <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
                     <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -597,9 +614,11 @@
                         <img src="images/2025/footer-logo.png" alt="Footer Logo">
                     </div>
                     <div class="footer-links">
-                        <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                            Links
-                        </h3>
+                        <div class="text-reveal--wrapper">
+                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                Links
+                            </h3>
+                        </div>
                         <div class="grid grid-cols-2 xl:gap-10">
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
@@ -643,9 +662,11 @@
                         </div>
                     </div>
                     <div class="info-social">
-                        <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                            Info
-                        </h3>
+                        <div class="text-reveal--wrapper">
+                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                Info
+                            </h3>
+                        </div>
                         <div class="">
                             <p class="mb-4 text-sm text-white opacity-40" >
                                 Maia Estates, 34 (New No. 84), Ulsoor Road, <br>
@@ -665,9 +686,11 @@
 
 
                         <div class="mt-24">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                                Social Icons
-                            </h3>
+                            <div class="text-reveal--wrapper">
+                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                    Social Icons
+                                </h3>
+                            </div>
                             <ul class="text-white text-sm font-medium">
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">

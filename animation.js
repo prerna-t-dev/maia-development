@@ -9,6 +9,10 @@ window.addEventListener('load', function() {
             console.log('ScrollTrigger found')
             gsap.registerPlugin(ScrollTrigger);
             
+            // Sync existing Lenis with ScrollTrigger
+            if (typeof Lenis !== 'undefined' && window.lenis) {
+                window.lenis.on('scroll', ScrollTrigger.update);
+            }
             
             // Generic clip-path reveal from top to bottom with scale contained within mask
             // Target ALL image reveal wrappers
@@ -96,7 +100,7 @@ window.addEventListener('load', function() {
                                 delay: index * 0.25, // Slightly slower stagger (increased from 0.2)
                                 scrollTrigger: {
                                     trigger: wrapper,
-                                    start: "top 90%",
+                                    start: "top 95%", //moved from 90% to 95% -- to make it start earlier
                                     toggleActions: "play none none reverse"
                                 }
                             });
@@ -237,7 +241,7 @@ window.addEventListener('load', function() {
                 // Animate on scroll
                 gsap.to(element, {
                     opacity: 1,
-                    duration: 0.8,
+                    duration: 1,
                     delay: delay,
                     ease: "power2.out",
                     scrollTrigger: {
@@ -346,6 +350,12 @@ window.addEventListener('load', function() {
             // Hero Banner Fade In and Parallax Animation
             const heroBanner = document.querySelector('.hero-banner-animation');
             const heroImage = document.querySelector('.hero-banner-image-animation');
+            const heroImageMobile = document.querySelector('.hero-banner-image-animation-mobile');
+            
+            // Debug: Check if elements are found
+            // console.log('Hero Banner:', heroBanner);
+            // console.log('Hero Image:', heroImage);
+            // console.log('Hero Image Mobile:', heroImageMobile);
             
             // Setup hero banner fade and text animation
             if (heroBanner) {
@@ -361,6 +371,7 @@ window.addEventListener('load', function() {
             }
             
             // Setup parallax animation (independent of banner)
+            // Handle single hero image
             if (heroImage) {
                 if (heroImage.complete) {
                     setupParallaxAnimation();
@@ -368,6 +379,36 @@ window.addEventListener('load', function() {
                     heroImage.addEventListener('load', setupParallaxAnimation);
                 }
             }
+            
+            // Handle separate desktop and mobile hero images
+            if (heroImageMobile) {
+                let imagesLoaded = 0;
+                const totalImages = (heroImage ? 1 : 0) + (heroImageMobile ? 1 : 0);
+                
+                function checkAllImagesLoaded() {
+                    imagesLoaded++;
+                    if (imagesLoaded >= totalImages) {
+                        setupParallaxAnimation();
+                    }
+                }
+                
+                if (heroImage) {
+                    if (heroImage.complete) {
+                        checkAllImagesLoaded();
+                    } else {
+                        heroImage.addEventListener('load', checkAllImagesLoaded);
+                    }
+                }
+                
+                if (heroImageMobile) {
+                    if (heroImageMobile.complete) {
+                        checkAllImagesLoaded();
+                    } else {
+                        heroImageMobile.addEventListener('load', checkAllImagesLoaded);
+                    }
+                }
+            }
+
             
             // Define functions within the proper scope
             function setupHeroBannerFade() {
@@ -423,27 +464,58 @@ window.addEventListener('load', function() {
             }
             
             function setupParallaxAnimation() {
-                // Create parallax effect
-                ScrollTrigger.create({
-                    trigger: '.hero-image-wrapper',
-                    start: 'top bottom',
-                    end: 'bottom top',
-                    scrub: true,
-                    onUpdate: (self) => {
-                        // Calculate parallax movement
-                        const progress = self.progress;
-                        const parallaxDistance = 250; // Adjust this for more/less movement
-                        const yOffset = progress * parallaxDistance;
-                        
-                        // Apply parallax movement
-                        gsap.set(heroImage, { y: yOffset });
-                    }
-                });
+                // console.log('Setting up parallax animation...');
+                // console.log('Hero Image exists:', !!heroImage);
+                // console.log('Hero Image Mobile exists:', !!heroImageMobile);
+                
+                // Create parallax effect for desktop image
+                if (heroImage) {
+                    console.log('Creating desktop parallax ScrollTrigger...');
+                    ScrollTrigger.create({
+                        trigger: '.hero-image-wrapper-desktop',
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: true,
+                        onUpdate: (self) => {
+                            // Calculate parallax movement
+                            const progress = self.progress;
+                            const parallaxDistance = 250; // Adjust this for more/less movement
+                            const yOffset = progress * parallaxDistance;
+                            
+                            // Apply parallax movement to desktop image
+                            gsap.set(heroImage, { y: yOffset });
+                        }
+                    });
+                }
+                
+                // Create parallax effect for mobile image
+                if (heroImageMobile) {
+                    // console.log('Creating mobile parallax ScrollTrigger...');
+                    
+                    // Set initial position to 0
+                    gsap.set(heroImageMobile, { y: 0 });
+                    
+                    // Use the mobile wrapper as trigger
+                    ScrollTrigger.create({
+                        trigger: '.hero-image-wrapper-mobile',
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: true,
+                        onUpdate: (self) => {
+                            // Calculate parallax movement
+                            const progress = self.progress;
+                            const parallaxDistance = 100; // Much smaller movement for mobile
+                            const yOffset = progress * parallaxDistance;
+                            
+                            // Apply parallax movement to mobile image
+                            gsap.set(heroImageMobile, { y: yOffset });
+                        }
+                    });
+                }
             }
             
             function setupHeroAnimations() {
                 setupHeroBannerFade();
-                setupParallaxAnimation();
             }
 
 

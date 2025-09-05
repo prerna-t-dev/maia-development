@@ -445,6 +445,13 @@ body.bespoke-services .header{
     text-transform: uppercase;
     font-weight: 400;
 }
+
+@media (max-width: 1023px) {
+    .section-subheader{
+        font-size: 11px;
+    }
+}
+
 .line-divider {
     background: linear-gradient(90deg, rgba(1, 78, 60, 0) 0%, rgba(1, 78, 60, 0.108) 20.67%, rgba(0, 54, 42, 0.108) 72.6%, rgba(2, 180, 138, 0) 100%);
     width: 100%;
