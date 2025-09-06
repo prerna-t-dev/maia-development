@@ -534,8 +534,8 @@ window.addEventListener('load', function() {
             // ScrollTrigger pins the swipe section
             ScrollTrigger.create({
                 trigger: ".swipe-section",
-                start: "top top+=88px",
-                end: "+=200",
+              start: "top top+=88px",
+                end: "bottom top+=100vh", // End when bottom of swipe section reaches 100px from top of viewport
                 pin: true,
               pinSpacing: true,
               onEnter: () => {
@@ -645,14 +645,14 @@ window.addEventListener('load', function() {
                 } else {
                     // Fallback to Observer if Lenis not available
                     swipeObserverInstance = Observer.create({
-                    target: window,
-                    type: "wheel,touch,pointer",
-                    wheelSpeed: -1,
-                    tolerance: 25,
-                    preventDefault: true,
+                target: window,
+                type: "wheel,touch,pointer",
+                wheelSpeed: -1,
+                tolerance: 25,
+                preventDefault: true,
                     ignoreMobile: false,
                     dragMinimum: 5,
-                    onUp: () => {
+                onUp: () => {
                                 if (!swipeAnimating && swipeAnimationActive) {
                                     console.log(`Swipe current index: ${swipeCurrentIndex}, attempting to go to ${swipeCurrentIndex + 1}`);
                                     
@@ -664,8 +664,8 @@ window.addEventListener('load', function() {
                                     }
                                 } else if (swipeAnimating) {
                                     console.log("Swipe animation in progress - ignoring scroll");
-                    }
-                    },
+                  }
+                },
                 onDown: () => {
                             if (!swipeAnimating && swipeAnimationActive) {
                                 console.log(`Swipe current index: ${swipeCurrentIndex}, attempting to go to ${swipeCurrentIndex - 1}`);
