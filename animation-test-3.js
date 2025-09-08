@@ -738,9 +738,17 @@ window.addEventListener('load', function() {
                 // the first image (i === 0) should be handled differently because it should start at the very top.
                 // use function-based values in order to keep things responsive
                 gsap.fromTo(img, {
-                    y: () => i ? -movementFactor * 0.5 * img.parentNode.offsetHeight : 0
+                    y: () => {
+                        const isMobile = window.innerWidth <= 768;
+                        const mobileFactor = isMobile ? 0.2 : 0.5; // Reduce movement on mobile
+                        return i ? -movementFactor * mobileFactor * img.parentNode.offsetHeight : 0;
+                    }
                 }, {
-                    y: () => movementFactor * 0.5 * img.parentNode.offsetHeight,
+                    y: () => {
+                        const isMobile = window.innerWidth <= 768;
+                        const mobileFactor = isMobile ? 0.2 : 0.5; // Reduce movement on mobile
+                        return movementFactor * mobileFactor * img.parentNode.offsetHeight;
+                    },
                     ease: "none",
                     scrollTrigger: {
                     trigger: img.parentNode,
