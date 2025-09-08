@@ -22,7 +22,6 @@
 .text-secondary-neutral { color: var(--secondary-neutral); }
 
 
-
 /* Background Colors */
 .bg-green { background-color: var(--green); }
 .bg-green-light { background-color: var(--green-light); }
@@ -39,6 +38,7 @@
 .bg-light-beige { background-color: var(--light-beige); }
 .bg-white-beige{ background-color: var(--white-beige); }
 .bg-plain-green{ background-color: var(--plain-green); }
+
 
 
 
@@ -885,9 +885,9 @@
     .xl\:gap-20 { gap: 5rem; }
     .xl\:gap-24 { gap: 6rem; }
     .xl\:gap-32 { gap: 8rem; }
-    .xl\:gap-x-12 { column-gap: 3rem; }
     .xl\:gap-x-6 { column-gap: 1.5rem; }
     .xl\:gap-y-12 { row-gap: 3rem; }
+    .xl\:gap-x-12 { column-gap: 3rem; }
     .xl\:gap-y-40 { row-gap: 10rem; }
 
     /* Display - XL */

@@ -2,18 +2,10 @@
 // Wait for GSAP to be loaded
 window.addEventListener('load', function() {
     if (typeof gsap !== 'undefined') {
-        console.log('gsap found')
         
         // Check if ScrollTrigger is available
         if (typeof ScrollTrigger !== 'undefined') {
-            console.log('ScrollTrigger found')
             gsap.registerPlugin(ScrollTrigger);
-            
-            // Register SplitText if available
-            if (typeof SplitText !== 'undefined') {
-                console.log('SplitText found')
-                gsap.registerPlugin(SplitText);
-            }
             
             // Sync existing Lenis with ScrollTrigger
             if (typeof Lenis !== 'undefined' && window.lenis) {
@@ -357,11 +349,7 @@ window.addEventListener('load', function() {
             const heroBanner = document.querySelector('.hero-banner-animation');
             const heroImage = document.querySelector('.hero-banner-image-animation');
             const heroImageMobile = document.querySelector('.hero-banner-image-animation-mobile');
-            
-            // Debug: Check if elements are found
-            // console.log('Hero Banner:', heroBanner);
-            // console.log('Hero Image:', heroImage);
-            // console.log('Hero Image Mobile:', heroImageMobile);
+
             
             // Setup hero banner fade and text animation
             if (heroBanner) {
@@ -427,31 +415,10 @@ window.addEventListener('load', function() {
                     onComplete: () => {
                         // After hero banner fades in, start text animation
                         setupTextAnimation();
-                        
-                        // Fade in the hero video wrapper after a slight delay (if it exists)
-                        const heroVideoWrapper = document.querySelector('.hero-video-wrapper');
-                        if (heroVideoWrapper) {
-                            setupHeroVideoFade();
-                        }
                     }
                 });
             }
-            
-            function setupHeroVideoFade() {
-                const heroVideoWrapper = document.querySelector('.hero-video-wrapper');
-                if (heroVideoWrapper) {
-                    // Set initial state
-                    gsap.set(heroVideoWrapper, { opacity: 0 });
-                    
-                    // Fade in the video wrapper
-                    gsap.to(heroVideoWrapper, {
-                        opacity: 1,
-                        duration: 0.8,
-                        ease: "power2.out",
-                        delay: 0.3 // Slight delay after hero banner
-                    });
-                }
-            }
+    
 
             
             
@@ -469,11 +436,7 @@ window.addEventListener('load', function() {
                 }
             }
             
-            function setupParallaxAnimation() {
-                // console.log('Setting up parallax animation...');
-                // console.log('Hero Image exists:', !!heroImage);
-                // console.log('Hero Image Mobile exists:', !!heroImageMobile);
-                
+            function setupParallaxAnimation() {                
                 // Create parallax effect for desktop image
                 if (heroImage) {
                     console.log('Creating desktop parallax ScrollTrigger...');
@@ -525,281 +488,6 @@ window.addEventListener('load', function() {
             }
 
 
-            
-            // Create text animation structure immediately (before any other animations)
-            const developmentTexts = gsap.utils.toArray('.development-project-item h4, .development-project-item span');
-            
-            developmentTexts.forEach((textElement, index) => {
-                // Create text-reveal animation structure immediately
-                const originalHTML = textElement.innerHTML;
-                const originalTextAlign = window.getComputedStyle(textElement).textAlign;
-                
-                // Clear original content and create the proper structure
-                textElement.innerHTML = '';
-                const lineWrapper = document.createElement('div');
-                lineWrapper.className = 'overflow-hidden lh-fix';
-                lineWrapper.style.cssText = `display: block; text-align: ${originalTextAlign}; position: relative;`;
-                
-                const lineSpan = document.createElement('div');
-                lineSpan.innerHTML = originalHTML;
-                lineSpan.style.cssText = `display: block; text-align: ${originalTextAlign}; position: relative;`;
-                
-                lineWrapper.appendChild(lineSpan);
-                textElement.appendChild(lineWrapper);
-                
-                // Set initial state to hidden
-                gsap.set(lineSpan, { y: '100%', opacity: 0 });
-                
-                // Create ScrollTrigger for text animation
-                ScrollTrigger.create({
-                    trigger: textElement,
-                    start: "top 90%",
-                    onEnter: () => {
-                        gsap.to(lineSpan, {
-                            y: '0%',
-                            opacity: 1,
-                            duration: 1,
-                            ease: "power4",
-                            delay: index * 0.1 // Small stagger between text elements
-                        });
-                    },
-                    onLeaveBack: () => {
-                        gsap.to(lineSpan, {
-                            y: '100%',
-                            opacity: 0,
-                            duration: 0.5,
-                            ease: "power2"
-                        });
-                    },
-                    toggleActions: "play none none reverse"
-                });
-            });
-
-            // Section Stacking Animation with Wrapper Pinning
-            //const sections = gsap.utils.toArray('.development-project-item');
-            
-            // Pin the development project items directly
-            // sections.forEach((section, index) => {
-            //     // Pin the section directly
-            //     ScrollTrigger.create({
-            //         trigger: section,
-            //         start: 'top 80px',
-            //         end: 'bottom top',
-            //         pin: index !== sections.length - 1, // Don't pin the last item
-            //         pinSpacing: false,
-            //         onEnter: () => {
-            //             // Smoothly animate section to center of pinned wrapper
-            //             gsap.to(section, {
-            //                 y: 0, // Center in wrapper
-            //                 duration: 0.8, // Back to shorter duration for smooth feel
-            //                 ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
-            //             });
-                        
-            //             // Move previous sections up smoothly
-            //             for (let i = 0; i < index; i++) {
-            //                 gsap.to(sections[i], {
-            //                     y: -(index - i) * 50,
-            //                     duration: 0.8, // Back to shorter duration for smooth feel
-            //                     ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
-            //                 });
-            //             }
-                        
-
-            //         },
-            //         onLeave: () => {
-            //             // Reset positions when leaving last section
-            //             if (index === sections.length - 1) {
-            //                 sections.forEach((sect, i) => {
-            //                     gsap.to(sect, {
-            //                         y: 0,
-            //                         duration: 0.8, // Back to shorter duration for smooth feel
-            //                         ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
-            //                     });
-            //                 });
-            //             }
-            //         }
-            //     });
-            // });
-
-
-
-
-
-
-
-
-            // Animation test - auto rotate animation
-            let sections = document.querySelectorAll(".animation-test-2 section"),
-            images = document.querySelectorAll(".animation-test-2 section .bg"),
-            headings = gsap.utils.toArray(".animation-test-2 section .bg h4"),
-            locationSpans = gsap.utils.toArray(".animation-test-2 section .project-location-span"),
-            outerWrappers = gsap.utils.toArray(".animation-test-2 section .outer"),
-            innerWrappers = gsap.utils.toArray(".animation-test-2 section .inner"),
-            splitHeadings = null, // Will be initialized after SplitText is confirmed
-            currentIndex = -1,
-            wrap = gsap.utils.wrap(0, sections.length),
-            animating;
-
-            // Initialize SplitText if available - wait for fonts to load
-            if (typeof SplitText !== 'undefined') {
-                // Wait for fonts to load before initializing SplitText
-                if (document.fonts && document.fonts.ready) {
-                    document.fonts.ready.then(() => {
-                        splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" }));
-                        console.log('SplitText initialized for headings (fonts loaded)');
-                    });
-                } else {
-                    // Fallback: wait a bit for fonts to load
-                    setTimeout(() => {
-                        splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" }));
-                        console.log('SplitText initialized for headings (fallback)');
-                    }, 100);
-                }
-            } else {
-                console.log('SplitText not available - skipping text splitting');
-            }
-
-
-            gsap.set(outerWrappers, { yPercent: 100 });
-            gsap.set(innerWrappers, { yPercent: -100 });
-
-            function gotoSection(index, direction) {
-                index = wrap(index); // make sure it's valid
-                animating = true;
-                let fromTop = direction === -1,
-                    dFactor = fromTop ? -1 : 1,
-                    tl = gsap.timeline({
-                      defaults: { duration: 1.8, ease: "power2.inOut" },
-                      onComplete: () => animating = false
-                    });
-                if (currentIndex >= 0) {
-                  // The first time this function runs, current is -1
-                  gsap.set(sections[currentIndex], { zIndex: 0 });
-                    tl.to(images[currentIndex], { 
-                        yPercent: -15 * dFactor
-                    })
-                    .set(sections[currentIndex], { autoAlpha: 0 });
-                }
-                gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-                tl.fromTo([outerWrappers[index], innerWrappers[index]], { 
-                    yPercent: i => i ? -100 * dFactor : 100 * dFactor,
-                    // opacity: 0 
-                  }, { 
-                    yPercent: 0,
-                    // opacity: 1 
-                  }, 0)
-                  .fromTo(images[index], { 
-                      yPercent: 15 * dFactor
-                    }, { 
-                      yPercent: 0
-                    }, 0)
-                    // Animate split text if available
-                    if (splitHeadings && splitHeadings[index] && splitHeadings[index].chars) {
-                        tl.fromTo(splitHeadings[index].chars, { 
-                            autoAlpha: 0, 
-                            yPercent: 150 * dFactor
-                        }, {
-                            autoAlpha: 1,
-                            yPercent: 0,
-                            duration: 1.5,
-                            delay: 0.5,
-                            ease: "power2.out",
-                            stagger: {
-                              each: 0.01,
-                              from: "random"
-                            }
-                        }, 0.2);
-                    }
-
-                    // Animate project location span
-                    if (locationSpans[index]) {
-                        tl.fromTo(locationSpans[index], {
-                            autoAlpha: 0,
-                            yPercent: 30 * dFactor
-                        }, {
-                            autoAlpha: 1,
-                            yPercent: 0,
-                            duration: 1.2,
-                            delay: 0.7,
-                            ease: "power2.out"
-                        }, 1.0); // Start after text animation begins
-                    }
-                  
-              
-                currentIndex = index;
-            }
-
-
-              gotoSection(0, 1);
-
-              // Auto-rotation loop - call gotoSection every 3 seconds
-              let autoRotationInterval = null;
-              let autoRotationActive = false;
-
-              function startAutoRotation() {
-                  if (autoRotationActive) return;
-                  
-                  autoRotationActive = true;
-                  console.log("Starting infinite auto-rotation every 3 seconds");
-                  
-                  autoRotationInterval = setInterval(() => {
-                      if (!animating) {
-                          const nextIndex = (currentIndex + 1) % sections.length;
-                        //   console.log(`Auto-rotating from section ${currentIndex} to section ${nextIndex}`);
-                          gotoSection(nextIndex, 1); // Always scroll down (direction = 1)
-                      }
-                  }, 3500); // 3 seconds
-              }
-
-              function stopAutoRotation() {
-                  if (!autoRotationActive) return;
-                  
-                  autoRotationActive = false;
-                  console.log("Stopping auto-rotation");
-                  
-                  if (autoRotationInterval) {
-                      clearInterval(autoRotationInterval);
-                      autoRotationInterval = null;
-                  } 
-              }
-
-              // Add parallax effect to the entire animation-test-2 section
-              const animationWrapper = document.querySelector('.animation-test-2-wrapper');
-              const animationSection = document.querySelector('.animation-test-2');
-              
-              if (animationWrapper && animationSection) {
-                  // Set initial position
-                  gsap.set(animationSection, { yPercent: -10 });
-                  
-                  // Create parallax ScrollTrigger
-                  ScrollTrigger.create({
-                      trigger: animationWrapper,
-                      start: "top bottom",
-                      end: "bottom top",
-                      scrub: 1,
-                      onUpdate: (self) => {
-                          const progress = self.progress;
-                          const yOffset = progress * 20; // 20% parallax movement
-                          gsap.set(animationSection, { yPercent: -10 + yOffset });
-                      }
-                  });
-              }
-
-              // Start auto-rotation immediately
-              startAutoRotation();
-            
-
-
-
-
-
-
-            
-
-
-           
-
-            
 
 
         }
