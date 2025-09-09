@@ -647,6 +647,7 @@
     .xl\:pr-8 { padding-right: 2rem; }
     .xl\:pr-10 { padding-right: 2.5rem; }
     .xl\:pr-12 { padding-right: 3rem; }
+    .xl\:pr-14 { padding-right: 3.5rem; }
     .xl\:pr-16 { padding-right: 4rem; }
     .xl\:pr-20 { padding-right: 5rem; }
     .xl\:pr-24 { padding-right: 6rem; }
@@ -870,8 +871,11 @@
     .xl\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
     .xl\:grid-cols-\[2fr_1fr\] { grid-template-columns: 2fr 1fr; }
     .xl\:grid-cols-\[1\.2fr_1fr\] { grid-template-columns: 1.2fr 1fr; }
+    .xl\:grid-cols-\[1\.4fr_1fr\] { grid-template-columns: 1.4fr 1fr; }
+    .xl\:grid-cols-\[1\.5fr_1fr\] { grid-template-columns: 1.5fr 1fr; }
 
     /* Gap - XL */
+    .xl\:gap-0 { gap: 0; }
     .xl\:gap-1 { gap: 0.25rem; }
     .xl\:gap-2 { gap: 0.5rem; }
     .xl\:gap-4 { gap: 1rem; }
@@ -1079,6 +1083,7 @@
 }
 
 img { width: 100%; height: auto; object-fit: contain; }
+.aspect-square { aspect-ratio: 1/1; }
 .object-cover { object-fit: cover; }
 .object-contain { object-fit: contain; }
 ul { list-style: none; }
