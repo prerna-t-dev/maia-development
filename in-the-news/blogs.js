@@ -92,6 +92,42 @@ $(document).ready(function(){
         ]
     });
 
+    // Featured Blogposts Slider
+    $('.featured-blogposts-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 0,
+        centerMode: false,
+        centerPadding: '0px',
+        prevArrow: $('.featured-blog-posts .slick-arrow-prev'),
+        nextArrow: $('.featured-blog-posts .slick-arrow-next'),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    centerPadding: '0px'
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    centerPadding: '0px'
+                }
+            }
+        ]
+    });
+
     // Article Slider Progress Bar Functionality
     $('.featured-articles-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
         updateArticleProgressBar(nextSlide, slick.slideCount);
@@ -100,6 +136,16 @@ $(document).ready(function(){
     // Also update on afterChange to ensure accuracy
     $('.featured-articles-slider').on('afterChange', function(event, slick, currentSlide) {
         updateArticleProgressBar(currentSlide, slick.slideCount);
+    });
+
+    // Blogposts Slider Progress Bar Functionality
+    $('.featured-blogposts-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        updateBlogpostsProgressBar(nextSlide, slick.slideCount);
+    });
+
+    // Also update on afterChange to ensure accuracy
+    $('.featured-blogposts-slider').on('afterChange', function(event, slick, currentSlide) {
+        updateBlogpostsProgressBar(currentSlide, slick.slideCount);
     });
 
     // Function to update article progress bar
@@ -137,6 +183,41 @@ $(document).ready(function(){
         }
     }
 
+    // Function to update blogposts progress bar
+    function updateBlogpostsProgressBar(currentSlide, totalSlides) {
+        // Ensure we're working with valid slide numbers
+        if (currentSlide >= 0 && totalSlides > 0) {
+            // Get current slidesToShow setting based on screen size
+            let slidesToShow = 3; // Default for desktop
+            
+            if (window.innerWidth <= 768) {
+                slidesToShow = 1; // Mobile
+            } else if (window.innerWidth <= 1024) {
+                slidesToShow = 2; // Tablet
+            }
+            
+            // Calculate when progress should complete using your formula
+            // Progress completion slide = Total slides - Slides shown + 1
+            const progressCompleteSlide = totalSlides - slidesToShow + 1;
+            
+            // Calculate progress based on current slide position
+            let progressPercentage;
+            if (currentSlide >= progressCompleteSlide) {
+                // We're at or past the completion point
+                progressPercentage = 100;
+            } else {
+                // Calculate progress: each slide represents equal percentage
+                // For 4 completion slides: 25%, 50%, 75%, 100%
+                progressPercentage = ((currentSlide + 1) / progressCompleteSlide) * 100;
+            }
+            
+            // Ensure we don't exceed 100%
+            const finalPercentage = Math.min(progressPercentage, 100);
+            
+            $('.blogpost-slider-progress-fill').css('width', finalPercentage + '%');
+        }
+    }
+
     // Initialize article progress bar immediately and after slider init
     function initializeArticleProgressBar() {
         const totalSlides = $('.featured-articles-slider .slick-slide').length;
@@ -160,12 +241,40 @@ $(document).ready(function(){
         }
     }
 
+    // Initialize blogposts progress bar immediately and after slider init
+    function initializeBlogpostsProgressBar() {
+        const totalSlides = $('.featured-blogposts-slider .slick-slide').length;
+        if (totalSlides > 0) {
+            // Get current slidesToShow setting based on screen size
+            let slidesToShow = 3; // Default for desktop
+            
+            if (window.innerWidth <= 768) {
+                slidesToShow = 1; // Mobile
+            } else if (window.innerWidth <= 1024) {
+                slidesToShow = 2; // Tablet
+            }
+            
+            // Calculate completion point using your formula
+            const progressCompleteSlide = totalSlides - slidesToShow + 1;
+            
+            // Calculate initial progress: 1 / completion slides * 100
+            const progressPercentage = (1 / progressCompleteSlide) * 100;
+            
+            $('.blogpost-slider-progress-fill').css('width', progressPercentage + '%');
+        }
+    }
+
     // Set initial progress immediately
     initializeArticleProgressBar();
+    initializeBlogpostsProgressBar();
 
     // Also set it after slider initialization
     $('.featured-articles-slider').on('init', function(event, slick) {
         updateArticleProgressBar(0, slick.slideCount);
+    });
+
+    $('.featured-blogposts-slider').on('init', function(event, slick) {
+        updateBlogpostsProgressBar(0, slick.slideCount);
     });
 
     // Manual progress check - ensure 100% when all remaining slides are visible
@@ -187,6 +296,28 @@ $(document).ready(function(){
         if (currentSlide >= progressCompleteSlide) {
             // We're at or past the completion point
             $('.article-slider-progress-fill').css('width', '100%');
+        }
+    });
+
+    // Manual progress check for blogposts slider - ensure 100% when all remaining slides are visible
+    $('.featured-blogposts-slider').on('swipe', function(event, slick, direction) {
+        const currentSlide = slick.currentSlide;
+        const totalSlides = slick.slideCount;
+        
+        // Get current slidesToShow setting
+        let slidesToShow = 3; // Default for desktop
+        if (window.innerWidth <= 768) {
+            slidesToShow = 1; // Mobile
+        } else if (window.innerWidth <= 1024) {
+            slidesToShow = 2; // Tablet
+        }
+        
+        // Check if we're at the completion point using your formula
+        const progressCompleteSlide = totalSlides - slidesToShow + 1;
+        
+        if (currentSlide >= progressCompleteSlide) {
+            // We're at or past the completion point
+            $('.blogpost-slider-progress-fill').css('width', '100%');
         }
     });
 

@@ -677,8 +677,41 @@ window.addEventListener('load', function() {
                   gsap.set(sections[currentIndex], { zIndex: 0 });
                     tl.to(images[currentIndex], { 
                         yPercent: -15 * dFactor
-                    })
-                    .set(sections[currentIndex], { autoAlpha: 0 });
+                    });
+                    
+
+
+                    //--newly added--
+
+                    
+                    // Animate previous slide's splitHeadings and locationSpans down
+                    if (splitHeadings && splitHeadings[currentIndex] && splitHeadings[currentIndex].chars) {
+                        tl.to(splitHeadings[currentIndex].chars, {
+                            autoAlpha: 0,
+                            yPercent: -150 * dFactor,
+                            duration: 0.8,
+                            ease: "power2.in",
+                            stagger: {
+                                each: 0.01,
+                                from: "random"
+                            }
+                        }, 0);
+                    }
+                    
+                    if (locationSpans[currentIndex]) {
+                        tl.to(locationSpans[currentIndex], {
+                            autoAlpha: 0,
+                            yPercent: -30 * dFactor,
+                            duration: 0.8,
+                            ease: "power2.in"
+                        }, 0.1);
+                    }
+
+                    //--newly added--
+
+
+                    
+                    tl.set(sections[currentIndex], { autoAlpha: 0 });
                 }
                 gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
                 tl.fromTo([outerWrappers[index], innerWrappers[index]], { 
@@ -748,7 +781,7 @@ window.addEventListener('load', function() {
                         //   console.log(`Auto-rotating from section ${currentIndex} to section ${nextIndex}`);
                           gotoSection(nextIndex, 1); // Always scroll down (direction = 1)
                       }
-                  }, 3500); // 3 seconds
+                  }, 3000); // 3 seconds
               }
 
               function stopAutoRotation() {

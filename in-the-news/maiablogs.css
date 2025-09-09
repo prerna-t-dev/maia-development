@@ -820,8 +820,223 @@
     /* =========================== --------- 2. Blog Details Page ---------- ======================== */
 
 
+    .bd-breadcrumb{
+        border-radius: 2px;
+        padding: 4px 16px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .bd-breadcrumb-middle{
+        background: #E3E3E342;
+    }
+    .bd-breadcrumb-last{
+        background: #FFFFFFED;
+        color: #01664D;
+    }
+    .bd-breadcrumb-separator{
+        padding: 4px 8px;
+    }
 
 
+
+    /* Blog Content  */
+    .blog-details--body-content,
+    .blog-details--body-content p{
+        font-weight: 300;
+        font-size: 18px;
+        leading-trim: NONE;
+        line-height: 148%;
+        letter-spacing: 0%;
+        color: #2E2E2E;
+    }
+
+    .blog-details--body-content strong{
+        font-weight: 600;
+    }
+
+
+    .blog-details--body-content h3{
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 32px;
+        leading-trim: NONE;
+        line-height: 36px;
+        letter-spacing: -0.5%;
+        vertical-align: middle;
+        color: var(--primary-deep-blue);
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
+
+    .blog-details--body-content h4{
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 24px;
+        leading-trim: NONE;
+        line-height: 128%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        color: var(--primary-deep-blue);
+        margin-bottom: 24px;
+
+    }
+
+    .blog-details--body-content h5{
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        leading-trim: NONE;
+        line-height: 128%;
+        letter-spacing: 0%;
+        vertical-align: middle;
+        color: var(--primary-deep-blue);
+        margin-bottom: 24px;
+    }
+
+    .blog-details--body-content h3 strong,
+    .blog-details--body-content h4 strong,
+    .blog-details--body-content h5 strong
+    {
+        font-weight: 400;
+    }
+
+    .blog-details--body-content ul{
+        margin-bottom: 50px;
+        list-style: disc;
+        padding-left: 20px;
+    }
+
+    .blog-details--body-content ol{
+        margin-bottom: 50px;
+        list-style: decimal;
+        padding-left: 20px;
+    }
+
+    .blog-details--body-content ul li,
+    .blog-details--body-content ol li{
+        font-weight: 300;
+        font-size: 18px;
+        leading-trim: NONE;
+        line-height: 148%;
+        letter-spacing: 0%;
+        color: #2E2E2E;
+    }
+
+    .blog-details--body-content a{
+        color:inherit;
+        text-decoration: underline;
+    }
+
+
+    /* TOC Active State Styling */
+    .toc-link{
+        font-weight: 400;
+        font-size: 18px;
+        leading-trim: NONE;
+        line-height: 150%;
+        letter-spacing: -1.5%;
+        vertical-align: middle;
+        color: #2E2E2E;
+        padding: 0;
+        margin-bottom: 24px
+
+    }
+
+    
+
+    .toc-link.active {
+        /* background-color: #f0f9ff; */
+        color: #027E5D !important;
+        font-weight: 600;
+        /* border-left: 3px solid #059669; */
+    }
+    
+    /* .toc-link:hover {
+        background-color: #f9fafb;
+    } */
+    
+    /* Accordion Styling */
+    .table-of-contents summary {
+        cursor: pointer;
+        list-style: none;
+    }
+    
+    .table-of-contents summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    .table-of-contents details[open] summary .minus {
+        transform: rotate(0deg);
+    }
+    
+    .table-of-contents details:not([open]) summary .minus {
+        transform: rotate(0deg);
+    }
+    
+    .minus {
+        transition: transform 0.2s ease;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    
+    /* Make entire TOC header clickable */
+    .text-primary-deep-blue.leading-12 {
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .text-primary-deep-blue.leading-12:hover {
+        opacity: 0.8;
+    }
+    
+    .accordion-icon {
+        transition: opacity 0.2s ease;
+    }
+
+
+
+    @media (max-width: 768px) {
+        .blog-details-sidebar--wrapper{
+            order: 1 !important;
+            position: static !important;
+            min-height: auto !important;
+        }
+
+        .blog-details-content--wrapper{
+            order: 2 !important;
+        }
+
+
+        .blog-details--body-content,
+        .blog-details--body-content p{
+            font-size: 16px;
+        }
+
+        .blog-details--body-content h3{
+            font-weight: 350;
+            font-size: 28px;
+            line-height: 36px;
+        }
+    
+        .blog-details--body-content h4{
+            font-size: 20px;
+            line-height: 128%;
+        }
+
+        .blog-details--body-content h5{
+            font-size: 18px;
+            line-height: 128%;
+        }
+
+        .blog-details--body-content ul li,
+        .blog-details--body-content ol li{
+            font-size: 16px;
+            line-height: 148%;
+        }
+
+
+
+    }
 
 
 
@@ -839,22 +1054,30 @@
         aspect-ratio: 1/1.2;
     }
 
-    .featured-articles-slider .slick-slide{
+    .featured-blogposts-slider .featured-blogpost--slide .blogpost-slide--img{
+        aspect-ratio: 1.6;
+    }
+
+    .featured-articles-slider .slick-slide,
+    .featured-blogposts-slider .slick-slide{
         margin-right: 32px;
     }
 
-    .featured-articles-slider .slick-list{
+    .featured-articles-slider .slick-list,
+    .featured-blogposts-slider .slick-list{
         padding: 0 10% 0 0 !important;
     }
 
     /* Featured Articles Slider Progress Bar */
-    .article-slider-progress {
+    .article-slider-progress,
+    .blogpost-slider-progress {
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
     }
 
-    .article-slider-progress-bar {
+    .article-slider-progress-bar,
+    .blogpost-slider-progress-bar {
         width: 100%;
         height: 3px;
         background-color: #EBE7E0;
@@ -862,7 +1085,8 @@
         overflow: hidden;
     }
 
-    .article-slider-progress-fill {
+    .article-slider-progress-fill,
+    .blogpost-slider-progress-fill {
         height: 100%;
         background-color: #000A1E;
         width: 25%; /* Default width for first slide (1/4 completion slides) */
@@ -875,3 +1099,15 @@
 
     /* =========================== --------- 2. Article Details Page ---------- ======================== */
 
+    .article-details--image{
+        aspect-ratio: 1.1;
+    }
+
+
+
+    @media (max-width: 1023px) {
+        .article-details--image{
+            /* aspect-ratio: 1/1.2; */
+            aspect-ratio: auto;
+        }
+    }
