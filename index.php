@@ -148,7 +148,7 @@
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block">
-                    <ul class="flex gap-8 text-xs font-medium">
+                    <ul class="flex gap-8 text-sm font-medium">
                         <li><a class="text-green uppercase" href="#">About Us</a></li>
                         <li><a class="text-green uppercase" href="#">Services</a></li>
                         <li><a class="text-green uppercase" href="#">Developments</a></li>
