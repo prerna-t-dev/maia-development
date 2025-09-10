@@ -203,6 +203,53 @@
     transition: none; /* Remove any CSS transitions that might interfere */
 }
 
+
+
+/* Navigation Overlay CSS */
+.nav-close {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    z-index: 1000;
+    position: relative;
+}
+
+.nav-close svg {
+    pointer-events: none;
+}
+
+.nav-list--container{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.nav-list--container .nav-list--item{
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #FFFFFF1F;
+}
+
+.nav-list--container .nav-list--item a,
+.nav-list--container .nav-list--item .text-white{
+    opacity: 32%;
+    transition: opacity 0.3s ease;
+}
+
+.nav-list--container .nav-list--item:hover a,
+.nav-list--container .nav-list--item:hover .text-white,
+.nav-list--container .nav-list--item:hover span{
+    opacity: 1;
+}
+
+
+
+
 .hero-banner-image-animation {
     width: 100%;
     height: 100%;
@@ -297,7 +344,7 @@ p{
 }
 
 .container{
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: 0 auto;
     padding: 0 80px;
 }
@@ -319,9 +366,11 @@ body.bespoke-services .header{
     background-color: transparent;
 }
 
-.header .logo{
+.header .logo,
+.nav-overlay .logo{
     width: 98px;
 }
+
 
 .header .social-icons{
     display: flex;

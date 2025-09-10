@@ -350,6 +350,7 @@
 .h-full { height: 100%; }
 .h-auto { height: auto; }
 .h-screen { height: 100vh; }
+.w-screen { width: 100vw; }
 .h-6 { height: 1.5rem; }
 .h-8 { height: 2rem; }
 .h-sm { height: 14px; }
