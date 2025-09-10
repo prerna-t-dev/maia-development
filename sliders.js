@@ -54,9 +54,20 @@ $(document).ready(function(){
     const navOverlay = $('#nav-overlay');
     const navClose = $('#nav-close');
     
+    // Force overlay off-screen on window resize
+    $(window).on('resize', function() {
+        if (!navOverlay.hasClass('open')) {
+            navOverlay.css({
+                'top': '-100vh',
+                'visibility': 'hidden',
+                'opacity': '0'
+            });
+        }
+    });
+    
     // Open navigation overlay
     menuButton.on('click', function() {
-        navOverlay.css('top', '0');
+        navOverlay.addClass('open');
         $('body').addClass('overflow-hidden'); // Prevent background scrolling
         
         // Completely disable Lenis and force native scrolling
@@ -84,7 +95,7 @@ $(document).ready(function(){
         e.stopPropagation();
         console.log('Close button clicked'); // Debug log
         
-        navOverlay.css('top', '-100vh');
+        navOverlay.removeClass('open');
         $('body').removeClass('overflow-hidden'); // Restore scrolling
         
         // Re-initialize Lenis after overlay closes
@@ -118,7 +129,7 @@ $(document).ready(function(){
     // Close on overlay click (optional)
     navOverlay.on('click', function(e) {
         if (e.target === this) {
-            navOverlay.css('top', '-100vh');
+            navOverlay.removeClass('open');
             $('body').removeClass('overflow-hidden');
             
             // Re-initialize Lenis after overlay closes
@@ -152,8 +163,8 @@ $(document).ready(function(){
     
     // Close on escape key
     $(document).on('keydown', function(e) {
-        if (e.key === 'Escape' && navOverlay.css('top') === '0px') {
-            navOverlay.css('top', '-100vh');
+        if (e.key === 'Escape' && navOverlay.hasClass('open')) {
+            navOverlay.removeClass('open');
             $('body').removeClass('overflow-hidden');
             
             // Re-initialize Lenis after overlay closes
@@ -1207,6 +1218,48 @@ $(document).ready(function(){
         prevArrow: $('.why-bespoke-slider-nav .slick-arrow-prev'),
         nextArrow: $('.why-bespoke-slider-nav .slick-arrow-next')
     });
+
+
+
+
+
+
+
+    // Environmental and Social Impact Slider
+    $('.environmental-and-social-impact-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 0,
+        centerMode: false,
+        centerPadding: '0px',
+        fade: true,
+        cssEase: 'ease-in-out',
+        prevArrow: $('.environmental-and-social-impact-slider-container .slick-arrow-prev'),
+        nextArrow: $('.environmental-and-social-impact-slider-container .slick-arrow-next')
+    });
+
+    // Sustainability Accordion Functionality
+    $('.sustainability-accordion .accordion-header').on('click', function() {
+        const accordionItem = $(this).closest('.accordion-item');
+        const accordionContent = accordionItem.find('.accordion-content');
+        const isActive = accordionItem.hasClass('active');
+        
+        // Close all other accordion items within sustainability accordion
+        $('.sustainability-accordion .accordion-item').removeClass('active');
+        $('.sustainability-accordion .accordion-content').removeClass('active');
+        
+        // Toggle current item
+        if (!isActive) {
+            accordionItem.addClass('active');
+            accordionContent.addClass('active');
+        }
+    });
+    
 });
 
 

@@ -206,6 +206,47 @@
 
 
 /* Navigation Overlay CSS */
+#nav-overlay {
+    position: fixed !important;
+    top: -100vh !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #00261E !important;
+    z-index: 50 !important;
+    transition: top 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+    transform: translateY(0) !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+#nav-overlay.open {
+    top: 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Ensure it's always off-screen on all screen sizes */
+@media (max-width: 768px) {
+    #nav-overlay {
+        top: -100vh !important;
+    }
+    
+    #nav-overlay.open {
+        top: 0 !important;
+    }
+}
+
+@media (min-width: 769px) {
+    #nav-overlay {
+        top: -100vh !important;
+    }
+    
+    #nav-overlay.open {
+        top: 0 !important;
+    }
+}
+
 .nav-close {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -246,6 +287,10 @@
 .nav-list--container .nav-list--item:hover span{
     opacity: 1;
 }
+
+
+
+
 
 
 
@@ -1265,3 +1310,117 @@ section.contact-us{
     border-top: 1px solid #40352412;
 }
 
+
+
+
+
+/*************** ========= Maia Impact Page ========= ***************/
+.environmental-and-social-impact-slider-item{
+    position: relative;
+}
+
+.environmental-and-social-impact-slider-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.environmental-and-social-impact-slider-item .env-slider-grid{
+    display: grid;
+    grid-template-columns: 1.5fr 1.8fr 1fr;
+    gap: 100px;
+}
+
+
+@media (max-width: 1023px) {
+    .environmental-and-social-impact-slider-item .env-slider-grid{
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .environmental-and-social-impact-slider-item img{
+        height: 340px;
+    }
+}
+
+
+/* Sustainability Accordion */
+.sustainability-accordion {
+    width: 100%;
+}
+
+.sustainability-accordion .accordion-item {
+    border-bottom: 1px solid #E5E5E5;
+    padding: 20px 0;
+}
+
+.sustainability-accordion .accordion-item:last-child {
+    border-bottom: none;
+}
+
+.sustainability-accordion .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    gap: 16px;
+}
+
+
+.sustainability-accordion .accordion-icon {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.sustainability-accordion .accordion-icon .plus-icon,
+.sustainability-accordion .accordion-icon .minus-icon {
+    transition: opacity 0.5s ease;
+}
+
+.sustainability-accordion .accordion-icon .minus-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sustainability-accordion .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding-top: 0;
+    width: 80%;
+}
+
+.sustainability-accordion .accordion-content.active {
+    max-height: 200px;
+    padding-top: 16px;
+}
+
+
+/* Accordion item active state - Show minus when open */
+.sustainability-accordion .accordion-item.active .plus-icon {
+    opacity: 0;
+}
+
+.sustainability-accordion .accordion-item.active .minus-icon {
+    opacity: 1;
+}
+
+.sustainability-accordion .accordion-item:not(.active) .plus-icon {
+    opacity: 1;
+}
+
+.sustainability-accordion .accordion-item:not(.active) .minus-icon {
+    opacity: 0;
+}
+
+@media (max-width: 1023px) {
+    .sustainability-construction-grid .sustainability-construction-image {
+        order: 1;
+    }
+
+    .sustainability-construction-grid .sustainability-construction-content {
+        order: 2;
+    }
+}
