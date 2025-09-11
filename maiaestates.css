@@ -95,6 +95,52 @@
 
 
 
+/* Button States */
+
+.btn-primary,
+.btn-secondary{
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover{
+    background-color: #014E3C;
+}
+
+.btn-primary:focus{
+    background-color: #027E5D;
+}
+
+.btn-primary:disabled{
+    opacity: 0.5;
+}
+
+
+.btn-secondary:hover{
+    background-color: #027E5D;
+    color: #FFFFFF;
+}
+
+.btn-secondary:hover svg circle{
+    stroke: #FFFFFF;
+}
+
+.btn-secondary:focus{
+    background-color: #027E5D;
+}
+
+.btn-secondary:disabled{
+    opacity: 0.5;
+}
+
+.header nav ul li a{
+    transition: all 0.3s ease;
+}
+
+.header nav ul li a:hover{
+    color: #027E5D;
+}
+
+
 
 
 /* Ensure text reveal animations don't add extra spacing */
@@ -420,7 +466,7 @@ body.bespoke-services .header{
 
 .header .logo,
 .nav-overlay .logo{
-    width: 98px;
+    width: 104px;
 }
 
 .nav-overlay .h-screen{

@@ -187,7 +187,7 @@
                 <!-- Menu Bar -->
                 <div class="menu-bar flex items-center gap-4">
                     <!-- Contact Us - Desktop -->
-                    <button class="nav-overlay-contact-us hidden xl:block btn-secondary bg-white w-fit text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center cursor-pointer">
+                    <button class="nav-overlay-contact-us hidden xl:flex btn-secondary bg-white w-fit text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center cursor-pointer">
                         <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="2.91484" cy="3.44102" r="2.18652" stroke="#00261E" stroke-width="0.874607"/>
                         </svg>
@@ -559,7 +559,7 @@
                             <h3 class="text-gold text-4xl xl:text-6xl leading-11 text-center font-heading font-normal px-4 xl:px-0">
                                 Embracing the highest standards of <br />
                                 design, execution, sustainability and <br />
-                                professionalism, We create spaces that <br />
+                                professionalism, we create spaces that <br />
                                 enhance our ecosystem.
                             </h3>
                         </div>
