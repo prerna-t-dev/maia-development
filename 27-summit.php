@@ -154,35 +154,35 @@
 <body id="bodycontainer">
     <div class="body_wrapper scroll-section overflow-x-hidden">
         <!-- Header -->
-        <header class="header sticky top-0 left-0 right-0 z-50">
-            <div class="container header-container flex justify-between items-center">
+        <header class="header header-green sticky top-0 left-0 right-0 z-50">
+            <div class="container flex justify-between items-center">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="images/2025/MAIA-logo.png" alt="Logo">
+                    <a href="index.php">
+                        <img src="images/2025/MAIA-logo-white.png" alt="Logo">
                     </a>
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
-                <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
-                    <ul class="flex gap-8 text-sm font-medium">
-                        <li><a class="text-green uppercase" href="#">About Us</a></li>
-                        <li><a class="text-green uppercase" href="#">Services</a></li>
-                        <li><a class="text-green uppercase" href="#">Developments</a></li>
+                <nav class="hidden xl:block">
+                    <ul class="flex gap-8 text-xs font-medium">
+                        <li><a class="text-white uppercase" href="#">About Us</a></li>
+                        <li><a class="text-white uppercase" href="#">Services</a></li>
+                        <li><a class="text-white uppercase" href="#">Developments</a></li>
                     </ul>
                 </nav>
                 <!-- Menu Bar -->
                 <div class="menu-bar flex items-center gap-4">
-                    <button class="btn-primary bg-green text-white uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
+                    <button class="btn-primary bg-white text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
                         <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                         </svg>
                         <span class="text-xs font-medium">Contact Us</span>
                     </button>
 
-                    <button id="menu-bar-button" class="menu-bar-button menu-bar-button--open cursor-pointer">
-                        <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4.74737" y="4.44073" width="38.1426" height="38.1426" rx="19.0713" stroke="#00362A" stroke-width="0.756465"/>
-                            <rect x="15.1035" y="19.9844" width="17.429" height="1" fill="#00362A"/>
-                            <rect x="15.1035" y="26.0391" width="17.429" height="1" fill="#00362A"/>
+                    <button id="menu-bar-button" class="menu-bar-button cursor-pointer">
+                        <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4.24933" y="4.44073" width="38.1426" height="38.1426" rx="19.0713" stroke="white" stroke-width="0.756465"/>
+                            <rect x="14.6055" y="19.9844" width="17.429" height="1" fill="white"/>
+                            <rect x="14.6055" y="26.0391" width="17.429" height="1" fill="white"/>
                         </svg>
                     </button>
                 </div> 
@@ -297,35 +297,41 @@
 
 
         <!-- Section 1: Hero Banner -->
-        <section class="hero-banner hero-banner-animation py-20">
+        <section class="hero-banner hero-banner-animation py-20 bg-green-dark text-white">
             <div class="container">
                 <div class="hero-content pb-10 xl:pb-12">
-                    <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-6 mb-16 xl:mb-20">
-                        <!-- <h1 class="text-60px xl:text-120px font-normal text-green">
-                            Our <br /> Developments
-                        </h1> -->
-                        <h1 class="text-60px xl:text-120px font-normal text-green">
+                    <div class="flex flex-col-reverse xl:flex-row xl:justify-between xl:items-center gap-16 mb-6 xl:mb-16">
+                        <div class="development-badge mb-5 fade-in" data-delay="1.2">
+                            Ongoing Delivery
+                        </div>
+
+                        <div class="dev-project--logo fade-in" data-delay="1.2" style="width: 150px; height: auto;">
+                            <img class="w-full h-auto" src="images/2025/27-summit/27-summit-logo.png" alt="27 Summit Logo">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6 mb-16 xl:mb-20">
+                         <h1 class="text-56px xl:text-7xl font-normal text-white">
                             <span class="line-wrapper">
-                                <span class="line">Our</span>
+                                <span class="line">Drawing From Heritage;</span>
                             </span>
                             <span class="line-wrapper">
-                                <span class="line">Developments</span>
+                                <span class="line">Brimming With Innovation</span>
                             </span>
                         </h1>
                         <div class="fade-in" data-delay="0.8">
-                            <p class="font-medium text-black opacity-70" style="max-width: 325px;">
-                                A curated portfolio of completed and upcoming icons, each exemplifying artistry, innovation, and an enduring legacy.
+                            <p class="font-medium text-white opacity-70" style="max-width: 720px;">
+                                27 Summit blends timeless architecture with verdant surroundings, creating a refined lifestyle amidst curated gardens, rain trees, and signature amenities.
                             </p>
                         </div>
                         
                     </div>
 
                     <div class="scroll-to-explore flex items-center justify-between fade-in" data-delay="0.8">
-                        <p class="text-xs font-medium text-black uppercase">(Scroll to explore)</p>
+                        <p class="text-xs font-medium text-white uppercase">(Scroll to explore)</p>
                         <div class="scroll-down cursor-pointer scale-65 xl:scale-100">
                             <svg class="w-full h-auto" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.378906" width="61.44" height="61.44" rx="30.72" fill="#014E3C"/>
-                                <path d="M25.0039 31.1746L26.2834 29.921L30.6336 34.3981V23.0391L32.5016 23.0391V34.3981L36.8774 29.921L38.1313 31.1746L31.5804 37.7495L25.0039 31.1746Z" fill="white"/>
+                                <rect width="61.44" height="61.44" rx="30.72" fill="white"/>
+                                <path d="M24.625 31.1746L25.9045 29.921L30.2547 34.3981V23.0391L32.1227 23.0391V34.3981L36.4985 29.921L37.7524 31.1746L31.2015 37.7495L24.625 31.1746Z" fill="#00362A"/>
                             </svg>
                         </div>
                     </div>
@@ -333,376 +339,315 @@
 
                 <div class="hidden xl:block">
                     <div class="hero-image-wrapper hero-image-wrapper-desktop">
-                        <img src="images/2025/developments/hero-banner-image--dev.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation">
+                        <img src="images/2025/27-summit/hero-banner-image--dev-desktop.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation">
                     </div>
                 </div>
                 <div class="block xl:hidden">
                     <div class="hero-image-wrapper hero-image-wrapper-mobile">
-                        <img src="images/2025/developments/hero-banner-image--dev.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation-mobile">
+                        <img src="images/2025/27-summit/hero-banner-image--dev-mobile.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation-mobile">
                     </div>
                 </div>
             </div>
         </section>
 
 
-
-
-        <!-- Section 2: Brand Ethos -->
-        <section class="brand-ethos py-20 xl:py-40 bg-green-dark text-white">
+        <!-- Section 2: Key Features -->
+        <section class="key-features py-30 bg-beige">
             <div class="container">
-                <div class="brand-ethos-content grid grid-cols-1 xl:grid-cols-2 gap-16 xl:gap-4 pb-16 xl:pb-30 xl:pt-10">
-                    <div class="brand-ethos-content-left xl:mt-10 xl:pr-4">
+                <div class="grid grid-cols-1 xl:grid-cols-[1.4fr_1fr] items-center gap-14">
+                    <div class="key-feature-info xl:pr-40">
                         <div class="text-reveal--wrapper">  
-                            <div class="section-subheader uppercase text-white mb-3">
-                                BRAND ETHOS
+                            <div class="section-subheader uppercase text-green mb-3">
+                                Key Features of 27 Summit
                             </div>
                         </div>
                         <div class="text-reveal--wrapper">
-                            <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-18 text-white">
-                                Driven by Vision, <br />
-                                Defined by Craft
+                            <h2 class="text-40px xl:text-6xl font-normal mb-12 xl:mb-30 text-green">
+                                Hallmarks of Maia <br />
+                                Living
                             </h2>
                         </div>
-                        <p class="xl:mb-12 max-w-lg text-white opacity-70">
-                            We practice the principles of perfection, precision, <br />
-                            innovative design and commitment to the highest quality <br />
-                            at each stage of the development process.
-                        </p>
-                    </div>
-                    <div class="brand-ethos-content-right">
-                        <div class="image-reveal--wrapper">
-                            <img src="images/2025/developments/brand-ethos.png" alt="Brand Ethos" class="brand-ethos-image w-full h-full object-cover">
+
+                        <!-- Key Features Data -->
+                        <div class="key-features-data">
+                            <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                                <div class="key-feature-data--item flex items-center gap-3 px-6">
+                                    <div class="text-reveal--wrapper">
+                                        <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
+                                            2.24
+                                        </p>
+                                    </div>
+                                    <div class="text-reveal--wrapper">
+                                        <span class="text-dark-slate font-normal text-base whitespace-nowrap">
+                                            Acres
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="key-feature-data--item flex items-center gap-3 px-6">
+                                    <div class="text-reveal--wrapper">
+                                        <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
+                                            81%
+                                        </p>
+                                    </div>
+                                    <div class="text-reveal--wrapper">
+                                        <span class="text-dark-slate font-normal text-base whitespace-nowrap">
+                                            Open Space
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="key-feature-data--item flex items-center gap-3 px-6">
+                                    <div class="text-reveal--wrapper">
+                                        <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
+                                            27
+                                        </p>
+                                    </div>
+                                    <div class="text-reveal--wrapper">
+                                        <span class="text-dark-slate font-normal text-base whitespace-nowrap">
+                                            Floors
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="key-feature-data--item flex items-center gap-3 px-6">
+                                    <div class="text-reveal--wrapper">
+                                        <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
+                                        3 BHK
+                                        </p>
+                                    </div>
+                                    <div class="text-reveal--wrapper">
+                                        <span class="text-dark-slate font-normal text-base whitespace-nowrap">
+                                            / 3 BHK with <br />
+                                            drawing room
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="key-feature-data--item flex items-center gap-3 px-6">
+                                    <div class="text-reveal--wrapper">
+                                        <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
+                                        40+
+                                        </p>
+                                    </div>
+                                    <div class="text-reveal--wrapper">
+                                        <span class="text-dark-slate font-normal text-base whitespace-nowrap">
+                                            Amenities
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
+                    <div class="img-wrapper">
+                        <img src="images/2025/27-summit/27-summit--features.png" alt="Key Features Image">
+                    </div>
                 </div>
-                <div class="line-divider-light"></div>
+
+                <div class="line-divider-green-light mt-14 xl:mt-30"></div>
             </div>
         </section>
 
-
-
-
-        <!-- Section 3: MAIA Developments -->
-        <section class="maia-developments pt-30 bg-white">
-            <div class="container maia-developments-content text-center">
-                <div class="text-reveal--wrapper">
-                    <div class="section-subheader uppercase text-green mb-3">
-                        MAIA DEVELOPMENTS
-                    </div>
-                </div>
-                <div class="text-reveal--wrapper">
-                    <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-8">
-                        Defining the Skyline
-                    </h2>
-                </div>
-                <!-- <div class="text-reveal--wrapper developments-text-line-paragraph"> -->
-                    <p>
-                        Our developments reflect a deep commitment to craftsmanship, context,<br />and quality, creating spaces that stand the test of time.
-                    </p>
-                <!-- </div> -->
-            </div>
-
-            <!-- Development Project List -->
-            <div class="development-project-list mt-16 xl:mt-30">
-                <!-- 1. 27 Summit -->
-                <div class="development-project-slider-item mb-10 xl:mb-30">
-                    <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-1 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
-                            <div class="custom-development-slider-container development-slider-container relative">
-                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-1">
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                </div>
-                                <div class="custom-development-slider-images development-slider-images development-slider-images-1">
-                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--11.png" alt="27 Summit">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-slider-content absolute bottom-8 xl:bottom-20 left-8 xl:left-20">
-                            <div class="development-badge mb-5">
-                                Ongoing Delivery
-                            </div>
-                            <h4 class="text-white text-5xl xl:text-6xl font-normal mb-5">
-                                27 Summit
-                            </h4>
-                            <p class="flex items-center gap-2 mb-7 xl:mb-10">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-white font-medium text-sm xl:text-base">
-                                    Central Bangalore - Off Richmond Road
-                                </span>
-                            </p>
-                            <p class="text-white font-medium">
-                                Ascend to Bangalore’s skyline at 27 Summit, where visionary design meets all-encompassing, sky-high amenities.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Casa Sia -->
-                <div class="development-project-slider-item mb-10 xl:mb-30">
-                    <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-2 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
-                            <div class="custom-development-slider-container development-slider-container relative">
-                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-2">
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                </div>
-                                <div class="custom-development-slider-images development-slider-images development-slider-images-2">
-                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--21.png" alt="Casa Sia">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-slider-content absolute bottom-8 xl:bottom-20 left-8 xl:left-20">
-                            <div class="development-badge mb-5">
-                                Under construction
-                            </div>
-                            <h4 class="text-white text-5xl xl:text-6xl font-normal mb-5">
-                                Casa Sia
-                            </h4>
-                            <p class="flex items-center gap-2 mb-7 xl:mb-10">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-white font-medium text-sm xl:text-base">
-                                    Central Chennai - Parthasarathy Gardens
-                                </span>
-                            </p>
-                            <p class="text-white font-medium">
-                                Nestled in Parthasarathy Gardens, Casa Sia honours visionary legacy with bespoke residences blending artisanal craftsmanship and sustainable innovation.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Pelican Gardens -->
-                <div class="development-project-slider-item mb-10 xl:mb-30">
-                    <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-3 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
-                            <div class="custom-development-slider-container development-slider-container relative">
-                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-3">
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                </div>
-                                <div class="custom-development-slider-images development-slider-images development-slider-images-3">
-                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--31.png" alt="Pelican Gardens">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-slider-content absolute bottom-8 xl:bottom-20 left-8 xl:left-20">
-                            <div class="development-badge mb-5">
-                                Under construction
-                            </div>
-                            <h4 class="text-white text-5xl xl:text-6xl font-normal mb-5">
-                                Pelican Gardens
-                            </h4>
-                            <p class="flex items-center gap-2 mb-7 xl:mb-10">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-white font-medium text-sm xl:text-base">
-                                    North Bangalore - Jakkur Lake
-                                </span>
-                            </p>
-                            <p class="text-white font-medium">
-                            Perched on Jakkur Lake, these residences blend serene waterfront living with curated amenities, visionary design, and ecological harmony.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- 4. Pelican Grove -->
-                <div class="development-project-slider-item">
-                    <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-4 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
-                            <div class="custom-development-slider-container development-slider-container relative">
-                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-4">
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                </div>
-                                <div class="custom-development-slider-images development-slider-images development-slider-images-4">
-                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--41.png" alt="Pelican Grove">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-slider-content absolute bottom-8 xl:bottom-20 left-8 xl:left-20">
-                            <div class="development-badge mb-5">
-                                Delivered
-                            </div>
-                            <h4 class="text-white text-5xl xl:text-6xl font-normal mb-5">
-                                Pelican Grove
-                            </h4>
-                            <p class="flex items-center gap-2 mb-7 xl:mb-10">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-white font-medium text-sm xl:text-base">
-                                    North Bangalore - Jakkur Lake
-                                </span>
-                            </p>
-                            <p class="text-white font-medium">
-                            Rising along Jakkur Lake, Pelican Gardens blends abundant flora and fauna with seamless indoor-outdoor living and serene connectivity.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </section>
-
-
-
-
-        <!-- Section 4: Next Developments -->
-        <section class="next-developments py-30 xl:py-40 bg-white">
+        <!-- Section 3: Location -->
+        <section class="development-location py-30 xl:pt-50 bg-white">
             <div class="container">
-                <div class="text-reveal--wrapper">
-                    <div class="section-subheader uppercase text-green mb-3">
-                        OUR DEVELOPMENTS
+                <div class="text-reveal--wrapper">  
+                    <div class="section-subheader uppercase text-green text-center mb-3">
+                        Location
                     </div>
                 </div>
                 <div class="text-reveal--wrapper">
-                    <h2 class="text-40px xl:text-7xl font-normal mb-6 xl:mb-8">
-                        Shaping what's next
+                    <h2 class="text-40px xl:text-6xl font-normal mb-12 xl:mb-30 text-green text-center">
+                        In the heart of <br />
+                        the Garden City
                     </h2>
                 </div>
-                <div class="flex items-center justify-between">
-                    <div class="text-reveal--wrapper developments-text-line-paragraph">
-                        <p class="mb-16">
-                            Designs in progress, destined to become <br /> 
-                            tomorrow's most coveted addresses
-                        </p>
-                    </div>
-
-                    <!-- Slick Arrows: Desktop -->
-                    <div class="slick-arrows flex items-center justify-end gap-6 mb-16 hidden xl:flex">
-                        <div class="slick-arrow-prev cursor-pointer">
-                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
-                                <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
-                            </svg>
-                        </div>
-                        <div class="slick-arrow-next cursor-pointer">
-                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
-                                <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
 
-            <!-- Next Developments Slider -->
-            <div class="next-developments-slider-container pl-5 xl:pl-20 pb-12">
-                
-                <div class="line-divider pr-20"></div>
-                <div class="next-developments-slider">
-                    <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-2">
-                            Residential Development
-                            <br />
-                            - Basavanagudi
-                        </h4>
-                        <img src="images/2025/homepage/Next-development--1.png" alt="Next Development 1">
-                    </div>
-                    <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-2">
-                            Commercial Development
-                            <br />
-                            - Nagawara Lake
-                        </h4>
-                        <img src="images/2025/homepage/Next-development--2.png" alt="Next Development 2">
-                    </div>
-                    <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-2">
-                            Commercial Development
-                            <br />
-                            - Nagawara Lake
-                        </h4>
-                        <img src="images/2025/homepage/Next-development--3.png" alt="Next Development 3">
-                    </div>
+            <div class="px-5 xl:px-0 my-20">
+                <div class="location--map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8711232377464!2d80.25536867518673!3d13.04387431328938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526636dd07d327%3A0x205902f7cf8180f!2sParthasarathy%20Garden%20St%2C%20Parthasarathypuram%2C%20Teynampet%2C%20Chennai%2C%20Tamil%20Nadu%20600018!5e0!3m2!1sen!2sin!4v1757536319193!5m2!1sen!2sin"
+                        width="100%" 
+                        height="500" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    
                 </div>
-                <div class="line-divider pr-20"></div>
             </div>
 
-            <!-- Slick Arrows: Desktop -->
-            <div class="slick-arrows flex items-center justify-start gap-6 xl:hidden px-5">
-                <div class="slick-arrow-prev cursor-pointer">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
-                        <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
-                    </svg>
+            <div class="container location-info-container">
+                <div class="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr] gap-16">
+                    <!-- Distance Info -->
+                    <div class="distance-info">
+                        <div class="grid grid-cols-1 xl:grid-cols-2 items-end xl:gap-16">
+                            <div class="distance-col">
+                                <div class="distance-info--item pb-8 distance-legend flex items-center justify-end gap-3">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.4087 9.62695L12 15.2616L16.9304 21.6006" stroke="#847B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M11.2966 18.7832L9.18359 21.6005" stroke="#847B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.18359 13.8533C9.18359 9.90895 12.0011 9.6272 13.4097 9.62723L14.8182 9.6272C15.053 10.8011 16.086 13.2898 18.3399 13.8532" stroke="#847B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.9688 7.5C15.0733 7.5 15.9688 6.60457 15.9688 5.5C15.9688 4.39543 15.0733 3.5 13.9688 3.5C12.8642 3.5 11.9688 4.39543 11.9688 5.5C11.9688 6.60457 12.8642 7.5 13.9688 7.5Z" stroke="#847B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="font-normal text-sm xl:text-base">
+                                        (~min)
+                                    </span>
+                                </div>
+
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Cubbon Park
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        10
+                                    </p>
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Bangalore Club
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        5
+                                    </p>
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        ITC Gardenia
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        2
+                                    </p>
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        UB City
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        10
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="distance-col">
+                                <div class="distance-info--item hidden xl:flex">
+                                    
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Lavelle Road
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                       5
+                                    </p>
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Mallya Hospital 
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        3
+                                    </p>
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Lalbagh
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        15
+                                    </p>
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Bishop Cotton School
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        10
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location Info -->
+                    <div class="location-info xl:text-right">
+                        <div class="flex items-center xl:justify-end gap-3 mb-2 xl:mb-5">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.9688 10.5C20.9688 14.9183 12.9688 22.5 12.9688 22.5C12.9688 22.5 4.96875 14.9183 4.96875 10.5C4.96875 6.08172 8.55047 2.5 12.9688 2.5C17.3871 2.5 20.9688 6.08172 20.9688 10.5Z" stroke="#333333" stroke-opacity="0.7" stroke-width="1.5"/>
+                                <path d="M12.9688 11.5C13.521 11.5 13.9688 11.0523 13.9688 10.5C13.9688 9.94772 13.521 9.5 12.9688 9.5C12.4165 9.5 11.9688 9.94772 11.9688 10.5C11.9688 11.0523 12.4165 11.5 12.9688 11.5Z" fill="#333333" fill-opacity="0.7" stroke="#333333" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="font-normal text-sm xl:text-base">
+                                Central Bangalore - Richmond Road
+                            </p>
+                        </div>
+
+                        <a href="#" class="directions--cta underline uppercase text-dark">
+                            GET DIRECTIONS
+                        </a>
+                    </div>
                 </div>
-                <div class="slick-arrow-next cursor-pointer">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
-                        <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
-                    </svg>
-                </div>
+
+                <div class="line-divider-green-light mt-16 xl:mt-20"></div>
             </div>
         </section>
 
 
+        
+        <!-- Section 5: Know More -->
+        <section class="py-20 bg-beige">
+            <div class="container flex flex-col items-center">
+                <div class="mt-20 xl:mt-20">
+                    <svg width="86" height="43" viewBox="0 0 86 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_632_1371)">
+                        <path d="M47.8651 41.5505C47.9957 41.1121 48.0623 40.6527 48.0623 40.175C48.0623 40.1172 48.0623 40.0569 48.0596 39.9991C48.0383 39.4032 47.9104 38.8336 47.6919 38.3086C47.4548 37.7259 47.1084 37.1983 46.6767 36.752C46.6474 36.7179 46.6127 36.6838 46.5781 36.6496C46.1518 36.227 45.6455 35.8805 45.0833 35.6311C44.4864 35.3634 43.8256 35.2059 43.1328 35.1901C43.0875 35.1875 43.0449 35.1875 42.9996 35.1875C42.3494 35.1875 41.7259 35.3082 41.1557 35.5314C40.5295 35.7702 39.9646 36.1325 39.4903 36.584C39.4664 36.605 39.4424 36.6286 39.4211 36.6496C38.9921 37.0696 38.6403 37.571 38.3872 38.1249C38.1394 38.6551 37.9875 39.2405 37.9475 39.8521C37.9396 39.9597 37.9369 40.0674 37.9369 40.175C37.9369 40.6265 37.9982 41.0596 38.1128 41.4744C38.2406 41.9469 38.4378 42.3931 38.6963 42.8H0.632812C0.632812 39.0515 1.13375 35.4185 2.07701 31.9614C3.04958 28.3861 4.49378 24.9999 6.33767 21.8709C8.20554 18.6999 10.4864 15.794 13.1084 13.2215C15.7276 10.6542 18.6853 8.42037 21.9121 6.59337H21.9148C25.091 4.79 28.5283 3.38562 32.1574 2.44325C35.6187 1.54288 39.2532 1.0625 42.9996 1.0625H43.1328C46.9245 1.073 50.599 1.577 54.0922 2.50887C57.7054 3.47225 61.124 4.89237 64.2842 6.70625C67.487 8.54112 70.4234 10.7802 73.024 13.3527C75.6193 15.9226 77.8789 18.8232 79.7281 21.9864C81.5533 25.1022 82.9789 28.4701 83.9408 32.027C84.8707 35.4631 85.3664 39.0751 85.3664 42.8H47.3002C47.5454 42.4167 47.7372 41.9967 47.8651 41.5505Z" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M41.1545 35.5334L32.1562 2.44531" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M21.9141 6.59375H21.9167L39.4923 36.5844" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M38.3882 38.1221L13.1094 13.2188" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M37.9458 39.8484L6.33594 21.8672" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M38.1139 41.4739L2.07812 31.9609" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M0.632812 42.7969H38.6963H43.1328H47.3002H85.3664" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M83.9429 32.0234L47.8672 41.5469" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M79.731 21.9844L48.0625 39.9971" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M73.0196 13.3516L47.6875 38.3074" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M64.2794 6.70312L46.6719 36.7489" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M54.0949 2.50781L45.0859 35.6301" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        <path d="M43.1328 35.1901V1.0625" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_632_1371">
+                        <rect width="85" height="42" fill="white" transform="translate(0.5 0.929688)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+
+                <div class="mt-8 mb-14">
+                    <div class="text-reveal--wrapper">
+                        <h3 class="text-gold text-4xl xl:text-6xl leading-11 text-center font-heading font-normal px-4 xl:px-0">
+                            To know more about <br />
+                            the development.
+                        </h3>
+                    </div>
+                </div>
+                <div class="fade-up">
+                    <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center mb-20 xl:mb-16">
+                        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
+                        </svg>
+                        <span class="text-xs font-medium uppercase">Learn More</span>
+                    </a>
+                </div>
+                <div class="line-divider"></div>
+            </div>
+        </section>
 
 
-        <!-- Section 5: Contact Us -->
+        <!-- Section 6: Contact Us -->
         <section class="contact-us py-20 bg-white relative overflow-hidden">
             <div class="image-scale-down--wrapper absolute top-0 left-0 w-full h-full">
                 <img src="images/2025/homepage/contact-us-bg.png" alt="Contact Us Bg Image" class="contact-us-bg-image w-full h-full object-cover">
@@ -950,6 +895,8 @@
     <!-- Animation JavaScript -->
     <script src="animation.js"></script>
     <script src="sliders.js"></script>
+
+    
     
 </body>
 </html>
