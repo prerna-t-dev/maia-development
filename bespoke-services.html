@@ -429,6 +429,22 @@
                             </p>
                         </div>
                     </div>
+
+                    <div class="maialife-purpose-slider-item bespoke-experience-slider-item">
+                        <!-- Bespoke Experience Slider Item 5 -->
+                        <div class="maialife-purpose-slider-item-inner">
+                            <div>
+                            <img class="mb-10" src="images/2025/bespoke/bespoke-experience--5.png" alt="Bespoke Experience Slider Item 4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                    Tailored Comfort <br>
+                                    & Lasting Value.
+                                </h3>
+                            </div>
+                            <p class="text-white text-sm font-medium opacity-60">
+                                Tailored solutions to enhance daily living comfort and long-term asset value.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 

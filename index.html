@@ -609,7 +609,7 @@
                     </div>
 
                     <!-- Slick Arrows: Desktop -->
-                    <div class="slick-arrows flex items-center justify-end gap-6 mb-16 hidden xl:flex">
+                    <div class="slick-arrows flex items-center justify-end gap-6 mb-16_ hidden xl:flex">
                         <div class="slick-arrow-prev cursor-pointer">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
@@ -630,30 +630,33 @@
             <!-- Next Developments Slider -->
             <div class="next-developments-slider-container pl-5 xl:pl-20 pb-12 xl:pb-30">
                 
-                <div class="line-divider pr-20"></div>
+                <!-- <div class="line-divider pr-20"></div> -->
                 <div class="next-developments-slider">
                     <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-2">
+                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
                             Residential Development
                             <br />
                             - Basavanagudi
                         </h4>
+                        <div class="line-divider mb-10"></div>
                         <img src="images/2025/homepage/Next-development--1.png" alt="Next Development 1">
                     </div>
                     <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-2">
+                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
                             Commercial Development
                             <br />
                             - Nagawara Lake
                         </h4>
+                        <div class="line-divider mb-10"></div>
                         <img src="images/2025/homepage/Next-development--2.png" alt="Next Development 2">
                     </div>
                     <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-2">
+                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
                             Commercial Development
                             <br />
                             - Nagawara Lake
                         </h4>
+                        <div class="line-divider mb-10"></div>
                         <img src="images/2025/homepage/Next-development--3.png" alt="Next Development 3">
                     </div>
                 </div>

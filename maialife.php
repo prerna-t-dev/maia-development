@@ -583,7 +583,7 @@
                                     Everyday Support
                                 </h4>
                                 <p class="text-gold  pr-10 xl:pr-0 text-sm xl:text-base">
-                                    Hospitality Driven service offerings, maintenance, errands…
+                                    Hospitality driven service offerings, maintenance, errands, travel reservations and exceptional requests, with unwavering discretion.
                                 </p>
                             </div>
                         </div>
