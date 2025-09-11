@@ -552,7 +552,7 @@ body.bespoke-services .header{
     will-change: transform; /* Optimize animation performance */
 }
 .section-subheader{
-    font-size: 14px;
+    font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -561,7 +561,7 @@ body.bespoke-services .header{
 
 @media (max-width: 1023px) {
     .section-subheader{
-        font-size: 11px;
+        font-size: 14px;
     }
 }
 
@@ -660,6 +660,7 @@ body.bespoke-services .header{
 .next-developments-slide-item img{
     aspect-ratio: 1.63;
     object-fit: cover;
+    height: 50vh ;
 }
 
 .next-developments-slider .slick-list{padding:0 40% 0 0 !important;}
@@ -690,6 +691,11 @@ body.bespoke-services .header{
 }
 
 
+@media (max-width: 1023px) {
+    .next-developments-slide-item img{
+        height: auto;
+    }
+}
 
 
 /* Homepage - Our Services */
@@ -843,14 +849,8 @@ section.contact-us{
     left: 0;
     right: 0;
     bottom: 0;
-    /* background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.1) 0%,
-        rgba(0, 0, 0, 0.1) 30%,
-        rgba(0, 0, 0, 0.02) 60%,
-        rgba(0, 0, 0, 0) 100%
-    ); */
     background: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 107.74%);
     pointer-events: none;
     z-index: 1;
 }
@@ -986,6 +986,18 @@ section.contact-us{
 
 
 /*************** ========= About Page ========= ***************/
+
+.about-hero-banner {
+    min-height: 100vh;
+}
+
+
+@media (max-width: 1023px) {
+    .about-hero-banner {
+        min-height: 70vh;
+    }
+}
+
 
 /* About Page - Purpose Slider */
 .purpose-slider {

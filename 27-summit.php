@@ -162,11 +162,11 @@
                     </a>
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
-                <nav class="hidden xl:block">
-                    <ul class="flex gap-8 text-xs font-medium">
-                        <li><a class="text-white uppercase" href="#">About Us</a></li>
-                        <li><a class="text-white uppercase" href="#">Services</a></li>
-                        <li><a class="text-white uppercase" href="#">Developments</a></li>
+                <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
+                    <ul class="flex gap-8 text-sm font-medium">
+                        <li><a class="text-white uppercase" href="about.html">About Us</a></li>
+                        <li><a class="text-white uppercase" href="developments.html">Developments</a></li>
+                        <li><a class="text-white uppercase" href="maialife.html">Services</a></li>
                     </ul>
                 </nav>
                 <!-- Menu Bar -->

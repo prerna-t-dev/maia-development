@@ -105,8 +105,10 @@ $(document).ready(function(){
         }
     });
     
-    // Open navigation overlay
-    menuButton.on('click', function() {
+    // Open navigation overlay - with mobile touch support
+    menuButton.on('click touchstart', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         navOverlay.addClass('open');
         $('body').addClass('overflow-hidden'); // Prevent background scrolling
         

@@ -48,6 +48,157 @@ $(document).ready(function(){
         }
     });
 
+    // Navigation Overlay Functionality
+    const menuButton = $('#menu-bar-button');
+    const navOverlay = $('#nav-overlay');
+    const navClose = $('#nav-close');
+    
+    // Handle Google Maps iframe scroll interference
+    $('.location--map iframe').on('load', function() {
+        console.log('Google Maps iframe loaded - scroll handling active');
+        
+        // Prevent iframe from interfering with Lenis
+        $(this).on('wheel', function(e) {
+            // Allow normal scrolling when hovering over the map
+            return true;
+        });
+    });
+
+    // Function to reinitialize Lenis after overlay closes
+    function reinitializeLenis() {
+        setTimeout(() => {
+            if (typeof Lenis !== 'undefined') {
+                // Destroy any existing Lenis first
+                if (window.lenis) {
+                    window.lenis.destroy();
+                }
+                
+                // Create new Lenis instance
+                window.lenis = new Lenis({
+                    duration: 1.2,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                });
+                
+                // Start the RAF loop
+                function raf(time) {
+                    if (window.lenis) {
+                        window.lenis.raf(time);
+                        requestAnimationFrame(raf);
+                    }
+                }
+                requestAnimationFrame(raf);
+                
+                console.log('Lenis reinitialized'); // Debug log
+            }
+        }, 1200); // Wait for CSS transition to complete (1.2s)
+    }
+    
+    // Force overlay off-screen on window resize
+    $(window).on('resize', function() {
+        if (!navOverlay.hasClass('open')) {
+            navOverlay.css({
+                'top': '-100vh',
+                'visibility': 'hidden',
+                'opacity': '0'
+            });
+        }
+    });
+    
+    // Open navigation overlay - with mobile touch support
+    menuButton.on('click touchstart', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        navOverlay.addClass('open');
+        $('body').addClass('overflow-hidden'); // Prevent background scrolling
+        
+        // Completely disable Lenis and force native scrolling
+        if (typeof lenis !== 'undefined') {
+            lenis.destroy();
+        }
+        
+        // Force native scrolling on the container
+        setTimeout(() => {
+            $('.nav-list--container').css({
+                'overflow-y': 'auto',
+                'height': 'calc(100vh - 160px)',
+                'position': 'relative',
+                'overflow-x': 'hidden'
+            });
+            
+            // Force scroll behavior
+            $('.nav-list--container')[0].style.overflowY = 'scroll';
+        }, 200);
+    });
+    
+    // Close navigation overlay - with mobile touch support
+    navClose.on('click touchstart', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Close button clicked'); // Debug log
+        
+        // Start closing animation by removing open class
+        navOverlay.removeClass('open');
+        $('body').removeClass('overflow-hidden'); // Restore scrolling
+        
+        // Re-initialize Lenis after overlay animation completes
+        reinitializeLenis();
+    });
+    
+    // Close on overlay click (optional)
+    navOverlay.on('click', function(e) {
+        if (e.target === this) {
+            navOverlay.removeClass('open');
+            $('body').removeClass('overflow-hidden');
+            
+            // Re-initialize Lenis after overlay animation completes
+            reinitializeLenis();
+        }
+    });
+    
+    // Close on escape key
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape' && navOverlay.hasClass('open')) {
+            navOverlay.removeClass('open');
+            $('body').removeClass('overflow-hidden');
+            
+            // Re-initialize Lenis after overlay animation completes
+            reinitializeLenis();
+        }
+    });
+
+    // Services Accordion functionality - SIMPLE
+    $('.services-header').on('click', function() {
+        const submenu = $('.services-submenu');
+        const toggle = $('.services-toggle');
+        
+        // Check if accordion is currently open
+        const isOpen = submenu.css('opacity') === '1';
+        
+        if (!isOpen) {
+            // Open accordion
+            submenu.css({
+                'transition': 'all 0.4s ease-out',
+                'opacity': '1',
+                'max-height': '150px',
+                'transform': 'translateY(0) scale(1)',
+                'pointer-events': 'auto',
+                'margin-top': '16px'
+            });
+            toggle.text('-');
+        } else {
+            // Close accordion
+            submenu.css({
+                'transition': 'all 0.4s ease-out',
+                'opacity': '0',
+                'max-height': '0',
+                'transform': 'translateY(-10px) scale(0.95)',
+                'pointer-events': 'none',
+                'margin-top': '0'
+            });
+            toggle.text('+');
+        }
+    });
+
 
 
     // Latest Posts - Dynamic Blog System
