@@ -204,6 +204,105 @@
       will-change: opacity; /* Optimize for animation */
       transition: none; /* Remove any CSS transitions that might interfere */
   }
+
+
+
+
+
+/* Navigation Overlay CSS */
+#nav-overlay {
+    position: fixed !important;
+    top: -100vh !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #00261E !important;
+    z-index: 50 !important;
+    transition: top 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+    transform: translateY(0) !important;
+}
+
+#nav-overlay.open {
+    top: 0 !important;
+}
+
+/* Ensure it's always off-screen on all screen sizes */
+@media (max-width: 768px) {
+    #nav-overlay {
+        top: -100vh !important;
+        transition: top 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+    }
+    
+    #nav-overlay.open {
+        top: 0 !important;
+    }
+}
+
+@media (min-width: 769px) {
+    #nav-overlay {
+        top: -100vh !important;
+        transition: top 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+    }
+    
+    #nav-overlay.open {
+        top: 0 !important;
+    }
+}
+
+.nav-close {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    z-index: 1000;
+    position: relative;
+}
+
+.nav-close svg {
+    pointer-events: none;
+}
+
+.nav-list--container{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.nav-list--container .nav-list--item{
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #FFFFFF1F;
+}
+
+.nav-list--container .nav-list--item a,
+.nav-list--container .nav-list--item .text-white{
+    opacity: 32%;
+    transition: opacity 0.3s ease;
+}
+
+.nav-list--container .nav-list--item:hover a,
+.nav-list--container .nav-list--item:hover .text-white,
+.nav-list--container .nav-list--item:hover span{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   .hero-banner-image-animation {
       width: 100%;
@@ -315,10 +414,19 @@
   .header-transparent{
       background-color: transparent;
   }
+
+  .header-green{
+    background-color: var(--green-dark);
+    border-bottom: 1px solid #FFFFFF2E;
+  }
   
   .header .logo,
   .nav-overlay .logo{
       width: 98px;
+  }
+
+  .nav-overlay .h-screen{
+    height: 100dvh;
   }
   
   .header .social-icons{
@@ -445,7 +553,7 @@
       will-change: transform; /* Optimize animation performance */
   }
   .section-subheader{
-      font-size: 14px;
+      font-size: 16px;
       line-height: 140%;
       letter-spacing: 0.16em;
       text-transform: uppercase;
@@ -454,7 +562,7 @@
   
   @media (max-width: 1023px) {
       .section-subheader{
-          font-size: 11px;
+          font-size: 14px;
       }
   }
   

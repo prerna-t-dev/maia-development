@@ -149,9 +149,9 @@
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
                     <ul class="flex gap-8 text-sm font-medium">
-                        <li><a class="text-green uppercase" href="#">About Us</a></li>
-                        <li><a class="text-green uppercase" href="#">Services</a></li>
-                        <li><a class="text-green uppercase" href="#">Developments</a></li>
+                        <li><a class="text-green uppercase" href="about.html">About Us</a></li>
+                        <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
+                        <li><a class="text-green uppercase" href="maialife.html">Services</a></li>
                     </ul>
                 </nav>
                 <!-- Menu Bar -->
@@ -350,7 +350,7 @@
                         <div class="xl:pr-24">
                             <div class="text-reveal--paragraph">
                                 <p class="mb-12 xl:mb-14 max-w-lg font-medium text-black opacity-70 text-sm xl:text-base">
-                                    We create landmark residences and commercial developments that embody design excellence, lasting value, and a sense of place. Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity, and context — shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
+                                    We create landmark residences and commercial developments that embody design excellence, lasting value, and a sense of place. Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity, and context, shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
                                 </p>
                             </div>
                         </div>
@@ -768,7 +768,7 @@
                                 <img src="images/2025/maia-bespoke-logo.png" alt="Maia Bespoke Logo">
                             </div>
                             <p class="font-gold mb-12 xl:mb-26">
-                                End-to-end interior design, dedicated to discerning clients’ exact tastes. Transforming unique visions into tailored, exquisite environments.
+                                Delivering turnkey interiors for luxury homes with complete transparency and effortless craftsmanship. In collaboration with leading interior designers, we create spaces of timeless elegance, designed around you.
                             </p>
                             <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -164,9 +164,9 @@
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
                     <ul class="flex gap-8 text-sm font-medium">
-                        <li><a class="text-green uppercase" href="#">About Us</a></li>
-                        <li><a class="text-green uppercase" href="#">Services</a></li>
-                        <li><a class="text-green uppercase" href="#">Developments</a></li>
+                        <li><a class="text-green uppercase" href="about.html">About Us</a></li>
+                        <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
+                        <li><a class="text-green uppercase" href="maialife.html">Services</a></li>
                     </ul>
                 </nav>
                 <!-- Menu Bar -->
@@ -190,7 +190,7 @@
         </header>
 
         <!-- Navigation Overlay -->
-        <div id="nav-overlay" class="nav-overlay fixed w-screen h-screen bg-green-footer z-50" style="top: -100vh; left: 0; transition: top 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);">
+        <div id="nav-overlay" class="nav-overlay fixed w-screen h-screen bg-green-footer z-50">
 
             <!-- Nav Overlay controls -->
             <div class="container w-full flex justify-between items-center absolute top-0 left-0 right-0" style="padding-top: 6px;">

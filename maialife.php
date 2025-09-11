@@ -143,18 +143,18 @@
     <div class="body_wrapper scroll-section overflow-x-hidden">
         <!-- Header -->
         <header class="header sticky top-0 left-0 right-0 z-50">
-            <div class="container flex justify-between items-center">
+            <div class="container header-container flex justify-between items-center">
                 <div class="logo">
-                    <a href="index.php">
+                    <a href="index.html">
                         <img src="images/2025/MAIA-logo.png" alt="Logo">
                     </a>
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
-                <nav class="hidden xl:block">
-                    <ul class="flex gap-8 text-xs font-medium">
-                        <li><a class="text-green uppercase" href="#">About Us</a></li>
-                        <li><a class="text-green uppercase" href="#">Services</a></li>
-                        <li><a class="text-green uppercase" href="#">Developments</a></li>
+                <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
+                    <ul class="flex gap-8 text-sm font-medium">
+                        <li><a class="text-green uppercase" href="about.html">About Us</a></li>
+                        <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
+                        <li><a class="text-green uppercase" href="maialife.html">Services</a></li>
                     </ul>
                 </nav>
                 <!-- Menu Bar -->
@@ -166,7 +166,7 @@
                         <span class="text-xs font-medium">Contact Us</span>
                     </button>
 
-                    <button id="menu-bar-button" class="menu-bar-button cursor-pointer">
+                    <button id="menu-bar-button" class="menu-bar-button menu-bar-button--open cursor-pointer">
                         <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="4.74737" y="4.44073" width="38.1426" height="38.1426" rx="19.0713" stroke="#00362A" stroke-width="0.756465"/>
                             <rect x="15.1035" y="19.9844" width="17.429" height="1" fill="#00362A"/>
@@ -176,6 +176,112 @@
                 </div> 
             </div>   
         </header>
+
+        <!-- Navigation Overlay -->
+        <div id="nav-overlay" class="nav-overlay fixed w-screen h-screen bg-green-footer z-50">
+
+            <!-- Nav Overlay controls -->
+            <div class="container w-full flex justify-between items-center absolute top-0 left-0 right-0" style="padding-top: 6px;">
+                <div class="logo">
+                    <a href="index.php">
+                        <img src="images/2025/MAIA-logo-white.png" alt="Logo">
+                    </a>
+                </div>
+                <!-- Menu Bar -->
+                <div class="menu-bar flex items-center gap-4">
+                    <!-- Contact Us - Desktop -->
+                    <button class="nav-overlay-contact-us hidden xl:block btn-secondary bg-white w-fit text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center cursor-pointer">
+                        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="2.91484" cy="3.44102" r="2.18652" stroke="#00261E" stroke-width="0.874607"/>
+                        </svg>
+                        <span class="text-xs font-medium">Contact Us</span>
+                    </button>
+
+                    <button id="nav-close" class="nav-close menu-bar-button--close cursor-pointer">
+                        <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4.69073" y="4.36969" width="38.1426" height="38.1426" rx="19.0713" stroke="white" stroke-width="0.756465"/>
+                            <rect x="17" y="28.9993" width="17.429" height="1" transform="rotate(-45 17 28.9993)" fill="white"/>
+                            <rect x="18" y="16.9993" width="17.429" height="1" transform="rotate(45 18 16.9993)" fill="white"/>
+                        </svg>
+                    </button>
+                </div> 
+            </div>
+
+
+            <div class="w-full h-full flex items-center justify-center overflow-hidden">
+                <div class="grid grid-cols-1 xl:grid-cols-2 w-full h-full">
+                    <div class="relative h-screen">
+                        <div class="nav-list--container mt-40 pb-40 xl:pb-20">
+                            <nav class="text-left">
+                                <ul class="container space-y-8 text-4xl font-medium">
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="about.html">About Us</a></li>
+                                    
+                                    <!-- Services Accordion -->
+                                    <li class="services-accordion nav-list--item">
+                                        <div class="services-header flex items-center justify-between gap-4 cursor-pointer">
+                                            <span class="text-white font-heading font-normal text-2xl xl:text-4xl">Services</span>
+                                            <span class="services-toggle text-white text-2xl font-light">+</span>
+                                        </div>
+                                        <ul class="services-submenu text-2xl font-normal" style="opacity: 0; max-height: 0; overflow: hidden; transform: translateY(-10px) scale(0.95); pointer-events: none;">
+                                            <li class="flex items-center mb-5">
+                                                <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect y="0.882812" width="5" height="5" fill="white" fill-opacity="0.64"/>
+                                                </svg>
+                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="maialife.html">Maia Life</a>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect y="0.882812" width="5" height="5" fill="white" fill-opacity="0.64"/>
+                                                </svg>
+                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="bespoke-services.html">Bespoke Services</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="developments.html">Developments</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="maia-impact.html">Maia Impact</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="in-the-news/article-listing.html">In The News</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="in-the-news/blog-listing.html">Blogs</a></li>
+                                </ul>
+                            </nav>
+
+                            
+                        </div>
+                        <!-- Social Media Links -->
+                        <div class="absolute w-full py-10 px-5 xl:px-20 bottom-0 left-0 right-0 bg-green-footer">
+                                <!-- Contact Us - Mobile -->
+                                <button class="nav-overlay-contact-us mb-6 block xl:hidden btn-secondary bg-white w-fit text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center cursor-pointer">
+                                    <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2.91484" cy="3.44102" r="2.18652" stroke="#00261E" stroke-width="0.874607"/>
+                                    </svg>
+                                    <span class="text-xs font-medium">Contact Us</span>
+                                </button>
+                                <div class="flex items-center gap-10">
+                                    <a class="social-media-link flex items-center gap-2" target="_blank" href="https://www.instagram.com/maiaestates/">
+                                    <span class="text-white text-sm font-medium"> Instagram</span>
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 8.90625L8.8125 1.09375M8.8125 1.09375H1M8.8125 1.09375V8.90625" stroke="white"/>
+                                    </svg>
+                                    </a>
+                                    <a class="social-media-link flex items-center gap-2" target="_blank" href="https://www.linkedin.com/company/maia-estates/mycompany/">
+                                        <span class="text-white text-sm font-medium"> Linkedin</span>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 8.90625L8.8125 1.09375M8.8125 1.09375H1M8.8125 1.09375V8.90625" stroke="white"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                     </div>
+
+                    <!-- Desktop Image -->
+                    <div class="hidden xl:block">
+                        <img src="images/2025/header-nav-overlay.png" alt="Nav Overlay Image" class="w-full h-full object-cover">
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
 
 
 
@@ -248,16 +354,17 @@
                     </div>
                 </div>
 
+                
 
                     <div class="maialife-hero-img--desktop hidden xl:block">
-                        <div class="hero-image-wrapper hero-image-wrapper-desktop">
-                            <img src="images/2025/maialife/hero-banner-image--maialife.png" class="hero-banner-image hero-banner-image-animation" alt="Hero Banner Image">
-                        </div>
+                        <!-- <div class="hero-image-wrapper hero-image-wrapper-desktop"> -->
+                            <img src="images/2025/maialife/hero-banner-image--maialife.png" class="hero-banner-image" alt="Hero Banner Image">
+                        <!-- </div> -->
                     </div>
 
                     <div class="maialife-hero-img--mobile block xl:hidden">
                         <div class="hero-image-wrapper hero-image-wrapper-mobile">
-                            <img src="images/2025/maialife/hero-banner-image--mobile.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation-mobile">
+                            <img src="images/2025/maialife/hero-banner-image--mobile.png" alt="Hero Banner Image" class="hero-banner-image">
                         </div>
                     </div>
                 
@@ -270,15 +377,15 @@
             <div class="container">
                 <div class="text-reveal--wrapper">  
                     <div class="section-subheader uppercase text-white mb-5">
-                        OUR PURPOSE, MISSION & VISION
+                        Vision & Mission
                     </div>
                 </div>
                 <div class="flex items-center justify-between">
                     <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-32 text-white xl:pr-24">
                         <div class="text-reveal--wrapper">
                             <span class="hidden xl:block">
-                                Designed around your life, <br />
-                                in every detail.
+                                To elevate urban living <br />
+                                beyond expectation
                             </span>
                         </div>
                         <div class="text-reveal--wrapper">
@@ -312,17 +419,19 @@
                         <!-- Purpose Slider Item 1 -->
                         <div class="maialife-purpose-slider-item-inner">
                             <div>
-                                <img class="mb-10" src="images/2025/maialife/maialife-purpose--1.png" alt="Purpose Slider Item 1">
+                                <img class="mb-10" src="images/2025/maialife/maialife-purpose--3.png" alt="Purpose Slider Item 3">
                                 <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
-                                    Integrity & <br>
-                                    Transparency
+                                    Customer <br>
+                                    Centricity 
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
-                                24/7 personalized concierge orchestrates events, amenities, and everyday resident requests.
+                                Resident feedback loops inform service enhancements and foster enduring engagement.
                             </p>
                         </div>
                     </div>
+
+                    
 
                     <div class="maialife-purpose-slider-item">
                         <!-- Purpose Slider Item 2 -->
@@ -344,17 +453,19 @@
                         <!-- Purpose Slider Item 3 -->
                         <div class="maialife-purpose-slider-item-inner">
                             <div>
-                                <img class="mb-10" src="images/2025/maialife/maialife-purpose--3.png" alt="Purpose Slider Item 3">
+                                <img class="mb-10" src="images/2025/maialife/maialife-purpose--1.png" alt="Purpose Slider Item 1">
                                 <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
-                                    Customer <br>
-                                    Centricity 
+                                    Reclaim Your <br>
+                                    Time
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
-                                Resident feedback loops inform service enhancements and foster enduring engagement.
+                                24/7 personalized concierge orchestrates events, amenities, and everyday resident requests.
                             </p>
                         </div>
                     </div>
+
+                    
 
                     <div class="maialife-purpose-slider-item">
                         <!-- Purpose Slider Item 4 -->
@@ -457,7 +568,7 @@
                                     Amenity Booking
                                 </h4>
                                 <p class="text-gold  pr-10 xl:pr-0 text-sm xl:text-base">
-                                    Effortlessly reserve amenity access with concierge coordination, confirmations, reminders and personalised support.
+                                    Technology driven amenity booking with concierge coordination, confirmations, reminders and personalised support.
                                 </p>
                             </div>
                         </div>
@@ -472,13 +583,13 @@
                                     Everyday Support
                                 </h4>
                                 <p class="text-gold  pr-10 xl:pr-0 text-sm xl:text-base">
-                                    24/7 assistance for housekeeping, maintenance, errands, travel reservations and exceptional requests, with unwavering discretion.
+                                    Hospitality Driven service offerings, maintenance, errands…
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="maialife-services-slider-item">
+                    <!-- <div class="maialife-services-slider-item">
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
                             <img class="w-full xl:w-3-5" src="images/2025/maialife/maialife-services--4.png" alt="Maialife 4">
                             <div class="xl:pr-20">
@@ -491,7 +602,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- <div class="maialife-services-slider-item">
                     </div> -->
@@ -539,7 +650,7 @@
 
                 <div class="text-reveal--paragraph developments-text-line-paragraph">
                     <p class="font-medium mb-12 xl:mb-16 text-center xl:w-1-2 mx-auto">
-                        A collective of industry-leading experts collaborating to deliver unparalleled design, sustainability, and client-centric excellence across every MAIA development.
+                        A statement of intent, capturing the essence of MAIA’s promise to create meaningful communities and experiences that stand the test of time.
                     </p>
                 </p>
 

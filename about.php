@@ -145,23 +145,23 @@
         <header class="header header-transparent fixed top-0 left-0 right-0 z-50">
             <div class="container flex justify-between items-center">
                 <div class="logo">
-                    <a href="index.php">
+                    <a href="index.html">
                         <img src="images/2025/MAIA-logo-white.png" alt="Logo">
                     </a>
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
-                <nav class="hidden xl:block">
-                    <ul class="flex gap-8 text-xs font-medium">
-                        <li><a class="text-white uppercase" href="#">About Us</a></li>
-                        <li><a class="text-white uppercase" href="#">Services</a></li>
-                        <li><a class="text-white uppercase" href="#">Developments</a></li>
+                <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
+                    <ul class="flex gap-8 text-sm font-medium">
+                        <li><a class="text-white uppercase" href="about.html">About Us</a></li>
+                        <li><a class="text-white uppercase" href="developments.html">Developments</a></li>
+                        <li><a class="text-white uppercase" href="maialife.html">Services</a></li>
                     </ul>
                 </nav>
                 <!-- Menu Bar -->
                 <div class="menu-bar flex items-center gap-4">
                     <button class="btn-primary bg-white text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
                         <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
+                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
                         </svg>
                         <span class="text-xs font-medium">Contact Us</span>
                     </button>
@@ -285,7 +285,7 @@
 
 
         <!-- Section 1: Hero Banner -->
-        <section class="hero-banner relative h-fit">
+        <section class="hero-banner about-hero-banner relative h-fit">
             <!-- Desktop Image -->
             <img src="images/2025/about/about-hero-banner.png" alt="About Hero Banner" class="w-full h-full object-cover hidden xl:block">
 
@@ -343,7 +343,7 @@
                         <div class="relative">
                             <p class="mb-12 xl:mb-14 max-w-lg font-medium text-black opacity-70 text-sm xl:text-base xl:pr-24 pl-4">
                                 We create landmark residences and commercial developments that embody design excellence, lasting value, and a sense of place. <br /> <br />
-                                Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity, and context — shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
+                                Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity, and context, shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
                             </p>
                             <div class="absolute h-full w-full bg-green-secondary top-0 left-0" style="width: 3px;">
                                     
@@ -756,74 +756,6 @@
                         </div>
                     </div>
 
-                    <div class="team-member-item" data-team-member-id="3">
-                        <div class="image-reveal--wrapper mb-7">
-                            <img src="images/2025/about/team-image--3.png" alt="Amrit Mangharam">
-                        </div>
-                        <div>
-                            <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
-                                Amrit Mangharam
-                            </h3>
-                            <p class="text-gold text-base font-semibold mb-3 xl:mb-8">
-                                Vice President - MAIA Life & Bespoke
-                            </p>
-                            
-                            <button class="flex items-center gap-2 uppercase" data-team-member-button="3" onclick="openTeamMemberDrawer(3)">
-                                <span class="text-xs font-bold uppercase underline">View More</span>
-                                <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
-                                </svg>
-                            </button>
-                        </div>
-
-
-
-                        <!-- Member-3 Content -->
-                        <div class="team-member-content--info" style="display: none !important;">
-                            <div id="team-member-3-content" class="team-member-content hidden px-8 pt-12">
-                                <div class="mb-7">
-                                    <h2 class="text-4xl font-heading font-normal text-green mb-2">
-                                        Amrit Mangharam
-                                    </h2>
-                                    <p class="text-gold text-base font-medium">
-                                        Vice President - MAIA Life & Bespoke
-                                    </p>
-                                </div>
-                                
-                                <div class="mb-7">
-                                    <img src="images/2025/about/team-image--3.png" alt="Amrit Mangharam" class="w-full object-cover">
-                                </div>
-                                
-                                <div class="pb-30">
-                                    <p class="text-sm text-gold leading-15 mb-4">
-                                        Amrit leads MAIA Life Services by fusing extensive real estate and hospitality expertise with a passion for operational excellence. A Chancellor’s Gold Medalist from Symbiosis with dual degrees in Business Administration and Information Technology, he tailors service offerings that elevate property value and customer experience
-                                    </p>
-                                    <p class="text-sm text-gold leading-15">
-                                        By optimising facility management, guiding high- performance teams, and implementing scalable strategies, Amrit advances MAIA’s mission of delivering unparalleled living environments. His data-driven leadership and focus on continuous improvement ensure every initiative aligns with MAIA’s vision for sustainable growth.
-                                    </p>
-                                </div>
-                                
-                                
-                            </div>
-                            <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
-                                <a href="mailto:amrit@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
-                                    <span class="font-semibold text-sm">EMAIL</span>
-                                    <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
-                                    </svg>
-                                </a>
-                                <a href="https://linkedin.com/in/amrit-mangharam" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
-                                    <span class="font-semibold text-sm">LINKEDIN</span>
-                                    <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-
-
-                    </div>
-
                     <div class="team-member-item" data-team-member-id="4">
                         <div class="image-reveal--wrapper mb-7">
                             <img src="images/2025/about/team-image--4.png" alt="Col. Jashwant Singh Chauhan">
@@ -947,6 +879,79 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="team-member-item" data-team-member-id="3">
+                        <div class="image-reveal--wrapper mb-7">
+                            <img src="images/2025/about/team-image--3.png" alt="Amrit Mangharam">
+                        </div>
+                        <div>
+                            <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
+                                Amrit Mangharam
+                            </h3>
+                            <p class="text-gold text-base font-semibold mb-3 xl:mb-8">
+                                Vice President - MAIA Life & Bespoke
+                            </p>
+                            
+                            <button class="flex items-center gap-2 uppercase" data-team-member-button="3" onclick="openTeamMemberDrawer(3)">
+                                <span class="text-xs font-bold uppercase underline">View More</span>
+                                <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
+                                </svg>
+                            </button>
+                        </div>
+
+
+
+                        <!-- Member-3 Content -->
+                        <div class="team-member-content--info" style="display: none !important;">
+                            <div id="team-member-3-content" class="team-member-content hidden px-8 pt-12">
+                                <div class="mb-7">
+                                    <h2 class="text-4xl font-heading font-normal text-green mb-2">
+                                        Amrit Mangharam
+                                    </h2>
+                                    <p class="text-gold text-base font-medium">
+                                        Vice President - MAIA Life & Bespoke
+                                    </p>
+                                </div>
+                                
+                                <div class="mb-7">
+                                    <img src="images/2025/about/team-image--3.png" alt="Amrit Mangharam" class="w-full object-cover">
+                                </div>
+                                
+                                <div class="pb-30">
+                                    <p class="text-sm text-gold leading-15 mb-4">
+                                        Amrit leads MAIA Life Services by fusing extensive real estate and hospitality expertise with a passion for operational excellence. A Chancellor’s Gold Medalist from Symbiosis with dual degrees in Business Administration and Information Technology, he tailors service offerings that elevate property value and customer experience
+                                    </p>
+                                    <p class="text-sm text-gold leading-15">
+                                        By optimising facility management, guiding high- performance teams, and implementing scalable strategies, Amrit advances MAIA’s mission of delivering unparalleled living environments. His data-driven leadership and focus on continuous improvement ensure every initiative aligns with MAIA’s vision for sustainable growth.
+                                    </p>
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
+                                <a href="mailto:amrit@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                    <span class="font-semibold text-sm">EMAIL</span>
+                                    <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
+                                    </svg>
+                                </a>
+                                <a href="https://linkedin.com/in/amrit-mangharam" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                    <span class="font-semibold text-sm">LINKEDIN</span>
+                                    <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                   
+
+                    
 
                     <div class="team-member-item" data-team-member-id="6">
                         <div class="image-reveal--wrapper mb-7">
