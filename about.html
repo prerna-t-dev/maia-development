@@ -1139,6 +1139,63 @@
                         </div>
                     </div>
 
+                    <div class="team-member-item" data-team-member-id="10">
+                        <div class="image-reveal--wrapper mb-7">
+                            <img src="images/2025/about/team-image--10.png" alt="Radhika Saraf">
+                        </div>
+                        <div>
+                            <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
+                                Radhika Saraf
+                            </h3>
+                            <p class="text-gold text-base font-semibold mb-3 xl:mb-8">
+                                General Manager - Head of Finance, CEO Office
+                            </p>
+                            
+                            <button class="flex items-center gap-2 uppercase" data-team-member-button="10">
+                                <span class="text-xs font-bold uppercase underline">View More</span>
+                                <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Member-10 Content -->
+                        <div class="team-member-content--info" style="display: none !important;">
+                            <div id="team-member-10-content" class="team-member-content hidden px-8 pt-12">
+                                <div class="mb-7">
+                                    <h2 class="text-4xl font-heading font-normal text-green mb-2">
+                                        Radhika Saraf
+                                    </h2>
+                                    <p class="text-gold text-base font-medium">
+                                        General Manager - Head of Finance, CEO Office
+                                    </p>
+                                </div>
+                                
+                                <div class="mb-7">
+                                    <img src="images/2025/about/team-image--10.png" alt="Radhika Saraf" class="w-full object-cover">
+                                </div>
+                                
+                                <div class="pb-30">
+                                    
+                                </div>
+                            </div>
+                            <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
+                                <a href="mailto:mayank@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                    <span class="font-semibold text-sm">EMAIL</span>
+                                    <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
+                                    </svg>
+                                </a>
+                                <a href="https://linkedin.com/in/mayank-karnawat" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                    <span class="font-semibold text-sm">LINKEDIN</span>
+                                    <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="team-member-item" data-team-member-id="9">
                         <div class="image-reveal--wrapper mb-7">
                             <img src="images/2025/about/team-image--9.png" alt="Mayank Karnawat">
