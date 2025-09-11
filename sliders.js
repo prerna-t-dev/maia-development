@@ -54,6 +54,46 @@ $(document).ready(function(){
     const navOverlay = $('#nav-overlay');
     const navClose = $('#nav-close');
     
+    // Handle Google Maps iframe scroll interference
+    $('.location--map iframe').on('load', function() {
+        console.log('Google Maps iframe loaded - scroll handling active');
+        
+        // Prevent iframe from interfering with Lenis
+        $(this).on('wheel', function(e) {
+            // Allow normal scrolling when hovering over the map
+            return true;
+        });
+    });
+
+    // Function to reinitialize Lenis after overlay closes
+    function reinitializeLenis() {
+        setTimeout(() => {
+            if (typeof Lenis !== 'undefined') {
+                // Destroy any existing Lenis first
+                if (window.lenis) {
+                    window.lenis.destroy();
+                }
+                
+                // Create new Lenis instance
+                window.lenis = new Lenis({
+                    duration: 1.2,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                });
+                
+                // Start the RAF loop
+                function raf(time) {
+                    if (window.lenis) {
+                        window.lenis.raf(time);
+                        requestAnimationFrame(raf);
+                    }
+                }
+                requestAnimationFrame(raf);
+                
+                console.log('Lenis reinitialized'); // Debug log
+            }
+        }, 1200); // Wait for CSS transition to complete (1.2s)
+    }
+    
     // Force overlay off-screen on window resize
     $(window).on('resize', function() {
         if (!navOverlay.hasClass('open')) {
@@ -95,35 +135,12 @@ $(document).ready(function(){
         e.stopPropagation();
         console.log('Close button clicked'); // Debug log
         
+        // Start closing animation by removing open class
         navOverlay.removeClass('open');
         $('body').removeClass('overflow-hidden'); // Restore scrolling
         
-        // Re-initialize Lenis after overlay closes
-        setTimeout(() => {
-            if (typeof Lenis !== 'undefined') {
-                // Destroy any existing Lenis first
-                if (window.lenis) {
-                    window.lenis.destroy();
-                }
-                
-                // Create new Lenis instance
-                window.lenis = new Lenis({
-                    duration: 1.2,
-                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-                });
-                
-                // Start the RAF loop
-                function raf(time) {
-                    if (window.lenis) {
-                        window.lenis.raf(time);
-                        requestAnimationFrame(raf);
-                    }
-                }
-                requestAnimationFrame(raf);
-                
-                console.log('Lenis reinitialized'); // Debug log
-            }
-        }, 800); // Wait for overlay animation to complete
+        // Re-initialize Lenis after overlay animation completes
+        reinitializeLenis();
     });
     
     // Close on overlay click (optional)
@@ -132,32 +149,8 @@ $(document).ready(function(){
             navOverlay.removeClass('open');
             $('body').removeClass('overflow-hidden');
             
-            // Re-initialize Lenis after overlay closes
-            setTimeout(() => {
-                if (typeof Lenis !== 'undefined') {
-                    // Destroy any existing Lenis first
-                    if (window.lenis) {
-                        window.lenis.destroy();
-                    }
-                    
-                    // Create new Lenis instance
-                    window.lenis = new Lenis({
-                        duration: 1.2,
-                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-                    });
-                    
-                    // Start the RAF loop
-                    function raf(time) {
-                        if (window.lenis) {
-                            window.lenis.raf(time);
-                            requestAnimationFrame(raf);
-                        }
-                    }
-                    requestAnimationFrame(raf);
-                    
-                    console.log('Lenis reinitialized'); // Debug log
-                }
-            }, 800);
+            // Re-initialize Lenis after overlay animation completes
+            reinitializeLenis();
         }
     });
     
@@ -167,34 +160,14 @@ $(document).ready(function(){
             navOverlay.removeClass('open');
             $('body').removeClass('overflow-hidden');
             
-            // Re-initialize Lenis after overlay closes
-            setTimeout(() => {
-                if (typeof Lenis !== 'undefined') {
-                    // Destroy any existing Lenis first
-                    if (window.lenis) {
-                        window.lenis.destroy();
-                    }
-                    
-                    // Create new Lenis instance
-                    window.lenis = new Lenis({
-                        duration: 1.2,
-                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-                    });
-                    
-                    // Start the RAF loop
-                    function raf(time) {
-                        if (window.lenis) {
-                            window.lenis.raf(time);
-                            requestAnimationFrame(raf);
-                        }
-                    }
-                    requestAnimationFrame(raf);
-                    
-                    console.log('Lenis reinitialized'); // Debug log
-                }
-            }, 800);
+            // Re-initialize Lenis after overlay animation completes
+            reinitializeLenis();
         }
     });
+
+
+
+    
 
     // Services Accordion functionality - SIMPLE
     $('.services-header').on('click', function() {

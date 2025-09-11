@@ -16,6 +16,7 @@
   --dark-grey: #454543;
   --grey: #F2F1EB;
   --dark-grey: #001623;
+  --dark-slate: #424242;
   --secondary-neutral: #737373;
   --dark: #212121;
   --brown: #403524;
@@ -205,6 +206,8 @@
 
 
 
+
+
 /* Navigation Overlay CSS */
 #nav-overlay {
     position: fixed !important;
@@ -216,20 +219,17 @@
     z-index: 50 !important;
     transition: top 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
     transform: translateY(0) !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
 }
 
 #nav-overlay.open {
     top: 0 !important;
-    visibility: visible !important;
-    opacity: 1 !important;
 }
 
 /* Ensure it's always off-screen on all screen sizes */
 @media (max-width: 768px) {
     #nav-overlay {
         top: -100vh !important;
+        transition: top 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
     }
     
     #nav-overlay.open {
@@ -240,6 +240,7 @@
 @media (min-width: 769px) {
     #nav-overlay {
         top: -100vh !important;
+        transition: top 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
     }
     
     #nav-overlay.open {
@@ -410,6 +411,12 @@ body.bespoke-services .header{
 .header-transparent{
     background-color: transparent;
 }
+
+.header-green{
+    background-color: var(--green-dark);
+    border-bottom: 1px solid #FFFFFF2E;
+}
+
 
 .header .logo,
 .nav-overlay .logo{
@@ -746,7 +753,7 @@ section.contact-us{
     border: none;
     outline: none;
     appearance: none;
-    border-bottom: 1px solid #00362A29;
+    border: 1px solid #00362A29;
 }
 
 .contact-form-container .form-group{
@@ -754,11 +761,11 @@ section.contact-us{
 }
 
 .contact-form-container .form-group label{
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
-    display: none !important; 
+    left: 0; */
+    /* display: none !important;  */
 }
 
 .contact-form-container .form-group input,
@@ -774,12 +781,9 @@ section.contact-us{
 .contact-form-container .form-group textarea::placeholder{
     color: var(--green);
     font-family: 'teodora', serif; 
+    opacity: 0;
 }
 
-.contact-form-container .form-group-textarea label{
-    top:0;
-    transform: translateY(12px);
-}
 
 
 
@@ -1422,5 +1426,61 @@ section.contact-us{
 
     .sustainability-construction-grid .sustainability-construction-content {
         order: 2;
+    }
+}
+
+
+
+
+
+
+
+/* Development Projects Templates */
+.key-features-data .key-feature-data--item{
+    border-left: 2px solid #AEA893;
+}
+
+
+/* Google Maps Embed CSS - Prevent Lenis interference */
+.location--map {
+    position: relative;
+    overflow: hidden;
+}
+
+.location--map iframe {
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    -webkit-overflow-scrolling: touch !important;
+    transform: translateZ(0) !important; /* Force hardware acceleration */
+    will-change: transform !important;
+}
+
+.directions--cta{
+    font-weight: 600;
+    font-size: 12px;
+    leading-trim: NONE;
+    line-height: 23.04px;
+    letter-spacing: 0.1em;
+    vertical-align: middle;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-offset: 0%;
+    text-decoration-thickness: 0%;
+    text-decoration-skip-ink: auto;
+
+}
+
+.distance-info--item{
+    border-bottom: 1px solid #847B5E;
+}
+
+@media (max-width: 1023px) {
+    .location-info-container .location-info{
+        order: 1
+    }
+
+    .location-info-container .distance-info{
+        order: 2
     }
 }

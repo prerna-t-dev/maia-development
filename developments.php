@@ -714,33 +714,38 @@
                         <div class="contact-form">
                             <h2 class="text-40px xl:text-7xl font-heading font-normal text-green mb-16">Contact us</h2>
                             
-                            <form action="#" method="POST" class="space-y-8">
-                                <div class="form-group form-group-input">
+                            <form action="contactmail.php" method="POST" class="space-y-8">
+                                <div class="form-group form-group-input mb-4 xl:mb-8">
+                                    <label for="contact-fullname" class="block text-base font-heading font-extralight text-green mb-2">FULL NAME (*)</label>
                                     <input type="text" id="contact-fullname" name="contact-fullname" required 
                                            placeholder="FULL NAME (*)"
-                                           class="w-full px-0 py-3 bg-transparent focus:border-green focus:outline-none transition-colors">
-                                    <label for="contact-fullname" class="block text-base font-heading font-medium text-green mb-2">FULL NAME (*)</label>
+                                           class="w-full px-3 py-3 bg-transparent focus:border-green focus:outline-none transition-colors">
                                 </div>
                                 
-                                <div class="form-group form-group-input">
-                                    <input type="tel" id="contact-phone" name="contact-phone" required 
-                                           placeholder="PHONE NUMBER (*)"
-                                           class="w-full px-0 py-3 bg-transparent focus:border-green focus:outline-none transition-colors">
-                                    <label for="contact-phone" class="block text-base font-heading font-medium text-green mb-2">PHONE NUMBER (*)</label>
-                                </div>
-                                
-                                <div class="form-group form-group-input">
-                                    <input type="email" id="contact-email" name="contact-email" required 
-                                           placeholder="EMAIL ADDRESS (*)"
-                                           class="w-full px-0 py-3 bg-transparent focus:border-green focus:outline-none transition-colors">
-                                    <label for="contact-email" class="block text-base font-heading font-medium text-green mb-2">EMAIL ADDRESS (*)</label>
+                                <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-4 xl:mb-8">
+                                    <div class="form-group form-group-input">
+                                        <label for="contact-phone" class="block text-base font-heading font-extralight text-green mb-2">PHONE NUMBER (*)</label>
+                                        <input type="tel" id="contact-phone" name="contact-phone" required 
+                                            placeholder="PHONE NUMBER (*)"
+                                            pattern="[0-9+\-\s\(\)]+"
+                                            maxlength="10"
+                                            oninput="this.value = this.value.replace(/[^0-9+\-\s\(\)]/g, '').substring(0, 10)"
+                                            class="w-full px-3 py-3 bg-transparent focus:border-green focus:outline-none transition-colors">
+                                    </div>
+                                    
+                                    <div class="form-group form-group-input">
+                                    <label for="contact-email" class="block text-base font-heading font-extralight text-green mb-2">EMAIL ADDRESS (*)</label>
+                                        <input type="email" id="contact-email" name="contact-email" required 
+                                            placeholder="EMAIL ADDRESS (*)"
+                                            class="w-full px-3 py-3 bg-transparent focus:border-green focus:outline-none transition-colors">
+                                    </div>
                                 </div>
                                 
                                 <div class="form-group form-group-textarea">
+                                    <label for="contact-message" class="block text-base font-heading font-extralight text-green mb-2">LEAVE A MESSAGE</label>
                                     <textarea id="contact-message" name="contact-message" rows="4" 
                                             placeholder="LEAVE A MESSAGE"   
-                                            class="w-full px-0 py-3 bg-transparent focus:border-green focus:outline-none transition-colors resize-none"></textarea>
-                                    <label for="contact-message" class="block text-base font-heading font-medium text-green mb-2">LEAVE A MESSAGE</label>
+                                            class="w-full px-3 py-3 bg-transparent focus:border-green focus:outline-none transition-colors resize-none"></textarea>
                                 </div>
                                 
 
