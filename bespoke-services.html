@@ -425,7 +425,7 @@
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
-                                Our meticulous QA process delivers timely reports, 360 virtual tours, and rigorous in-house quality checks
+                                Our meticulous QA process delivers timely reports, 360° virtual tours, and rigorous in-house quality checks
                             </p>
                         </div>
                     </div>
