@@ -1682,3 +1682,17 @@ section.contact-us{
     }
   }
   
+
+
+
+  /* Slick Glitch Fix */
+  .gallery--images .slick-track {
+    will-change: transform;
+    transform: translate3d(0,0,0); /* force GPU once */
+  }
+  
+  .gallery--slide {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  

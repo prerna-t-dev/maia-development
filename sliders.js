@@ -1241,9 +1241,6 @@ $(document).ready(function(){
 
 
 
-    // Gallery at a Glance Slider
-
-   // Gallery Slider with Category Filtering + Fade between categories
     // Gallery Slider — rebuild DOM on filter; first 4 become a 2x2 collage on desktop
     function initGallerySlider() {
         const $gallery = $('.gallery--images');
@@ -1261,6 +1258,9 @@ $(document).ready(function(){
             imgHtml: ($s.find('img').prop('outerHTML') || '')
         });
         });
+
+
+
     
         // initialize Slick (idempotent)
         function initSlickSlider() {
@@ -1274,6 +1274,8 @@ $(document).ready(function(){
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
+            // fade: true,
+            // cssEase: 'ease-in-out',
             autoplay: false,
             centerMode: false,
             centerPadding: '0px',
@@ -1281,6 +1283,7 @@ $(document).ready(function(){
             nextArrow: '.gallery-at-a-glance .slick-arrow-next'
         });
         }
+
     
         // ensure slide-number text is correct after rebuild
         function renumberSlides() {
@@ -1330,23 +1333,27 @@ $(document).ready(function(){
         $('.gallery--no-results').remove();
         $gallery.stop(true, true).fadeTo(fadeDuration, 0, function () {
             if ($gallery.hasClass('slick-initialized')) $gallery.slick('unslick');
-    
+
             const newHtml = buildHtmlForCategory(category);
             if (!newHtml) {
             $gallery.empty();
             $gallery.after('<div class="gallery--no-results text-center mt-4">No images in this category.</div>');
             $gallery.css('opacity', 1);
+            // Sync Lenis scroll here
+            if (window.lenis) setTimeout(() => window.lenis.update(), 16);
             return;
             }
-    
+
             $gallery.html(newHtml);
             initSlickSlider();
-    
+
             // allow slick to render, then renumber + go to 0
             setTimeout(function () {
             renumberSlides();
             $gallery.slick('slickGoTo', 0);
             $gallery.stop(true, true).fadeTo(fadeDuration, 1);
+            // Sync Lenis scroll after DOM and animation
+            if (window.lenis) setTimeout(() => window.lenis.update(), fadeDuration + 16);
             }, 10);
         });
         }
@@ -1368,12 +1375,17 @@ $(document).ready(function(){
         initSlickSlider();
         renumberSlides();
         $gallery.css('opacity', 1);
+        
+        // Sync Lenis after initial gallery setup
+        if (window.lenis) setTimeout(() => window.lenis.update(), 100);
     }
     
     // initialize if present
     if ($('.gallery--images').length) {
         initGallerySlider();
     }
+
+    
     
 
 
