@@ -1234,6 +1234,155 @@ $(document).ready(function(){
             accordionContent.addClass('active');
         }
     });
+
+
+
+
+
+
+
+    // Gallery at a Glance Slider
+
+   // Gallery Slider with Category Filtering + Fade between categories
+    // Gallery Slider — rebuild DOM on filter; first 4 become a 2x2 collage on desktop
+    function initGallerySlider() {
+        const $gallery = $('.gallery--images');
+        const $categories = $('.gallery--category');
+        const fadeDuration = 220;
+        const desktopBreakpoint = 1024; // px breakpoint for collage layout
+    
+        // Save original slides (HTML + category + image HTML) so we can rebuild reliably
+        const originals = [];
+        $gallery.find('.gallery--slide').each(function () {
+        const $s = $(this);
+        originals.push({
+            html: $s.prop('outerHTML'),
+            cats: ($s.attr('data-categories') || '').toString(),
+            imgHtml: ($s.find('img').prop('outerHTML') || '')
+        });
+        });
+    
+        // initialize Slick (idempotent)
+        function initSlickSlider() {
+        if ($gallery.hasClass('slick-initialized')) {
+            $gallery.slick('unslick');
+        }
+        $gallery.slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            centerMode: false,
+            centerPadding: '0px',
+            prevArrow: '.gallery-at-a-glance .slick-arrow-prev',
+            nextArrow: '.gallery-at-a-glance .slick-arrow-next'
+        });
+        }
+    
+        // ensure slide-number text is correct after rebuild
+        function renumberSlides() {
+        $gallery.find('.gallery--slide').each(function (i) {
+            const $num = $(this).find('.slide-number');
+            if ($num.length) $num.text('Slide ' + (i + 1));
+            else $(this).prepend('<div class="slide-number">Slide ' + (i + 1) + '</div>');
+        });
+        }
+    
+        // Build gallery HTML for a given category
+        function buildHtmlForCategory(category) {
+        const isDesktop = window.innerWidth >= desktopBreakpoint;
+    
+        // Filter originals
+        const filtered = originals.filter(o => {
+            if (category === 'all') return true;
+            const arr = o.cats.split(/[\s,]+/).map(s => s.trim()).filter(Boolean);
+            return arr.indexOf(category) !== -1;
+        });
+    
+        if (filtered.length === 0) return '';
+    
+        const parts = [];
+        // If desktop & at least 4 images -> create collage as first slide
+        if (isDesktop && filtered.length >= 4) {
+            const catAttr = category === 'all' ? (filtered[0].cats || 'all') : category;
+            let collage = '<div class="gallery--slide collage-slide" data-categories="' + catAttr + '">';
+            collage += '<div class="slide-number">Slide 1</div>';
+            collage += '<div class="collage-grid">';
+            for (let i = 0; i < 4; i++) collage += filtered[i].imgHtml;
+            collage += '</div></div>';
+            parts.push(collage);
+    
+            // append remaining slides (skip the 4 used in collage)
+            for (let i = 4; i < filtered.length; i++) parts.push(filtered[i].html);
+        } else {
+            // Not enough items for collage (or mobile) — just output all filtered slides normally
+            filtered.forEach(o => parts.push(o.html));
+        }
+    
+        return parts.join('');
+        }
+    
+        // Refresh gallery for a given category with fade
+        function refresh(category) {
+        $('.gallery--no-results').remove();
+        $gallery.stop(true, true).fadeTo(fadeDuration, 0, function () {
+            if ($gallery.hasClass('slick-initialized')) $gallery.slick('unslick');
+    
+            const newHtml = buildHtmlForCategory(category);
+            if (!newHtml) {
+            $gallery.empty();
+            $gallery.after('<div class="gallery--no-results text-center mt-4">No images in this category.</div>');
+            $gallery.css('opacity', 1);
+            return;
+            }
+    
+            $gallery.html(newHtml);
+            initSlickSlider();
+    
+            // allow slick to render, then renumber + go to 0
+            setTimeout(function () {
+            renumberSlides();
+            $gallery.slick('slickGoTo', 0);
+            $gallery.stop(true, true).fadeTo(fadeDuration, 1);
+            }, 10);
+        });
+        }
+    
+        // category clicks
+        $categories.off('click.galleryFilter').on('click.galleryFilter', function () {
+        const $btn = $(this);
+        if ($btn.hasClass('active')) return;
+        $categories.removeClass('active');
+        $btn.addClass('active');
+    
+        const cat = $btn.data('category');
+        refresh(cat);
+        });
+    
+        // initial build (apply 'all' so first 4 become collage on desktop)
+        const initialHtml = buildHtmlForCategory('all');
+        if (initialHtml) $gallery.html(initialHtml);
+        initSlickSlider();
+        renumberSlides();
+        $gallery.css('opacity', 1);
+    }
+    
+    // initialize if present
+    if ($('.gallery--images').length) {
+        initGallerySlider();
+    }
+    
+
+
+
+
+
+
+
+
     
 });
 
