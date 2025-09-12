@@ -338,14 +338,14 @@
                 </div>
 
                 <div class="hidden xl:block">
-                    <div class="hero-image-wrapper hero-image-wrapper-desktop">
-                        <img src="images/2025/27-summit/hero-banner-image--dev-desktop.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation">
-                    </div>
+                    <!-- <div class="hero-image-wrapper hero-image-wrapper-desktop"> -->
+                        <img src="images/2025/27-summit/hero-banner-image--dev-desktop.png" alt="Hero Banner Image" class="hero-banner-image ">
+                    <!-- </div> -->
                 </div>
                 <div class="block xl:hidden">
-                    <div class="hero-image-wrapper hero-image-wrapper-mobile">
-                        <img src="images/2025/27-summit/hero-banner-image--dev-mobile.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation-mobile">
-                    </div>
+                    <!-- <div class="hero-image-wrapper hero-image-wrapper-mobile"> -->
+                        <img src="images/2025/27-summit/hero-banner-image--dev-mobile.png" alt="Hero Banner Image" class="hero-banner-image">
+                    <!-- </div> -->
                 </div>
             </div>
         </section>
@@ -483,7 +483,7 @@
             <div class="px-5 xl:px-0 my-20">
                 <div class="location--map">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8711232377464!2d80.25536867518673!3d13.04387431328938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526636dd07d327%3A0x205902f7cf8180f!2sParthasarathy%20Garden%20St%2C%20Parthasarathypuram%2C%20Teynampet%2C%20Chennai%2C%20Tamil%20Nadu%20600018!5e0!3m2!1sen!2sin!4v1757536319193!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1254432089518!2d77.59206897518575!3d12.96382391504857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae173a50af253d%3A0xd554fd8c85284f52!2s27%20Summit!5e0!3m2!1sen!2sin!4v1757674281835!5m2!1sen!2sin"
                         width="100%" 
                         height="500" 
                         style="border:0;" 
@@ -491,8 +491,8 @@
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    
-                </div>
+                </div> 
+
             </div>
 
             <div class="container location-info-container">
