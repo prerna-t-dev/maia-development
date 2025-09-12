@@ -761,7 +761,7 @@
             <div class="container">
                  <!-- Mobile Arrows -->
                  <div class="slick-arrows flex items-center justify-between mt-16 gap-6 xl:hidden">
-                    <div class="slick-arrow-prev cursor-pointer">
+                        <div class="slick-arrow-prev cursor-pointer">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
                                 <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
@@ -773,10 +773,12 @@
                                 <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
                             </svg>
                         </div>
-                    </div>
+                
                 </div>
             </div>
         </section>
+
+       
 
 
         
