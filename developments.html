@@ -163,7 +163,7 @@
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
-                    <ul class="flex gap-8 text-sm font-medium">
+                    <ul class="flex gap-8 text-sm font-semibold">
                         <li><a class="text-green uppercase" href="about.html">About Us</a></li>
                         <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
                         <li><a class="text-green uppercase" href="maialife.html">Services</a></li>
@@ -360,7 +360,7 @@
                         <div class="text-reveal--wrapper">
                             <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-18 text-white">
                                 Driven by Vision, <br />
-                                Defined by Craft
+                                Defined by Craft.
                             </h2>
                         </div>
                         <p class="xl:mb-12 max-w-lg text-white opacity-70">
@@ -392,7 +392,7 @@
                 </div>
                 <div class="text-reveal--wrapper">
                     <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-8">
-                        Defining the Skyline
+                        Building iconic skylines
                     </h2>
                 </div>
                 <!-- <div class="text-reveal--wrapper developments-text-line-paragraph"> -->
@@ -545,7 +545,7 @@
                                 </span>
                             </p>
                             <p class="text-white font-medium">
-                            Perched on Jakkur Lake, these residences blend serene waterfront living with curated amenities, visionary design, and ecological harmony.
+                                Perched on Jakkur Lake, these residences blend a serene waterfront living with curated amenities, visionary design, and ecological harmony.
                             </p>
                         </div>
                     </div>
@@ -614,7 +614,7 @@
             <div class="container">
                 <div class="text-reveal--wrapper">
                     <div class="section-subheader uppercase text-green mb-3">
-                        OUR DEVELOPMENTS
+                        UPCOMING DEVELOPMENTS
                     </div>
                 </div>
                 <div class="text-reveal--wrapper">

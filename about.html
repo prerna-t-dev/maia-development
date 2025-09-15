@@ -151,7 +151,7 @@
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
-                    <ul class="flex gap-8 text-sm font-medium">
+                    <ul class="flex gap-8 text-sm font-semibold">
                         <li><a class="text-white uppercase" href="about.html">About Us</a></li>
                         <li><a class="text-white uppercase" href="developments.html">Developments</a></li>
                         <li><a class="text-white uppercase" href="maialife.html">Services</a></li>
@@ -332,8 +332,7 @@
                             ABOUT MAIA
                         </div>
                         <h2 class="text-40px xl:text-6xl font-normal mb-14 xl:mb-18">
-                            Crafting iconic spaces <br>
-                            for inspired living.
+                            Crafting iconic spaces 
                         </h2>
 
                         <div class="image-reveal--wrapper mb-14 block xl:hidden">
@@ -383,7 +382,7 @@
                 </h2>
             </div>
 
-            <div class="pl-0 xl:pl-12">
+            <div class="about--purpose-slider-container pl-0 xl:pl-12">
                 <!-- Purpose Slider -->
                 <div class="purpose-slider">
                     
@@ -398,7 +397,7 @@
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
-                                Our commitment to service informs research, planning, and execution, shaping every touchpoint so each interaction feels attentive, responsive, and thoughtfully orchestrated.
+                                Our commitment to service drives research, planning and execution, shaping every touchpoint, so each interaction feels attentive, responsive and thoughtfully orchestrated.
                             </p>
                         </div>
                     </div>
@@ -415,7 +414,7 @@
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
-                                We plan with precision and foresight, aligning timelines, budgets, and resources through rigorous methodology to deliver predictable outcomes and exceptional consistency.
+                                We plan with precision and foresight, aligning timelines, budgets and resources through rigorous collaboration to deliver predictable outcomes and exceptional consistency.
                             </p>
                         </div>
                     </div>
@@ -473,8 +472,8 @@
                             <div>
                                 <img class="w-6 h-6 mb-9" src="images/2025/about/about-icon--2.png" alt="Purpose Slider Item 1">
                                 <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
-                                    Conscious <br>
-                                    Developers 
+                                    Purpose-Driven <br>
+                                    Development 
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
@@ -485,10 +484,27 @@
                 </div>
 
                 <!-- Purpose Slider Progress Bar -->
-                <div class="mx-6 my-16">
+                <div class="mx-6 my-16 xl:mt-40 relative">
                     <div class="purpose-slider-progress flex justify-center">
                         <div class="purpose-slider-progress-bar">
                             <div class="purpose-slider-progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <!-- Slick Arrows -->
+                    
+                    <div class="slick-arrows absolute w-full top-0 xl:-translate-y-1/2 flex items-center justify-between gap-6 pr-5 xl:pr-12 hidden xl:flex">
+                        <div class="purpose-arrow-prev cursor-pointer">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
+                                <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
+                            </svg>
+                        </div>
+                        <div class="purpose-arrow-next cursor-pointer">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
+                                <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -505,7 +521,7 @@
                 </div>
 
                 <h2 class="text-40px xl:text-7xl font-normal mb-16 xl:mb-30 xl:px-24 text-green text-center">
-                    We believe in developing a tomorrow that focuses on the well-being of both mankind and nature.
+                We believe in developing a tomorrow that focuses on the well-being of both nature and mankind.
                 </h2>
             </div>
 
@@ -520,13 +536,13 @@
                                 Sustainable Construction and Design
                             </h4>
                             <p class="text-gold text-sm xl:text-base">
-                            MAIA uses technology to intelligently plan and execute all its construction processes. This helps ensure precision in design that minimises wastage.
+                                MAIA uses technology to intelligently plan and execute all its construction processes. This helps ensure precision in design that minimises wastage.
                             </p>
                         </div>
                     </div>
 
                     <div class="sustainability-initiatives-slider-item">
-                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--2.png" alt="Sustainability Initiatives Image 1">
+                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--2.png" alt="Sustainability Initiatives Image 2">
                         <div>
                             <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
                                 Green Count
@@ -538,25 +554,37 @@
                     </div>
 
                     <div class="sustainability-initiatives-slider-item">
-                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--1.png" alt="Sustainability Initiatives Image 1">
+                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--3.png" alt="Sustainability Initiatives Image 3">
                         <div>
                             <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
-                                Sustainable Construction and Design
+                                Water Management
                             </h4>
                             <p class="text-gold text-sm xl:text-base">
-                            MAIA uses technology to intelligently plan and execute all its construction processes. This helps ensure precision in design that minimises wastage.
+                                Keeping water scarcity in mind, MAIA ensures all its developments incorporate a zero-water discharge architecture from construction to completion.
                             </p>
                         </div>
                     </div>
 
                     <div class="sustainability-initiatives-slider-item">
-                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--2.png" alt="Sustainability Initiatives Image 1">
+                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--4.png" alt="Sustainability Initiatives Image 4">
                         <div>
                             <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
-                                Green Count
+                                Energy Efficiency
                             </h4>
                             <p class="text-gold text-sm xl:text-base">
-                                We work towards preserving the local flora and fauna in and around all projects. Our aim is to develop the incomparable, while keeping nature at the forefront.
+                                We believe in imbibing eco-consciousness, by harnessing the wealth of renewable energy resources around all our developments.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="sustainability-initiatives-slider-item">
+                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--5.png" alt="Sustainability Initiatives Image 5">
+                        <div>
+                            <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
+                                Waste Management
+                            </h4>
+                            <p class="text-gold text-sm xl:text-base">
+                                Achieving zero-waste construction process is a thought that guides the business. MAIA believes in utilizing all the construction waste it can within its developments.
                             </p>
                         </div>
                     </div>
@@ -594,12 +622,11 @@
                     MAIA Pillars
                 </div>
                 <h2 class="text-40px xl:text-7xl font-normal mb-8 xl:px-24 text-green text-center">
-                    Meet the Team <br>
-                    Behind MAIA
+                    Meet the Team 
                 </h2>
                 
                 <p class="text-center text-sm xl:text-base font-medium mb-20 xl:mb-30 xl:w-1-2 mx-auto">
-                    A collective of industry-leading experts collaborating to deliver unparalleled design, sustainability, and client-centric excellence across every MAIA development.
+                    A collective of driven individuals redefining how real estate development is envisioned in modern India, with a perspective shaped for the world.
                 </p>
 
                 <div class="grid grid-cols-1 xl:grid-cols-2 xl:items-end gap-8 xl:gap-0">
@@ -678,13 +705,13 @@
                                 </div>
                             </div>
                             <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
-                                <a href="mailto:rishad@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="mailto:rishadgk@maiaestates.in" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">EMAIL</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
                                     </svg>
                                 </a>
-                                <a href="https://linkedin.com/in/rishad-khergamwala" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="https://www.linkedin.com/in/rishad-khergamwala-9810b4165/" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">LINKEDIN</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
@@ -740,13 +767,13 @@
                                 </div>
                             </div>
                             <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
-                                <a href="mailto:rudresh@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="mailto:rudreshkv@maiaestates.in" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">EMAIL</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
                                     </svg>
                                 </a>
-                                <a href="https://linkedin.com/in/rudresh-kv" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="https://www.linkedin.com/in/rudreshkv/" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">LINKEDIN</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
@@ -765,7 +792,7 @@
                                 Col. Jashwant Singh Chauhan
                             </h3>
                             <p class="text-gold text-base font-semibold mb-3 xl:mb-8">
-                                Vice President & Business Head
+                                Vice President & Business Head - MAIA Life
                             </p>
                             
                             <button class="flex items-center gap-2 uppercase" data-team-member-button="4">
@@ -802,13 +829,13 @@
                                 </div>
                             </div>
                             <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
-                                <a href="mailto:jashwant@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="mailto:jaswantc@maiaestates.in" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">EMAIL</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
                                     </svg>
                                 </a>
-                                <a href="https://linkedin.com/in/jashwant-chauhan" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="https://www.linkedin.com/in/col-jaswant-singh-chauhan-755a0439/" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">LINKEDIN</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
@@ -864,13 +891,13 @@
                                 </div>
                             </div>
                             <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
-                                <a href="mailto:sanaa@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="mailto:sanaar@maiaestates.in" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">EMAIL</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
                                     </svg>
                                 </a>
-                                <a href="https://linkedin.com/in/sanaa-ruia" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="https://www.linkedin.com/in/sanaa-ruia-286907352/" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">LINKEDIN</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
@@ -931,13 +958,13 @@
                                 
                             </div>
                             <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
-                                <a href="mailto:amrit@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="mailto:amritm@maialife.in" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">EMAIL</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
                                     </svg>
                                 </a>
-                                <a href="https://linkedin.com/in/amrit-mangharam" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="https://www.linkedin.com/in/amritmangharam/" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">LINKEDIN</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
@@ -999,13 +1026,13 @@
                                 </div>
                             </div>
                             <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
-                                <a href="mailto:aditya@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="mailto:adityac@maiaestates.in" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">EMAIL</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
                                     </svg>
                                 </a>
-                                <a href="https://linkedin.com/in/aditya-chandra" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="https://www.linkedin.com/in/aditya-chandra-292693153/" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">LINKEDIN</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
@@ -1061,13 +1088,13 @@
                                 </div>
                             </div>
                             <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
-                                <a href="mailto:vipul@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="mailto:vipuls@maiaestates.in" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">EMAIL</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
                                     </svg>
                                 </a>
-                                <a href="https://linkedin.com/in/vipul-sharma" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="https://www.linkedin.com/in/vipul-sharama-15148615" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">LINKEDIN</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
@@ -1077,67 +1104,7 @@
                         </div>
                     </div>
 
-                    <div class="team-member-item" data-team-member-id="8">
-                        <div class="image-reveal--wrapper mb-7">
-                            <img src="images/2025/about/team-image--8.png" alt="Nitin Kangne">
-                        </div>
-                        <div>
-                            <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
-                                Nitin Kangne
-                            </h3>
-                            <p class="text-gold text-base font-semibold mb-3 xl:mb-8">
-                                Assistant Vice President - Construction
-                            </p>
-                            
-                            <button class="flex items-center gap-2 uppercase" data-team-member-button="8">
-                                <span class="text-xs font-bold uppercase underline">View More</span>
-                                <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
-                                </svg>
-                            </button>
-                        </div>
-
-                        <!-- Member-8 Content -->
-                        <div class="team-member-content--info" style="display: none !important;">
-                            <div id="team-member-8-content" class="team-member-content hidden px-8 pt-12">
-                                <div class="mb-7">
-                                    <h2 class="text-4xl font-heading font-normal text-green mb-2">
-                                        Nitin Kangne
-                                    </h2>
-                                    <p class="text-gold text-base font-medium">
-                                        Assistant Vice President - Construction
-                                    </p>
-                                </div>
-                                
-                                <div class="mb-7">
-                                    <img src="images/2025/about/team-image--8.png" alt="Nitin Kangne" class="w-full object-cover">
-                                </div>
-                                
-                                <div class="pb-30">
-                                    <p class="text-sm text-gold leading-15 mb-4">
-                                        With over 23 years of multinational experience spanning India, Mauritius, and Oman, Nitin is a seasoned construction leader adept at delivering high-value projects on time and within budget. A PMP certified professional with postgraduate credentials in Advanced Construction Management from NICMAR and an Executive MBA in Finance from NMIMS, he excels in project planning, execution, and FIDIC-based contract administration.
-                                    </p>
-                                    <p class="text-sm text-gold leading-15">
-                                        From luxury residential to complex social infrastructure, Nitin has overseen developments that demand both technical precision and strategic foresight. Now heading MAIA’s construction division, he orchestrates cross functional teams to uphold the company’s “Building Lives and Beyond” ethos. By aligning robust execution frameworks with uncompromising quality standards, Nitin ensures each MAIA project resonates with innovation, sustainability, and enduring value.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
-                                <a href="mailto:nitin@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
-                                    <span class="font-semibold text-sm">EMAIL</span>
-                                    <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
-                                    </svg>
-                                </a>
-                                <a href="https://linkedin.com/in/nitin-kangne" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
-                                    <span class="font-semibold text-sm">LINKEDIN</span>
-                                    <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Removed Member 8: Nitin Kangne -->
 
                     <div class="team-member-item" data-team-member-id="10">
                         <div class="image-reveal--wrapper mb-7">
@@ -1148,7 +1115,7 @@
                                 Radhika Saraf
                             </h3>
                             <p class="text-gold text-base font-semibold mb-3 xl:mb-8">
-                                General Manager - Head of Finance, CEO Office
+                                Assistant Vice President - Head of Human Capital management
                             </p>
                             
                             <button class="flex items-center gap-2 uppercase" data-team-member-button="10">
@@ -1167,7 +1134,7 @@
                                         Radhika Saraf
                                     </h2>
                                     <p class="text-gold text-base font-medium">
-                                        General Manager - Head of Finance, CEO Office
+                                        Assistant Vice President - Head of Human Capital management
                                     </p>
                                 </div>
                                 
@@ -1176,17 +1143,22 @@
                                 </div>
                                 
                                 <div class="pb-30">
-                                    
+                                    <p class="text-sm text-gold leading-15 mb-4">
+                                        Radhika’s cross-sectoral expertise in human capital strategy, organizational design, and change management underpins MAIA’s people-first approach. An Institute Silver Medalist from the Tata Institute of Social Sciences, Mumbai, with a background in Statistics, she blends analytical rigor with deep people insight to align HR practices with business goals.
+                                    </p>
+                                    <p class="text-sm text-gold leading-15">
+                                        Her career spans leadership roles across FMCG, Pharmaceuticals and EdTech, where she has driven culture integration, employee engagement, and large-scale organizational transitions. From building HR systems in fast-paced startups to shaping talent and performance frameworks in global corporations, Radhika’s work ensures MAIA’s “Building Lives and Beyond” ethos extends to its most valuable asset, its people.
+                                    </p>
                                 </div>
                             </div>
                             <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
-                                <a href="mailto:mayank@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="mailto:radhikas@maiaestates.in" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">EMAIL</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
                                     </svg>
                                 </a>
-                                <a href="https://linkedin.com/in/mayank-karnawat" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="https://www.linkedin.com/in/radhika-saraf-86509a26/" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">LINKEDIN</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
@@ -1242,13 +1214,13 @@
                                 </div>
                             </div>
                             <div class="sticky-contact-bar grid grid-cols-2 gap-4 bottom-0 absolute left-0 right-0 w-full bg-white">
-                                <a href="mailto:mayank@maiaestates.com" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="mailto:mayankk@maiaestates.in" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">EMAIL</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>
                                     </svg>
                                 </a>
-                                <a href="https://linkedin.com/in/mayank-karnawat" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
+                                <a href="https://www.linkedin.com/in/mayankkarnawat/" target="_blank" class="flex items-center justify-center gap-3 px-6 py-6 text-green">
                                     <span class="font-semibold text-sm">LINKEDIN</span>
                                     <svg class="scale-80 xl:scale-100" width="9" height="23" viewBox="0 0 9 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0.722656 14.8574L8.12109 7.46094M8.12109 7.46094H0.722656M8.12109 7.46094V15.17" stroke="#00362A" stroke-width="1.5"/>

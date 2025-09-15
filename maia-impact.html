@@ -163,7 +163,7 @@
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
-                    <ul class="flex gap-8 text-sm font-medium">
+                    <ul class="flex gap-8 text-sm font-semibold">
                         <li><a class="text-green uppercase" href="about.html">About Us</a></li>
                         <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
                         <li><a class="text-green uppercase" href="maialife.html">Services</a></li>

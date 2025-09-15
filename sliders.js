@@ -747,6 +747,9 @@ $(document).ready(function(){
         swipeEvent: true,
         // Pause autoplay on touch/swipe
         pauseOnFocus: true,
+        arrows: true,
+        prevArrow: $('.about--purpose-slider-container .purpose-arrow-prev'),
+        nextArrow: $('.about--purpose-slider-container .purpose-arrow-next'),
         responsive: [
             {
                 breakpoint: 1024,

@@ -602,7 +602,7 @@ body.bespoke-services .header{
     line-height: 140%;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 @media (max-width: 1023px) {
@@ -1034,7 +1034,8 @@ section.contact-us{
 /*************** ========= About Page ========= ***************/
 
 .about-hero-banner {
-    min-height: 100vh;
+    min-height: 700px;
+    height: 100vh;
 }
 
 

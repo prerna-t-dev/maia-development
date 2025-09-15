@@ -148,7 +148,7 @@
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
-                    <ul class="flex gap-8 text-sm font-medium">
+                    <ul class="flex gap-8 text-sm font-semibold">
                         <li><a class="text-green uppercase" href="about.html">About Us</a></li>
                         <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
                         <li><a class="text-green uppercase" href="maialife.html">Services</a></li>
@@ -330,27 +330,31 @@
         <section class="about-maia py-20">
             <div class="container about-maia-content grid grid-cols-1 xl:grid-cols-2 gap-16 xl:gap-4">
                 <div class="about-maia-content-left xl:pr-4 flex flex-col justify-between">
-                    <div class="about-maia-content-left-inner">
+                    <div class="about-maia-content-left-inner xl:mt-30">
                         <div class="section-subheader uppercase text-green mb-3">
                             ABOUT MAIA
                         </div>
                         <div class="text-reveal--wrapper">
                             <h2 class="text-40px xl:text-6xl font-normal mb-16 xl:mb-18">
-                                Crafting iconic spaces <br>
-                                for inspired living.
+                                Crafting iconic spaces 
+                                
                             </h2>
                         </div>
-                        <div class="font-heading text-green flex items-center gap-2 mb-8 xl:hidden">
+                        <!-- <div class="font-heading text-green flex items-center gap-2 mb-8 xl:hidden">
                             <div class="w-sm h-sm bg-green-light rounded-full"> 
                             </div>
                             <span class="text-sm font-medium text-green uppercase">
                                 ( Since 2016 )
                             </span>
-                        </div>
+                        </div> -->
                         <div class="xl:pr-24">
                             <div class="text-reveal--paragraph">
                                 <p class="mb-12 xl:mb-14 max-w-lg font-medium text-black opacity-70 text-sm xl:text-base">
-                                    We create landmark residences and commercial developments that embody design excellence, lasting value, and a sense of place. Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity, and context, shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
+                                We create landmark residences and commercial developments that embody design excellence, lasting value, and a sense of place. Guided by
+                                integrity and attention to detail, each MAIA development blends
+                                craftsmanship, creativity and context, shaping spaces that enrich lives
+                                today and build an enduring legacy for tomorrow.
+
                                 </p>
                             </div>
                         </div>
@@ -370,7 +374,7 @@
                         </div>
                     </div>
 
-                    <div class="fade-up">
+                    <!-- <div class="fade-up">
                         <div class="mt-20 font-heading text-green flex items-center gap-2 hidden xl:flex">
                             <div class="w-sm h-sm bg-green-light rounded-full"> 
                             </div>
@@ -378,7 +382,7 @@
                                 ( Since 2016 )
                             </span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="about-maia-content-right">
                     <div class="image-reveal--wrapper_ parallax-image">
@@ -400,7 +404,7 @@
                 </div>
                 <div class="text-reveal--wrapper">
                     <h2 class="text-40px xl:text-6xl font-normal mb-8 text-center">
-                        Defining the Skyline
+                        Building iconic skylines
                     </h2>
                 </div>
                 <div class="text-reveal--wrapper developments-text-line-paragraph">
@@ -593,7 +597,7 @@
             <div class="container">
                 <div class="text-reveal--wrapper">
                     <div class="section-subheader uppercase text-green mb-3">
-                        OUR DEVELOPMENTS
+                        UPCOMING DEVELOPMENTS
                     </div>
                 </div>
                 <div class="text-reveal--wrapper">
@@ -801,7 +805,8 @@
                                 <img src="images/2025/maialife-logo.png" alt="Maia Life Logo">
                             </div>
                             <p class="font-gold mb-12 xl:mb-26">
-                                With MAIA Life, your home extends beyond its walls, offering a seamless blend of hospitality-driven facility management and concierge-style living, where luxury meets effortless convenience.                            </p>
+                                With MAIA Life, your home extends beyond its walls, offering a seamless blend of hospitality-driven, facility management, where luxury meets effortless convenience.
+                            </p>
                             <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
@@ -826,12 +831,12 @@
                     IN THE NEWS
                 </div>
                 <div class="text-reveal--wrapper">
-                    <h2 class="text-40px xl:text-7xl font-normal mb-7 text-green">
+                    <h2 class="text-40px xl:text-7xl font-normal mb-6 text-green">
                         In the News
                     </h2>
                 </div>
                 <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-12 xl:gap-20 mb-20">
-                    <div class="text-reveal--wrapper">
+                    <div class="text-reveal--wrapper developments-text-line-paragraph">
                         <p class="">
                             MAIA’s recent features, exclusive interviews, and industry <br />
                             insights shaping tomorrow’s real estate narrative.
@@ -941,7 +946,7 @@
                         <div class="contact-form">
                             <h2 class="text-40px xl:text-7xl font-heading font-normal text-green mb-16">Contact us</h2>
                             
-                            <form action="contactmail.php" method="POST" class="space-y-8">
+                            <form id="contactform" action="contactmail.php" method="POST" class="space-y-8">
                                 <div class="form-group form-group-input mb-4 xl:mb-8">
                                     <label for="contact-fullname" class="block text-base font-heading font-extralight text-green mb-2">FULL NAME (*)</label>
                                     <input type="text" id="contact-fullname" name="contact-fullname" required 
@@ -1182,74 +1187,6 @@
     <!-- <script src="animation-2.js"></script> -->
     
     <!-- Contact Form JavaScript -->
-    <script>
-        $(document).ready(function() {
-
-            // Contact form submission handling
-            $('form[action="contactmail.php"]').on('submit', function(e) {
-                e.preventDefault();
-                
-                var $form = $(this);
-                var $submitBtn = $form.find('button[type="submit"]');
-                var originalText = $submitBtn.html();
-                
-                // Basic validation
-                var name = $form.find('#contact-fullname').val().trim();
-                var email = $form.find('#contact-email').val().trim();
-                var phone = $form.find('#contact-phone').val().trim();
-                
-                if (!name || !email || !phone) {
-                    alert('Please fill in all required fields.');
-                    return false;
-                }
-                
-                // Email validation
-                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email)) {
-                    alert('Please enter a valid email address.');
-                    return false;
-                }
-                
-                // Disable submit button and show loading
-                $submitBtn.prop('disabled', true).html('<span>SUBMITTING...</span>');
-                
-                // Submit form via AJAX
-                $.ajax({
-                    type: 'POST',
-                    url: 'contactmail.php',
-                    data: $form.serialize(),
-                    dataType: 'json',
-                    timeout: 10000, // 10 second timeout
-                    success: function(response) {
-                        if (response.success) {
-                            alert(response.message);
-                            $form[0].reset(); // Reset the form
-                        } else {
-                            alert(response.message);
-                        }
-                        $submitBtn.prop('disabled', false).html(originalText);
-                    },
-                    error: function(xhr, status, error) {
-                        console.error('AJAX Error:', xhr.responseText);
-                        // Even if there's an error, reset the button
-                        $submitBtn.prop('disabled', false).html(originalText);
-                        
-                        // Try to parse the response as JSON
-                        try {
-                            var response = JSON.parse(xhr.responseText);
-                            if (response.message) {
-                                alert(response.message);
-                            } else {
-                                alert('Thank you for your message! We have received your information.');
-                            }
-                        } catch (e) {
-                            // If we can't parse JSON, show a generic success message
-                            alert('Thank you for your message! We have received your information.');
-                        }
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="contact-form.js"></script>
 </body>
 </html>
