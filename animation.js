@@ -8,6 +8,12 @@ window.addEventListener('load', function() {
         if (typeof ScrollTrigger !== 'undefined') {
             console.log('ScrollTrigger found')
             gsap.registerPlugin(ScrollTrigger);
+
+            // Register SplitText if available
+            if (typeof SplitText !== 'undefined') {
+                console.log('SplitText found')
+                gsap.registerPlugin(SplitText);
+            }
             
             // Sync existing Lenis with ScrollTrigger
             if (typeof Lenis !== 'undefined' && window.lenis) {
@@ -520,100 +526,199 @@ window.addEventListener('load', function() {
 
 
             
-            // Create text animation structure immediately (before any other animations)
-            const developmentTexts = gsap.utils.toArray('.development-project-item h4, .development-project-item span');
             
-            developmentTexts.forEach((textElement, index) => {
-                // Create text-reveal animation structure immediately
-                const originalHTML = textElement.innerHTML;
-                const originalTextAlign = window.getComputedStyle(textElement).textAlign;
-                
-                // Clear original content and create the proper structure
-                textElement.innerHTML = '';
-                const lineWrapper = document.createElement('div');
-                lineWrapper.className = 'overflow-hidden lh-fix';
-                lineWrapper.style.cssText = `display: block; text-align: ${originalTextAlign}; position: relative;`;
-                
-                const lineSpan = document.createElement('div');
-                lineSpan.innerHTML = originalHTML;
-                lineSpan.style.cssText = `display: block; text-align: ${originalTextAlign}; position: relative;`;
-                
-                lineWrapper.appendChild(lineSpan);
-                textElement.appendChild(lineWrapper);
-                
-                // Set initial state to hidden
-                gsap.set(lineSpan, { y: '100%', opacity: 0 });
-                
-                // Create ScrollTrigger for text animation
-                ScrollTrigger.create({
-                    trigger: textElement,
-                    start: "top 90%",
-                    onEnter: () => {
-                        gsap.to(lineSpan, {
-                            y: '0%',
-                            opacity: 1,
-                            duration: 1,
-                            ease: "power4",
-                            delay: index * 0.1 // Small stagger between text elements
-                        });
-                    },
-                    onLeaveBack: () => {
-                        gsap.to(lineSpan, {
-                            y: '100%',
-                            opacity: 0,
-                            duration: 0.5,
-                            ease: "power2"
-                        });
-                    },
-                    toggleActions: "play none none reverse"
-                });
-            });
 
-            // Section Stacking Animation with Wrapper Pinning
-            const sections = gsap.utils.toArray('.development-project-item');
+
+
+            //HOMEPAGE - DEVELOPMENTS SECTION ANIMATION
+            // Animation test 3 - simple parallax animation
+            let movementFactor = 0.9; // controls how much the backgrounds move. It's a percentage of the section's height. This can be negative if you want to move in the other direction.
+            let backgrounds = gsap.utils.toArray(".animation-test-3 section .bg img");
+            let overlays = gsap.utils.toArray(".animation-test-3 section .bg-overlay");
+            let headings = gsap.utils.toArray(".animation-test-3 section .bg h4");
+            let locationSpans = gsap.utils.toArray(".animation-test-3 section .project-location-span");
+
+            // Initialize SplitText if available - wait for fonts to load
+            if (typeof SplitText !== 'undefined') {
+                // Wait for fonts to load before initializing SplitText
+                if (document.fonts && document.fonts.ready) {
+                    document.fonts.ready.then(() => {
+                        splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" }));
+                        console.log('SplitText initialized for headings (fonts loaded)');
+                        console.log('splitHeadings', splitHeadings);
+                        
+                        // Set up character animations after SplitText is ready
+                        setupCharacterAnimations();
+                    });
+                } else {
+                    // Fallback: wait a bit for fonts to load
+                    setTimeout(() => {
+                        splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" }));
+                        console.log('SplitText initialized for headings (fallback)');
+                        
+                        // Set up character animations after SplitText is ready
+                        setupCharacterAnimations();
+                    }, 100);
+                }
+            } else {
+                console.log('SplitText not available - skipping text splitting');
+            }
             
-            // Pin the development project items directly
-            sections.forEach((section, index) => {
-                // Pin the section directly
-                ScrollTrigger.create({
-                    trigger: section,
-                    start: 'top 80px',
-                    end: 'bottom top',
-                    pin: index !== sections.length - 1, // Don't pin the last item
-                    pinSpacing: false,
-                    onEnter: () => {
-                        // Smoothly animate section to center of pinned wrapper
-                        gsap.to(section, {
-                            y: 0, // Center in wrapper
-                            duration: 0.8, // Back to shorter duration for smooth feel
-                            ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
+            // Function to set up character animations with ScrollTrigger
+            function setupCharacterAnimations() {
+                if (!splitHeadings) return;
+                
+                splitHeadings.forEach((splitHeading, index) => {
+                    if (splitHeading.chars) {
+                        // Set initial state for characters
+                        gsap.set(splitHeading.chars, {
+                            autoAlpha: 0,
+                            yPercent: 150
                         });
                         
-                        // Move previous sections up smoothly
-                        for (let i = 0; i < index; i++) {
-                            gsap.to(sections[i], {
-                                y: -(index - i) * 50,
-                                duration: 0.8, // Back to shorter duration for smooth feel
-                                ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
-                            });
-                        }
-                        
-
-                    },
-                    onLeave: () => {
-                        // Reset positions when leaving last section
-                        if (index === sections.length - 1) {
-                            sections.forEach((sect, i) => {
-                                gsap.to(sect, {
-                                    y: 0,
-                                    duration: 0.8, // Back to shorter duration for smooth feel
-                                    ease: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' // Smooth easing
+                        // Create ScrollTrigger for each heading
+                        ScrollTrigger.create({
+                            trigger: headings[index].parentNode, // Use the section as trigger
+                            start: "top 90%",
+                            end: "bottom 10%",
+                            onEnter: () => {
+                                // Animate characters in
+                                gsap.to(splitHeading.chars, {
+                                    autoAlpha: 1,
+                                    yPercent: 0,
+                                    duration: 0.8,
+                                    delay: 0,
+                                    ease: "power2.out",
+                                    stagger: {
+                                        each: 0.01,
+                                        from: "random"
+                                    }
                                 });
-                            });
-                        }
+                                
+                                // Animate project location span
+                                if (locationSpans[index]) {
+                                    gsap.fromTo(locationSpans[index], {
+                                        autoAlpha: 0,
+                                        yPercent: 30
+                                    }, {
+                                        autoAlpha: 1,
+                                        yPercent: 0,
+                                        duration: 0.8,
+                                        delay: 0.3,
+                                        ease: "power2.out"
+                                    });
+                                }
+                            },
+                            onLeaveBack: () => {
+                                // Animate characters out when scrolling back up
+                                gsap.to(splitHeading.chars, {
+                                    autoAlpha: 0,
+                                    yPercent: 150,
+                                    duration: 0.5,
+                                    ease: "power2.in"
+                                });
+                                
+                                // Animate location span out
+                                if (locationSpans[index]) {
+                                    gsap.to(locationSpans[index], {
+                                        autoAlpha: 0,
+                                        yPercent: 30,
+                                        duration: 0.5,
+                                        ease: "power2.in"
+                                    });
+                                }
+                            },
+                            toggleActions: "play none none reverse"
+                        });
                     }
                 });
+            }
+
+           
+
+            backgrounds.forEach((img, i) => {
+                console.log('img', img);
+            
+                img.addEventListener("load", () => { // wait until the image loads because we need to ascertain the naturalWidth/naturalHeight
+                console.log('img', img);
+                fitImage(img, movementFactor);
+                
+                // the first image (i === 0) should be handled differently because it should start at the very top.
+                // use function-based values in order to keep things responsive
+                gsap.fromTo(img, {
+                    y: () => {
+                        const isMobile = window.innerWidth <= 768;
+                        const mobileFactor = isMobile ? 0.2 : 0.5; // Reduce movement on mobile
+                        return i ? -movementFactor * mobileFactor * img.parentNode.offsetHeight : 0;
+                    }
+                }, {
+                    y: () => {
+                        const isMobile = window.innerWidth <= 768;
+                        const mobileFactor = isMobile ? 0.2 : 0.5; // Reduce movement on mobile
+                        return movementFactor * mobileFactor * img.parentNode.offsetHeight;
+                    },
+                    ease: "none",
+                    scrollTrigger: {
+                    trigger: img.parentNode,
+                    start: () => i ? "top bottom" : "-1px top", 
+                    end: "bottom top",
+                    scrub: true,
+                    invalidateOnRefresh: true // to make it responsive
+                    }
+                });
+
+                // Add overlay darkening animation
+                const overlay = overlays[i];
+                if (overlay) {
+                    ScrollTrigger.create({
+                        trigger: img.parentNode,
+                        start: () => i ? "top bottom" : "-1px top",
+                        end: "bottom top",
+                        scrub: true,
+                        onUpdate: (self) => {
+                            // Calculate overlay opacity - only get dark at the very end
+                            const progress = self.progress;
+                            const maxOpacity = 0.7; // Maximum darkness (increased from 0.7)
+                            
+                            // Use a curve that stays mostly transparent until the end
+                            // When progress is 0-0.8: opacity stays near 0
+                            // When progress is 0.8-1: opacity quickly increases to max
+                            let opacity = 0;
+                            if (progress > 0.8) {
+                                // Only start darkening in the last 20% of scroll
+                                const endProgress = (progress - 0.8) / 0.2; // 0 to 1 in the last 20%
+                                opacity = endProgress * maxOpacity;
+                            }
+                            
+                            // Apply the darkening effect smoothly
+                            overlay.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+                        }
+                    });
+                }
+                })
+                // Give the backgrounds the project images
+                img.setAttribute("src", `images/2025/homepage/dev-project--${i + 1}.png`);
+            
             });
+            
+            // whenever the window resizes, we should adjust the backgrounds to fit properly.
+            window.addEventListener("resize", () => backgrounds.forEach(img => fitImage(img, movementFactor)));
+            
+            // fits the image to fill the parent container
+            function fitImage(img, marginFactor) {
+                let sx = img.parentNode.offsetWidth / img.naturalWidth,
+                    sy = img.parentNode.offsetHeight / img.naturalHeight,
+                    scale = Math.max(sx, sy), // Use max to ensure image covers the container
+                    w = Math.ceil(img.naturalWidth * scale),
+                    h = Math.ceil(img.naturalHeight * scale);
+                gsap.set(img, {
+                    width: w, 
+                    height: h, 
+                    top: Math.ceil((img.parentNode.offsetHeight - h) / 2), 
+                    left: Math.ceil((img.parentNode.offsetWidth - w) / 2), 
+                    position: "absolute"
+                });
+            }
             
 
 
