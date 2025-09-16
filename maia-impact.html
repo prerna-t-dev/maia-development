@@ -308,7 +308,7 @@
                         </h1>
                         <div class="fade-in" data-delay="0.8">
                             <p class="font-medium text-black opacity-70 xl:text-center" style="max-width: 450px;">
-                                MAIA’s holistic commitment empowers people, preserves environments, and fosters resilient communities through responsible practices and conscious stewardship.
+                                MAIA’s holistic commitment to empowering people, preserving environments and fostering resilient communities through responsible practices and conscious stewardship.
                             </p>
                         </div>
                         
@@ -363,7 +363,7 @@
                 <div class="maialife-services-slider" style="padding-right: 30vw">
                     <div class="maialife-services-slider-item">
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
-                            <img class="w-full xl:w-3-5" src="images/2025/impact/maiaimpact-about--1.png" alt="Maia Impact 1">
+                            <img class="w-full xl:w-3-5 h-full" style="aspect-ratio: 14/9; object-fit: cover;" src="images/2025/impact/maiaimpact-about--1.png" alt="Maia Impact 1">
                             <div class="xl:pr-20">
                                 <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5 xl:mb-16">
                                     Commitment To <br>
@@ -397,7 +397,7 @@
 
                     <div class="maialife-services-slider-item">
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
-                            <img class="w-full xl:w-3-5" src="images/2025/impact/maiaimpact-about--2.png" alt="Maia Impact 2">
+                            <img class="w-full xl:w-3-5 h-full" style="aspect-ratio: 14/9; object-fit: cover;" src="images/2025/impact/maiaimpact-about--2.jpg" alt="Maia Impact 2">
                             <div class="xl:pr-20">
                                 <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5 xl:mb-16">
                                     Urban <br>
@@ -430,7 +430,7 @@
 
                     <div class="maialife-services-slider-item">
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
-                            <img class="w-full xl:w-3-5" src="images/2025/impact/maiaimpact-about--3.png" alt="Maia Impact 3">
+                            <img class="w-full xl:w-3-5 h-full" style="aspect-ratio: 14/9; object-fit: cover;" src="images/2025/impact/maiaimpact-about--3.jpg" alt="Maia Impact 3">
                             <div class="xl:pr-20">
                                 <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5 xl:mb-16">
                                     Foster <br>
@@ -443,7 +443,7 @@
                                         </svg>
 
                                         <span>
-                                            Refresh public spaces, creating a welcoming environment for residents and commuters alike.
+                                            Revitalize public spaces to create safe, welcoming environments that enhance everyday experiences for residents and commuters.
                                         </span>
                                     </p>
 
@@ -453,7 +453,7 @@
                                         </svg>
 
                                         <span>
-                                            Inspire community pride and contribute to mental well-being by transforming the area into a vibrant, green oasis.
+                                            Strengthen community bonds by introducing vibrant green spaces that nurture well-being, pride and a shared sense of belonging.
                                         </span>
                                     </p>
                                 </div>
@@ -488,7 +488,7 @@
 
                 <div class="text-reveal-paragraph">
                     <p class="text-center text-white opacity-70 mx-auto text-sm xl:text-base font-medium" style="max-width: 500px;">
-                        It represents a heartfelt commitment to sustainability, nurturing local ecosystems, and preserving natural beauty.
+                        A heartfelt commitment to sustainability, nurturing local ecosystems and preserving natural beauty.
                     </p>
                 </div>
 
@@ -611,7 +611,7 @@
                                         Restore.
                                     </h4>
                                     <p class="text-white text-base xl:text-base font-medium">
-                                        On World Environment Day a few years ago, Team MAIA came together to contribute towards a healthier ecosystem and to do our bit for Jakkur Lake.
+                                        On World Environment Day (2022), Team MAIA came together to contribute towards a healthier ecosystem and to do our bit for Jakkur Lake. 
                                     </p>
                                 </div>
                                 
@@ -649,10 +649,11 @@
                                 
                                 <div class="env-grid-item--2">
                                     <p class="text-white text-sm xl:text-base font-normal">
-                                        A 100-metre stretch opposite the City Civil Court in Gandhinagar, Bengaluru, was given a thorough clean-up and much-needed restoration. 
+                                        A 100-metre stretch opposite the City Civil Court in Gandhinagar, Bengaluru, was given a thorough clean-up and a much-needed restoration. 
                                         <br>
                                         <br>
-                                        With over 80 volunteers on-site, this community-led drive became a testament to what collective effort can achieve. Turning intent into impact, and care into transformation.
+                                        With over 80 volunteers on-site, this community-led drive became a testament to what collective effort can achieve. Turning intent into impact and care into transformation.
+
                                     </p>
                                 </div>
                                 
@@ -717,7 +718,7 @@
 
 
 
-                    <div class="sustainability-construction-grid grid grid-cols-1 xl:grid-cols-2 items-center gap-10 mt-16">
+                    <div class="sustainability-construction-grid grid grid-cols-1 xl:grid-cols-2 items-center gap-10 xl:gap-32 mt-16">
                         <div class="grid-item sustainability-construction-content">
                             
 

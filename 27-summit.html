@@ -320,7 +320,7 @@
                         </h1>
                         <div class="fade-in" data-delay="0.8">
                             <p class="font-medium text-white opacity-70" style="max-width: 720px;">
-                                27 Summit blends timeless architecture with verdant surroundings, creating a refined lifestyle amidst curated gardens, rain trees, and signature amenities.
+                                27 Summit blends timeless architecture with verdant surroundings, creating a refined lifestyle amidst curated gardens, rain trees and signature amenities.
                             </p>
                         </div>
                         
@@ -370,7 +370,7 @@
 
                         <!-- Key Features Data -->
                         <div class="key-features-data">
-                            <div class="grid grid-cols-1 xl:flex flex-wrap gap-8">
+                            <div class="grid grid-cols-1 xl:flex flex-wrap gap-8 xl:gap-12">
                                 <div class="key-feature-data--item flex items-center gap-3 px-6">
                                     <div class="text-reveal--wrapper">
                                         <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
@@ -420,6 +420,20 @@
                                     <div class="text-reveal--wrapper">
                                         <span class="text-dark-slate font-normal text-base whitespace-nowrap">
                                             Floors
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="key-feature-data--item flex items-center gap-3 px-6">
+                                    <div class="text-reveal--wrapper">
+                                        <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
+                                        3 BHK
+                                        </p>
+                                    </div>
+                                    <div class="text-reveal--wrapper">
+                                        <span class="text-dark-slate font-normal text-base whitespace-nowrap">
+                                            / 3 BHK with <br />
+                                            Drawing Room
                                         </span>
                                     </div>
                                 </div>
@@ -561,7 +575,7 @@
                                 </div>
                                 <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
                                     <p class="font-medium leading-15 text-sm xl:text-base">
-                                        Mallya Hospital 
+                                        Vydehi Speciality Hospital 
                                     </p>
                                     <p class="font-medium leading-15 text-sm xl:text-base">
                                         3
@@ -648,115 +662,120 @@
                         </div>
                     </div>
 
-                <!-- Desktop Arrows -->
-                <div class="slick-arrows flex items-center justify-end gap-6 hidden xl:flex">
-                    <div class="slick-arrow-prev cursor-pointer">
-                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
-                                <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
-                            </svg>
-                        </div>
-                        <div class="slick-arrow-next cursor-pointer">
-                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
-                                <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
-                            </svg>
-                        </div>
-                    </div>
+                    
                 </div>
 
 
                 
             </div>
 
-            <div class="gallery--images">
-                <!-- Residences Images (5) -->
-                <div class="gallery--slide" data-categories="residences">
-                    <div class="slide-number">Slide 1</div>
-                    <img src="images/2025/27-summit/gallery-27summit--residences--1.jpg" alt="Residences Gallery Image 1">
-                </div>
-                <div class="gallery--slide" data-categories="residences">
-                    <div class="slide-number">Slide 2</div>
-                    <img src="images/2025/27-summit/gallery-27summit--residences--2.jpg" alt="Residences Gallery Image 2">
-                </div>
-                <div class="gallery--slide" data-categories="residences">
-                    <div class="slide-number">Slide 3</div>
-                    <img src="images/2025/27-summit/gallery-27summit--residences--3.jpg" alt="Residences Gallery Image 3">
-                </div>
-                <div class="gallery--slide" data-categories="residences">
-                    <div class="slide-number">Slide 4</div>
-                    <img src="images/2025/27-summit/gallery-27summit--residences--4.jpg" alt="Residences Gallery Image 4">
-                </div>
-                <div class="gallery--slide" data-categories="residences">
-                    <div class="slide-number">Slide 5</div>
-                    <img src="images/2025/27-summit/gallery-27summit--residences--5.jpg" alt="Residences Gallery Image 5">
+            <div class="relative">
+                <div class="gallery--images">
+                    <!-- Residences Images (5) -->
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 1</div>
+                        <img src="images/2025/27-summit/gallery-27summit--residences--1.jpg" alt="Residences Gallery Image 1">
+                    </div>
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 2</div>
+                        <img src="images/2025/27-summit/gallery-27summit--residences--2.jpg" alt="Residences Gallery Image 2">
+                    </div>
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 3</div>
+                        <img src="images/2025/27-summit/gallery-27summit--residences--3.jpg" alt="Residences Gallery Image 3">
+                    </div>
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 4</div>
+                        <img src="images/2025/27-summit/gallery-27summit--residences--4.jpg" alt="Residences Gallery Image 4">
+                    </div>
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 5</div>
+                        <img src="images/2025/27-summit/gallery-27summit--residences--5.jpg" alt="Residences Gallery Image 5">
+                    </div>
+
+                    <!-- Facade Images (5) -->
+                    <div class="gallery--slide" data-categories="facade">
+                        <div class="slide-number">Slide 6</div>
+                        <img src="images/2025/27-summit/gallery-27summit--facade--1.jpg" alt="Facade Gallery Image 1">
+                    </div>
+                    <div class="gallery--slide" data-categories="facade">
+                        <div class="slide-number">Slide 7</div>
+                        <img src="images/2025/27-summit/gallery-27summit--facade--2.jpg" alt="Facade Gallery Image 2">
+                    </div>
+                    <div class="gallery--slide" data-categories="facade">
+                        <div class="slide-number">Slide 8</div>
+                        <img src="images/2025/27-summit/gallery-27summit--facade--3.jpg" alt="Facade Gallery Image 3">
+                    </div>
+                    <div class="gallery--slide" data-categories="facade">
+                        <div class="slide-number">Slide 9</div>
+                        <img src="images/2025/27-summit/gallery-27summit--facade--4.jpg" alt="Facade Gallery Image 4">
+                    </div>
+                    <div class="gallery--slide" data-categories="facade">
+                        <div class="slide-number">Slide 10</div>
+                        <img src="images/2025/27-summit/gallery-27summit--facade--5.jpg" alt="Facade Gallery Image 5">
+                    </div>
+
+                    <!-- Amenities Images (10) -->
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 11</div>
+                        <img src="images/2025/27-summit/gallery-27summit--amenities--1.jpg" alt="Amenities Gallery Image 1">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 12</div>
+                        <img src="images/2025/27-summit/gallery-27summit--amenities--2.jpg" alt="Amenities Gallery Image 2">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 13</div>
+                        <img src="images/2025/27-summit/gallery-27summit--amenities--3.jpg" alt="Amenities Gallery Image 3">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 14</div>
+                        <img src="images/2025/27-summit/gallery-27summit--amenities--4.jpg" alt="Amenities Gallery Image 4">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 15</div>
+                        <img src="images/2025/27-summit/gallery-27summit--amenities--5.jpg" alt="Amenities Gallery Image 5">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 16</div>
+                        <img src="images/2025/27-summit/gallery-27summit--amenities--6.jpg" alt="Amenities Gallery Image 6">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 17</div>
+                        <img src="images/2025/27-summit/gallery-27summit--amenities--7.jpg" alt="Amenities Gallery Image 7">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 18</div>
+                        <img src="images/2025/27-summit/gallery-27summit--amenities--8.jpg" alt="Amenities Gallery Image 8">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 19</div>
+                        <img src="images/2025/27-summit/gallery-27summit--amenities--9.jpg" alt="Amenities Gallery Image 9">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 20</div>
+                        <img src="images/2025/27-summit/gallery-27summit--amenities--10.jpg" alt="Amenities Gallery Image 10">
+                    </div>
                 </div>
 
-                <!-- Facade Images (5) -->
-                <div class="gallery--slide" data-categories="facade">
-                    <div class="slide-number">Slide 6</div>
-                    <img src="images/2025/27-summit/gallery-27summit--facade--1.jpg" alt="Facade Gallery Image 1">
-                </div>
-                <div class="gallery--slide" data-categories="facade">
-                    <div class="slide-number">Slide 7</div>
-                    <img src="images/2025/27-summit/gallery-27summit--facade--2.jpg" alt="Facade Gallery Image 2">
-                </div>
-                <div class="gallery--slide" data-categories="facade">
-                    <div class="slide-number">Slide 8</div>
-                    <img src="images/2025/27-summit/gallery-27summit--facade--3.jpg" alt="Facade Gallery Image 3">
-                </div>
-                <div class="gallery--slide" data-categories="facade">
-                    <div class="slide-number">Slide 9</div>
-                    <img src="images/2025/27-summit/gallery-27summit--facade--4.jpg" alt="Facade Gallery Image 4">
-                </div>
-                <div class="gallery--slide" data-categories="facade">
-                    <div class="slide-number">Slide 10</div>
-                    <img src="images/2025/27-summit/gallery-27summit--facade--5.jpg" alt="Facade Gallery Image 5">
+                <!-- Desktop Arrows -->
+                <div class="slick-arrows flex items-center justify-end gap-6 hidden xl:flex">
+                    <div class="slick-arrow-prev cursor-pointer absolute top-1/2 -translate-y-1/2 left-4">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
+                            <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
+                        </svg>
+                    </div>
+                    <div class="slick-arrow-next cursor-pointer absolute top-1/2 -translate-y-1/2 right-4">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
+                            <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
+                        </svg>
+                    </div>
                 </div>
 
-                <!-- Amenities Images (10) -->
-                <div class="gallery--slide" data-categories="amenities">
-                    <div class="slide-number">Slide 11</div>
-                    <img src="images/2025/27-summit/gallery-27summit--amenities--1.jpg" alt="Amenities Gallery Image 1">
-                </div>
-                <div class="gallery--slide" data-categories="amenities">
-                    <div class="slide-number">Slide 12</div>
-                    <img src="images/2025/27-summit/gallery-27summit--amenities--2.jpg" alt="Amenities Gallery Image 2">
-                </div>
-                <div class="gallery--slide" data-categories="amenities">
-                    <div class="slide-number">Slide 13</div>
-                    <img src="images/2025/27-summit/gallery-27summit--amenities--3.jpg" alt="Amenities Gallery Image 3">
-                </div>
-                <div class="gallery--slide" data-categories="amenities">
-                    <div class="slide-number">Slide 14</div>
-                    <img src="images/2025/27-summit/gallery-27summit--amenities--4.jpg" alt="Amenities Gallery Image 4">
-                </div>
-                <div class="gallery--slide" data-categories="amenities">
-                    <div class="slide-number">Slide 15</div>
-                    <img src="images/2025/27-summit/gallery-27summit--amenities--5.jpg" alt="Amenities Gallery Image 5">
-                </div>
-                <div class="gallery--slide" data-categories="amenities">
-                    <div class="slide-number">Slide 16</div>
-                    <img src="images/2025/27-summit/gallery-27summit--amenities--6.jpg" alt="Amenities Gallery Image 6">
-                </div>
-                <div class="gallery--slide" data-categories="amenities">
-                    <div class="slide-number">Slide 17</div>
-                    <img src="images/2025/27-summit/gallery-27summit--amenities--7.jpg" alt="Amenities Gallery Image 7">
-                </div>
-                <div class="gallery--slide" data-categories="amenities">
-                    <div class="slide-number">Slide 18</div>
-                    <img src="images/2025/27-summit/gallery-27summit--amenities--8.jpg" alt="Amenities Gallery Image 8">
-                </div>
-                <div class="gallery--slide" data-categories="amenities">
-                    <div class="slide-number">Slide 19</div>
-                    <img src="images/2025/27-summit/gallery-27summit--amenities--9.jpg" alt="Amenities Gallery Image 9">
-                </div>
-                <div class="gallery--slide" data-categories="amenities">
-                    <div class="slide-number">Slide 20</div>
-                    <img src="images/2025/27-summit/gallery-27summit--amenities--10.jpg" alt="Amenities Gallery Image 10">
-                </div>
+
             </div>
-
 
             <div class="container">
                  <!-- Mobile Arrows -->
@@ -776,6 +795,11 @@
                 
                 </div>
             </div>
+
+
+
+
+            
         </section>
 
        
