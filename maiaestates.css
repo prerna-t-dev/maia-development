@@ -1188,6 +1188,12 @@ section.contact-us{
     z-index: 9999 !important; /* Much higher z-index */
 }
 
+.team-member-item img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
+}
+
 /* Ensure body scroll prevention works */
 /* body[style*="position: fixed"] {
     overflow: hidden !important;

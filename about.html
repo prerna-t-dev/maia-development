@@ -704,7 +704,7 @@
                 <div class="team-members-grid grid grid-cols-1 xl:grid-cols-3 gap-20 xl:gap-x-12 xl:gap-y-40">
                     <div class="team-member-item" data-team-member-id="1">
                         <div class="image-reveal--wrapper mb-7">
-                            <img src="images/2025/about/team-image--1.png" alt="Rishad Khergamwala">
+                            <img src="images/2025/about/team-image--1.jpg" alt="Rishad Khergamwala">
                         </div>
                         <div>
                             <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
@@ -735,7 +735,7 @@
                                 </div>
                                 
                                 <div class="mb-7">
-                                    <img src="images/2025/about/team-image--1.png" alt="Rishad Khergamwala" class="w-full object-cover">
+                                    <img src="images/2025/about/team-image--1.jpg" alt="Rishad Khergamwala" class="w-full object-cover">
                                 </div>
                                 
                                 <div class="pb-30">
@@ -766,7 +766,7 @@
 
                     <div class="team-member-item" data-team-member-id="2">
                         <div class="image-reveal--wrapper mb-7">
-                            <img src="images/2025/about/team-image--2.png" alt="Rudresh K V">
+                            <img src="images/2025/about/team-image--2.jpg" alt="Rudresh K V">
                         </div>
                         <div>
                             <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
@@ -797,7 +797,7 @@
                                 </div>
                                 
                                 <div class="mb-7">
-                                    <img src="images/2025/about/team-image--2.png" alt="Rudresh K V" class="w-full object-cover">
+                                    <img src="images/2025/about/team-image--2.jpg" alt="Rudresh K V" class="w-full object-cover">
                                 </div>
                                 
                                 <div class="pb-30">
@@ -828,7 +828,7 @@
 
                     <div class="team-member-item" data-team-member-id="4">
                         <div class="image-reveal--wrapper mb-7">
-                            <img src="images/2025/about/team-image--4.png" alt="Col. Jashwant Singh Chauhan">
+                            <img src="images/2025/about/team-image--4.jpg" alt="Col. Jashwant Singh Chauhan">
                         </div>
                         <div>
                             <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
@@ -859,7 +859,7 @@
                                 </div>
                                 
                                 <div class="mb-7">
-                                    <img src="images/2025/about/team-image--4.png" alt="Col. Jashwant Singh Chauhan" class="w-full object-cover">
+                                    <img src="images/2025/about/team-image--4.jpg" alt="Col. Jashwant Singh Chauhan" class="w-full object-cover">
                                 </div>
                                 
                                 <div class="pb-30">
@@ -890,7 +890,7 @@
 
                     <div class="team-member-item" data-team-member-id="5">
                         <div class="image-reveal--wrapper mb-7">
-                            <img src="images/2025/about/team-image--5.png" alt="Sanaa Ruia">
+                            <img src="images/2025/about/team-image--5.jpg" alt="Sanaa Ruia">
                         </div>
                         <div>
                             <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
@@ -921,7 +921,7 @@
                                 </div>
                                 
                                 <div class="mb-7">
-                                    <img src="images/2025/about/team-image--5.png" alt="Sanaa Ruia" class="w-full object-cover">
+                                    <img src="images/2025/about/team-image--5.jpg" alt="Sanaa Ruia" class="w-full object-cover">
                                 </div>
                                 
                                 <div class="pb-30">
@@ -953,7 +953,7 @@
 
                     <div class="team-member-item" data-team-member-id="3">
                         <div class="image-reveal--wrapper mb-7">
-                            <img src="images/2025/about/team-image--3.png" alt="Amrit Mangharam">
+                            <img src="images/2025/about/team-image--3.jpg" alt="Amrit Mangharam">
                         </div>
                         <div>
                             <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
@@ -986,7 +986,7 @@
                                 </div>
                                 
                                 <div class="mb-7">
-                                    <img src="images/2025/about/team-image--3.png" alt="Amrit Mangharam" class="w-full object-cover">
+                                    <img src="images/2025/about/team-image--3.jpg" alt="Amrit Mangharam" class="w-full object-cover">
                                 </div>
                                 
                                 <div class="pb-30">
@@ -1025,7 +1025,7 @@
 
                     <div class="team-member-item" data-team-member-id="6">
                         <div class="image-reveal--wrapper mb-7">
-                            <img src="images/2025/about/team-image--6.png" alt="Aditya Chandra">
+                            <img src="images/2025/about/team-image--6.jpg" alt="Aditya Chandra">
                         </div>
                         <div>
                             <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
@@ -1056,7 +1056,7 @@
                                 </div>
                                 
                                 <div class="mb-7">
-                                    <img src="images/2025/about/team-image--6.png" alt="Aditya Chandra" class="w-full object-cover">
+                                    <img src="images/2025/about/team-image--6.jpg" alt="Aditya Chandra" class="w-full object-cover">
                                 </div>
                                 
                                 <div class="pb-30">
@@ -1087,7 +1087,7 @@
 
                     <div class="team-member-item" data-team-member-id="7">
                         <div class="image-reveal--wrapper mb-7">
-                            <img src="images/2025/about/team-image--7.png" alt="Vipul Sharma">
+                            <img src="images/2025/about/team-image--7.jpg" alt="Vipul Sharma">
                         </div>
                         <div>
                             <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
@@ -1118,7 +1118,7 @@
                                 </div>
                                 
                                 <div class="mb-7">
-                                    <img src="images/2025/about/team-image--7.png" alt="Vipul Sharma" class="w-full object-cover">
+                                    <img src="images/2025/about/team-image--7.jpg" alt="Vipul Sharma" class="w-full object-cover">
                                 </div>
                                 
                                 <div class="pb-30">
@@ -1151,7 +1151,7 @@
 
                     <div class="team-member-item" data-team-member-id="10">
                         <div class="image-reveal--wrapper mb-7">
-                            <img src="images/2025/about/team-image--10.png" alt="Radhika Saraf">
+                            <img src="images/2025/about/team-image--10.jpg" alt="Radhika Saraf">
                         </div>
                         <div>
                             <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
@@ -1182,7 +1182,7 @@
                                 </div>
                                 
                                 <div class="mb-7">
-                                    <img src="images/2025/about/team-image--10.png" alt="Radhika Saraf" class="w-full object-cover">
+                                    <img src="images/2025/about/team-image--10.jpg" alt="Radhika Saraf" class="w-full object-cover">
                                 </div>
                                 
                                 <div class="pb-30">
@@ -1213,7 +1213,7 @@
 
                     <div class="team-member-item" data-team-member-id="9">
                         <div class="image-reveal--wrapper mb-7">
-                            <img src="images/2025/about/team-image--9.png" alt="Mayank Karnawat">
+                            <img src="images/2025/about/team-image--9.jpg" alt="Mayank Karnawat">
                         </div>
                         <div>
                             <h3 class="text-green text-4xl font-heading font-normal leading-11 mb-3">
@@ -1244,7 +1244,7 @@
                                 </div>
                                 
                                 <div class="mb-7">
-                                    <img src="images/2025/about/team-image--9.png" alt="Mayank Karnawat" class="w-full object-cover">
+                                    <img src="images/2025/about/team-image--9.jpg" alt="Mayank Karnawat" class="w-full object-cover">
                                 </div>
                                 
                                 <div class="pb-30">

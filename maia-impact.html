@@ -740,7 +740,7 @@
                                         </div>
                                     </div>
                                     <div class="accordion-content">
-                                        <p class="text-gold font-medium text-base leading-15">Host gatherings seamlessly, with concierge planning and execution on call.</p>
+                                        <p class="text-gold font-medium text-base leading-15">MAIA prioritises locally sourced, sustainable materials that protect the environment while upholding uncompromising durability and timeless quality.</p>
                                     </div>
                                 </div>
 

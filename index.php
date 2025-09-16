@@ -379,13 +379,12 @@
                                 ( Since 2016 )
                             </span>
                         </div> -->
-                        <div class="xl:pr-24">
+                        <div class="xl:pr-20">
                             <div class="text-reveal--paragraph">
                                 <p class="mb-12 xl:mb-14 max-w-lg font-medium text-black opacity-70 text-sm xl:text-base">
-                                We create landmark residences and commercial developments that embody design excellence, lasting value, and a sense of place. Guided by
-                                integrity and attention to detail, each MAIA development blends
-                                craftsmanship, creativity and context, shaping spaces that enrich lives
-                                today and build an enduring legacy for tomorrow.
+                                We create landmark residences and commercial developments that embody design excellence, lasting value and a sense of place. Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity and context, shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
+
+
 
                                 </p>
                             </div>
@@ -764,7 +763,7 @@
                 <div class="flex items-center justify-between">
                     <div class="text-reveal--wrapper developments-text-line-paragraph">
                         <p class="mb-16">
-                            Designs in progress, destined to become <br /> tomorrow's most coveted addresses
+                            Designs in progress, destined to become <br /> tomorrow's most coveted addresses.
                         </p>
                     </div>
 
@@ -994,7 +993,7 @@
                 <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-12 xl:gap-20 mb-20">
                     <div class="text-reveal--wrapper developments-text-line-paragraph">
                         <p class="">
-                            MAIA’s recent features, exclusive interviews, and industry <br />
+                            MAIA’s recent features, exclusive interviews and industry <br />
                             insights shaping tomorrow’s real estate narrative.
                         </p>
                     </div>
