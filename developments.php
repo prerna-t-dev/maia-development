@@ -165,8 +165,39 @@
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
                     <ul class="flex gap-8 text-sm font-semibold">
                         <li><a class="text-green uppercase" href="about.html">About Us</a></li>
+                        <li class="relative nav-services--link">
+                            <div class="text-green uppercase flex items-center gap-2 cursor-pointer">
+                                <span class="leading-10">Services</span>
+                                <span class="text-green-light">
+                                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 0.757812L5 4.25781L8.5 0.757812" stroke="#00362A" stroke-width="1.5"/>
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="absolute services-dropdown opacity-0 invisible top-full left-0 mt-2 py-1 px-6 min-w-48" style="background-color: #E8E7E1;">
+                                <ul class="space-y-2">
+                                    <li>
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="bespoke-services.html">
+                                            Bespoke Services
+                                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
+                                            </svg>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.html">
+                                            Maia Life
+                                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
+                                            </svg>
+                                        </a>
+                                    </li> 
+                                </ul>
+                            </div>
+                        </li>
                         <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
-                        <li><a class="text-green uppercase" href="maialife.html">Services</a></li>
                     </ul>
                 </nav>
                 <!-- Menu Bar -->

@@ -140,23 +140,23 @@
 <body id="bodycontainer">
     <div class="body_wrapper scroll-section overflow-x-hidden">
         <!-- Header -->
-        <header class="header sticky top-0 left-0 right-0 z-50">
+        <header class="header header-transparent sticky_ fixed top-0 left-0 right-0 z-50">
             <div class="container header-container flex justify-between items-center">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="images/2025/MAIA-logo.png" alt="Logo">
+                        <img src="images/2025/MAIA-logo-white.png" alt="Logo">
                     </a>
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
                     <ul class="flex gap-8 text-sm font-semibold">
-                        <li><a class="text-green uppercase" href="about.html">About Us</a></li>
+                        <li><a class="text-white uppercase" href="about.html">About Us</a></li>
                         <li class="relative nav-services--link">
-                            <div class="text-green uppercase flex items-center gap-2 cursor-pointer">
+                            <div class="text-white uppercase flex items-center gap-2 cursor-pointer">
                                 <span class="leading-10">Services</span>
                                 <span class="text-green-light">
                                     <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.5 0.757812L5 4.25781L8.5 0.757812" stroke="#00362A" stroke-width="1.5"/>
+                                        <path d="M1.5 0.757812L5 4.25781L8.5 0.757812" stroke="#FFFFFF" stroke-width="1.5"/>
                                     </svg>
                                 </span>
                             </div>
@@ -183,25 +183,25 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
+                        <li><a class="text-white uppercase" href="developments.html">Developments</a></li>
                     </ul>
                 </nav>
 
                 
                 <!-- Menu Bar -->
                 <div class="menu-bar flex items-center gap-4">
-                    <button class="btn-primary bg-green text-white uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
+                    <button class="btn-primary bg-white text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
                         <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
+                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
                         </svg>
                         <span class="text-xs font-medium">Contact Us</span>
                     </button>
 
-                    <button id="menu-bar-button" class="menu-bar-button menu-bar-button--open cursor-pointer">
-                        <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4.74737" y="4.44073" width="38.1426" height="38.1426" rx="19.0713" stroke="#00362A" stroke-width="0.756465"/>
-                            <rect x="15.1035" y="19.9844" width="17.429" height="1" fill="#00362A"/>
-                            <rect x="15.1035" y="26.0391" width="17.429" height="1" fill="#00362A"/>
+                    <button id="menu-bar-button" class="menu-bar-button cursor-pointer">
+                        <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4.24933" y="4.44073" width="38.1426" height="38.1426" rx="19.0713" stroke="white" stroke-width="0.756465"/>
+                            <rect x="14.6055" y="19.9844" width="17.429" height="1" fill="white"/>
+                            <rect x="14.6055" y="26.0391" width="17.429" height="1" fill="white"/>
                         </svg>
                     </button>
                 </div> 
@@ -317,9 +317,9 @@
 
 
         <!-- Section 1: Hero Banner -->
-        <section class="hero-banner hero-banner-animation py-20">
-            <div class="container">
-                <div class="hero-content pb-12">
+        <section class="hero-banner hero-banner-animation py-20_">
+            <div class="container_">
+                <!-- <div class="hero-content pb-12">
                     <h1 class="text-60px xl:text-120px font-normal mb-16 xl:mb-20 text-green">
                         <span class="line-wrapper">
                             <span class="line">Building Lives</span>
@@ -338,11 +338,9 @@
                             </svg>
                         </div>
                     </div>
-                </div>
-
-                <!-- <div class="hero-image-wrapper">
-                    <img src="images/2025/homepage/hero-banner-image.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation">
                 </div> -->
+
+                
 
                 <div class="hero-video-wrapper">
                     <!-- Desktop Video -->
