@@ -342,7 +342,7 @@
 
                 
 
-                <div class="hero-video-wrapper">
+                <div class="hero-video-wrapper" style="height: 100vh;">
                     <!-- Desktop Video -->
                     <video class="hero-video-desktop hidden xl:block" autoplay muted loop playsinline preload="metadata">
                         <source src="images/2025/homepage/maia-home-hero-video--desktop.mp4" type="video/mp4">
