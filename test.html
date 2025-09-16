@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <script src="jquery-3.2.1.min.js"></script>
+        <style>
+            @font-face {
+    font-family: GothamNarrow;
+    src: url(GothamNarrow-Book.otf);
+  }
+  @font-face {
+    font-family: GothamNarrowMedium;
+    src: url(GothamNarrow-Medium.otf);
+    
+  }
+  @font-face {
+    font-family: GothamBook;
+    src: url(Gotham-Book.otf);
+    
+  }
+  @font-face {
+    font-family: FreightTextPro;
+    src: url(FreightTextProBook-Regular.ttf);
+    
+  }
+  @font-face {
+    font-family: GothamLight;
+    src: url(Gotham-Light.otf);
+    
+  }
+            body{
+    font: normal 16px/26px GothamBook;
+    margin:0;
+    background:#F2F2F2;
+    overflow-x:hidden!important;
+    cursor:none;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+            table{
+                display:none;
+            }
+            #content{
+                display:flex;
+                flex-wrap:wrap;
+                padding:40px 15%;
+            }
+            .abc{
+                max-width:25%;
+                width:20%;
+                margin:2.5%;
+            }
+            img{
+                width:100%;
+                height:auto;
+            }
+            .link-button-dark{
+    padding:10px;
+    border:1px solid #363738;
+    color:#f2f2f2!important;
+    background-color:#363738;
+    font-size:12px;
+    display:inline-block;
+    margin-bottom:0px;
+    min-width:150px;
+    margin-top:15px;
+    text-align: center;
+    text-decoration: none;
+}
+.section-title-dark{
+    font: normal 600 26px GothamLight;
+letter-spacing: 2.4px;
+color: #363738;
+text-transform: uppercase;
+margin:0;
+text-align:center;
+position:absolute;
+top:22px;
+width:100%;
+left:0;
+}
+        </style>
+    </head>
+    <body>
+        <div style="position:relative;padding-bottom:100px;">
+            <div class="section-title-dark"><p>IN THE NEWS</p></div>
+        </div>
+        <div id="content"></div>
+        <div style="text-align: center;"><a class="link-u link-button-dark" href="/in-the-news/">VIEW MORE</a></div>
+    </body>
+    <script>
+        const FEED_URL = 'https://www.maiaestates.in/press/feed/?post_type=project';
+var count = 0;
+$.get(FEED_URL, function (data) {
+    $(data).find("item").each(function () { // or "item" or whatever suits your feed
+        var el = $(this);
+        if(count <4){
+        console.log("------------------------");
+        console.log("title      : " + el.find("title").text());
+        console.log("author     : " + el.find("author").text());
+        console.log("description: " + el.find("description").text());
+        $('#content').append("<div class=\"abc\">"+ el.find("description").text() +"<p>" + el.find("title").text() + "</p></div>");
+    }
+    count++;
+    });
+});
+    </script>
+</html>

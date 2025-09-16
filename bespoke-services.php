@@ -341,7 +341,7 @@
                 </div>
                 <div class="flex items-center justify-between">
                     <div class="text-reveal--wrapper">
-                        <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-30 text-white xl:pr-24">
+                        <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-20 text-white xl:pr-24">
                             A collaboration unlike <br />
                             any other.
                         </h2>
@@ -377,7 +377,7 @@
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
-                                Every element reflects your individual style, preferences, and lifestyle requirements.
+                                Every element reflects your individual style, preferences and lifestyle requirements
                             </p>
                         </div>
                     </div>
@@ -489,7 +489,7 @@
             <div class="container">
                 <div class="text-reveal--wrapper">
                     <div class="section-subheader uppercase text-brown mb-5">
-                        The MAIA Bespoke Experience
+                        The Bespoke Experience
                     </div>
                 </div>
                 <div class="text-reveal--wrapper">
@@ -499,8 +499,8 @@
                 </div>
                 <div class="text-reveal--paragraph developments-text-line-paragraph">
                     <p class="text-sm xl:text-base font-medium text-brown xl:mb-12">
-                        Turning imagination into interiors that are timeless, <br />
-                        personal, and undeniably you.
+                    Turning imagination into interiors that are timeless, <br />
+                    personal and undeniably you.
                     </p>
                 </div>
 
@@ -512,22 +512,27 @@
                         <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 items-start">
                             <!-- Why Bespoke Slider Item 1 -->
                             <div class="mt-14 xl:mt-24 border-t py-5 xl:p-5 xl:mr-30 fade-up">
-                                <div class="flex items-center gap-8 mb-4">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <div class="flex items-start gap-8 ">
+                                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.2104 15.1092L2.52339 12.4222C2.28908 12.1878 2.28908 11.808 2.52339 11.5736L5.2104 8.88667C5.44471 8.65236 5.82461 8.65236 6.05892 8.88667L8.74593 11.5736C8.98024 11.808 8.98024 12.1878 8.74593 12.4222L6.05892 15.1092C5.82461 15.3435 5.44471 15.3435 5.2104 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M11.5737 21.4763L8.88668 18.7893C8.65236 18.555 8.65236 18.1752 8.88668 17.9409L11.5737 15.2538C11.808 15.0195 12.1879 15.0195 12.4223 15.2538L15.1093 17.9409C15.3436 18.1752 15.3436 18.555 15.1093 18.7893L12.4223 21.4763C12.1879 21.7106 11.808 21.7106 11.5737 21.4763Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M11.5737 8.74984L8.88668 6.06283C8.65236 5.82852 8.65236 5.44862 8.88668 5.21431L11.5737 2.52729C11.808 2.29298 12.1879 2.29298 12.4223 2.52729L15.1093 5.21431C15.3436 5.44862 15.3436 5.82852 15.1093 6.06283L12.4223 8.74984C12.1879 8.98416 11.808 8.98416 11.5737 8.74984Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M17.9409 15.1092L15.2538 12.4222C15.0195 12.1878 15.0195 11.808 15.2538 11.5736L17.9409 8.88667C18.1753 8.65236 18.5552 8.65236 18.7895 8.88667L21.4765 11.5736C21.7108 11.808 21.7108 12.1878 21.4765 12.4222L18.7895 15.1092C18.5552 15.3435 18.1753 15.3435 17.9409 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                     </svg>
-                                    <h4 class="text-base font-heading font-normal">
+                                    <div>
+
+                                    
+                                    <h4 class="text-base xl:text-4xl font-heading font-normal mb-4 text-brown">
                                         Design Expertise
                                     </h4>
+                                    <p class="text-sm font-normal text-brown">
+                                        Our credible list of best-in-class designers and 'smart' pairing approach ensures you quickly find the right designer.
+                                    </p>
+                                    </div>
                                 </div>
-                                <p class="text-sm font-normal text-brown">
-                                    Our credible list of best-in-class designers and 'smart' pairing approach ensures you quickly find the right designer.
-                                </p>
+                                
                             </div>
-                            <img src="images/2025/bespoke/why-bespoke--1.png" alt="Why Bespoke Slider Item 1">
+                            <img src="images/2025/bespoke/why-bespoke--1.png" style="aspect-ratio: 1.2; object-fit: cover;" alt="Why Bespoke Slider Item 1">
                         </div>
                     </div>
 
@@ -535,22 +540,25 @@
                         <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 items-start">
                             <!-- Why Bespoke Slider Item 2 -->
                             <div class="mt-14 xl:mt-24 border-t py-5 xl:p-5 xl:mr-30">
-                                <div class="flex items-center gap-8 mb-4">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <div class="flex items-start gap-8 ">
+                                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.2104 15.1092L2.52339 12.4222C2.28908 12.1878 2.28908 11.808 2.52339 11.5736L5.2104 8.88667C5.44471 8.65236 5.82461 8.65236 6.05892 8.88667L8.74593 11.5736C8.98024 11.808 8.98024 12.1878 8.74593 12.4222L6.05892 15.1092C5.82461 15.3435 5.44471 15.3435 5.2104 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M11.5737 21.4763L8.88668 18.7893C8.65236 18.555 8.65236 18.1752 8.88668 17.9409L11.5737 15.2538C11.808 15.0195 12.1879 15.0195 12.4223 15.2538L15.1093 17.9409C15.3436 18.1752 15.3436 18.555 15.1093 18.7893L12.4223 21.4763C12.1879 21.7106 11.808 21.7106 11.5737 21.4763Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M11.5737 8.74984L8.88668 6.06283C8.65236 5.82852 8.65236 5.44862 8.88668 5.21431L11.5737 2.52729C11.808 2.29298 12.1879 2.29298 12.4223 2.52729L15.1093 5.21431C15.3436 5.44862 15.3436 5.82852 15.1093 6.06283L12.4223 8.74984C12.1879 8.98416 11.808 8.98416 11.5737 8.74984Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M17.9409 15.1092L15.2538 12.4222C15.0195 12.1878 15.0195 11.808 15.2538 11.5736L17.9409 8.88667C18.1753 8.65236 18.5552 8.65236 18.7895 8.88667L21.4765 11.5736C21.7108 11.808 21.7108 12.1878 21.4765 12.4222L18.7895 15.1092C18.5552 15.3435 18.1753 15.3435 17.9409 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                     </svg>
-                                    <h4 class="text-base font-heading font-normal">
-                                        Process Driven
-                                    </h4>
+                                    <div>
+                                        <h4 class="text-base xl:text-4xl font-heading font-normal mb-4 text-brown">
+                                            Process Driven
+                                        </h4>
+                                        <p class="text-sm xl:text-base font-normal text-brown">
+                                            We ensure timely delivery with planned schedules, milestone-based updates and tech-driven site monitoring.
+                                        </p>
+                                    </div>
                                 </div>
-                                <p class="text-sm font-normal text-brown">
-                                    We ensure timely delivery with planned schedules, milestone-based updates and tech-driven site monitoring.
-                                </p>
+                                
                             </div>
-                            <img src="images/2025/bespoke/why-bespoke--1.png" alt="Why Bespoke Slider Item 1">
+                            <img src="images/2025/bespoke/why-bespoke--2.jpg" style="aspect-ratio: 1.2; object-fit: cover;" alt="Why Bespoke Slider Item 1">
                         </div>
                     </div>
 
@@ -558,22 +566,25 @@
                         <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 items-start">
                             <!-- Why Bespoke Slider Item 3 -->
                             <div class="mt-14 xl:mt-24 border-t py-5 xl:p-5 xl:mr-30">
-                                <div class="flex items-center gap-8 mb-4">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <div class="flex items-start gap-8 ">
+                                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.2104 15.1092L2.52339 12.4222C2.28908 12.1878 2.28908 11.808 2.52339 11.5736L5.2104 8.88667C5.44471 8.65236 5.82461 8.65236 6.05892 8.88667L8.74593 11.5736C8.98024 11.808 8.98024 12.1878 8.74593 12.4222L6.05892 15.1092C5.82461 15.3435 5.44471 15.3435 5.2104 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M11.5737 21.4763L8.88668 18.7893C8.65236 18.555 8.65236 18.1752 8.88668 17.9409L11.5737 15.2538C11.808 15.0195 12.1879 15.0195 12.4223 15.2538L15.1093 17.9409C15.3436 18.1752 15.3436 18.555 15.1093 18.7893L12.4223 21.4763C12.1879 21.7106 11.808 21.7106 11.5737 21.4763Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M11.5737 8.74984L8.88668 6.06283C8.65236 5.82852 8.65236 5.44862 8.88668 5.21431L11.5737 2.52729C11.808 2.29298 12.1879 2.29298 12.4223 2.52729L15.1093 5.21431C15.3436 5.44862 15.3436 5.82852 15.1093 6.06283L12.4223 8.74984C12.1879 8.98416 11.808 8.98416 11.5737 8.74984Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M17.9409 15.1092L15.2538 12.4222C15.0195 12.1878 15.0195 11.808 15.2538 11.5736L17.9409 8.88667C18.1753 8.65236 18.5552 8.65236 18.7895 8.88667L21.4765 11.5736C21.7108 11.808 21.7108 12.1878 21.4765 12.4222L18.7895 15.1092C18.5552 15.3435 18.1753 15.3435 17.9409 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                     </svg>
-                                    <h4 class="text-base font-heading font-normal">
-                                        Cost Benefit
-                                    </h4>
+                                    <div>
+                                        <h4 class="text-base xl:text-4xl font-heading font-normal mb-4 text-brown">
+                                            Cost Benefit
+                                        </h4>
+                                        <p class="text-sm xl:text-base font-normal text-brown">
+                                            Gain clarity on costs through our detailed and transparent budgets and enjoy significant savings with project-level pricing.
+                                        </p>
+                                    </div>
                                 </div>
-                                <p class="text-sm font-normal text-brown">
-                                    Gain clarity on costs through our detailed and transparent budgets and enjoy significant savings with project-level pricing.
-                                </p>
+                                
                             </div>
-                            <img src="images/2025/bespoke/why-bespoke--1.png" alt="Why Bespoke Slider Item 1">
+                            <img src="images/2025/bespoke/why-bespoke--3.jpg" style="aspect-ratio: 1.2; object-fit: cover;" alt="Why Bespoke Slider Item 1">
                         </div>
                     </div>
 
@@ -581,22 +592,25 @@
                         <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 items-start">
                             <!-- Why Bespoke Slider Item 4 -->
                             <div class="mt-14 xl:mt-24 border-t py-5 xl:p-5 xl:mr-30">
-                                <div class="flex items-center gap-8 mb-4">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <div class="flex items-start gap-8 ">
+                                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.2104 15.1092L2.52339 12.4222C2.28908 12.1878 2.28908 11.808 2.52339 11.5736L5.2104 8.88667C5.44471 8.65236 5.82461 8.65236 6.05892 8.88667L8.74593 11.5736C8.98024 11.808 8.98024 12.1878 8.74593 12.4222L6.05892 15.1092C5.82461 15.3435 5.44471 15.3435 5.2104 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M11.5737 21.4763L8.88668 18.7893C8.65236 18.555 8.65236 18.1752 8.88668 17.9409L11.5737 15.2538C11.808 15.0195 12.1879 15.0195 12.4223 15.2538L15.1093 17.9409C15.3436 18.1752 15.3436 18.555 15.1093 18.7893L12.4223 21.4763C12.1879 21.7106 11.808 21.7106 11.5737 21.4763Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M11.5737 8.74984L8.88668 6.06283C8.65236 5.82852 8.65236 5.44862 8.88668 5.21431L11.5737 2.52729C11.808 2.29298 12.1879 2.29298 12.4223 2.52729L15.1093 5.21431C15.3436 5.44862 15.3436 5.82852 15.1093 6.06283L12.4223 8.74984C12.1879 8.98416 11.808 8.98416 11.5737 8.74984Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                         <path d="M17.9409 15.1092L15.2538 12.4222C15.0195 12.1878 15.0195 11.808 15.2538 11.5736L17.9409 8.88667C18.1753 8.65236 18.5552 8.65236 18.7895 8.88667L21.4765 11.5736C21.7108 11.808 21.7108 12.1878 21.4765 12.4222L18.7895 15.1092C18.5552 15.3435 18.1753 15.3435 17.9409 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                     </svg>
-                                    <h4 class="text-base font-heading font-normal">
-                                        Quality Assured
-                                    </h4>
+                                    <div>
+                                        <h4 class="text-base xl:text-4xl font-heading font-normal mb-4 text-brown">
+                                            Quality Assured
+                                        </h4>
+                                        <p class="text-sm xl:text-base font-normal text-brown">
+                                            Our knowledge of our developments, the use of vetted vendors, thorough quality control and material protection ensures superior execution.
+                                        </p>
+                                    </div>
                                 </div>
-                                <p class="text-sm font-normal text-brown">
-                                    Our knowledge of our developments, the use of vetted vendors, thorough quality control and material protection ensures superior execution.
-                                </p>
+                                
                             </div>
-                            <img src="images/2025/bespoke/why-bespoke--1.png" alt="Why Bespoke Slider Item 1">
+                            <img src="images/2025/bespoke/why-bespoke--4.jpg" style="aspect-ratio: 1.2;object-fit:cover" alt="Why Bespoke Slider Item 1">
                         </div>
                     </div>
                 </div>

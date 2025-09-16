@@ -358,7 +358,7 @@
                             </div>
                         </div>
                         <div class="text-reveal--wrapper">
-                            <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-18 text-white">
+                            <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-12 text-white">
                                 Driven by Vision, <br />
                                 Defined by Craft.
                             </h2>
@@ -545,7 +545,7 @@
                                 </span>
                             </p>
                             <p class="text-white font-medium">
-                                Perched on Jakkur Lake, these residences blend a serene waterfront living with curated amenities, visionary design, and ecological harmony.
+                                Perched on Jakkur Lake, these residences blend serene waterfront living with curated amenities, visionary design and ecological harmony.
                             </p>
                         </div>
                     </div>

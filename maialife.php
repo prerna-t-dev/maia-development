@@ -298,13 +298,13 @@
                                 <!-- Mobile Heading -->
                                 <div class="">
                                     <span class="line-wrapper">
-                                        <span class="line">Personalised Hospitality</span>
+                                        <span class="line">Experience</span>
                                     </span>
                                     <span class="line-wrapper">
-                                        <span class="line">for Effortless</span>
+                                        <span class="line">end-to-end Integrated</span>
                                     </span>
                                     <span class="line-wrapper">
-                                        <span class="line">Daily Living</span>
+                                        <span class="line">Facility management</span>
                                     </span> 
                                 </div>
                             </h1>
@@ -317,19 +317,19 @@
                                 <div class="inline">
                                     <div class="relative">
                                         <span class="!opacity-0">
-                                            Personalised
+                                            Experience
                                         </span>
                                         <span class="absolute top-0 left-0 whitespace-nowrap line-wrapper">
-                                            <span class="line">Personalised Hospitality</span>
+                                            <span class="line">Experience</span>
                                         </span>
                                     </div>
                                     <!-- <br /> -->
                                     <span class="line-wrapper">
-                                        <span class="line">for Effortless</span>
+                                        <span class="line">end-to-end Integrated</span>
                                     </span>
                                     <!-- <br /> -->
                                     <span class="line-wrapper">
-                                        <span class="line">Daily Living</span>
+                                        <span class="line">Facility management</span>
                                     </span>
                                 </div>
                             </h1>
@@ -384,14 +384,15 @@
                     <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-32 text-white xl:pr-24">
                         <div class="text-reveal--wrapper">
                             <span class="hidden xl:block">
-                                To elevate urban living <br />
-                                beyond expectation
+                                Anticipating needs to create <br />
+                                effortless, daily living
                             </span>
                         </div>
                         <div class="text-reveal--wrapper">
                             <span class="block xl:hidden">
-                                Designed around your <br />
-                                life, in every detail.
+                                Anticipating needs to <br />
+                                create effortless, daily <br />
+                                living
                             </span>
                         </div>
                     </h2>
@@ -537,7 +538,7 @@
                 </div>
                 <div class="text-reveal--paragraph developments-text-line-paragraph">
                     <p class="font-medium mb-12 xl:mb-16 text-center xl:w-1-2 mx-auto xl:px-12">
-                        Effortless living through 24/7 concierge, automated home care, and personalized support, freeing you to focus on what matters.
+                        Effortless living through 24/7 concierge support and personalized support, freeing you to focus on what matters.
                     </p>
                 </div>
             </div>
@@ -650,7 +651,7 @@
 
                 <div class="text-reveal--paragraph developments-text-line-paragraph">
                     <p class="font-medium mb-12 xl:mb-16 text-center xl:w-1-2 mx-auto">
-                        A statement of intent, capturing the essence of MAIA’s promise to create meaningful communities and experiences that stand the test of time.
+                        I’m proud to introduce MAIA Life, our fully integrated hospitality arm designed around your aspirations. From orchestrating curated events to delivering a refreshing beverage poolside, our dedicated hospitality team anticipates every need with unwavering integrity and care. We’ve woven technology into every service touchpoint, streamlining maintenance and listening closely to your feedback. MAIA Life isn’t an add-on; it’s the embodiment of our promise to elevate your daily living with effortless sophistication.
                     </p>
                 </p>
 

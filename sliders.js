@@ -1160,12 +1160,12 @@ $(document).ready(function(){
         // Create horizontal scroll animation with ScrollTrigger
         gsap.to(slider, {
             x: () => -(slider.offsetWidth - sliderContainer.offsetWidth), // Scroll to show all content
-            // ease: "power1.inOut",
+            ease: "power2.out", // Smoother easing
             scrollTrigger: {
                 trigger: sliderContainer,
-                start: "top top+=150px", // Start when container is 40px before reaching top
-                end: () => `+=${slider.offsetWidth + sliderContainer.offsetWidth}`, // Extra distance to ensure last slide is fully visible
-                scrub: 1, // Smooth scrubbing
+                start: "top top+=150px", // Start when container is 150px before reaching top
+                end: () => `+=${slider.offsetWidth * 0.6}`, // Reduced distance for faster scroll
+                scrub: 0.8, // Balanced scrubbing (was 1, then 0.5)
                 pin: true, // Pin the container while scrolling
                 anticipatePin: 1,
                 invalidateOnRefresh: true

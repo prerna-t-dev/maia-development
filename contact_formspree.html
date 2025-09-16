@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - Formspree Alternative</title>
+</head>
+<body>
+    <h2>Alternative: Formspree Contact Form</h2>
+    <p>This is a backup option using Formspree (even easier than EmailJS)</p>
+    
+    <!-- Formspree Form -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div>
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div>
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div>
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        
+        <button type="submit">Send Message</button>
+    </form>
+    
+    <h3>Setup Instructions:</h3>
+    <ol>
+        <li>Go to <a href="https://formspree.io" target="_blank">formspree.io</a></li>
+        <li>Sign up for free</li>
+        <li>Create a new form</li>
+        <li>Copy the form action URL</li>
+        <li>Replace "YOUR_FORM_ID" in the form action above</li>
+        <li>Add this form to your website</li>
+    </ol>
+    
+    <p><strong>Benefits:</strong></p>
+    <ul>
+        <li>✅ No coding required</li>
+        <li>✅ Works immediately</li>
+        <li>✅ Free for up to 50 submissions/month</li>
+        <li>✅ Spam protection included</li>
+        <li>✅ Email notifications</li>
+    </ul>
+</body>
+</html>
+

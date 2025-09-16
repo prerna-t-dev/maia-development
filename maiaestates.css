@@ -783,8 +783,16 @@ body.bespoke-services .header{
     padding: 0 15px;
 }
 
+.news-article-slide-item .image-scale-down--wrapper{
+    aspect-ratio: 4/5;
+    overflow: hidden;
+}
+
 .news-article-slide-item img{
     width: 100%;
+    height: 100%;
+    object-fit: contain;
+
 }
 
 .news-article-slider .slick-list{padding:0 10% 0 0 !important;}
@@ -1105,7 +1113,7 @@ section.contact-us{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .purpose-slider-item.slick-current::before{

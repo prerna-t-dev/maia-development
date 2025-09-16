@@ -285,8 +285,9 @@
 
 
         <!-- Section 1: Hero Banner -->
-        <section class="hero-banner about-hero-banner relative h-fit">
+        <section class="hero-banner about-hero-banner hero-banner-animation relative h-fit">
             <!-- Desktop Image -->
+            
             <img src="images/2025/about/about-hero-banner.png" alt="About Hero Banner" class="w-full h-full object-cover hidden xl:block">
 
             <!-- Mobile Image -->
@@ -295,8 +296,17 @@
             <div class="container absolute top-32 xl:top-1/2 xl:right-0  xl:-translate-y-1/2">
                 <div class="hero-banner-content">
                     <h1 class="text-white text-60px xl:text-8xl font-heading font-normal leading-10">
-                        Building lives<br>
-                        & Beyond
+                    <span class="line-wrapper">
+                        <span class="line">
+                            Building lives
+                        </span>
+                    </span>
+                    <span class="line-wrapper">
+                        <span class="line">
+                            & Beyond
+                            </span>
+                        </span>
+                    </span>
                     </h1>
                 </div>
             </div>
@@ -306,7 +316,7 @@
         <section class="about-founder">
             <div class="bg-beige py-30 xl:py-40">
                 <div class="container flex flex-col items-center">
-                    <div class="mb-20 xl:mb-32 text-gold text-36px xl:text-56px leading-11 text-center font-heading px-5 xl:px-50">
+                    <div class="mb-20 xl:mb-32 text-gold text-36px xl:text-56px leading-11 text-center font-heading px-5 xl:px-50 fade-up">
                         Founded by Mayank Ruia in 2016, MAIA is not just building properties; it is crafting a new blueprint for the real estate landscape in India.
                     </div>
 
@@ -331,9 +341,11 @@
                         <div class="section-subheader uppercase text-green mb-3">
                             ABOUT MAIA
                         </div>
-                        <h2 class="text-40px xl:text-6xl font-normal mb-14 xl:mb-18">
-                            Crafting iconic spaces 
-                        </h2>
+                        <div class="text-reveal--wrapper">
+                            <h2 class="text-40px xl:text-6xl font-normal mb-14 xl:mb-18">
+                                Crafting iconic spaces 
+                            </h2>
+                        </div>
 
                         <div class="image-reveal--wrapper mb-14 block xl:hidden">
                             <img src="images/2025/about/about-maia-image.png" alt="About MAIA Image" class="h-full w-full object-cover">
@@ -341,8 +353,8 @@
                         
                         <div class="relative">
                             <p class="mb-12 xl:mb-14 max-w-lg font-medium text-black opacity-70 text-sm xl:text-base xl:pr-24 pl-4">
-                                We create landmark residences and commercial developments that embody design excellence, lasting value, and a sense of place. <br /> <br />
-                                Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity, and context, shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
+                                We create landmark residences and commercial developments that embody design excellence, lasting value and a sense of place. <br /> <br />
+                                Guided by integrity and attention to detail, each MAIA development blends craftsmanship, creativity and context, shaping spaces that enrich lives today and build an enduring legacy for tomorrow.
                             </p>
                             <div class="absolute h-full w-full bg-green-secondary top-0 left-0" style="width: 3px;">
                                     

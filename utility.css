@@ -317,6 +317,28 @@
 .text-7xl { font-size: 72px; }
 .text-8xl { font-size: 96px; }
 
+/* Line Clamp */
+.line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
 .font-extralight { font-weight: 200; }
 .font-light { font-weight: 300; }
 .font-normal { font-weight: 400; }
@@ -1105,3 +1127,34 @@ a { text-decoration: none; }
 .capitalize { text-transform: capitalize; }
 .whitespace-nowrap { white-space: nowrap; }
 button { border: none; background: none; cursor: pointer; outline: none; padding: 0; margin: 0; appearance: none; }
+
+/* Services Dropdown Hover Effect */
+.nav-services--link:hover .services-dropdown {
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: auto !important;
+}
+
+.services-dropdown {
+    transition: all 0.3s ease-in-out;
+    height: 0;
+    overflow: hidden;
+    width: 240px;
+}
+
+.services-dropdown a{
+    white-space: nowrap;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.services-dropdown ul li:first-child{
+    border-bottom: 1px solid #0000000A;
+}
+
+.services-dropdown a:hover svg path{
+    stroke: var(--green-light);
+}

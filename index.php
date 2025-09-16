@@ -151,10 +151,43 @@
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
                     <ul class="flex gap-8 text-sm font-semibold">
                         <li><a class="text-green uppercase" href="about.html">About Us</a></li>
+                        <li class="relative nav-services--link">
+                            <div class="text-green uppercase flex items-center gap-2 cursor-pointer">
+                                <span class="leading-10">Services</span>
+                                <span class="text-green-light">
+                                    <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.5 0.757812L5 4.25781L8.5 0.757812" stroke="#00362A" stroke-width="1.5"/>
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="absolute services-dropdown opacity-0 invisible top-full left-0 mt-2 py-1 px-6 min-w-48" style="background-color: #E8E7E1;">
+                                <ul class="space-y-2">
+                                    <li>
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="bespoke-services.html">
+                                            Bespoke Services
+                                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
+                                            </svg>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.html">
+                                            Maia Life
+                                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
+                                            </svg>
+                                        </a>
+                                    </li> 
+                                </ul>
+                            </div>
+                        </li>
                         <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
-                        <li><a class="text-green uppercase" href="maialife.html">Services</a></li>
                     </ul>
                 </nav>
+
+                
                 <!-- Menu Bar -->
                 <div class="menu-bar flex items-center gap-4">
                     <button class="btn-primary bg-green text-white uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
@@ -410,7 +443,8 @@
                 </div>
                 <div class="text-reveal--wrapper developments-text-line-paragraph">
                     <p>
-                        Our developments reflect a deep commitment to craftsmanship, context,<br />and quality, creating spaces that stand the test of time.
+                    Our developments reflect a deep commitment to craftsmanship, context <br />
+                    and quality, creating spaces that stand the test of time.
                     </p>
                 </div>
             </div>
@@ -956,7 +990,7 @@
                 </div>
                 <div class="text-reveal--wrapper">
                     <h2 class="text-40px xl:text-7xl font-normal mb-6 text-green">
-                        In the News
+                        Press Highlights
                     </h2>
                 </div>
                 <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-12 xl:gap-20 mb-20">
@@ -979,61 +1013,91 @@
             <!-- News Article Slider -->
             <div class="news-article-slider px-1 xl:pl-20">
                 <div class="news-article-slide-item">
-                    <a href="#">
+                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/fortune-india-maia-estates-in-fortune-india/">
                         <div class="image-scale-down--wrapper">
-                            <img src="images/2025/homepage/news-article--1.png" alt="News Article 1">
+                            <img src="images/2025/homepage/news-article--1.jpg" alt="News Article 1">
                         </div>
                         <div class="mt-8">
-                            <h4 class="text-green text-3xl font-heading font-normal mb-4">
-                                News 18
+                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                Fortune India : The MAIA Method featured in Fortune India
                             </h4>
-                            <p class="text-green font-normal text-dark-grey text-sm pr-8">
-                                Moodboards Are Out, Mood-Led Design Is In-The Emotional Intelligence of Modern ...
+                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                            We’re honoured to be featured in Fortune India, a moment that reflects our quiet commitment to building with purpose.
                             </p>
                         </div>
                     </a>
                 </div>
                 <div class="news-article-slide-item">
-                    <a href="#">
+                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/hindustan-times/">
                         <div class="image-scale-down--wrapper">
-                            <img src="images/2025/homepage/news-article--2.png" alt="News Article 2">
+                            <img src="images/2025/homepage/news-article--2.jpg" alt="News Article 2">
                         </div>
                         <div class="mt-8">
-                            <h4 class="text-green text-3xl font-heading font-normal mb-4">
-                                Real Estate News
+                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                Hindustan Times: MAIA Estates plans ₹3,000 crore investment to scale up its real estate presence in Bengaluru
                             </h4>
-                            <p class="text-green font-normal text-dark-grey text-sm pr-8">
-                                Why NRIs and HNIs are betting BIG on Bengaluru’s luxury residential market?  ...
+                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                                Bengaluru Real Estate: With this expansion, MAIA Estates’ total development footprint in the city is expected to cross 2.5 million sq ft by the end of the year
                             </p>
                         </div>
                     </a>
                 </div>
                 <div class="news-article-slide-item">
-                    <a href="#">
+                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/news18-moodboards-are-out-mood-led-design-is-in-the-emotional-intelligence-of-modern-spaces/">
                         <div class="image-scale-down--wrapper">
-                            <img src="images/2025/homepage/news-article--3.png" alt="News Article 3">
+                            <img src="images/2025/homepage/news-article--3.jpg" alt="News Article 3">
                         </div>
                         <div class="mt-8">
-                            <h4 class="text-green text-3xl font-heading font-normal mb-4">
-                                International Property Awards
+                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                News18: Moodboards Are Out, Mood-Led Design Is In-The Emotional Intelligence of Modern Spaces
                             </h4>
-                            <p class="text-green font-normal text-dark-grey text-sm pr-8">
-                                Casa Sia represents India and wins big at the International Property Awards 2025- ...
+                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                                In 2025, the design world is undergoing a quiet but meaningful revolution. Gone are the days when static moodboards dictated the aesthetic of a space. Instead, designers are embracing mood-led design—an intuitive, emotion-forward approach that puts how a space makes you feel at the heart of its function.
                             </p>
                         </div>
                     </a>
                 </div>
                 <div class="news-article-slide-item">
-                    <a href="#">
+                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/real-estate-news-why-nris-and-hnis-are-betting-big-on-bengalurus-luxury-residential-market-insights-from-maia-estates-mayank-ruia-exclusive">
                         <div class="image-scale-down--wrapper">
-                            <img src="images/2025/homepage/news-article--4.png" alt="News Article 4">
+                            <img src="images/2025/homepage/news-article--4.jpg" alt="News Article 4">
                         </div>
                         <div class="mt-8">
-                            <h4 class="text-green text-3xl font-heading font-normal mb-4">
-                                India Property Awards 2025
+                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                Real Estate News: Why NRIs and HNIs are betting BIG on Bengaluru’s luxury residential market? Insights from MAIA Estates’ Mayank Ruia | EXCLUSIVE
                             </h4>
-                            <p class="text-green font-normal text-dark-grey text-sm pr-8">
-                                We’re delighted to share that Casa Sia, our debut development in Chennai, has been ...
+                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                                Bengaluru Real Estate: Bengaluru’s luxury real estate boom isn’t just a trend—it’s a structural shift in how the city’s new-age wealth creators define lifestyle value. Market data reveals a growing appetite for large-format residences—5,000+ sq. ft.—with FY25 already recording over ₹1,250 crore in luxury sales.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-article-slide-item">
+                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/casa-sia-represents-india-and-wins-big-at-the-international-property-awards-2025-26/">
+                        <div class="image-scale-down--wrapper">
+                            <img src="images/2025/homepage/news-article--5.jpg" alt="News Article 4">
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                Casa Sia represents India and wins big at the International Property Awards 2025-26.
+                            </h4>
+                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                                A proud moment for Indian design and development, led by our General Manager of Design & Architecture, Deepesh, who represented MAIA at the 2025–26 International Property Awards in Bangkok
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-article-slide-item">
+                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/india-property-awards-best-upcoming-project-2025-south-india/">
+                        <div class="image-scale-down--wrapper">
+                            <img src="images/2025/homepage/news-article--6.jpg" alt="News Article 4">
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                India Property Awards: Best Upcoming Project 2025 (South India)
+                            </h4>
+                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                                We’re delighted to share that Casa Sia, our debut development in Chennai, has been awarded Best Upcoming Project 2025 (South India) at the India Property Awards.
                             </p>
                         </div>
                     </a>

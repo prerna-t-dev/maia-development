@@ -1,0 +1,948 @@
+@font-face {
+    font-family: GothamNarrow;
+    src: url(GothamNarrow-Book.otf);
+  }
+  @font-face {
+    font-family: GothamNarrowMedium;
+    src: url(GothamNarrow-Medium.otf);
+    
+  }
+  @font-face {
+    font-family: FreightTextPro;
+    src: url(FreightTextProBook-Regular.ttf);
+    
+  }
+  @font-face {
+    font-family: SurveyorBookReg ;
+    src: url(Surveyor\ Text\ Book\ Regular.ttf);
+    
+  }
+  @font-face {
+    font-family: AktivGroteskReg ;
+    src: url(AktivGroteskCorp-Regular.ttf);
+    
+  }
+  
+html{
+    scroll-behavior: smooth;
+    background:#fff;
+}
+body{
+    margin:0;
+    background:#F2F2F2;
+    
+}
+a{
+    outline:none;
+}
+.fixed-container{
+    position:fixed;
+    z-index:102;
+    width:100%;
+    max-height:80px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+}
+.logo{
+    max-height:60px;
+    margin:10px 20px;
+    transition:all 1s linear;
+    z-index:99;
+}
+.logo-container{
+    width:25%;
+}
+.section-name-container{
+    width:50%;
+    text-align:center;
+}
+.blue-bg{
+    padding:80px 8.5%;
+}
+.tagline{
+    font: 36px/46px SurveyorBookReg;
+    color:#F2F2F2;
+}
+.section-name{
+    font: normal 600 30px SurveyorBookReg;
+letter-spacing: 0px;
+color: #363738;
+text-transform: uppercase;
+margin:0;
+}
+
+#cursor-circle{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    opacity: 1;
+    z-index: 103;
+    border-radius: 9999px;
+    border:0;
+    font-size: 1rem;
+    font-family: Gordita,Helvetica Neue,Arial,sans-serif;
+    text-transform: uppercase;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%) scale(1);
+    -o-transform: translate(-50%,-50%) scale(1);
+    transform: translate(-50%,-50%) scale(1);
+    -webkit-transition: opacity .24s ease,-webkit-transform .24s ease,width .5s ease,height .5s ease;
+    transition: opacity .24s ease,-webkit-transform .24s ease,width .5s ease,height .5s ease;
+    -o-transition: opacity .24s ease,-o-transform .24s ease,width .5s ease,height .5s ease;
+    transition: opacity .24s ease,transform .24s ease,width .5s ease,height .5s ease;
+    transition: opacity .24s ease,transform .24s ease,-webkit-transform .24s ease,-o-transform .24s ease,width .5s ease,height .5s ease;
+    mix-blend-mode: difference;
+}
+.grow{
+    width:4em!important;
+    height:4em!important;
+
+}
+.arrow-direction{
+    opacity: 0;
+    width:100%;
+    height:100%;
+    position:relative;
+    box-sizing:border-box;
+    }
+    .arrow-direction img{
+        width:100%;
+        display:block;
+        mix-blend-mode: normal!important;
+    }
+    .arrow-dir-grow{
+        opacity:1;
+    }
+    .rotate-90{
+        transform:rotate(-90deg);
+    }
+    .rotate-min-90{
+        transform:rotate(90deg);
+    }
+    .rotate-180{
+        transform:rotate(180deg);
+    }
+
+.pseudo-table-cell{
+    width:100%;
+    height:100%;
+    display:flex;
+    vertical-align: middle;
+    z-index:2;
+    top:0;
+    left:0;
+    align-items: center;
+    box-sizing:border-box;
+    flex-wrap: wrap;
+}
+.sec-1 .pseudo-table-cell,.element .pseudo-table-cell{
+    position:absolute;
+}
+.project-content{
+    max-width:40%;
+    margin:auto 10%;
+    letter-spacing: 0px;
+    color: #363738;
+    text-align:left;
+    font: 18px/32px SurveyorBookReg;
+    letter-spacing: 0px;
+    color: #F2F2F2;
+}
+.project-title,.sustainability-title{
+    text-align: left;
+font: 30px/36px AktivGroteskReg;
+letter-spacing: 0px;
+color: #363738;
+text-transform: uppercase;
+opacity: 1;
+position:relative;
+display:inline-flex;
+margin-bottom:0;
+}
+.project-title:after,.sustainability-title:after{
+    position:absolute;
+    display:block;
+    content:"";
+    height:2px;
+    max-width:200px;
+    width:100%;
+    background:#363738;
+    top:calc(50% - 1.5px);
+    left:120%;
+}
+.link-u{
+    font:  normal 12px/18px AktivGroteskReg;
+letter-spacing: 1.4px;
+color: #F2F2F2;
+text-transform: uppercase;
+opacity: 1;
+margin-top:40px;
+display:inline-flex;
+text-decoration:underline;
+}
+.section-10 .link-u a{
+    color: #041E42;
+}
+.link-button{
+    padding:10px;
+    border:1px solid #f2f2f2;
+    color:#1D3B27;
+    background-color:#f2f2f2;
+    font-size:12px;
+    display:inline-block;
+    margin-bottom:0px;
+    min-width:150px;
+    text-align: center;
+    text-decoration: none;
+}
+.pseudo-bg{
+    min-height:100%;
+    min-width:100%;
+    max-width:100%;
+    max-height:100vh;
+    margin:auto;
+    display:block;
+    overflow:hidden;
+}
+.pseudo-bg img{
+    width:100%;
+}
+.sec-max-100{
+    overflow-x:hidden;
+}
+.fp-tableCell{
+    position:relative;
+}
+.pos-rel{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+.center-title{
+    text-align: center;
+    font: 40px/50px AktivGroteskReg;
+    letter-spacing: 0px;
+    color: #363738;
+    text-transform: uppercase;
+    margin-bottom:0;
+    margin-top:0;
+    display:none;
+    transition:all 0.7s ease-in-out;
+    }
+    .center-description{
+        letter-spacing: 0px;
+        color: #f2f2f2;
+        font: 35px/45px 'SurveyorBookReg';
+        margin-top:10px;
+        opacity:1;
+        text-align:center;
+        transition:all 0.7s ease-in-out;
+    }
+    .inner-cont{
+        max-width:55%;
+        margin:auto;
+    }
+    .big-name{
+        text-align: center;
+    height:130px;
+    width:45%;
+    overflow:hidden;
+    margin:0 auto;
+    display:none;
+    transition:all 1s ease-out;
+    }
+    .big-name img{
+        width:100%;
+    }
+.pseudo-bg-left{
+    min-height:100%;
+    max-height:100vh;
+    min-width:50%;
+    max-width:60%;
+    display:block;
+    overflow:hidden;
+}
+.pseudo-bg-left img,.pseudo-bg-right img{
+    width:100%;
+}
+.pseudo-bg-right{
+    min-height:100%;
+    max-height:100vh;
+    min-width:50%;
+    max-width:60%;
+    display:block;
+    margin:0 0 0 auto;
+}
+.panel-right{
+    position:absolute;
+    left:50%;
+    width:50%;
+    height:100%;
+    top:0;
+    box-sizing:border-box;
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+}
+.panel-show{
+    position:absolute;
+    left:50%;
+    width:50%;
+    height:100%;
+    top:0;
+    display:none;
+    box-sizing:border-box;
+    background: rgba(242,242,242,0.9) 0% 0% no-repeat padding-box;
+}
+.shine{
+    opacity:1!important;
+}
+.panel-left{
+    position:absolute;
+    left:0%;
+    width:50%;
+    height:100%;
+    top:0;
+    box-sizing:border-box;
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+}
+.sustainability-content{
+    max-width:80%;
+    margin:auto 10%;
+    letter-spacing: 0px;
+    color: #363738;
+    text-align:left;
+    font: 26px/36px SurveyorBookReg;
+    letter-spacing: 0px;
+}
+.project-description ul{
+    list-style:none;
+    padding-left:0;
+}
+    
+.awards-content{
+    padding:40px 8.5%;
+    box-sizing: border-box;
+    width:100%;
+    margin:auto;
+}
+.div-flex{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.div-flex-nc{
+    display:flex;
+    flex-wrap:wrap;
+    height:inherit;
+    width:100%;
+}
+.contArrow-next{
+    width:10px;
+        height:10px;
+        transform:rotate(-135deg);
+        border-left:3px solid #363738;
+        border-bottom:3px solid #363738;
+        position:absolute;
+        right:25px;
+        top:calc(50% - 5px);
+        z-index:2;
+}
+.contArrow-prev{
+    width:10px;
+        height:10px;
+        transform:rotate(45deg);
+        border-left:3px solid #363738;
+        border-bottom:3px solid #363738;
+        position:absolute;
+        left:25px;
+        top:calc(50% - 5px);
+        z-index:2;
+}
+.testimonial-content{
+    padding:20px 10%;
+    margin:auto;
+    box-sizing:border-box;
+}
+.testimonial-img-holder{
+    max-width:30%;
+}
+.testimonial-content .div-flex{
+    align-items: center;
+
+}
+.testimonial-img-holder img{
+    width:100%;
+}
+.testimonial-txt-holder{
+    max-width:50%;
+    padding:20px 40px;
+height:100%;
+}
+.testimonial-txt-holder .p-testimonial{
+    font: normal 26px/36px SurveyorBookReg;
+letter-spacing: 0px;
+color: #363738;
+}
+.p-title{
+    font: normal 20px/27px AktivGroteskReg;
+letter-spacing: 0px;
+color: #363738;
+text-transform: uppercase;
+margin:5px 0;
+}
+.p-designation{
+    font: normal 16px/23px AktivGroteskReg;
+letter-spacing: 2px;
+color: #363738;
+text-transform: uppercase;
+margin:0;
+}
+.slide-green{
+    background:#1D3B27;
+}
+.footer{
+    width:100%;
+    box-sizing:border-box;
+    padding:40px;
+    background:#041E42;
+}
+.address p{
+    text-align: center;
+font: normal 16px/25px AktivGroteskReg;
+letter-spacing: 2px;
+color: #f2f2f2;
+text-transform: uppercase;
+}
+.address span{
+    white-space:nowrap;
+}
+.copyright{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;
+}
+.copyright span{
+    margin:0 20px;
+    color:#f2f2f2;
+}
+.copyright p{
+text-align: center;
+font: normal 12px/21px AktivGroteskReg;
+letter-spacing: 1.6px;
+color: #f2f2f2;
+text-transform: uppercase;
+}
+.footer > .div-flex{
+    align-items: center;
+}
+.social-icons img{
+    height:20px;
+    margin:5 20px;
+}
+.social-icons{
+    margin-bottom:20px;
+}
+::placeholder{
+    color:F2F2F2;
+    font-family:AktivGroteskReg;
+}
+.menu-btn-container{
+    width:25%;
+    text-align:right;
+}
+.menu-small {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin:0 20px 0 auto;
+}
+
+.menu-small span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #363738;
+    border-radius:20px;
+    opacity: 1;
+    left: 0;
+    box-sizing: border-box;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+    .menu-small span:nth-child(1) {
+        top: 0;
+    }
+
+    .menu-small span:nth-child(2) {
+        top: 6px;
+    }
+
+    .menu-small span:nth-child(3) {
+        top: 12px;
+    }
+
+.menu-small.open span:nth-child(1) {
+    top: 6px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.menu-small.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.menu-small.open span:nth-child(3) {
+    top: 6px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+.menu-container{
+    width:100%;
+    height:100vh;
+    position:fixed;
+    z-index:101;
+    top:0;
+    left:0;
+    display:none;
+    background:rgba(242,242,242,0.95) 0% 0% no-repeat padding-box;
+}
+.menu-container .div-flex{
+    width:80%;
+    margin:auto;
+    align-items:center;
+    }
+    .menu-img-container{
+        width:40%;
+        overflow:hidden;
+    }
+    .menu-img-container img{
+        width:100%;
+    }
+    .menu-list-container{
+        width:60%;
+    }
+    .menu-list-container ul{
+    list-style:none;
+    }
+    .menu-list-container ul li p{
+    font: 30px/50px SurveyorBookReg;
+    letter-spacing: 0px;
+    color: #363738;
+    text-transform: uppercase;
+    margin:10px 0;
+    display:inline-block;
+    }
+    .menu-item{
+        transition: all 0.7s ease-out;
+    }
+    .menu-item a,.menu-item-in a{
+        text-decoration:none;
+        color:#363738;
+        
+    }
+    .menu-item + span{
+        display:inline-flex;
+        margin-left:15%;
+        position:absolute;
+        opacity:0;
+        transition: all 0.7s ease-out;
+    }
+    .menu-item + span:before{
+        position:absolute;
+        display:block;
+        content:"";
+        height:2px;
+        max-width:200px;
+        width:50%;
+        background:#363738;
+        top:calc(25% - 1.5px);
+        right:120%;
+    }
+    li:hover > span{
+        opacity:1;
+    }
+    .menu-item div{
+    display:flex;
+    }
+    .menu-item-in{
+        font: normal 30px/40px SurveyorBookReg;
+    letter-spacing: 0px;
+    color: #36453A;
+    text-transform: uppercase;
+    }
+    .color-white{
+        background-color:#fff!important;
+    }
+    .section-footer .link-u{
+    
+        color:#363738;
+    }
+    .txt-center{
+        text-align:center;
+    }
+    .fullscreen {
+        height: 100%;
+          overflow: hidden;
+          width: 100%;
+      }
+      .video {
+        display: block;
+          left: 0px;
+          overflow: hidden;
+          padding-bottom: 100vh; /* 56.25% = 16:9. set ratio */
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+      }
+      .video .wrapper {
+        display: block;
+          height: 100%;
+          left: 0px;
+          overflow: hidden;
+          position: absolute;
+          bottom: 0%;
+          width: 100%;
+          /*-webkit-transform: translateY(-50%);
+          transform: translateY(-50%);*/
+      }
+      .video video {
+        display: block;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+      }
+      .logonlink{
+          position:absolute;
+          padding:40px 40px 0;
+          margin:auto;
+          width:50%;
+          left:25%;
+          bottom:15%;
+          text-align:center;
+          box-sizing:border-box;
+          z-index:2;
+      }
+      .logonlink img{
+          max-width:50%;
+          display:block;
+          margin:auto;
+          max-height:100px;
+      }
+      .play-pause-cont{
+          width:70px;
+          height:70px;
+          padding:0px;
+          box-sizing: border-box;
+          position:absolute;
+          top:calc(50% - 35px);
+          left:calc(50% - 35px);
+      }
+      .play-pause-cont img{
+        width:100%;
+        opacity:1;
+      }
+      .play-pause-cont:hover img{
+          opacity:1!important;
+      }
+      
+    .nav-white{
+        border:1px solid #f2f2f2!important;
+        
+    }
+    .nav-white-bg{
+        background:#f2f2f2!important;
+    }
+    .rera-number{
+        position:absolute;
+        bottom:10px;
+        left:10px;
+        color:#f2f2f2;
+        font: normal 14px/16px SurveyorBookReg;
+    }
+    .rera-number p{
+        margin:0;
+    }
+    .black-overlay{
+        position:absolute;
+        width:100%;
+        height:100vh;
+        background:rgba(12,12,12,0.6);
+        mix-blend-mode: multiply;
+        z-index:1;
+    }
+    .section{
+        overflow:hidden;
+    }
+    .sec-1{
+        height:100vh;
+    }
+    .arrow-small{
+        width:10px;
+        height:10px;
+        transform:rotate(-45deg);
+        border-left:3px solid #363738;
+        border-bottom:3px solid #363738;
+        position:absolute;
+        bottom:25px;
+        left:calc(50% - 5px);
+        z-index:2;
+    }
+    .arrow-white{
+     border-left:3px solid #f2f2f2;
+     border-bottom:3px solid #f2f2f2;
+    }
+    #legaldisclaimer{
+        position:fixed;
+        z-index:99;
+        background:rgba(0,0,0,0.95);
+        height:100vh;
+        width:100%;
+        top:0;
+        left:0;
+        display:none;
+    }
+    #legaldisclaimer div{
+        background:#041E42;
+        width:70%;
+        height:80%;
+        position:absolute;
+        top:10%;
+        left:15%;
+        color:white;
+        padding:40px;
+        border:1px solid #555;
+        box-sizing:border-box;
+        text-align:center;
+        overflow-y:auto;
+    }
+    #legaldisclaimer div h2{
+        font:30px/40px SurveyorBookReg;
+    }
+    .close-but{
+        font:  normal 12px/18px AktivGroteskReg;
+    letter-spacing: 1.4px;
+    color: #F2F2F2;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-top:40px;
+    display:inline-flex;
+    text-decoration:underline;
+    cursor:pointer;
+    }
+    .blue-line{
+        background:#afafaf;
+        height:2px;
+        width:50%;
+        margin:auto;
+    }
+    .nav-white{
+        border:1px solid #f2f2f2!important;
+        
+    }
+    .nav-white-bg{
+        background:#f2f2f2!important;
+    }
+    .form-cont{
+        width:50%;
+        margin:auto;
+    }
+    .maia-logo{
+        width:150px;
+        margin:0 auto 50px;
+        display:block;
+    }
+    input{
+        display: block;
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    font-size: 14px;
+    outline: none;
+    background-color: rgba(214,212,208,0);
+    border: none;
+    border-bottom:2px solid #041E42;
+    font-family:AktivGroteskReg;
+    padding: 5px 20px;
+    border-radius: 0px;
+    color: #041e42;
+    margin-bottom:20px;
+    }
+    input[type=submit]{
+        display: block;
+    width: 50%;
+    margin: 16px auto;
+    height: 40px;
+    font-family: 'SurveyorBookReg';
+    font-size: 15px;
+    outline: none;
+    background-color: #A28D58;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    }
+    ::placeholder{
+        color:#041E42;
+        font-family:AktivGroteskReg;
+        font-size:14px;
+    }
+    .call-but{
+        margin: 16px 20px 16px auto;
+        font-family: 'SurveyorBookReg';
+        font-size: 15px;
+        outline: none;
+        background-color: #A28D58;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    #cursor-circle{
+        display:none;
+    }
+    .form-heading{
+        text-align:center;
+        margin-bottom:50px;
+        color:#041E42;
+    }
+    .form-heading h3{
+        margin-bottom:15px;
+        font:36px/40px SurveyorBookReg;
+    }
+    .form-heading p{
+        font-family:AktivGroteskReg;
+        
+    }
+    .form-heading a{
+        color:#A28D58;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    .section-10{
+        text-align:center;
+        color:#041E42;
+        padding:40px 24%;
+        /*background:url('https://maiapelicangrove.com/Images/last-1.jpg');*/
+        background-size:100%;
+    }
+    .section-10 img{
+        width:200px;
+        margin:auto;
+    }
+    .section-10 > .p-10{
+        font: 16px/26px SurveyorBookReg;
+    }
+    
+    
+    @media only screen and (max-width: 768px){
+        .logo{
+            max-height:35px;
+            margin:10px 10px;
+        }
+        .section-name,.section-title-white,.section-title-dark{
+            font-size:16px;
+        }
+        .menu-img-container{
+            display:none;
+        }
+        .section-name-container{
+            width:0;
+        }
+        .logo-container,.menu-btn-container{
+            width:50%;
+        }
+        .menu-list-container{
+            width:100%;
+        }
+        .menu-list-container ul li p{
+            font-size:20px;
+            line-height:30px;
+        }
+        .menu-list-container ul {
+            list-style: none;
+            padding-left:0;
+        }
+        .menu-item + span:before{
+            max-width:30px;
+            right:105%;
+        }
+        .fullscreen{
+            height:auto;
+        }
+        .logonlink{
+            width:100%;
+            box-sizing:border-box;
+            left:0;
+        }
+        .link-u{
+            color:#f2f2f2;
+        }
+        #cursor-circle{
+            display:none;
+        }
+        .rera-number{
+            color:#f2f2f2;
+            font-size:12px;
+        }
+        .form-cont{
+            width:75%;
+        }
+        .pseudo-bg{
+            width:auto;
+            height:100%;
+            margin:auto;
+            position: relative;
+        }
+        .pseudo-bg img{
+        height:auto;
+        width:100%;
+        position:absolute;
+        bottom:0;
+        }
+        .copyright span{
+            display:none;
+        }
+        .section-10{
+            background-size:auto 100%;
+        }
+        .call-but{
+            margin: 16px 10px 16px auto;
+        }
+        #legaldisclaimer div{
+
+            width:90%;
+            left:5%;
+            color:white;
+            padding:20px;
+            
+        }
+        #legaldisclaimer div p{
+            font-size:12px;
+        }
+        #legaldisclaimer div h2{
+            font:20px/30px SurveyorBookReg;
+        }
+      }
