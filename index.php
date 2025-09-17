@@ -464,11 +464,22 @@
                         Building iconic skylines
                     </h2>
                 </div>
-                <div class="text-reveal--wrapper developments-text-line-paragraph">
-                    <p>
-                    Our developments reflect a deep commitment to craftsmanship, context <br />
-                    and quality, creating spaces that stand the test of time.
-                    </p>
+                <div class="hidden xl:block">
+                    <div class="text-reveal--wrapper developments-text-line-paragraph">
+                        <p>
+                        Our developments reflect a deep commitment to craftsmanship, context <br />
+                        and quality, creating spaces that stand the test of time.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="xl:hidden">
+                    <div class="text-reveal--wrapper developments-text-line-paragraph">
+                        <p>
+                        Our developments reflect a deep commitment to craftsmanship, context
+                        and quality, creating spaces that stand the test of time.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -1035,12 +1046,26 @@
                     </h2>
                 </div>
                 <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-12 xl:gap-20 mb-20">
-                    <div class="text-reveal--wrapper developments-text-line-paragraph">
-                        <p class="">
-                            MAIA’s recent features, exclusive interviews and industry <br />
-                            insights shaping tomorrow’s real estate narrative.
-                        </p>
+
+                    <div class="hidden xl:block">
+                        <div class="text-reveal--wrapper developments-text-line-paragraph">
+                            <p class="">
+                                MAIA’s recent features, exclusive interviews and industry <br />
+                                insights shaping tomorrow’s real estate narrative.
+                            </p>
+                        </div>
                     </div>
+                    <div class="xl:hidden">
+                        <div class="text-reveal--wrapper developments-text-line-paragraph">
+                            <p class="">
+                                MAIA’s recent features, exclusive interviews and industry
+                                insights shaping tomorrow’s real estate narrative.
+                            </p>
+                        </div>
+                    </div>
+
+
+
                     <div class="fade-up">
                         <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                             <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">

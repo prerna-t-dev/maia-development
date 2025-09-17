@@ -683,7 +683,7 @@
 
                 <div class="text-reveal--paragraph developments-text-line-paragraph">
                     <p class="font-medium mb-12 xl:mb-16 text-center xl:w-1-2 mx-auto">
-                    A collective of industry-leading experts collaborating to deliver unparalleled design, sustainability and client-centric excellence across every MAIA development.
+                        A statement of intent, capturing the essence of MAIA’s promise to create meaningful communities and experiences that stand the test of time.
                     </p>
                 </p>
 
