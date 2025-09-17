@@ -1,24 +1,37 @@
-// Image Reveal Animation using GSAP and ScrollTrigger
-// Wait for GSAP to be loaded
-window.addEventListener('load', function() {
+// Optimized Image Reveal Animation using GSAP and ScrollTrigger
+// Wait for GSAP to be loaded with timeout fallback
+let gsapCheckAttempts = 0;
+const maxGsapChecks = 50; // 5 seconds max wait
+
+function checkGSAPAvailability() {
+    gsapCheckAttempts++;
+    
     if (typeof gsap !== 'undefined') {
         console.log('gsap found')
-        
-        // Check if ScrollTrigger is available
-        if (typeof ScrollTrigger !== 'undefined') {
-            console.log('ScrollTrigger found')
-            gsap.registerPlugin(ScrollTrigger);
+        initializeAnimations();
+    } else if (gsapCheckAttempts < maxGsapChecks) {
+        setTimeout(checkGSAPAvailability, 100);
+    } else {
+        console.warn('GSAP not available after timeout, skipping animations');
+    }
+}
 
-            // Register SplitText if available
-            if (typeof SplitText !== 'undefined') {
-                console.log('SplitText found')
-                gsap.registerPlugin(SplitText);
-            }
-            
-            // Sync existing Lenis with ScrollTrigger
-            if (typeof Lenis !== 'undefined' && window.lenis) {
-                window.lenis.on('scroll', ScrollTrigger.update);
-            }
+function initializeAnimations() {
+    // Check if ScrollTrigger is available
+    if (typeof ScrollTrigger !== 'undefined') {
+        console.log('ScrollTrigger found')
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Register SplitText if available
+        if (typeof SplitText !== 'undefined') {
+            console.log('SplitText found')
+            gsap.registerPlugin(SplitText);
+        }
+        
+        // Sync existing Lenis with ScrollTrigger
+        if (typeof Lenis !== 'undefined' && window.lenis) {
+            window.lenis.on('scroll', ScrollTrigger.update);
+        }
             
             // Generic clip-path reveal from top to bottom with scale contained within mask
             // Target ALL image reveal wrappers
@@ -726,4 +739,6 @@ window.addEventListener('load', function() {
 
         }
     }
-});
+
+// Start checking for GSAP availability
+checkGSAPAvailability();

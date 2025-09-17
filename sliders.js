@@ -1,14 +1,19 @@
+// Optimized Sliders with Performance Improvements
 $(document).ready(function(){
-    // Responsive Breakpoint Detection and Page Reload
+    // Debounced resize handler to prevent excessive reloads
+    let resizeTimeout;
     let currentBreakpoint = getCurrentBreakpoint();
     
-    // Check for breakpoint changes on window resize
+    // Check for breakpoint changes on window resize (debounced)
     $(window).on('resize', function() {
-        const newBreakpoint = getCurrentBreakpoint();
-        if (newBreakpoint !== currentBreakpoint) {
-            // Breakpoint changed, reload the page
-            location.reload();
-        }
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            const newBreakpoint = getCurrentBreakpoint();
+            if (newBreakpoint !== currentBreakpoint) {
+                // Breakpoint changed, reload the page
+                location.reload();
+            }
+        }, 250); // 250ms debounce
     });
     
     // Function to determine current breakpoint

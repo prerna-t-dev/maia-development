@@ -345,7 +345,7 @@
                         </h1>
                         <div class="fade-in" data-delay="0.8">
                             <p class="font-medium text-black opacity-70" style="max-width: 325px;">
-                                A curated portfolio of completed and upcoming icons, each exemplifying artistry, innovation, and an enduring legacy.
+                                A curated portfolio of completed and upcoming icons, each exemplifying artistry, innovation and an enduring legacy.
                             </p>
                         </div>
                         
@@ -657,7 +657,7 @@
                     <div class="text-reveal--wrapper developments-text-line-paragraph">
                         <p class="mb-16">
                             Designs in progress, destined to become <br /> 
-                            tomorrow's most coveted addresses
+                            tomorrow's most coveted addresses.
                         </p>
                     </div>
 

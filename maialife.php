@@ -461,7 +461,7 @@
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
-                                24/7 personalized concierge orchestrates events, amenities, and everyday resident requests.
+                                24/7 personalised concierge orchestrates events, amenities and everyday resident requests. 
                             </p>
                         </div>
                     </div>
@@ -479,7 +479,7 @@
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
-                                Sustainable practices utilize eco-friendly chemicals, solar panels, and water conservation.
+                                Sustainable practices utilize eco-friendly chemicals, solar panels and water conservation.
                             </p>
                         </div>
                     </div>
@@ -538,7 +538,7 @@
                 </div>
                 <div class="text-reveal--paragraph developments-text-line-paragraph">
                     <p class="font-medium mb-12 xl:mb-16 text-center xl:w-1-2 mx-auto xl:px-12">
-                        Effortless living through 24/7 concierge support and personalized support, freeing you to focus on what matters.
+                        Effortless living through 24/7 concierge services and personalised support, freeing you to focus on what matters.
                     </p>
                 </div>
             </div>
@@ -651,7 +651,7 @@
 
                 <div class="text-reveal--paragraph developments-text-line-paragraph">
                     <p class="font-medium mb-12 xl:mb-16 text-center xl:w-1-2 mx-auto">
-                        I’m proud to introduce MAIA Life, our fully integrated hospitality arm designed around your aspirations. From orchestrating curated events to delivering a refreshing beverage poolside, our dedicated hospitality team anticipates every need with unwavering integrity and care. We’ve woven technology into every service touchpoint, streamlining maintenance and listening closely to your feedback. MAIA Life isn’t an add-on; it’s the embodiment of our promise to elevate your daily living with effortless sophistication.
+                    A collective of industry-leading experts collaborating to deliver unparalleled design, sustainability and client-centric excellence across every MAIA development.
                     </p>
                 </p>
 
@@ -660,7 +660,7 @@
                     <img class="w-16 mb-10 fade-up" src="images/2025/maialife/grey-quotes.png" alt="Quote">
                     
                     <p class="text-gold text-base mb-10 fade-in" data-delay="0.5">
-                        I’m proud to introduce MAIA Life, our fully integrated hospitality arm designed around your aspirations. From orchestrating curated events to delivering a refreshing beverage poolside, our dedicated hospitality team anticipates every need with unwavering integrity and care. We’ve woven technology into every service touchpoint, streamlining maintenance, and listening closely to your feedback. MAIA Life isn’t an add-on; it’s the embodiment of our promise to elevate your daily living with effortless sophistication.
+                    I’m proud to introduce MAIA Life, our fully integrated hospitality arm designed around your aspirations. From orchestrating curated events to delivering a refreshing beverage poolside, our dedicated hospitality team anticipates every need with unwavering integrity and care. We’ve woven technology into every service touchpoint, streamlining maintenance and listening closely to your feedback. MAIA Life isn’t an add-on; it’s the embodiment of our promise to elevate your daily living with effortless sophistication.
                     </p>
 
                     <div class="flex flex-col xl:flex-row xl:items-center gap-8">

@@ -760,7 +760,7 @@
                                         </div>
                                     </div>
                                     <div class="accordion-content">
-                                        <p class="text-gold font-medium text-base leading-15">Our workers are provided with dignified housing, safety training, and stringent health protocols. With machinery to reduce manual strain and regular upskilling, we ensure their well-being and growth.</p>
+                                        <p class="text-gold font-medium text-base leading-15">Our workers are provided with dignified housing, safety training and stringent health protocols. With machinery to reduce manual strain and regular upskilling, we ensure their well-being and growth.</p>
                                     </div>
                                 </div>
 
@@ -780,7 +780,7 @@
                                         </div>
                                     </div>
                                     <div class="accordion-content">
-                                        <p class="text-gold font-medium text-base leading-15">Water and energy conservation is achieved through grey water recycling, zero-discharge systems, and solar-powered common areas. Energy-efficient fixtures and double-glazed glass further reduce resource consumption.</p>
+                                        <p class="text-gold font-medium text-base leading-15"> Water and energy conservation is achieved through grey water recycling, zero-discharge systems and solar-powered common areas. Energy-efficient fixtures and double-glazed glass further reduce resource consumption.</p>
                                     </div>
                                 </div>
 
@@ -801,7 +801,7 @@
                                     </div>
                                     <div class="accordion-content">
                                         <p class="text-gold font-medium text-base leading-15">
-                                        Native plants, organic herb gardens, and over 100 trees are integrated into our developments. Together, they support biodiversity, natural cooling, and a healthier ecosystem.
+                                            Native plants, organic herb gardens and over 100 trees are integrated into our developments. Together, they support biodiversity, natural cooling and a healthier ecosystem.
                                         </p>
                                     </div>
                                 </div>
