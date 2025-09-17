@@ -163,8 +163,9 @@
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
-                    <ul class="flex gap-8 text-sm font-semibold">
+                    <ul class="flex gap-12 text-base font-semibold">
                         <li><a class="text-green uppercase" href="about.html">About Us</a></li>
+                        <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
                         <li class="relative nav-services--link">
                             <div class="text-green uppercase flex items-center gap-2 cursor-pointer">
                                 <span class="leading-10">Services</span>
@@ -197,7 +198,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
+                        
                     </ul>
                 </nav>
                 <!-- Menu Bar -->
@@ -711,6 +712,24 @@
                         </h4>
                         <div class="line-divider mb-10"></div>
                         <img src="images/2025/homepage/Next-development--3.png" alt="Next Development 3">
+                    </div>
+                    <div class="next-developments-slide-item">
+                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
+                            Residential Development
+                            <br />
+                            - Cunningham Road
+                        </h4>
+                        <div class="line-divider mb-10"></div>
+                        <img src="images/2025/homepage/Next-development--4.png" alt="Next Development 4">
+                    </div>
+                    <div class="next-developments-slide-item">
+                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
+                            Residential Development
+                            <br />
+                            - Jakkur Lake
+                        </h4>
+                        <div class="line-divider mb-10"></div>
+                        <img src="images/2025/homepage/Next-development--5.png" alt="Next Development 5">
                     </div>
                 </div>
                 <div class="line-divider pr-20"></div>

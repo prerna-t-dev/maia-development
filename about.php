@@ -151,8 +151,10 @@
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
-                    <ul class="flex gap-8 text-sm font-semibold">
+                    <ul class="flex gap-12 text-base font-semibold">
                         <li><a class="text-white uppercase" href="about.html">About Us</a></li>
+                        <li><a class="text-white uppercase" href="developments.html">Developments</a></li>
+
                         <li class="relative nav-services--link">
                             <div class="text-white uppercase flex items-center gap-2 cursor-pointer">
                                 <span class="leading-10">Services</span>
@@ -185,12 +187,13 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a class="text-white uppercase" href="developments.html">Developments</a></li>
                     </ul>
                 </nav>
+
+
                 <!-- Menu Bar -->
                 <div class="menu-bar flex items-center gap-4">
-                    <button class="btn-primary bg-white text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
+                    <button class="btn-secondary bg-white text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
                         <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
                         </svg>
