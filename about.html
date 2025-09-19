@@ -350,8 +350,8 @@
         <section class="about-founder">
             <div class="bg-beige py-30 xl:py-40">
                 <div class="container flex flex-col items-center">
-                    <div class="mb-20 xl:mb-32 text-gold text-36px xl:text-56px leading-11 text-center font-heading px-5 xl:px-50 fade-up">
-                        Found by Mayank Ruia, MAIA is creating ecosystems that represent real estate development in Modern india - to the world. “With the belief that real estate development is greater than physical structures”
+                    <div class="mb-20 xl:mb-32 text-gold text-36px xl:text-56px leading-11 text-center font-heading px-5 xl:px-30 fade-up">
+                        Founded by Mayank Ruia, MAIA is focused on creating ecosystems that redefine real estate in modern India, built on the belief that development goes beyond physical structures to create meaningful environments where people can thrive
                     </div>
 
 

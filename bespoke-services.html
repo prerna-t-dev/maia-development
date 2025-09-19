@@ -334,7 +334,7 @@
                         </div>
                     </div>
 
-                    <div class="scroll-to-explore flex items-center justify-between fade-in" data-delay="0.8">
+                    <!-- <div class="scroll-to-explore flex items-center justify-between fade-in" data-delay="0.8">
                         <p class="text-xs font-medium text-black uppercase">(Scroll to explore)</p>
                         <div class="scroll-down cursor-pointer scale-65 xl:scale-100">
                             <svg class="w-full h-auto"  width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -343,7 +343,7 @@
                             </svg>
 
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
 
@@ -565,6 +565,34 @@
                                 
                             </div>
                             <img src="images/2025/bespoke/why-bespoke--1.png" style="aspect-ratio: 1.2; object-fit: cover;" alt="Why Bespoke Slider Item 1">
+                        </div>
+                    </div>
+
+                    <div class="why-bespoke-slider-item">
+                        <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 items-start">
+                            <!-- Why Bespoke Slider Item 5 -->
+                            <div class="mt-14 xl:mt-24 border-t py-5 xl:p-5 xl:mr-30 fade-up">
+                                <div class="flex items-start gap-8 ">
+                                    <svg class="flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.2104 15.1092L2.52339 12.4222C2.28908 12.1878 2.28908 11.808 2.52339 11.5736L5.2104 8.88667C5.44471 8.65236 5.82461 8.65236 6.05892 8.88667L8.74593 11.5736C8.98024 11.808 8.98024 12.1878 8.74593 12.4222L6.05892 15.1092C5.82461 15.3435 5.44471 15.3435 5.2104 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
+                                        <path d="M11.5737 21.4763L8.88668 18.7893C8.65236 18.555 8.65236 18.1752 8.88668 17.9409L11.5737 15.2538C11.808 15.0195 12.1879 15.0195 12.4223 15.2538L15.1093 17.9409C15.3436 18.1752 15.3436 18.555 15.1093 18.7893L12.4223 21.4763C12.1879 21.7106 11.808 21.7106 11.5737 21.4763Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
+                                        <path d="M11.5737 8.74984L8.88668 6.06283C8.65236 5.82852 8.65236 5.44862 8.88668 5.21431L11.5737 2.52729C11.808 2.29298 12.1879 2.29298 12.4223 2.52729L15.1093 5.21431C15.3436 5.44862 15.3436 5.82852 15.1093 6.06283L12.4223 8.74984C12.1879 8.98416 11.808 8.98416 11.5737 8.74984Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
+                                        <path d="M17.9409 15.1092L15.2538 12.4222C15.0195 12.1878 15.0195 11.808 15.2538 11.5736L17.9409 8.88667C18.1753 8.65236 18.5552 8.65236 18.7895 8.88667L21.4765 11.5736C21.7108 11.808 21.7108 12.1878 21.4765 12.4222L18.7895 15.1092C18.5552 15.3435 18.1753 15.3435 17.9409 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
+                                    </svg>
+                                    <div>
+
+                                    
+                                    <h4 class="text-base xl:text-4xl font-heading font-normal mb-4 text-brown">
+                                        Time Saved
+                                    </h4>
+                                    <p class="text-sm font-normal text-brown">
+                                        You achieve complete interiors alongside the development handover by finding the right designer and a trusted contractor effortlessly.
+                                    </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <img src="images/2025/bespoke/why-bespoke--5.png" style="aspect-ratio: 1.2; object-fit: cover;" alt="Why Bespoke Slider Item 1">
                         </div>
                     </div>
 
