@@ -695,7 +695,7 @@
                 <div class="grid grid-cols-1 xl:grid-cols-2 xl:items-end gap-8 xl:gap-0">
                     <div class="xl:pr-5">
                         <div class="image-reveal--wrapper">
-                            <img src="images/2025/about/team-image--founder.png" alt="Mayank Ruia">
+                            <img src="images/2025/about/team-image--founder-new.png" alt="Mayank Ruia">
                         </div>
                     </div>
                     <div class="xl:pl-16 xl:pr-12">

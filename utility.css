@@ -819,6 +819,7 @@
     .xl\:mb-40 { margin-bottom: 10rem; }
 
     .xl\:ml-24 { margin-left: 6rem; }
+    .xl\:ml-20 { margin-left: 5rem; }
     .xl\:mr-30 { margin-right: 7.5rem; }
 
     /* Typography - XL */
@@ -968,6 +969,10 @@
     .xl\:top-3\/4 { top: 75%; }
     .xl\:top-full { top: 100%; }
     .xl\:top-auto { top: auto; }
+    .xl\:top-unset { top: unset; }
+    .xl\:bottom-unset { bottom: unset; }
+    .xl\:left-unset { left: unset; }
+    .xl\:right-unset { right: unset; }
 
     /* Desktop Position Utilities - Right */
     .xl\:right-0 { right: 0; }

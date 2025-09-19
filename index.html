@@ -517,42 +517,14 @@
                     </div>
                   </section> 
 
-                  <section class="second">
-                    <div class="outer">
-                      <div class="inner">
-                        <a href="casa-sia.html" target="_blank" class="bg">
-                          <!-- <h2 class="section-heading">2. Casa Sia</h2> -->
-                            <div class="bg-overlay" data-overlay="1"></div>
-                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
-                            <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
-                                Casa Sia
-                            </h4>
-                            <p class="flex items-center gap-2">
-                                <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                    <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="project-location-span text-green xl:text-white font-medium text-base">
-                                    Central Chennai - Parthasarathy Gardens
-                                </span>
-                            </p>
-                          </div>
-                          <img src="images/2025/homepage/dev-project--2.png" alt="Casa Sia" class="bg-img">
-                        </a>
-                      </div>
-                    </div>
-                  </section>
+                 
 
-                  <section class="third">
+                  <section class="second">
                     <div class="outer">
                       <div class="inner">
                         <a href="pelican-gardens.html" target="_blank" class="bg">
                           <!-- <h2 class="section-heading">3. Pelican Gardens</h2> -->
-                            <div class="bg-overlay" data-overlay="2"></div>
+                            <div class="bg-overlay" data-overlay="1"></div>
                           <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
                             <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                 Pelican Gardens
@@ -577,12 +549,12 @@
                     </div>
                   </section>
 
-                  <section class="fourth">
+                  <section class="third">
                     <div class="outer">
                       <div class="inner">
                         <a href="pelican-grove.html" target="_blank" class="bg">
                           <!-- <h2 class="section-heading">4. Pelican Grove</h2> -->
-                            <div class="bg-overlay" data-overlay="3"></div>
+                            <div class="bg-overlay" data-overlay="2"></div>
                           <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
                             <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                 Pelican Grove
@@ -602,6 +574,108 @@
                             </p>
                           </div>
                           <img src="images/2025/homepage/dev-project--4.png" alt="Pelican Grove" class="bg-img">
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="fourth">
+                    <div class="outer">
+                      <div class="inner">
+                        <a href="javascript:void(0)" class="bg">
+
+                          <!-- <h2 class="section-heading">4. Pelican Grove</h2> -->
+                         <div class="bg-overlay" data-overlay="3"></div>
+                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
+                            <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
+                                The Beacon
+                            </h4>
+                            <p class="flex items-center gap-2">
+                                <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
+                                    <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="project-location-span text-green xl:text-white font-medium text-base">
+                                    Nagawara Lake
+                                </span>
+                            </p>
+                          </div>
+                          <div class="absolute bottom-4 left-4 xl:bottom-unset xl:left-unset xl:top-20 xl:right-20 z-2">
+                            <div class="development-badge mb-5">
+                                Coming Soon
+                            </div>
+                          </div>
+
+                          <img src="images/2025/homepage/dev-project--5.png" alt="The Beacon" class="bg-img">
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="fifth">
+                    <div class="outer">
+                      <div class="inner">
+                        <a href="javascript:void(0)" class="bg">
+                          <!-- <h2 class="section-heading">4. Pelican Grove</h2> -->
+                            <div class="bg-overlay" data-overlay="4"></div>
+                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
+                            <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
+                                The Seven
+                            </h4>
+                            <p class="flex items-center gap-2">
+                                <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
+                                    <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="project-location-span text-green xl:text-white font-medium text-base">
+                                    South Bangalore, Basavanagudi
+                                </span>
+                            </p>
+                          </div>
+                          <div class="absolute bottom-4 left-4 xl:bottom-unset xl:left-unset xl:top-20 xl:right-20 z-2">
+                            <div class="development-badge mb-5">
+                                Coming Soon
+                            </div>
+                          </div>
+                          <img src="images/2025/homepage/dev-project--6.png" alt="The Seven" class="bg-img">
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="sixth">
+                    <div class="outer">
+                      <div class="inner">
+                        <a href="casa-sia.html" target="_blank" class="bg">
+                          <!-- <h2 class="section-heading">2. Casa Sia</h2> -->
+                            <div class="bg-overlay" data-overlay="5"></div>
+                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
+                            <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
+                                Casa Sia
+                            </h4>
+                            <p class="flex items-center gap-2">
+                                <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
+                                    <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="project-location-span text-green xl:text-white font-medium text-base">
+                                    Central Chennai - Parthasarathy Gardens
+                                </span>
+                            </p>
+                          </div>
+                          <img src="images/2025/homepage/dev-project--2.png" alt="Casa Sia" class="bg-img">
                         </a>
                       </div>
                     </div>
@@ -678,14 +752,18 @@
                     .second .bg,
                     .first .bg,
                     .third .bg,
-                    .fourth .bg{
+                    .fourth .bg,
+                    .fifth .bg,
+                    .sixth .bg{
                         position: relative;
                     }
                     
                     .second .bg::after,
                     .first .bg::after,
                     .third .bg::after,
-                    .fourth .bg::after{
+                    .fourth .bg::after,
+                    .fifth .bg::after,
+                    .sixth .bg::after{
                         content: '';
                         position: absolute;
                         top: 0;
@@ -1192,7 +1270,7 @@
             </div>
             <div class="container relative">
                 <div class="contact-form-container bg-white p-10 py-20 xl:px-14">
-                    <div class="grid grid-cols-1 xl:grid-cols-2 items-center gap-20">
+                    <div class="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr] items-end gap-20">
                         <!-- Left Section: Contact Form -->
                         <div class="contact-form">
                             <h2 class="text-40px xl:text-7xl font-heading font-normal text-green mb-16">Contact us</h2>
@@ -1242,8 +1320,8 @@
                         </div>
                         
                         <!-- Right Section: Contact Information -->
-                        <div class="contact-info flex justify-end hidden xl:flex">
-                            <div class="space-y-8">
+                        <div class="contact-info green-border-left h-full xl:pl-20 flex flex-col justify-end">
+                            <div class="space-y-8 hidden xl:block">
                                 <div class="mb-8">
                                     <!-- <h3 class="text-lg font-semibold text-gray-900 mb-4">Address</h3> -->
                                     <p class="text-black opacity-70 text-sm font-medium">
@@ -1256,9 +1334,25 @@
                                 <div>
                                     <!-- <h3 class="text-lg font-semibold text-gray-900 mb-4">Get in Touch</h3> -->
                                     <p class="">
-                                        <a href="mailto:info@maia.com" class="text-black opacity-70 text-sm font-medium">info@maia.com</a> | 
+                                        <a href="mailto:getintouch@maiaestates.in" class="text-black opacity-70 text-sm font-medium">getintouch@maiaestates.in</a> | 
                                         <a href="tel:+918041219231" class="text-black opacity-70 text-sm font-medium">+91 80 4121 9231</a>
                                     </p>
+                                </div>
+                            </div>
+
+                            <div class="bg-plain-green p-6 xl:py-6 xl:px-10 xl:mt-20">
+                                <div class="grid grid-cols-1 xl:items-center justify-between gap-8">
+                                    <h4 class="text-white font-heading leading-12 font-normal text-3xl xl:text-4xl">
+                                        Build your career in real estate excellence.
+                                    </h4>
+                                    <div class="flex">
+                                        <a href="mailto:careers@maiaestates.in" class="btn-secondary bg-white w-fit text-green uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                                            <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="2.7332" cy="3.47538" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
+                                            </svg>
+                                            <span class="text-xs font-medium">Contact Us</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1358,8 +1452,8 @@
                                 Bengaluru, Karnataka 560042
                             </p>
                             <div class="flex items-center gap-3">
-                                <a href="mailto:info@maia.com" class="footer-info-item text-white text-sm">
-                                    info@maia.com
+                                <a href="mailto:getintouch@maiaestates.in" class="footer-info-item text-white text-sm">
+                                    getintouch@maiaestates.in
                                 </a>
                                 <div class="text-white text-sm opacity-40">|</div>
                                 <a href="tel:+918041219231" class="footer-info-item text-white text-sm">
