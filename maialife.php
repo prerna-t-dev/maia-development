@@ -396,7 +396,7 @@
 
                     <div class="maialife-hero-img--mobile block xl:hidden">
                         <div class="hero-image-wrapper hero-image-wrapper-mobile">
-                            <img src="images/2025/maialife/hero-banner-image--mobile.png" alt="Hero Banner Image" class="hero-banner-image">
+                            <img src="images/2025/maialife/hero-banner-image--maialife.png" alt="Hero Banner Image" class="hero-banner-image h-full object-cover">
                         </div>
                     </div>
                 

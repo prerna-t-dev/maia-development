@@ -605,6 +605,35 @@ $(document).ready(function(){
             ]   
         });
     }, 3000); // 3 second delay
+
+
+    // Fade slider 5
+    setTimeout(() => {
+        setupFadeSlider({
+            containerSelector: '.development-slider-images-5',
+            imageSelector: '.development-slider-image',
+            progressSelector: '.development-slider-dots-5 .dot-progress',
+            imageSources: [
+                'images/2025/developments/dev-project--51.png',
+                'images/2025/developments/dev-project--52.jpg',
+                'images/2025/developments/dev-project--53.jpg'
+            ]   
+        });
+    }, 3000); // 2 second delay
+
+    // Fade slider 6
+    setTimeout(() => {
+        setupFadeSlider({
+            containerSelector: '.development-slider-images-6',
+            imageSelector: '.development-slider-image',
+            progressSelector: '.development-slider-dots-6 .dot-progress',
+            imageSources: [
+                'images/2025/developments/dev-project--61.png',
+                'images/2025/developments/dev-project--62.jpg',
+                'images/2025/developments/dev-project--63.jpg'
+            ]   
+        });
+    }, 3000); // 2 second delay
     
     
     

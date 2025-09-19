@@ -996,6 +996,10 @@ section.contact-us{
     width: 25%;
 }
 
+.custom-development-slider-dots.three-dot-wrapper .dot-wrapper{
+    width: 33.33%;
+}
+
 .custom-development-slider-dots .dot-progress{
     height: 8px;
     background-color: #FFFFFF;
