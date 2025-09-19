@@ -351,7 +351,7 @@
             <div class="bg-beige py-30 xl:py-40">
                 <div class="container flex flex-col items-center">
                     <div class="mb-20 xl:mb-32 text-gold text-36px xl:text-56px leading-11 text-center font-heading px-5 xl:px-50 fade-up">
-                        Founded by Mayank Ruia in 2016, MAIA is not just building properties; it is crafting a new blueprint for the real estate landscape in India.
+                        Found by Mayank Ruia, MAIA is creating ecosystems that represent real estate development in Modern india - to the world. “With the belief that real estate development is greater than physical structures”
                     </div>
 
 
@@ -424,7 +424,7 @@
                     OUR PURPOSE
                 </div>
                 <h2 class="text-36px xl:text-6xl font-normal mb-30 xl:mb-50 text-white xl:pr-44">
-                    We represent the values of real estate development in modern India and intend to build and serve our customers with utmost integrity and transparency.
+                    We represent the values of real estate development in modern India and intend to build and serve our customers with the utmost integrity and transparency.
                 </h2>
             </div>
 
@@ -573,10 +573,27 @@
 
 
             <!-- Sustainability Initiatives Slider -->
-            <div class="pl-5 xl:pl-20">
+            <div class="pl-5 xl:pl-20 relative">
+                <!-- Slick Arrows: Desktop -->
+                <div class="slick-arrows flex items-center justify-between gap-6 my-14 mb-16 pr-5 xl:pr-12 hidden xl:flex">
+                    <div class="sustainability-arrow-prev cursor-pointer absolute top-1/2 -translate-y-1/2 left-4 z-1">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
+                            <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
+                        </svg>
+                    </div>
+                    <div class="sustainability-arrow-next cursor-pointer absolute top-1/2 -translate-y-1/2 right-4 z-1">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
+                            <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
+                        </svg>
+                    </div>
+                </div>
+
+
                 <div class="sustainability-initiatives-slider">
                     <div class="sustainability-initiatives-slider-item">
-                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--1.png" alt="Sustainability Initiatives Image 1">
+                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--1.jpg" alt="Sustainability Initiatives Image 1">
                         <div>
                             <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
                                 Sustainable Construction and Design
@@ -588,7 +605,7 @@
                     </div>
 
                     <div class="sustainability-initiatives-slider-item">
-                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--2.png" alt="Sustainability Initiatives Image 2">
+                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--2.jpg" alt="Sustainability Initiatives Image 2">
                         <div>
                             <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
                                 Green Count
@@ -600,7 +617,7 @@
                     </div>
 
                     <div class="sustainability-initiatives-slider-item">
-                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--3.png" alt="Sustainability Initiatives Image 3">
+                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--3.jpg" alt="Sustainability Initiatives Image 3">
                         <div>
                             <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
                                 Water Management
@@ -612,7 +629,7 @@
                     </div>
 
                     <div class="sustainability-initiatives-slider-item">
-                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--4.png" alt="Sustainability Initiatives Image 4">
+                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--4.jpg" alt="Sustainability Initiatives Image 4">
                         <div>
                             <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
                                 Energy Efficiency
@@ -624,7 +641,7 @@
                     </div>
 
                     <div class="sustainability-initiatives-slider-item">
-                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--5.png" alt="Sustainability Initiatives Image 5">
+                        <img class="w-full h-full object-cover mb-6" src="images/2025/about/sustainability--5.jpg" alt="Sustainability Initiatives Image 5">
                         <div>
                             <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
                                 Waste Management
@@ -637,18 +654,18 @@
                     
                 </div>
 
-                <!-- Slick Arrows -->
-                <div class="slick-arrows flex items-center justify-between gap-6 my-14 mb-16 pr-5 xl:pr-12">
+                <!-- Slick Arrows: mobile -->
+                <div class="slick-arrows flex items-center justify-between gap-6 my-14 mb-16 pr-5 xl:pr-12 xl:hidden">
                     <div class="sustainability-arrow-prev cursor-pointer">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
-                            <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
+                            <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
+                            <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
                         </svg>
                     </div>
                     <div class="sustainability-arrow-next cursor-pointer">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
-                            <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
+                            <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
+                            <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
                         </svg>
                     </div>
                 </div>
@@ -693,10 +710,7 @@
                             A fourth-generation descendant of the industrialist Ruia Family, Mayank’s individual journey began at Indiana University and led him through top-tier finance roles at globally renowned organisations like Goldman Sachs, UBS and Everstone Capital. After nearly a decade in the U.S., he returned to India in 2008, where his exposure to real estate began in 2011 with Phoenix Mills as its Group Director – Residential.
                             <br>
                             <br>
-                            Combining this experience with his financial acumen, Mayank established MAIA Estates in 2016 with a vision to deliver high-quality residential and commercial developments built with integrity, precision, and passion. From a three-member team to an organisation of over 150, Mayank with MAIA has consistently challenged norms and set new benchmarks.
-                            <br>
-                            <br>
-                            Today, Mayank leads MAIA with a commitment to deliver exceptional spaces and build lasting relationships.
+                            Combining his experience in finance and real estate development, Mayank founded MAIA Estates in 2016 with a commitment to deliver high-quality residential and commercial projects defined by integrity, precision, and passion. Through his leadership, MAIA has grown from a small team into an organization of over 180 professionals, united in challenging conventions and setting new benchmarks for the industry.
                         </div>
                     </div>
                 </div>

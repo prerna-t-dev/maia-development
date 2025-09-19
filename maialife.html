@@ -333,7 +333,7 @@
                                         <span class="line">Experience</span>
                                     </span>
                                     <span class="line-wrapper">
-                                        <span class="line">end-to-end Integrated</span>
+                                        <span class="line">End to End Integrated</span>
                                     </span>
                                     <span class="line-wrapper">
                                         <span class="line">Facility management</span>
@@ -357,7 +357,7 @@
                                     </div>
                                     <!-- <br /> -->
                                     <span class="line-wrapper">
-                                        <span class="line">end-to-end Integrated</span>
+                                        <span class="line">End to End Integrated</span>
                                     </span>
                                     <!-- <br /> -->
                                     <span class="line-wrapper">
@@ -370,12 +370,12 @@
                         
                         <div class="fade-in" data-delay="1">
                             <p class="font-medium text-black opacity-70 xl:ml-24" style="max-width: 380px;">
-                                Anchored in hospitality excellence and tech-driven operations, MAIA Life leverages resident feedback and efficient maintenance for seamless, sustainable living experiences.
+                                Anchored in hospitality and tech-driven operations, MAIA Life offers our residents a comprehensive lifestyle solution within our developments.
                             </p>
                         </div>
                     </div>
 
-                    <div class="scroll-to-explore flex items-center justify-between fade-in" data-delay="0.8">
+                    <!-- <div class="scroll-to-explore flex items-center justify-between fade-in" data-delay="0.8">
                         <p class="text-xs font-medium text-black uppercase">(Scroll to explore)</p>
                         <div class="scroll-down cursor-pointer scale-65 xl:scale-100">
                             <svg class="w-full h-auto" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -383,7 +383,7 @@
                                 <path d="M25.0039 31.1746L26.2834 29.921L30.6336 34.3981V23.0391L32.5016 23.0391V34.3981L36.8774 29.921L38.1313 31.1746L31.5804 37.7495L25.0039 31.1746Z" fill="white"/>
                             </svg>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 
@@ -449,6 +449,23 @@
                 <!-- Purpose Slider -->
                 <div class="maialife-purpose-slider">
                     <div class="maialife-purpose-slider-item">
+                        <!-- Purpose Slider Item 2 -->
+                        <div class="maialife-purpose-slider-item-inner_">
+                            <div>
+                                <img class="mb-10" src="images/2025/maialife/maialife-purpose--2.png" alt="Purpose Slider Item 2">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                    Hospitality-Driven <br>
+                                    Experiences 
+                                </h3>
+                            </div>
+                            <p class="text-white text-sm font-medium opacity-60">
+                                Your one-call solution to five-star living. We bring hotel-style services to your doorstep, designed for seamless, hassle-free everyday living.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="maialife-purpose-slider-item">
                         <!-- Purpose Slider Item 1 -->
                         <div class="maialife-purpose-slider-item-inner">
                             <div>
@@ -466,21 +483,7 @@
 
                     
 
-                    <div class="maialife-purpose-slider-item">
-                        <!-- Purpose Slider Item 2 -->
-                        <div class="maialife-purpose-slider-item-inner_">
-                            <div>
-                                <img class="mb-10" src="images/2025/maialife/maialife-purpose--2.png" alt="Purpose Slider Item 2">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
-                                    Hospitality-Driven <br>
-                                    Experiences 
-                                </h3>
-                            </div>
-                            <p class="text-white text-sm font-medium opacity-60">
-                                Your one-call solution to five-star living. We bring hotel-style services to your doorstep, designed for seamless, hassle-free everyday living.
-                            </p>
-                        </div>
-                    </div>
+                    
 
                     <div class="maialife-purpose-slider-item">
                         <!-- Purpose Slider Item 3 -->

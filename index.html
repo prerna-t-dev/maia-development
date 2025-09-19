@@ -804,57 +804,32 @@
                         </p>
                     </div>
 
-                    <!-- Slick Arrows: Desktop -->
-                    <div class="slick-arrows flex items-center justify-end gap-6 mb-16_ hidden xl:flex">
-                        <div class="slick-arrow-prev cursor-pointer">
-                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
-                                <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
-                            </svg>
-                        </div>
-                        <div class="slick-arrow-next cursor-pointer">
-                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
-                                <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
-                            </svg>
-                        </div>
-                    </div>
+                    
                 </div>
                 
             </div>
 
             <!-- Next Developments Slider -->
-            <div class="next-developments-slider-container pl-5 xl:pl-20 pb-12 xl:pb-30">
+            <div class="next-developments-slider-container relative pl-5 xl:pl-20 pb-12 xl:pb-30">
+
+                <!-- Slick Arrows: Desktop: Green -->
+                <div class="slick-arrows flex items-center justify-end gap-6 mb-16_ hidden xl:flex">
+                    <div class="slick-arrow-prev cursor-pointer absolute top-1/2 -translate-y-1/2 left-4 z-1">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
+                            <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
+                        </svg>
+                    </div>
+                    <div class="slick-arrow-next cursor-pointer absolute top-1/2 -translate-y-1/2 right-4 z-1">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
+                            <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
+                        </svg>
+                    </div>
+                </div>
                 
                 <!-- <div class="line-divider pr-20"></div> -->
                 <div class="next-developments-slider">
-                    <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
-                            Residential Development
-                            <br />
-                            - Basavanagudi
-                        </h4>
-                        <div class="line-divider mb-10"></div>
-                        <img src="images/2025/homepage/Next-development--1.png" alt="Next Development 1">
-                    </div>
-                    <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
-                            Commercial Development
-                            <br />
-                            - Nagawara Lake
-                        </h4>
-                        <div class="line-divider mb-10"></div>
-                        <img src="images/2025/homepage/Next-development--2.png" alt="Next Development 2">
-                    </div>
-                    <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
-                            Commercial Development
-                            <br />
-                            - Nagawara Lake
-                        </h4>
-                        <div class="line-divider mb-10"></div>
-                        <img src="images/2025/homepage/Next-development--3.png" alt="Next Development 3">
-                    </div>
                     <div class="next-developments-slide-item">
                         <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
                             Residential Development
@@ -881,14 +856,14 @@
             <div class="slick-arrows flex items-center justify-start gap-6 xl:hidden px-5">
                 <div class="slick-arrow-prev cursor-pointer">
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
-                        <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
+                        <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
+                        <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
                     </svg>
                 </div>
                 <div class="slick-arrow-next cursor-pointer">
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
-                        <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
+                        <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
+                        <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
                     </svg>
                 </div>
             </div>
@@ -1077,113 +1052,135 @@
                 </div>
             </div>
             <!-- News Article Slider -->
-            <div class="news-article-slider px-1 xl:pl-20">
-                <div class="news-article-slide-item">
-                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/fortune-india-maia-estates-in-fortune-india/">
-                        <div class="image-scale-down--wrapper">
-                            <img src="images/2025/homepage/news-article--1.jpg" alt="News Article 1">
-                        </div>
-                        <div class="mt-8">
-                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
-                                Fortune India : The MAIA Method featured in Fortune India
-                            </h4>
-                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
-                            We’re honoured to be featured in Fortune India, a moment that reflects our quiet commitment to building with purpose.
-                            </p>
-                        </div>
-                    </a>
+            <div class="news-article-slider--wrapper relative">
+                <!-- Slick Arrows: Mobile -->
+                <div class="slick-arrows flex items-center justify-start gap-6 hidden xl:flex px-5 mt-12">
+                    <div class="slick-arrow-prev cursor-pointer absolute top-1/2 -translate-y-1/2 left-4 z-1">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
+                            <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
+                        </svg>
+                    </div>
+                    <div class="slick-arrow-next cursor-pointer absolute top-1/2 -translate-y-1/2 right-4 z-1">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
+                            <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="news-article-slide-item">
-                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/hindustan-times/">
-                        <div class="image-scale-down--wrapper">
-                            <img src="images/2025/homepage/news-article--2.jpg" alt="News Article 2">
-                        </div>
-                        <div class="mt-8">
-                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
-                                Hindustan Times: MAIA Estates plans ₹3,000 crore investment to scale up its real estate presence in Bengaluru
-                            </h4>
-                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
-                                Bengaluru Real Estate: With this expansion, MAIA Estates’ total development footprint in the city is expected to cross 2.5 million sq ft by the end of the year
-                            </p>
-                        </div>
-                    </a>
+
+
+                <div class="news-article-slider px-1 xl:pl-20">
+                    <div class="news-article-slide-item">
+                        <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/fortune-india-maia-estates-in-fortune-india/">
+                            <div class="image-scale-down--wrapper">
+                                <img src="images/2025/homepage/news-article--1.jpg" alt="News Article 1">
+                            </div>
+                            <div class="mt-8">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                    Fortune India : The MAIA Method featured in Fortune India
+                                </h4>
+                                <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                                We’re honoured to be featured in Fortune India, a moment that reflects our quiet commitment to building with purpose.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="news-article-slide-item">
+                        <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/hindustan-times/">
+                            <div class="image-scale-down--wrapper">
+                                <img src="images/2025/homepage/news-article--2.jpg" alt="News Article 2">
+                            </div>
+                            <div class="mt-8">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                    Hindustan Times: MAIA Estates plans ₹3,000 crore investment to scale up its real estate presence in Bengaluru
+                                </h4>
+                                <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                                    Bengaluru Real Estate: With this expansion, MAIA Estates’ total development footprint in the city is expected to cross 2.5 million sq ft by the end of the year
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="news-article-slide-item">
+                        <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/news18-moodboards-are-out-mood-led-design-is-in-the-emotional-intelligence-of-modern-spaces/">
+                            <div class="image-scale-down--wrapper">
+                                <img src="images/2025/homepage/news-article--3.jpg" alt="News Article 3">
+                            </div>
+                            <div class="mt-8">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                    News18: Moodboards Are Out, Mood-Led Design Is In-The Emotional Intelligence of Modern Spaces
+                                </h4>
+                                <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                                    In 2025, the design world is undergoing a quiet but meaningful revolution. Gone are the days when static moodboards dictated the aesthetic of a space. Instead, designers are embracing mood-led design—an intuitive, emotion-forward approach that puts how a space makes you feel at the heart of its function.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="news-article-slide-item">
+                        <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/real-estate-news-why-nris-and-hnis-are-betting-big-on-bengalurus-luxury-residential-market-insights-from-maia-estates-mayank-ruia-exclusive">
+                            <div class="image-scale-down--wrapper">
+                                <img src="images/2025/homepage/news-article--4.jpg" alt="News Article 4">
+                            </div>
+                            <div class="mt-8">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                    Real Estate News: Why NRIs and HNIs are betting BIG on Bengaluru’s luxury residential market? Insights from MAIA Estates’ Mayank Ruia | EXCLUSIVE
+                                </h4>
+                                <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                                    Bengaluru Real Estate: Bengaluru’s luxury real estate boom isn’t just a trend—it’s a structural shift in how the city’s new-age wealth creators define lifestyle value. Market data reveals a growing appetite for large-format residences—5,000+ sq. ft.—with FY25 already recording over ₹1,250 crore in luxury sales.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="news-article-slide-item">
+                        <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/casa-sia-represents-india-and-wins-big-at-the-international-property-awards-2025-26/">
+                            <div class="image-scale-down--wrapper">
+                                <img src="images/2025/homepage/news-article--5.jpg" alt="News Article 4">
+                            </div>
+                            <div class="mt-8">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                    Casa Sia represents India and wins big at the International Property Awards 2025-26.
+                                </h4>
+                                <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                                    A proud moment for Indian design and development, led by our General Manager of Design & Architecture, Deepesh, who represented MAIA at the 2025–26 International Property Awards in Bangkok
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="news-article-slide-item">
+                        <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/india-property-awards-best-upcoming-project-2025-south-india/">
+                            <div class="image-scale-down--wrapper">
+                                <img src="images/2025/homepage/news-article--6.jpg" alt="News Article 4">
+                            </div>
+                            <div class="mt-8">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                    India Property Awards: Best Upcoming Project 2025 (South India)
+                                </h4>
+                                <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
+                                    We’re delighted to share that Casa Sia, our debut development in Chennai, has been awarded Best Upcoming Project 2025 (South India) at the India Property Awards.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="news-article-slide-item">
-                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/news18-moodboards-are-out-mood-led-design-is-in-the-emotional-intelligence-of-modern-spaces/">
-                        <div class="image-scale-down--wrapper">
-                            <img src="images/2025/homepage/news-article--3.jpg" alt="News Article 3">
-                        </div>
-                        <div class="mt-8">
-                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
-                                News18: Moodboards Are Out, Mood-Led Design Is In-The Emotional Intelligence of Modern Spaces
-                            </h4>
-                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
-                                In 2025, the design world is undergoing a quiet but meaningful revolution. Gone are the days when static moodboards dictated the aesthetic of a space. Instead, designers are embracing mood-led design—an intuitive, emotion-forward approach that puts how a space makes you feel at the heart of its function.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="news-article-slide-item">
-                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/real-estate-news-why-nris-and-hnis-are-betting-big-on-bengalurus-luxury-residential-market-insights-from-maia-estates-mayank-ruia-exclusive">
-                        <div class="image-scale-down--wrapper">
-                            <img src="images/2025/homepage/news-article--4.jpg" alt="News Article 4">
-                        </div>
-                        <div class="mt-8">
-                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
-                                Real Estate News: Why NRIs and HNIs are betting BIG on Bengaluru’s luxury residential market? Insights from MAIA Estates’ Mayank Ruia | EXCLUSIVE
-                            </h4>
-                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
-                                Bengaluru Real Estate: Bengaluru’s luxury real estate boom isn’t just a trend—it’s a structural shift in how the city’s new-age wealth creators define lifestyle value. Market data reveals a growing appetite for large-format residences—5,000+ sq. ft.—with FY25 already recording over ₹1,250 crore in luxury sales.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="news-article-slide-item">
-                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/casa-sia-represents-india-and-wins-big-at-the-international-property-awards-2025-26/">
-                        <div class="image-scale-down--wrapper">
-                            <img src="images/2025/homepage/news-article--5.jpg" alt="News Article 4">
-                        </div>
-                        <div class="mt-8">
-                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
-                                Casa Sia represents India and wins big at the International Property Awards 2025-26.
-                            </h4>
-                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
-                                A proud moment for Indian design and development, led by our General Manager of Design & Architecture, Deepesh, who represented MAIA at the 2025–26 International Property Awards in Bangkok
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="news-article-slide-item">
-                    <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/india-property-awards-best-upcoming-project-2025-south-india/">
-                        <div class="image-scale-down--wrapper">
-                            <img src="images/2025/homepage/news-article--6.jpg" alt="News Article 4">
-                        </div>
-                        <div class="mt-8">
-                            <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
-                                India Property Awards: Best Upcoming Project 2025 (South India)
-                            </h4>
-                            <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
-                                We’re delighted to share that Casa Sia, our debut development in Chennai, has been awarded Best Upcoming Project 2025 (South India) at the India Property Awards.
-                            </p>
-                        </div>
-                    </a>
+                <!-- Slick Arrows: Mobile -->
+                <div class="slick-arrows flex items-center justify-start gap-6 xl:hidden px-5 mt-12">
+                    <div class="slick-arrow-prev cursor-pointer">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
+                            <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
+                        </svg>
+                    </div>
+                    <div class="slick-arrow-next cursor-pointer">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
+                            <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
-            <!-- Slick Arrows: Desktop -->
-            <div class="slick-arrows flex items-center justify-start gap-6 xl:hidden px-5 mt-12">
-                <div class="slick-arrow-prev cursor-pointer">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
-                        <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
-                    </svg>
-                </div>
-                <div class="slick-arrow-next cursor-pointer">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
-                        <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
-                    </svg>
-                </div>
-            </div>
+
+
+
         </section>
 
 

@@ -1155,9 +1155,13 @@ section.contact-us{
 }
 
 
-
 .sustainability-initiatives-slider .slick-list {
     padding: 0 10% 0 0 !important;
+}
+
+.sustainability-initiatives-slider-item img{
+    aspect-ratio: 1.3;
+    object-fit: cover;
 }
 
 

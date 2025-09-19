@@ -352,7 +352,7 @@
                         
                     </div>
 
-                    <div class="scroll-to-explore flex items-center justify-between fade-in" data-delay="0.8">
+                    <!-- <div class="scroll-to-explore flex items-center justify-between fade-in" data-delay="0.8">
                         <p class="text-xs font-medium text-black uppercase">(Scroll to explore)</p>
                         <div class="scroll-down cursor-pointer scale-65 xl:scale-100">
                             <svg class="w-full h-auto" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -360,7 +360,7 @@
                                 <path d="M25.0039 31.1746L26.2834 29.921L30.6336 34.3981V23.0391L32.5016 23.0391V34.3981L36.8774 29.921L38.1313 31.1746L31.5804 37.7495L25.0039 31.1746Z" fill="white"/>
                             </svg>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="hidden xl:block">
@@ -464,7 +464,7 @@
                         </div>
                         <div class="project-slider-content absolute bottom-8 xl:bottom-20 left-8 xl:left-20">
                             <div class="development-badge mb-5">
-                                Ongoing Delivery
+                                Delivered
                             </div>
                             <h4 class="text-white text-5xl xl:text-6xl font-normal mb-5">
                                 27 Summit
@@ -661,58 +661,31 @@
                             tomorrow's most coveted addresses.
                         </p>
                     </div>
-
-                    <!-- Slick Arrows: Desktop -->
-                    <div class="slick-arrows flex items-center justify-end gap-6 mb-16_ hidden xl:flex">
-                        <div class="slick-arrow-prev cursor-pointer">
-                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
-                                <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
-                            </svg>
-                        </div>
-                        <div class="slick-arrow-next cursor-pointer">
-                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
-                                <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
-                            </svg>
-                        </div>
-                    </div>
                 </div>
                 
             </div>
 
             <!-- Next Developments Slider -->
-            <div class="next-developments-slider-container pl-5 xl:pl-20 pb-12">
+            <div class="next-developments-slider-container relative pl-5 xl:pl-20 pb-12">
+
+                <!-- Slick Arrows: Desktop: Green -->
+                <div class="slick-arrows flex items-center justify-end gap-6 mb-16_ hidden xl:flex">
+                    <div class="slick-arrow-prev cursor-pointer absolute top-1/2 -translate-y-1/2 left-4 z-1">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
+                            <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
+                        </svg>
+                    </div>
+                    <div class="slick-arrow-next cursor-pointer absolute top-1/2 -translate-y-1/2 right-4 z-1">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
+                            <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
+                        </svg>
+                    </div>
+                </div>
                 
                 <!-- <div class="line-divider pr-20"></div> -->
                 <div class="next-developments-slider">
-                    <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
-                            Residential Development
-                            <br />
-                            - Basavanagudi
-                        </h4>
-                        <div class="line-divider mb-10"></div>
-                        <img src="images/2025/homepage/Next-development--1.png" alt="Next Development 1">
-                    </div>
-                    <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
-                            Commercial Development
-                            <br />
-                            - Nagawara Lake
-                        </h4>
-                        <div class="line-divider mb-10"></div>
-                        <img src="images/2025/homepage/Next-development--2.png" alt="Next Development 2">
-                    </div>
-                    <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
-                            Commercial Development
-                            <br />
-                            - Nagawara Lake
-                        </h4>
-                        <div class="line-divider mb-10"></div>
-                        <img src="images/2025/homepage/Next-development--3.png" alt="Next Development 3">
-                    </div>
                     <div class="next-developments-slide-item">
                         <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
                             Residential Development
@@ -739,14 +712,14 @@
             <div class="slick-arrows flex items-center justify-start gap-6 xl:hidden px-5">
                 <div class="slick-arrow-prev cursor-pointer">
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
-                        <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
+                        <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
+                        <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
                     </svg>
                 </div>
                 <div class="slick-arrow-next cursor-pointer">
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
-                        <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
+                        <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
+                        <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
                     </svg>
                 </div>
             </div>

@@ -329,7 +329,7 @@
                         </h1>
                         <div class="fade-in" data-delay="1">
                             <p class="font-medium text-brown-body" style="max-width: 325px;">
-                                Delivering turnkey interiors for luxury homes with complete transparency and effortless craftsmanship. In collaboration with leading interior designers, we create spaces of timeless elegance, designed around you.
+                                Delivering turnkey interiors for quality homes with Professionalism, transparency and detailed craftsmanship. In collaboration with leading interior designers, we build spaces of timeless elegance, designed around you.
                             </p>
                         </div>
                     </div>
@@ -405,7 +405,7 @@
                                 <img class="mb-10" src="images/2025/bespoke/bespoke-experience--1.png" alt="Bespoke Experience Slider Item 1">
                                 <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
                                     Preferences <br>
-                                    & Lifestyle.
+                                    & Lifestyle
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
@@ -421,7 +421,7 @@
                                 <img class="mb-10" src="images/2025/bespoke/bespoke-experience--2.png" alt="Bespoke Experience Slider Item 2">
                                 <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
                                     Transparency <br>
-                                    & Clarity.
+                                    & Clarity
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
@@ -437,7 +437,7 @@
                                 <img class="mb-10" src="images/2025/bespoke/bespoke-experience--3.png" alt="Bespoke Experience Slider Item 3">
                                 <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
                                     Material <br>
-                                    Mastery.
+                                    Mastery
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
@@ -453,11 +453,11 @@
                             <img class="mb-10" src="images/2025/bespoke/bespoke-experience--4.png" alt="Bespoke Experience Slider Item 4">
                                 <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
                                     Quality <br>
-                                    Assurance.
+                                    Assurance
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
-                                Our meticulous QA process delivers timely reports 360°, virtual tours and rigorous in-house quality checks
+                                Our meticulous QA processes deliver timely reports, 360° virtual tours and rigorous in-house quality checks.
                             </p>
                         </div>
                     </div>
@@ -469,7 +469,7 @@
                             <img class="mb-10" src="images/2025/bespoke/bespoke-experience--5.png" alt="Bespoke Experience Slider Item 4">
                                 <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
                                     Tailored Comfort <br>
-                                    & Lasting Value.
+                                    & Lasting Value
                                 </h3>
                             </div>
                             <p class="text-white text-sm font-medium opacity-60">
@@ -531,8 +531,8 @@
                 </div>
                 <div class="text-reveal--paragraph developments-text-line-paragraph">
                     <p class="text-sm xl:text-base font-medium text-brown xl:mb-12">
-                    Turning imagination into interiors that are timeless, <br />
-                    personal and undeniably you.
+                        Turning world class designs into interiors that are timeless, <br />
+                        Personal and undeniably you.
                     </p>
                 </div>
 
@@ -558,7 +558,7 @@
                                         Design Expertise
                                     </h4>
                                     <p class="text-sm font-normal text-brown">
-                                        Our credible list of best-in-class designers and 'smart' pairing approach ensures you quickly find the right designer.
+                                        Our platform hosts some of India’s Best Designer and our ‘smart’ pairing approach ensures you quickly find the right designer.
                                     </p>
                                     </div>
                                 </div>
@@ -584,7 +584,7 @@
                                             Process Driven
                                         </h4>
                                         <p class="text-sm xl:text-base font-normal text-brown">
-                                            We ensure timely delivery with planned schedules, milestone-based updates and tech-driven site monitoring.
+                                            We ensure timely delivery with planned schedules, milestone based updates and tech driven, site monitoring.
                                         </p>
                                     </div>
                                 </div>
