@@ -193,7 +193,7 @@
                                     </li>
                                     <li>
                                         <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.html">
-                                            Maia Life
+                                            MAIA Life
                                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
                                             </svg>
@@ -276,7 +276,7 @@
                                                 <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect y="0.882812" width="5" height="5" fill="white" fill-opacity="0.64"/>
                                                 </svg>
-                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="maialife.html">Maia Life</a>
+                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="maialife.html">MAIA Life</a>
                                             </li>
                                             <li class="flex items-center">
                                                 <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -288,7 +288,7 @@
                                     </li>
                                     
                                     <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="developments.html">Developments</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="maia-impact.html">Maia Impact</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="maia-impact.html">MAIA Impact</a></li>
                                     <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="in-the-news/article-listing.html">In The News</a></li>
                                     <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="in-the-news/blog-listing.html">Blogs</a></li>
                                 </ul>
@@ -394,7 +394,7 @@
                         </div>
                         <div class="text-reveal--wrapper">
                             <h2 class="text-40px xl:text-6xl font-normal mb-16 xl:mb-18">
-                                Crafting iconic spaces 
+                                Crafting Iconic Spaces 
                                 
                             </h2>
                         </div>
@@ -461,7 +461,7 @@
                 </div>
                 <div class="text-reveal--wrapper">
                     <h2 class="text-40px xl:text-6xl font-normal mb-8 text-center">
-                        Building iconic skylines
+                        Building Iconic Skylines
                     </h2>
                 </div>
                 <div class="hidden xl:block">
@@ -803,27 +803,9 @@
             <div class="bg-beige py-20">
                 <div class="container flex flex-col items-center">
                     <div class="mt-20 xl:mt-4">
-                        <svg width="86" height="43" viewBox="0 0 86 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_632_1371)">
-                            <path d="M47.8651 41.5505C47.9957 41.1121 48.0623 40.6527 48.0623 40.175C48.0623 40.1172 48.0623 40.0569 48.0596 39.9991C48.0383 39.4032 47.9104 38.8336 47.6919 38.3086C47.4548 37.7259 47.1084 37.1983 46.6767 36.752C46.6474 36.7179 46.6127 36.6838 46.5781 36.6496C46.1518 36.227 45.6455 35.8805 45.0833 35.6311C44.4864 35.3634 43.8256 35.2059 43.1328 35.1901C43.0875 35.1875 43.0449 35.1875 42.9996 35.1875C42.3494 35.1875 41.7259 35.3082 41.1557 35.5314C40.5295 35.7702 39.9646 36.1325 39.4903 36.584C39.4664 36.605 39.4424 36.6286 39.4211 36.6496C38.9921 37.0696 38.6403 37.571 38.3872 38.1249C38.1394 38.6551 37.9875 39.2405 37.9475 39.8521C37.9396 39.9597 37.9369 40.0674 37.9369 40.175C37.9369 40.6265 37.9982 41.0596 38.1128 41.4744C38.2406 41.9469 38.4378 42.3931 38.6963 42.8H0.632812C0.632812 39.0515 1.13375 35.4185 2.07701 31.9614C3.04958 28.3861 4.49378 24.9999 6.33767 21.8709C8.20554 18.6999 10.4864 15.794 13.1084 13.2215C15.7276 10.6542 18.6853 8.42037 21.9121 6.59337H21.9148C25.091 4.79 28.5283 3.38562 32.1574 2.44325C35.6187 1.54288 39.2532 1.0625 42.9996 1.0625H43.1328C46.9245 1.073 50.599 1.577 54.0922 2.50887C57.7054 3.47225 61.124 4.89237 64.2842 6.70625C67.487 8.54112 70.4234 10.7802 73.024 13.3527C75.6193 15.9226 77.8789 18.8232 79.7281 21.9864C81.5533 25.1022 82.9789 28.4701 83.9408 32.027C84.8707 35.4631 85.3664 39.0751 85.3664 42.8H47.3002C47.5454 42.4167 47.7372 41.9967 47.8651 41.5505Z" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M41.1545 35.5334L32.1562 2.44531" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M21.9141 6.59375H21.9167L39.4923 36.5844" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M38.3882 38.1221L13.1094 13.2188" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M37.9458 39.8484L6.33594 21.8672" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M38.1139 41.4739L2.07812 31.9609" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M0.632812 42.7969H38.6963H43.1328H47.3002H85.3664" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M83.9429 32.0234L47.8672 41.5469" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M79.731 21.9844L48.0625 39.9971" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M73.0196 13.3516L47.6875 38.3074" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M64.2794 6.70312L46.6719 36.7489" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M54.0949 2.50781L45.0859 35.6301" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            <path d="M43.1328 35.1901V1.0625" stroke="#847B5E" stroke-width="0.8" stroke-miterlimit="10"/>
-                            </g>
-                            <defs>
-                            <clipPath id="clip0_632_1371">
-                            <rect width="85" height="42" fill="white" transform="translate(0.5 0.929688)"/>
-                            </clipPath>
-                            </defs>
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 0.465332L20.7851 6.87685C22.1732 11.8621 26.0686 15.7575 31.0538 17.1455L37.4653 18.9307L31.0538 20.7158C26.0686 22.1038 22.1732 25.9993 20.7851 30.9845L19 37.396L17.2149 30.9845C15.8268 25.9993 11.9314 22.1038 6.94619 20.7158L0.534668 18.9307L6.94619 17.1455C11.9314 15.7575 15.8268 11.8621 17.2149 6.87685L19 0.465332Z" fill="#847B5E"/>
+                            <circle cx="19" cy="18.9307" r="18.0653" stroke="#847B5E" stroke-width="0.8"/>
                         </svg>
                     </div>
 
@@ -872,7 +854,7 @@
                 </div>
                 <div class="text-reveal--wrapper">
                     <h2 class="text-40px xl:text-7xl font-normal mb-6 xl:mb-8">
-                        Shaping what's next
+                        Shaping What's Next
                     </h2>
                 </div>
                 <div class="flex items-center justify-between">
@@ -1325,7 +1307,7 @@
                                 <div class="mb-8">
                                     <!-- <h3 class="text-lg font-semibold text-gray-900 mb-4">Address</h3> -->
                                     <p class="text-black opacity-70 text-sm font-medium">
-                                        Maia Estates, 34 (New No. 84), Ulsoor Road,<br>
+                                        MAIA Estates, 34 (New No. 84), Ulsoor Road,<br>
                                         Yellappa Chetty Layout, Sivanchetti Gardens,<br>
                                         Bengaluru, Karnataka 560042
                                     </p>
@@ -1366,7 +1348,7 @@
     <!-- Footer -->
     <div class="sticky-section">
         <footer class="footer sticky-content pt-12 bg-green-footer">
-            <div class="footer-content py-8 xl:py-50 relative">
+            <div class="footer-content py-8 xl:py-20 relative flex items-center" style="min-height: calc(100vh - 150px);">
                 <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
                     <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1138_411)">
@@ -1387,9 +1369,9 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="container grid grid-cols-1 xl:grid-cols-3 gap-20">
+                <div class="container w-full grid grid-cols-1 xl:grid-cols-3 gap-20">
                     <div class="footer-logo">
-                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
+                        <!-- <img src="images/2025/footer-logo.png" alt="Footer Logo"> -->
                     </div>
                     <div class="footer-links">
                         <div class="text-reveal--wrapper">
@@ -1400,39 +1382,39 @@
                         <div class="grid grid-cols-2 xl:gap-10">
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="index.html" class="footer-menu-item text-white text-sm">
                                         Home
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="about.html" class="footer-menu-item text-white text-sm">
                                         Our Story
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="developments.html" class="footer-menu-item text-white text-sm">
                                         Developments
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="maialife.html" class="footer-menu-item text-white text-sm">
                                         Our Services
                                     </a>
                                 </li>
                             </ul>
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="maia-impact.html" class="footer-menu-item text-white text-sm">
                                         MAIA Impact
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/article-listing.html" class="footer-menu-item text-white text-sm">
                                         In the News
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/blog-listing.html" class="footer-menu-item text-white text-sm">
                                         Blogs
                                     </a>
                                 </li>
@@ -1447,7 +1429,7 @@
                         </div>
                         <div class="">
                             <p class="mb-4 text-sm text-white opacity-40" >
-                                Maia Estates, 34 (New No. 84), Ulsoor Road, <br>
+                                MAIA Estates, 34 (New No. 84), Ulsoor Road, <br>
                                 Yellappa Chetty Layout, Sivanchetti Gardens, <br>
                                 Bengaluru, Karnataka 560042
                             </p>
@@ -1472,7 +1454,7 @@
                             <ul class="text-white text-sm font-medium">
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">
-                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        <a href="https://www.instagram.com/maiaestates/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
                                             Instagram
                                             <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
@@ -1486,7 +1468,7 @@
                                 
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">
-                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        <a href="https://www.linkedin.com/company/maiaestates/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
                                             LinkedIn
                                             <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>

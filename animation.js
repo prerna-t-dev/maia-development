@@ -709,13 +709,29 @@ function initializeAnimations() {
                     });
                 }
                 })
-                // Give the backgrounds the project images
-                img.setAttribute("src", `images/2025/homepage/dev-project--${i + 1}.png`);
+                // Give the backgrounds the project images - different for mobile/desktop
+                const isMobile = window.innerWidth <= 768;
+                const imageSrc = isMobile 
+                    ? `images/2025/homepage/dev-project--${i + 1}-mobile.png`
+                    : `images/2025/homepage/dev-project--${i + 1}.png`;
+                img.setAttribute("src", imageSrc);
             
             });
             
             // whenever the window resizes, we should adjust the backgrounds to fit properly.
-            window.addEventListener("resize", () => backgrounds.forEach(img => fitImage(img, movementFactor)));
+            window.addEventListener("resize", () => {
+                backgrounds.forEach((img, i) => {
+                    // Switch image source based on new screen size
+                    const isMobile = window.innerWidth <= 768;
+                    const imageSrc = isMobile 
+                        ? `images/2025/homepage/dev-project--${i + 1}-mobile.png`
+                        : `images/2025/homepage/dev-project--${i + 1}.png`;
+                    img.setAttribute("src", imageSrc);
+                    
+                    // Refit the image
+                    fitImage(img, movementFactor);
+                });
+            });
             
             // fits the image to fill the parent container
             function fitImage(img, marginFactor) {

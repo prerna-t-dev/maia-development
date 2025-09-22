@@ -333,10 +333,10 @@
                                         <span class="line">Experience</span>
                                     </span>
                                     <span class="line-wrapper">
-                                        <span class="line">End to End Integrated</span>
+                                        <span class="line">End-to-End Integrated</span>
                                     </span>
                                     <span class="line-wrapper">
-                                        <span class="line">Facility management</span>
+                                        <span class="line">Facility Management</span>
                                     </span> 
                                 </div>
                             </h1>
@@ -357,11 +357,11 @@
                                     </div>
                                     <!-- <br /> -->
                                     <span class="line-wrapper">
-                                        <span class="line">End to End Integrated</span>
+                                        <span class="line">End-to-End Integrated</span>
                                     </span>
                                     <!-- <br /> -->
                                     <span class="line-wrapper">
-                                        <span class="line">Facility management</span>
+                                        <span class="line">Facility Management</span>
                                     </span>
                                 </div>
                             </h1>
@@ -416,15 +416,15 @@
                     <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-32 text-white xl:pr-24">
                         <div class="text-reveal--wrapper">
                             <span class="hidden xl:block">
-                                Anticipating needs to create <br />
-                                effortless, daily living
+                                Anticipating Needs to Create <br />
+                                Effortless, Daily Living
                             </span>
                         </div>
                         <div class="text-reveal--wrapper">
                             <span class="block xl:hidden">
-                                Anticipating needs to <br />
-                                create effortless, daily <br />
-                                living
+                                Anticipating Needs to <br />
+                                Create Effortless, Daily <br />
+                                Living
                             </span>
                         </div>
                     </h2>
@@ -501,8 +501,24 @@
                         </div>
                     </div>
 
-                    
 
+                    <div class="maialife-purpose-slider-item">
+                        <!-- Purpose Slider Item 5 -->
+                        <div class="maialife-purpose-slider-item-inner">
+                            <div>
+                            <img class="mb-10" src="images/2025/maialife/maialife-purpose--5.png" alt="Purpose Slider Item 4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                    Tech  <br>
+                                    Integrated
+                                </h3>
+                            </div>
+                            <p class="text-white text-sm font-medium opacity-60">
+                                MAIA Life integrates technology with human touch-points to provide efficient, discreet, and anticipatory services, uniquely designed around you.
+                            </p>
+                        </div>
+                    </div>
+
+                    
                     <div class="maialife-purpose-slider-item">
                         <!-- Purpose Slider Item 4 -->
                         <div class="maialife-purpose-slider-item-inner">
@@ -521,21 +537,7 @@
 
 
 
-                    <div class="maialife-purpose-slider-item">
-                        <!-- Purpose Slider Item 5 -->
-                        <div class="maialife-purpose-slider-item-inner">
-                            <div>
-                            <img class="mb-10" src="images/2025/maialife/maialife-purpose--5.png" alt="Purpose Slider Item 4">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
-                                    Tech  <br>
-                                    Integrated
-                                </h3>
-                            </div>
-                            <p class="text-white text-sm font-medium opacity-60">
-                                MAIA Life integrates technology with human touch-points to provide efficient, discreet, and anticipatory services, uniquely designed around you.
-                            </p>
-                        </div>
-                    </div>
+                    
                 </div>
 
                 
@@ -774,7 +776,7 @@
     <!-- Footer -->
     <div class="sticky-section">
         <footer class="footer sticky-content pt-12 bg-green-footer">
-            <div class="footer-content py-8 xl:py-50 relative">
+            <div class="footer-content py-8 xl:py-20 relative flex items-center" style="min-height: calc(100vh - 150px);">
                 <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
                     <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1138_411)">
@@ -795,9 +797,9 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="container grid grid-cols-1 xl:grid-cols-3 gap-20">
+                <div class="container w-full grid grid-cols-1 xl:grid-cols-3 gap-20">
                     <div class="footer-logo">
-                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
+                        <!-- <img src="images/2025/footer-logo.png" alt="Footer Logo"> -->
                     </div>
                     <div class="footer-links">
                         <div class="text-reveal--wrapper">
@@ -808,39 +810,39 @@
                         <div class="grid grid-cols-2 xl:gap-10">
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="index.html" class="footer-menu-item text-white text-sm">
                                         Home
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="about.html" class="footer-menu-item text-white text-sm">
                                         Our Story
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="developments.html" class="footer-menu-item text-white text-sm">
                                         Developments
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="maialife.html" class="footer-menu-item text-white text-sm">
                                         Our Services
                                     </a>
                                 </li>
                             </ul>
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="maia-impact.html" class="footer-menu-item text-white text-sm">
                                         MAIA Impact
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/article-listing.html" class="footer-menu-item text-white text-sm">
                                         In the News
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/blog-listing.html" class="footer-menu-item text-white text-sm">
                                         Blogs
                                     </a>
                                 </li>
@@ -855,13 +857,13 @@
                         </div>
                         <div class="">
                             <p class="mb-4 text-sm text-white opacity-40" >
-                                Maia Estates, 34 (New No. 84), Ulsoor Road, <br>
+                                MAIA Estates, 34 (New No. 84), Ulsoor Road, <br>
                                 Yellappa Chetty Layout, Sivanchetti Gardens, <br>
                                 Bengaluru, Karnataka 560042
                             </p>
                             <div class="flex items-center gap-3">
-                                <a href="mailto:info@maia.com" class="footer-info-item text-white text-sm">
-                                    info@maia.com
+                                <a href="mailto:getintouch@maiaestates.in" class="footer-info-item text-white text-sm">
+                                    getintouch@maiaestates.in
                                 </a>
                                 <div class="text-white text-sm opacity-40">|</div>
                                 <a href="tel:+918041219231" class="footer-info-item text-white text-sm">
@@ -880,7 +882,7 @@
                             <ul class="text-white text-sm font-medium">
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">
-                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        <a href="https://www.instagram.com/maiaestates/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
                                             Instagram
                                             <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
@@ -894,7 +896,7 @@
                                 
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">
-                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        <a href="https://www.linkedin.com/company/maiaestates/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
                                             LinkedIn
                                             <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>

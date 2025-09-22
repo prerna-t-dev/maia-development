@@ -470,14 +470,55 @@ $(document).ready(function(){
         const sliderContainer = $(containerSelector);
         const imageEl = sliderContainer.find(imageSelector);
         const progressBars = $(progressSelector);
-        const images = imageSources;
+        
+        // Function to get appropriate image source (mobile with fallback)
+        function getImageSource(originalSrc) {
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                // Try mobile version first
+                const mobileSrc = originalSrc.replace(/\.(png|jpg|jpeg)$/i, '-mobile.$1');
+                return mobileSrc;
+            }
+            return originalSrc;
+        }
+        
+        // Function to load image with fallback
+        function loadImageWithFallback(imgElement, src, fallbackSrc) {
+            const isMobile = window.innerWidth <= 768;
+            
+            if (isMobile && src !== fallbackSrc) {
+                // Try mobile version first
+                imgElement.attr('src', src);
+                
+                // Check if image loads successfully
+                const testImg = new Image();
+                testImg.onload = function() {
+                    // Mobile image loaded successfully
+                    imgElement.attr('src', src);
+                };
+                testImg.onerror = function() {
+                    // Mobile image failed, use fallback
+                    imgElement.attr('src', fallbackSrc);
+                };
+                testImg.src = src;
+            } else {
+                // Desktop or no mobile version needed
+                imgElement.attr('src', src);
+            }
+        }
+        
+        // Process image sources for mobile/desktop
+        const images = imageSources.map(src => getImageSource(src));
         let currentIndex = 0;
         let rotationInterval;
     
         // --- Fade & Progress ---
         function showImage(index) {
             imageEl.stop(true, true).fadeOut(fadeDuration, 'swing', function () {
-                $(this).attr('src', images[index]).fadeIn(fadeDuration, 'swing');
+                const mobileSrc = images[index];
+                const originalSrc = imageSources[index];
+                loadImageWithFallback($(this), mobileSrc, originalSrc);
+                $(this).fadeIn(fadeDuration, 'swing');
             });
         }
         function startProgressBar(index) {
@@ -511,6 +552,20 @@ $(document).ready(function(){
         }
         rotationInterval = setInterval(nextSlide, rotationTime);
         sliderContainer.data('rotationInterval', rotationInterval);
+        
+        // --- Resize Handler ---
+        // Update images when switching between mobile/desktop
+        $(window).on('resize', function() {
+            const newImages = imageSources.map(src => getImageSource(src));
+            // Only update if the image sources have changed
+            if (JSON.stringify(newImages) !== JSON.stringify(images)) {
+                images.splice(0, images.length, ...newImages); // Update the images array
+                // Use fallback mechanism for current image
+                const mobileSrc = images[currentIndex];
+                const originalSrc = imageSources[currentIndex];
+                loadImageWithFallback(imageEl, mobileSrc, originalSrc);
+            }
+        });
     
         // --- Parallax ---
         if (
@@ -547,7 +602,7 @@ $(document).ready(function(){
     }
     
 
-    // Fade slider 1
+    // Fade slider 1(27 Summit)
     setupFadeSlider({
         containerSelector: '.development-slider-images-1',
         imageSelector: '.development-slider-image', // Adjust if your selector is different per slider
@@ -560,7 +615,7 @@ $(document).ready(function(){
         ]
     });    
 
-    // Fade slider 2 - with slight delay
+    // Fade slider 2(Casa Sia)
     setTimeout(() => {
         setupFadeSlider({
             containerSelector: '.development-slider-images-2',
@@ -573,9 +628,9 @@ $(document).ready(function(){
                 'images/2025/developments/dev-project--24.png'
             ]
         });
-    }, 1000); // 1 second delay
+    }, 500); // 1 second delay
 
-    // Fade slider 3
+    // Fade slider 3(Pelican Gardens)
     setTimeout(() => {
         setupFadeSlider({
             containerSelector: '.development-slider-images-3',
@@ -588,10 +643,10 @@ $(document).ready(function(){
                 'images/2025/developments/dev-project--34.png'
             ]
         });
-    }, 2000); // 2 second delay
+    }, 800); // 2 second delay
 
 
-    // Fade slider 4
+    // Fade slider 4(Pelican Grove)
     setTimeout(() => {
         setupFadeSlider({
             containerSelector: '.development-slider-images-4',
@@ -604,10 +659,10 @@ $(document).ready(function(){
                 'images/2025/developments/dev-project--44.png'
             ]   
         });
-    }, 3000); // 3 second delay
+    }, 1000); // 3 second delay
 
 
-    // Fade slider 5
+    // Fade slider 5(The Beacon)
     setTimeout(() => {
         setupFadeSlider({
             containerSelector: '.development-slider-images-5',
@@ -619,9 +674,9 @@ $(document).ready(function(){
                 'images/2025/developments/dev-project--53.jpg'
             ]   
         });
-    }, 3000); // 2 second delay
+    }, 800); // 2 second delay
 
-    // Fade slider 6
+    // Fade slider 6(The Seven)
     setTimeout(() => {
         setupFadeSlider({
             containerSelector: '.development-slider-images-6',
@@ -633,7 +688,7 @@ $(document).ready(function(){
                 'images/2025/developments/dev-project--63.jpg'
             ]   
         });
-    }, 3000); // 2 second delay
+    }, 1000); // 2 second delay
     
     
     

@@ -140,7 +140,7 @@
     <meta name="facebook-domain-verification" content="pognb9mgkrukvqi84431jr4q18r62l" />
 </head>
 <body id="bodycontainer">
-    <div class="body_wrapper overflow-x-hidden">
+    <div class="body_wrapper scroll-section overflow-x-hidden">
         <!-- Header -->
         <header class="header header-transparent fixed top-0 left-0 right-0 z-50">
             <div class="container flex justify-between items-center">
@@ -178,7 +178,7 @@
                                     </li>
                                     <li>
                                         <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.html">
-                                            Maia Life
+                                            MAIA Life
                                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
                                             </svg>
@@ -261,7 +261,7 @@
                                                 <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect y="0.882812" width="5" height="5" fill="white" fill-opacity="0.64"/>
                                                 </svg>
-                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="maialife.html">Maia Life</a>
+                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="maialife.html">MAIA Life</a>
                                             </li>
                                             <li class="flex items-center">
                                                 <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -273,7 +273,7 @@
                                     </li>
                                     
                                     <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="developments.html">Developments</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="maia-impact.html">Maia Impact</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="maia-impact.html">MAIA Impact</a></li>
                                     <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="in-the-news/article-listing.html">In The News</a></li>
                                     <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="in-the-news/blog-listing.html">Blogs</a></li>
                                 </ul>
@@ -332,7 +332,7 @@
                     <h1 class="text-white text-60px xl:text-8xl font-heading font-normal leading-10">
                     <span class="line-wrapper">
                         <span class="line">
-                            Building lives
+                            Building Lives
                         </span>
                     </span>
                     <span class="line-wrapper">
@@ -351,7 +351,7 @@
             <div class="bg-beige py-30 xl:py-40">
                 <div class="container flex flex-col items-center">
                     <div class="mb-20 xl:mb-32 text-gold text-36px xl:text-56px leading-11 text-center font-heading px-5 xl:px-30 fade-up">
-                        Founded by Mayank Ruia, MAIA is focused on creating ecosystems that redefine real estate in modern India, built on the belief that development goes beyond physical structures to create meaningful environments where people can thrive
+                        Founded by Mayank Ruia, MAIA is focused on creating ecosystems that redefine real estate in modern India, built on the belief that developments go beyond physical structures to create meaningful environments where people can thrive.
                     </div>
 
 
@@ -377,7 +377,7 @@
                         </div>
                         <div class="text-reveal--wrapper">
                             <h2 class="text-40px xl:text-6xl font-normal mb-14 xl:mb-18">
-                                Crafting iconic spaces 
+                                Crafting Iconic Spaces 
                             </h2>
                         </div>
 
@@ -395,13 +395,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-2 xl:mt-20 font-heading text-green flex items-center gap-2">
+                    <!-- <div class="mt-2 xl:mt-20 font-heading text-green flex items-center gap-2">
                         <div class="w-sm h-sm bg-green-light rounded-full"> 
                         </div>
                         <span class="text-sm font-medium text-green uppercase">
                             ( Since 2016 )
                         </span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="about-maia-content-right">
                     <div class="image-reveal--wrapper hidden xl:block">
@@ -503,6 +503,7 @@
                             <div>
                                 <img class="w-6 h-6 mb-9" src="images/2025/about/about-icon--1.png" alt="Purpose Slider Item 1">
                                 <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                    Integrity & <br>
                                     Transparency
                                 </h3>
                             </div>
@@ -575,7 +576,7 @@
             <!-- Sustainability Initiatives Slider -->
             <div class="pl-5 xl:pl-20 relative">
                 <!-- Slick Arrows: Desktop -->
-                <div class="slick-arrows flex items-center justify-between gap-6 my-14 mb-16 pr-5 xl:pr-12 hidden xl:flex">
+                <div class="slick-arrows flex items-center justify-between gap-6 pr-5 xl:pr-12 hidden xl:flex">
                     <div class="sustainability-arrow-prev cursor-pointer absolute top-1/2 -translate-y-1/2 left-4 z-1">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
@@ -670,7 +671,7 @@
                     </div>
                 </div>
 
-                <div class="pr-5 xl:pr-12">
+                <div class="pr-5 xl:pr-12 mt-20">
                     <div class="line-divider-plain-green"></div>
                 </div>
             </div>
@@ -1338,13 +1339,13 @@
         </section>
 
 
-        
+    </div>
 
 
-
-        <!-- Footer -->
-        <footer class="footer pt-12 bg-green-footer">
-            <div class="footer-content py-8 xl:py-50 relative">
+    <!-- Footer -->
+    <div class="sticky-section">
+        <footer class="footer sticky-content pt-12 bg-green-footer">
+            <div class="footer-content py-8 xl:py-20 relative flex items-center" style="min-height: calc(100vh - 150px);">
                 <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
                     <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1138_411)">
@@ -1365,50 +1366,52 @@
                         </defs>
                     </svg>
                 </div>
-                <div class="container grid grid-cols-1 xl:grid-cols-3 gap-20">
+                <div class="container w-full grid grid-cols-1 xl:grid-cols-3 gap-20">
                     <div class="footer-logo">
-                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
+                        <!-- <img src="images/2025/footer-logo.png" alt="Footer Logo"> -->
                     </div>
                     <div class="footer-links">
-                        <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                            Links
-                        </h3>
+                        <div class="text-reveal--wrapper">
+                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                Links
+                            </h3>
+                        </div>
                         <div class="grid grid-cols-2 xl:gap-10">
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="index.html" class="footer-menu-item text-white text-sm">
                                         Home
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="about.html" class="footer-menu-item text-white text-sm">
                                         Our Story
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="developments.html" class="footer-menu-item text-white text-sm">
                                         Developments
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="maialife.html" class="footer-menu-item text-white text-sm">
                                         Our Services
                                     </a>
                                 </li>
                             </ul>
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="maia-impact.html" class="footer-menu-item text-white text-sm">
                                         MAIA Impact
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/article-listing.html" class="footer-menu-item text-white text-sm">
                                         In the News
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="#" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/blog-listing.html" class="footer-menu-item text-white text-sm">
                                         Blogs
                                     </a>
                                 </li>
@@ -1416,18 +1419,20 @@
                         </div>
                     </div>
                     <div class="info-social">
-                        <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                            Info
-                        </h3>
+                        <div class="text-reveal--wrapper">
+                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                Info
+                            </h3>
+                        </div>
                         <div class="">
                             <p class="mb-4 text-sm text-white opacity-40" >
-                                Maia Estates, 34 (New No. 84), Ulsoor Road, <br>
+                                MAIA Estates, 34 (New No. 84), Ulsoor Road, <br>
                                 Yellappa Chetty Layout, Sivanchetti Gardens, <br>
                                 Bengaluru, Karnataka 560042
                             </p>
                             <div class="flex items-center gap-3">
-                                <a href="mailto:info@maia.com" class="footer-info-item text-white text-sm">
-                                    info@maia.com
+                                <a href="mailto:getintouch@maiaestates.in" class="footer-info-item text-white text-sm">
+                                    getintouch@maiaestates.in
                                 </a>
                                 <div class="text-white text-sm opacity-40">|</div>
                                 <a href="tel:+918041219231" class="footer-info-item text-white text-sm">
@@ -1438,13 +1443,15 @@
 
 
                         <div class="mt-24">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
-                                Social Icons
-                            </h3>
+                            <div class="text-reveal--wrapper">
+                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                    Social Icons
+                                </h3>
+                            </div>
                             <ul class="text-white text-sm font-medium">
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">
-                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        <a href="https://www.instagram.com/maiaestates/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
                                             Instagram
                                             <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
@@ -1458,7 +1465,7 @@
                                 
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">
-                                        <a href="#" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        <a href="https://www.linkedin.com/company/maiaestates/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
                                             LinkedIn
                                             <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
