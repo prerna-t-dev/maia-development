@@ -142,15 +142,15 @@
         <header class="header sticky top-0 left-0 right-0 z-50">
             <div class="container header-container flex justify-between items-center">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="images/2025/MAIA-logo.png" alt="Logo">
                     </a>
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
                     <ul class="flex gap-12 text-base font-semibold">
-                        <li><a class="text-green uppercase" href="about.html">About Us</a></li>
-                        <li><a class="text-green uppercase" href="developments.html">Developments</a></li>
+                        <li><a class="text-green uppercase" href="about.php">About Us</a></li>
+                        <li><a class="text-green uppercase" href="developments.php">Developments</a></li>
                         <li class="relative nav-services--link">
                             <div class="text-green uppercase flex items-center gap-2 cursor-pointer">
                                 <span class="leading-10">Services</span>
@@ -164,7 +164,7 @@
                             <div class="absolute services-dropdown opacity-0 invisible top-full left-0 mt-2 py-1 px-6 min-w-48" style="background-color: #E8E7E1;">
                                 <ul class="space-y-2">
                                     <li>
-                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="bespoke-services.html">
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="bespoke-services.php">
                                             Bespoke Services
                                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
@@ -173,7 +173,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.html">
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.php">
                                             Maia Life
                                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
@@ -188,12 +188,12 @@
                 </nav>
                 <!-- Menu Bar -->
                 <div class="menu-bar flex items-center gap-4">
-                    <button class="btn-primary bg-green text-white uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
+                    <a href="index.php#contact-us--form" class="btn-primary bg-green text-white uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
                         <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                         </svg>
                         <span class="text-xs font-medium">Contact Us</span>
-                    </button>
+                    </a>
 
                     <button id="menu-bar-button" class="menu-bar-button menu-bar-button--open cursor-pointer">
                         <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -219,12 +219,12 @@
                 <!-- Menu Bar -->
                 <div class="menu-bar flex items-center gap-4">
                     <!-- Contact Us - Desktop -->
-                    <button class="nav-overlay-contact-us hidden xl:flex btn-secondary bg-white w-fit text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center cursor-pointer">
+                    <a href="index.php#contact-us--form" class="nav-overlay-contact-us hidden xl:flex btn-secondary bg-white w-fit text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center cursor-pointer">
                         <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="2.91484" cy="3.44102" r="2.18652" stroke="#00261E" stroke-width="0.874607"/>
                         </svg>
                         <span class="text-xs font-medium">Contact Us</span>
-                    </button>
+                    </a>
 
                     <button id="nav-close" class="nav-close menu-bar-button--close cursor-pointer">
                         <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -243,12 +243,12 @@
                         <div class="nav-list--container mt-40 pb-40 xl:pb-20">
                             <nav class="text-left">
                                 <ul class="container space-y-8 text-4xl font-medium">
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="about.html">About Us</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="about.php">About Us</a></li>
                                     
                                     <!-- Services Accordion -->
                                     <li class="services-accordion nav-list--item">
                                         <div class="services-header flex items-center justify-between gap-4 cursor-pointer">
-                                            <span class="text-white font-heading font-normal text-2xl xl:text-4xl">Services</span>
+                                            <span class="text-white font-heading font-normal text-2xl xl:text-36px">Services</span>
                                             <span class="services-toggle text-white text-2xl font-light">+</span>
                                         </div>
                                         <ul class="services-submenu text-2xl font-normal" style="opacity: 0; max-height: 0; overflow: hidden; transform: translateY(-10px) scale(0.95); pointer-events: none;">
@@ -256,21 +256,21 @@
                                                 <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect y="0.882812" width="5" height="5" fill="white" fill-opacity="0.64"/>
                                                 </svg>
-                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="maialife.html">Maia Life</a>
+                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="maialife.php">MAIA Life</a>
                                             </li>
                                             <li class="flex items-center">
                                                 <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect y="0.882812" width="5" height="5" fill="white" fill-opacity="0.64"/>
                                                 </svg>
-                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="bespoke-services.html">Bespoke Services</a>
+                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="bespoke-services.php">Bespoke Services</a>
                                             </li>
                                         </ul>
                                     </li>
                                     
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="developments.html">Developments</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="maia-impact.html">Maia Impact</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="in-the-news/article-listing.html">In The News</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="in-the-news/blog-listing.html">Blogs</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="developments.php">Developments</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="maia-impact.php">MAIA Impact</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/">In The News</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/blogs">Blogs</a></li>
                                 </ul>
                             </nav>
 
@@ -279,12 +279,12 @@
                         <!-- Social Media Links -->
                         <div class="absolute w-full py-10 px-5 xl:px-20 bottom-0 left-0 right-0 bg-green-footer">
                                 <!-- Contact Us - Mobile -->
-                                <button class="nav-overlay-contact-us mb-6 block xl:hidden btn-secondary bg-white w-fit text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center cursor-pointer">
+                                <a href="index.php#contact-us--form" class="nav-overlay-contact-us mb-6 block xl:hidden btn-secondary bg-white w-fit text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center cursor-pointer">
                                     <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="2.91484" cy="3.44102" r="2.18652" stroke="#00261E" stroke-width="0.874607"/>
                                     </svg>
                                     <span class="text-xs font-medium">Contact Us</span>
-                                </button>
+                                </a>
                                 <div class="flex items-center gap-10">
                                     <a class="social-media-link flex items-center gap-2" target="_blank" href="https://www.instagram.com/maiaestates/">
                                     <span class="text-white text-sm font-medium"> Instagram</span>
@@ -839,29 +839,29 @@
                         <div class="grid grid-cols-2 xl:gap-10">
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="index.html" class="footer-menu-item text-white text-sm">
+                                    <a href="index.php" class="footer-menu-item text-white text-sm">
                                         Home
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="about.html" class="footer-menu-item text-white text-sm">
+                                    <a href="about.php" class="footer-menu-item text-white text-sm">
                                         Our Story
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="developments.html" class="footer-menu-item text-white text-sm">
+                                    <a href="developments.php" class="footer-menu-item text-white text-sm">
                                         Developments
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="maialife.html" class="footer-menu-item text-white text-sm">
+                                    <a href="maialife.php" class="footer-menu-item text-white text-sm">
                                         Our Services
                                     </a>
                                 </li>
                             </ul>
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="maia-impact.html" class="footer-menu-item text-white text-sm">
+                                    <a href="maia-impact.php" class="footer-menu-item text-white text-sm">
                                         MAIA Impact
                                     </a>
                                 </li>
@@ -925,7 +925,7 @@
                                 
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">
-                                        <a href="https://www.linkedin.com/company/maiaestates/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        <a href="https://www.linkedin.com/company/maia-estates/mycompany/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
                                             LinkedIn
                                             <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>

@@ -812,7 +812,7 @@
 
   .featured-blog--item h3,
   .popular-blog--item h3{
-    letter-spacing: -0.5px;
+    letter-spacing: -0.5px !important;
   }
 
   .bg-plain-green h4{

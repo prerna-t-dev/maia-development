@@ -160,15 +160,15 @@
         <header class="header header-transparent sticky_ fixed top-0 left-0 right-0 z-50">
             <div class="container header-container flex justify-between items-center">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="images/2025/MAIA-logo-white.png" alt="Logo">
                     </a>
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
                     <ul class="flex gap-12 text-base font-semibold">
-                        <li><a class="text-white uppercase" href="about.html">About Us</a></li>
-                        <li><a class="text-white uppercase" href="developments.html">Developments</a></li>
+                        <li><a class="text-white uppercase" href="about.php">About Us</a></li>
+                        <li><a class="text-white uppercase" href="developments.php">Developments</a></li>
 
                         <li class="relative nav-services--link">
                             <div class="text-white uppercase flex items-center gap-2 cursor-pointer">
@@ -183,7 +183,7 @@
                             <div class="absolute services-dropdown opacity-0 invisible top-full left-0 mt-2 py-1 px-6 min-w-48" style="background-color: #E8E7E1;">
                                 <ul class="space-y-2">
                                     <li>
-                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="bespoke-services.html">
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="bespoke-services.php">
                                             Bespoke Services
                                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
@@ -192,7 +192,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.html">
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.php">
                                             MAIA Life
                                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
@@ -232,7 +232,7 @@
             <!-- Nav Overlay controls -->
             <div class="container w-full flex justify-between items-center absolute top-0 left-0 right-0" style="padding-top: 6px;">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="images/2025/MAIA-logo-white.png" alt="Logo">
                     </a>
                 </div>
@@ -263,7 +263,7 @@
                         <div class="nav-list--container mt-40 pb-40 xl:pb-20">
                             <nav class="text-left">
                                 <ul class="container space-y-8 text-4xl font-medium">
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="about.html">About Us</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="about.php">About Us</a></li>
                                     
                                     <!-- Services Accordion -->
                                     <li class="services-accordion nav-list--item">
@@ -276,21 +276,21 @@
                                                 <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect y="0.882812" width="5" height="5" fill="white" fill-opacity="0.64"/>
                                                 </svg>
-                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="maialife.html">MAIA Life</a>
+                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="maialife.php">MAIA Life</a>
                                             </li>
                                             <li class="flex items-center">
                                                 <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect y="0.882812" width="5" height="5" fill="white" fill-opacity="0.64"/>
                                                 </svg>
-                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="bespoke-services.html">Bespoke Services</a>
+                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="bespoke-services.php">Bespoke Services</a>
                                             </li>
                                         </ul>
                                     </li>
                                     
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="developments.html">Developments</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="maia-impact.html">MAIA Impact</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/article-listing.html">In The News</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/maiablogs.html">Blogs</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="developments.php">Developments</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="maia-impact.php">MAIA Impact</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/">In The News</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/blogs">Blogs</a></li>
                                 </ul>
                             </nav>
 
@@ -422,7 +422,7 @@
                          -->
 
                         <div class="fade-up">
-                            <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                            <a href="about.php" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                                 </svg>
@@ -489,7 +489,7 @@
                   <section class="first">
                     <div class="outer">
                       <div class="inner">
-                        <a href="27-summit.html" target="_blank" class="bg one">
+                        <a href="27-summit.php" target="_blank" class="bg one">
                           <!-- <h2 class="section-heading">1. 27 Summit</h2> -->
                             <div class="bg-overlay" data-overlay="0"></div>
                             <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
@@ -522,7 +522,7 @@
                   <section class="second">
                     <div class="outer">
                       <div class="inner">
-                        <a href="pelican-gardens.html" target="_blank" class="bg">
+                        <a href="pelican-gardens.php" target="_blank" class="bg">
                           <!-- <h2 class="section-heading">3. Pelican Gardens</h2> -->
                             <div class="bg-overlay" data-overlay="1"></div>
                           <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
@@ -552,7 +552,7 @@
                   <section class="third">
                     <div class="outer">
                       <div class="inner">
-                        <a href="pelican-grove.html" target="_blank" class="bg">
+                        <a href="pelican-grove.php" target="_blank" class="bg">
                           <!-- <h2 class="section-heading">4. Pelican Grove</h2> -->
                             <div class="bg-overlay" data-overlay="2"></div>
                           <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
@@ -654,7 +654,7 @@
                   <section class="sixth">
                     <div class="outer">
                       <div class="inner">
-                        <a href="casa-sia.html" target="_blank" class="bg">
+                        <a href="casa-sia.php" target="_blank" class="bg">
                           <!-- <h2 class="section-heading">2. Casa Sia</h2> -->
                             <div class="bg-overlay" data-overlay="5"></div>
                           <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
@@ -831,7 +831,7 @@
                     </div>
                     
                     <div class="fade-up">
-                        <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center mb-20 xl:mb-16">
+                        <a href="developments.php" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center mb-20 xl:mb-16">
                             <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                             </svg>
@@ -965,7 +965,7 @@
                         </div>
 
                         <div class="fade-up">
-                            <a href="#" class="btn-secondary bg-white w-fit text-green uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                            <a href="about.php" class="btn-secondary bg-white w-fit text-green uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2.7332" cy="3.47538" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
                                 </svg>
@@ -1022,7 +1022,7 @@
                             <p class="font-gold mb-12 xl:mb-26">
                                 Delivering turnkey interiors for luxury homes with complete transparency and effortless craftsmanship. In collaboration with leading interior designers, we create spaces of timeless elegance, designed around you.
                             </p>
-                            <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                            <a href="bespoke-services.php" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                                 </svg>
@@ -1052,7 +1052,7 @@
                             <p class="font-gold mb-12 xl:mb-26">
                                 With MAIA Life, your home extends beyond its walls, offering a seamless blend of hospitality-driven, facility management, where luxury meets effortless convenience.
                             </p>
-                            <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                            <a href="maialife.php" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                                 </svg>
@@ -1102,7 +1102,7 @@
 
 
                     <div class="fade-up">
-                        <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                        <a href="in-the-news/" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                             <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                             </svg>
@@ -1382,29 +1382,29 @@
                         <div class="grid grid-cols-2 xl:gap-10">
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="index.html" class="footer-menu-item text-white text-sm">
+                                    <a href="index.php" class="footer-menu-item text-white text-sm">
                                         Home
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="about.html" class="footer-menu-item text-white text-sm">
+                                    <a href="about.php" class="footer-menu-item text-white text-sm">
                                         Our Story
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="developments.html" class="footer-menu-item text-white text-sm">
+                                    <a href="developments.php" class="footer-menu-item text-white text-sm">
                                         Developments
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="maialife.html" class="footer-menu-item text-white text-sm">
+                                    <a href="maialife.php" class="footer-menu-item text-white text-sm">
                                         Our Services
                                     </a>
                                 </li>
                             </ul>
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="maia-impact.html" class="footer-menu-item text-white text-sm">
+                                    <a href="maia-impact.php" class="footer-menu-item text-white text-sm">
                                         MAIA Impact
                                     </a>
                                 </li>
@@ -1468,7 +1468,7 @@
                                 
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">
-                                        <a href="https://www.linkedin.com/company/maiaestates/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        <a href="https://www.linkedin.com/company/maia-estates/mycompany/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
                                             LinkedIn
                                             <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>

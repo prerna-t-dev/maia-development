@@ -154,24 +154,25 @@
 <body id="bodycontainer">
     <div class="body_wrapper scroll-section overflow-x-hidden">
         <!-- Header -->
-        <header class="header sticky top-0 left-0 right-0 z-50">
-            <div class="container header-container flex justify-between items-center">
+        <header class="header header-green sticky top-0 left-0 right-0 z-50">
+            <div class="container flex justify-between items-center">
                 <div class="logo">
                     <a href="index.php">
-                        <img src="images/2025/MAIA-logo.png" alt="Logo">
+                        <img src="images/2025/MAIA-logo-white.png" alt="Logo">
                     </a>
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
                     <ul class="flex gap-12 text-base font-semibold">
-                        <li><a class="text-green uppercase" href="about.php">About Us</a></li>
-                        <li><a class="text-green uppercase" href="developments.php">Developments</a></li>
+                        <li><a class="text-white uppercase" href="about.html">About Us</a></li>
+                        <li><a class="text-white uppercase" href="developments.html">Developments</a></li>
+
                         <li class="relative nav-services--link">
-                            <div class="text-green uppercase flex items-center gap-2 cursor-pointer">
+                            <div class="text-white uppercase flex items-center gap-2 cursor-pointer">
                                 <span class="leading-10">Services</span>
                                 <span class="text-green-light">
                                     <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.5 0.757812L5 4.25781L8.5 0.757812" stroke="#00362A" stroke-width="1.5"/>
+                                        <path d="M1.5 0.757812L5 4.25781L8.5 0.757812" stroke="#FFFFFF" stroke-width="1.5"/>
                                     </svg>
                                 </span>
                             </div>
@@ -179,7 +180,7 @@
                             <div class="absolute services-dropdown opacity-0 invisible top-full left-0 mt-2 py-1 px-6 min-w-48" style="background-color: #E8E7E1;">
                                 <ul class="space-y-2">
                                     <li>
-                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="bespoke-services.php">
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="bespoke-services.html">
                                             Bespoke Services
                                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
@@ -188,8 +189,8 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.php">
-                                            MAIA Life
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.html">
+                                            Maia Life
                                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
                                             </svg>
@@ -198,23 +199,22 @@
                                 </ul>
                             </div>
                         </li>
-                        
                     </ul>
                 </nav>
                 <!-- Menu Bar -->
                 <div class="menu-bar flex items-center gap-4">
-                    <button class="btn-primary bg-green text-white uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
+                    <button class="btn-secondary bg-white text-green uppercase px-6 py-3 rounded-full flex gap-2 items-center hidden xl:flex" onclick="scrollToContact()">
                         <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
+                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
                         </svg>
                         <span class="text-xs font-medium">Contact Us</span>
                     </button>
 
-                    <button id="menu-bar-button" class="menu-bar-button menu-bar-button--open cursor-pointer">
-                        <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4.74737" y="4.44073" width="38.1426" height="38.1426" rx="19.0713" stroke="#00362A" stroke-width="0.756465"/>
-                            <rect x="15.1035" y="19.9844" width="17.429" height="1" fill="#00362A"/>
-                            <rect x="15.1035" y="26.0391" width="17.429" height="1" fill="#00362A"/>
+                    <button id="menu-bar-button" class="menu-bar-button cursor-pointer">
+                        <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4.24933" y="4.44073" width="38.1426" height="38.1426" rx="19.0713" stroke="white" stroke-width="0.756465"/>
+                            <rect x="14.6055" y="19.9844" width="17.429" height="1" fill="white"/>
+                            <rect x="14.6055" y="26.0391" width="17.429" height="1" fill="white"/>
                         </svg>
                     </button>
                 </div> 
@@ -329,499 +329,507 @@
 
 
         <!-- Section 1: Hero Banner -->
-        <section class="hero-banner hero-banner-animation py-20">
+        <section class="hero-banner hero-banner-animation py-20 bg-green-dark text-white">
             <div class="container">
                 <div class="hero-content pb-10 xl:pb-12">
-                    <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-6 mb-16 xl:mb-20">
-                        <!-- <h1 class="text-60px xl:text-120px font-normal text-green">
-                            Our <br /> Developments
-                        </h1> -->
-                        <h1 class="text-60px xl:text-120px font-normal text-green">
+                    <div class="flex flex-col-reverse xl:flex-row xl:justify-between xl:items-center gap-16 mb-6 xl:mb-16">
+                        <div class="development-badge mb-5 fade-in" data-delay="1.2">
+                            Under Construction
+                        </div>
+
+                        <div class="dev-project--logo fade-in" data-delay="1.2" style="width: 200px; height: auto;">
+                            <img class="w-full h-auto" src="images/2025/casa-sia/casa-sia-logo.png" alt="Casa Sia Logo">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6 mb-16 xl:mb-20">
+                         <h1 class="text-56px xl:text-7xl font-normal text-white larger-text-size">
                             <span class="line-wrapper">
-                                <span class="line">Our</span>
+                                <span class="line">Where Timeless Elegance</span>
                             </span>
                             <span class="line-wrapper">
-                                <span class="line">Developments</span>
+                                <span class="line">Meets Contemporary Design</span>
                             </span>
                         </h1>
                         <div class="fade-in" data-delay="0.8">
-                            <p class="font-medium text-black opacity-70" style="max-width: 325px;">
-                                A curated portfolio of completed and upcoming icons, each exemplifying artistry, innovation and an enduring legacy.
+                            <p class="font-medium text-white opacity-70" style="max-width: 720px;">
+                                Nestled in Parthasarathy Gardens, Casa Sia honours visionary legacy with bespoke residences blending artisanal craftsmanship and sustainable innovation.
                             </p>
                         </div>
                         
                     </div>
 
                     <!-- <div class="scroll-to-explore flex items-center justify-between fade-in" data-delay="0.8">
-                        <p class="text-xs font-medium text-black uppercase">(Scroll to explore)</p>
+                        <p class="text-xs font-medium text-white uppercase">(Scroll to explore)</p>
                         <div class="scroll-down cursor-pointer scale-65 xl:scale-100">
                             <svg class="w-full h-auto" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.378906" width="61.44" height="61.44" rx="30.72" fill="#014E3C"/>
-                                <path d="M25.0039 31.1746L26.2834 29.921L30.6336 34.3981V23.0391L32.5016 23.0391V34.3981L36.8774 29.921L38.1313 31.1746L31.5804 37.7495L25.0039 31.1746Z" fill="white"/>
+                                <rect width="61.44" height="61.44" rx="30.72" fill="white"/>
+                                <path d="M24.625 31.1746L25.9045 29.921L30.2547 34.3981V23.0391L32.1227 23.0391V34.3981L36.4985 29.921L37.7524 31.1746L31.2015 37.7495L24.625 31.1746Z" fill="#00362A"/>
                             </svg>
                         </div>
                     </div> -->
                 </div>
 
                 <div class="hidden xl:block">
-                    <div class="hero-image-wrapper hero-image-wrapper-desktop">
-                        <img src="images/2025/developments/hero-banner-image--dev.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation">
-                    </div>
+                    <!-- <div class="hero-image-wrapper hero-image-wrapper-desktop"> -->
+                        <img src="images/2025/casa-sia/hero-banner-image--dev-desktop.png" alt="Hero Banner Image" class="hero-banner-image">
+                    <!-- </div> -->
                 </div>
                 <div class="block xl:hidden">
-                    <div class="hero-image-wrapper hero-image-wrapper-mobile">
-                        <img src="images/2025/developments/hero-banner-image--dev.png" alt="Hero Banner Image" class="hero-banner-image hero-banner-image-animation-mobile">
-                    </div>
+                    <!-- <div class="hero-image-wrapper hero-image-wrapper-mobile"> -->
+                        <img src="images/2025/casa-sia/hero-banner-image--dev-mobile.png" alt="Hero Banner Image" class="hero-banner-image">
+                    <!-- </div> -->
                 </div>
             </div>
         </section>
 
 
-
-
-        <!-- Section 2: Brand Ethos -->
-        <section class="brand-ethos py-20 xl:py-40 bg-green-dark text-white">
+        <!-- Section 2: Key Features -->
+        <section class="key-features py-30 bg-beige">
             <div class="container">
-                <div class="brand-ethos-content grid grid-cols-1 xl:grid-cols-2 gap-16 xl:gap-4 pb-16 xl:pb-30 xl:pt-10">
-                    <div class="brand-ethos-content-left xl:mt-10 xl:pr-4">
+                <div class="grid grid-cols-1 xl:grid-cols-[1.4fr_1fr] items-center gap-14">
+                    <div class="key-feature-info xl:pr-40">
                         <div class="text-reveal--wrapper">  
-                            <div class="section-subheader uppercase text-white mb-3">
-                                BRAND ETHOS
+                            <div class="section-subheader uppercase text-green mb-3">
+                                Key Features of Casa Sia
                             </div>
                         </div>
                         <div class="text-reveal--wrapper">
-                            <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-12 text-white">
-                                Driven by Vision, <br />
-                                Defined by Craft.
+                            <h2 class="text-40px xl:text-6xl font-normal mb-12 xl:mb-30 text-green">
+                                The MAIA Standard <br />
+                                Of Living
                             </h2>
                         </div>
-                        <p class="xl:mb-12 max-w-lg text-white opacity-70">
-                            We practice the principles of perfection, precision, <br />
-                            innovative design and commitment to the highest quality <br />
-                            at each stage of the development process.
-                        </p>
-                    </div>
-                    <div class="brand-ethos-content-right">
-                        <div class="image-reveal--wrapper">
-                            <img src="images/2025/developments/brand-ethos.png" alt="Brand Ethos" class="brand-ethos-image w-full h-full object-cover">
+
+                        <!-- Key Features Data -->
+                        <div class="key-features-data">
+                            <div class="grid grid-cols-1 xl:flex flex-wrap gap-8 xl:gap-12">
+                                <div class="key-feature-data--item flex items-center gap-3 px-6">
+                                    <div class="text-reveal--wrapper">
+                                        <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
+                                            6.3
+                                        </p>
+                                    </div>
+                                    <div class="text-reveal--wrapper">
+                                        <span class="text-dark-slate font-normal text-base whitespace-nowrap">
+                                            Grounds
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="key-feature-data--item flex items-center gap-3 px-6">
+                                    <div class="text-reveal--wrapper">
+                                        <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
+                                            4
+                                        </p>
+                                    </div>
+                                    <div class="text-reveal--wrapper">
+                                        <span class="text-dark-slate font-normal text-base whitespace-nowrap">
+                                            Floors
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="key-feature-data--item flex items-center gap-3 px-6">
+                                    <div class="text-reveal--wrapper">
+                                        <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
+                                        4 &nbsp;BHK
+                                        </p>
+                                    </div>
+                                    <div class="text-reveal--wrapper">
+                                        <span class="text-dark-slate font-normal text-base whitespace-nowrap">
+                                            With Home Office, Puja <br />
+                                            Room & Staff Room
+                                        </span>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Removed an item from here -->
+
+
+                                <div class="key-feature-data--item flex items-center gap-3 px-6">
+                                    <div class="text-reveal--wrapper">
+                                        <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
+                                        2
+                                        </p>
+                                    </div>
+                                    <div class="text-reveal--wrapper">
+                                        <span class="text-dark-slate font-normal text-base whitespace-nowrap">
+                                            Exclusive <br />
+                                            Wings
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="key-feature-data--item flex items-center gap-3 px-6">
+                                    <div class="text-reveal--wrapper">
+                                        <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
+                                        4
+                                        </p>
+                                    </div>
+                                    <div class="text-reveal--wrapper">
+                                        <span class="text-dark-slate font-normal text-base whitespace-nowrap">
+                                            Apartments <br />
+                                            Per Wing
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
+                    <div class="img-wrapper">
+                        <img src="images/2025/casa-sia/casa-sia--features.png" alt="Key Features Image">
+                    </div>
                 </div>
-                <div class="line-divider-light"></div>
+
+                <div class="line-divider-green-light mt-14 xl:mt-30"></div>
             </div>
         </section>
 
-
-
-
-        <!-- Section 3: MAIA Developments -->
-        <section class="maia-developments pt-30 bg-white">
-            <div class="container maia-developments-content text-center">
-                <div class="text-reveal--wrapper">
-                    <div class="section-subheader uppercase text-green mb-3">
-                        MAIA DEVELOPMENTS
+        <!-- Section 3: Location -->
+        <section class="development-location py-30 xl:pt-50 bg-white">
+            <div class="container">
+                <div class="text-reveal--wrapper">  
+                    <div class="section-subheader uppercase text-green text-center mb-3">
+                        Location
                     </div>
                 </div>
                 <div class="text-reveal--wrapper">
-                    <h2 class="text-40px xl:text-6xl font-normal mb-6 xl:mb-8">
-                        Building Iconic Skylines
+                    <h2 class="text-40px xl:text-6xl font-normal mb-12 xl:mb-30 text-green text-center">
+                        Connected to the <br />
+                        best of Chennai
                     </h2>
                 </div>
-                <!-- <div class="text-reveal--wrapper developments-text-line-paragraph"> -->
-                    <p>
-                        Our developments reflect a deep commitment to craftsmanship, context,<br />and quality, creating spaces that stand the test of time.
-                    </p>
-                <!-- </div> -->
             </div>
 
-            <!-- Development Project List -->
-            <div class="development-project-list mt-16 xl:mt-30">
-                <!-- 1. 27 Summit -->
-                <div class="development-project-slider-item mb-10 xl:mb-30">
-                    <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-1 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
-                            <div class="custom-development-slider-container development-slider-container relative">
-                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-1">
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
+            <div class="px-5 xl:px-0 my-20">
+                <div class="location--map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8711232377464!2d80.25536867518673!3d13.04387431328938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526636dd07d327%3A0x205902f7cf8180f!2sParthasarathy%20Garden%20St%2C%20Parthasarathypuram%2C%20Teynampet%2C%20Chennai%2C%20Tamil%20Nadu%20600018!5e0!3m2!1sen!2sin!4v1757536319193!5m2!1sen!2sin"
+                        width="100%" 
+                        height="500" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div> 
+
+            </div>
+
+            <div class="container location-info-container">
+                <div class="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr] gap-16">
+                    <!-- Distance Info -->
+                    <div class="distance-info">
+                        <div class="grid grid-cols-1 xl:grid-cols-2 items-end xl:gap-16">
+                            <div class="distance-col">
+                                <div class="distance-info--item pb-8 distance-legend flex items-center justify-end gap-3">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.4087 9.62695L12 15.2616L16.9304 21.6006" stroke="#847B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M11.2966 18.7832L9.18359 21.6005" stroke="#847B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.18359 13.8533C9.18359 9.90895 12.0011 9.6272 13.4097 9.62723L14.8182 9.6272C15.053 10.8011 16.086 13.2898 18.3399 13.8532" stroke="#847B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.9688 7.5C15.0733 7.5 15.9688 6.60457 15.9688 5.5C15.9688 4.39543 15.0733 3.5 13.9688 3.5C12.8642 3.5 11.9688 4.39543 11.9688 5.5C11.9688 6.60457 12.8642 7.5 13.9688 7.5Z" stroke="#847B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="font-normal text-sm xl:text-base">
+                                        (~min)
+                                    </span>
                                 </div>
-                                <div class="custom-development-slider-images development-slider-images development-slider-images-1">
-                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--11.png" alt="27 Summit">
-                                    </div>
+
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Cathedral Road
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        5
+                                    </p>
                                 </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Hyatt Regency
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        7
+                                    </p>
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Express Avenue Mall
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        9
+                                    </p>
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Marina Beach
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        10
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="distance-col">
+                                <div class="distance-info--item hidden xl:flex">
+                                    
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Kauvery Hospital
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                       10
+                                    </p>
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        Boat Club
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        15
+                                    </p>
+                                </div>
+                                <div class="distance-info--item flex items-center justify-between py-2 xl:py-3">
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        ITC Grand Chola
+                                    </p>
+                                    <p class="font-medium leading-15 text-sm xl:text-base">
+                                        25
+                                    </p>
+                                </div>
+                                
+
+
                             </div>
                         </div>
-                        <div class="project-slider-content absolute bottom-8 xl:bottom-20 left-8 xl:left-20">
-                            <div class="development-badge mb-5">
-                                Delivered
-                            </div>
-                            <h4 class="text-white text-5xl xl:text-6xl font-normal mb-5">
-                                27 Summit
-                            </h4>
-                            <p class="flex items-center gap-2 mb-7 xl:mb-10">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-white font-medium text-sm xl:text-base">
-                                    Central Bangalore - Off Richmond Road
-                                </span>
-                            </p>
-                            <p class="text-white font-medium">
-                                Ascend to Bangalore’s skyline at 27 Summit, where visionary design meets all-encompassing, sky-high amenities.
+                    </div>
+
+                    <!-- Location Info -->
+                    <div class="location-info xl:text-right">
+                        <div class="flex items-center xl:justify-end gap-3 mb-2 xl:mb-5">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.9688 10.5C20.9688 14.9183 12.9688 22.5 12.9688 22.5C12.9688 22.5 4.96875 14.9183 4.96875 10.5C4.96875 6.08172 8.55047 2.5 12.9688 2.5C17.3871 2.5 20.9688 6.08172 20.9688 10.5Z" stroke="#333333" stroke-opacity="0.7" stroke-width="1.5"/>
+                                <path d="M12.9688 11.5C13.521 11.5 13.9688 11.0523 13.9688 10.5C13.9688 9.94772 13.521 9.5 12.9688 9.5C12.4165 9.5 11.9688 9.94772 11.9688 10.5C11.9688 11.0523 12.4165 11.5 12.9688 11.5Z" fill="#333333" fill-opacity="0.7" stroke="#333333" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <p class="font-normal text-sm xl:text-base">
+                                Central Chennai - Parthasarathy Gardens
                             </p>
                         </div>
+
+                        <a href="#" class="directions--cta underline uppercase text-dark">
+                            GET DIRECTIONS
+                        </a>
                     </div>
                 </div>
 
-                <!-- 3. Pelican Gardens -->
-                <div class="development-project-slider-item mb-10 xl:mb-30">
-                    <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-3 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
-                            <div class="custom-development-slider-container development-slider-container relative">
-                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-3">
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                </div>
-                                <div class="custom-development-slider-images development-slider-images development-slider-images-3">
-                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--31.png" alt="Pelican Gardens">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-slider-content absolute bottom-8 xl:bottom-20 left-8 xl:left-20">
-                            <div class="development-badge mb-5">
-                                Under construction
-                            </div>
-                            <h4 class="text-white text-5xl xl:text-6xl font-normal mb-5">
-                                Pelican Gardens
-                            </h4>
-                            <p class="flex items-center gap-2 mb-7 xl:mb-10">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-white font-medium text-sm xl:text-base">
-                                    North Bangalore - Jakkur Lake
-                                </span>
-                            </p>
-                            <p class="text-white font-medium">
-                                Perched on Jakkur Lake, these residences blend serene waterfront living with curated amenities, visionary design and ecological harmony.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- 4. Pelican Grove -->
-                <div class="development-project-slider-item mb-10 xl:mb-30">
-                    <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-4 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
-                            <div class="custom-development-slider-container development-slider-container relative">
-                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-4">
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                </div>
-                                <div class="custom-development-slider-images development-slider-images development-slider-images-4">
-                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--41.png" alt="Pelican Grove">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-slider-content absolute bottom-8 xl:bottom-20 left-8 xl:left-20">
-                            <div class="development-badge mb-5">
-                                Delivered
-                            </div>
-                            <h4 class="text-white text-5xl xl:text-6xl font-normal mb-5">
-                                Pelican Grove
-                            </h4>
-                            <p class="flex items-center gap-2 mb-7 xl:mb-10">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-white font-medium text-sm xl:text-base">
-                                    North Bangalore - Jakkur Lake
-                                </span>
-                            </p>
-                            <p class="text-white font-medium">
-                            Rising along Jakkur Lake, Pelican Grove blends abundant flora and fauna with seamless indoor-outdoor living and serene connectivity.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5. The Beacon -->
-                <div class="development-project-slider-item mb-10 xl:mb-30">
-                    <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-5 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
-                            <div class="custom-development-slider-container development-slider-container relative">
-                                <div class="custom-development-slider-dots development-slider-dots three-dot-wrapper development-slider-dots-5">
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                </div>
-                                <div class="custom-development-slider-images development-slider-images development-slider-images-5">
-                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--51.png" alt="The Beacon">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-slider-content absolute bottom-8 xl:bottom-20 left-8 xl:left-20">
-                            <div class="development-badge mb-5">
-                                Coming Soon
-                            </div>
-                            <h4 class="text-white text-5xl xl:text-6xl font-normal mb-5">
-                                The Beacon
-                            </h4>
-                            <p class="flex items-center gap-2 mb-7 xl:mb-10">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-white font-medium text-sm xl:text-base">
-                                    Nagawara Lake
-                                </span>
-                            </p>
-                            <p class="text-white font-medium">
-                                Set on the banks of Nagawara Lake, The Beacon rises as a point of convergence; where design, ambition, and experience meet to redefine the commercial landscape.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 6. The Seven -->
-                <div class="development-project-slider-item mb-10 xl:mb-30">
-                    <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-6 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
-                            <div class="custom-development-slider-container development-slider-container relative">
-                                <div class="custom-development-slider-dots development-slider-dots three-dot-wrapper development-slider-dots-6">
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                </div>
-                                <div class="custom-development-slider-images development-slider-images development-slider-images-6">
-                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--61.png" alt="The Beacon">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-slider-content absolute bottom-8 xl:bottom-20 left-8 xl:left-20">
-                            <div class="development-badge mb-5">
-                                Coming Soon
-                            </div>
-                            <h4 class="text-white text-5xl xl:text-6xl font-normal mb-5">
-                                The Seven
-                            </h4>
-                            <p class="flex items-center gap-2 mb-7 xl:mb-10">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-white font-medium text-sm xl:text-base">
-                                    South Bangalore, Basavanagudi
-                                </span>
-                            </p>
-                            <p class="text-white font-medium">
-                                Rooted in Basavanagudi’s rich legacy, The Seven rises as a symbol of completeness, blending elemental harmony, timeless design and thoughtful craftsmanship.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- 2. Casa Sia -->
-                <div class="development-project-slider-item">
-                    <div class="development-project-slider-item-image relative">
-                        <div class="development-slider development-slider-2 bg-dark-grey_ bg-green-dark relative overflow-hidden_" style="height: 800px;">
-                            <div class="custom-development-slider-container development-slider-container relative">
-                                <div class="custom-development-slider-dots development-slider-dots development-slider-dots-2">
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                    <div class="dot-wrapper">
-                                        <div class="dot-progress"></div>
-                                    </div>
-                                </div>
-                                <div class="custom-development-slider-images development-slider-images development-slider-images-2">
-                                    <div class="custom-development-slide-item development-slide-item absolute top-0 left-0 w-full h-full">
-                                        <img class="development-slider-image" src="images/2025/developments/dev-project--21.png" alt="Casa Sia">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-slider-content absolute bottom-8 xl:bottom-20 left-8 xl:left-20">
-                            <div class="development-badge mb-5">
-                                Under construction
-                            </div>
-                            <h4 class="text-white text-5xl xl:text-6xl font-normal mb-5">
-                                Casa Sia
-                            </h4>
-                            <p class="flex items-center gap-2 mb-7 xl:mb-10">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="text-white font-medium text-sm xl:text-base">
-                                    Central Chennai - Parthasarathy Gardens
-                                </span>
-                            </p>
-                            <p class="text-white font-medium">
-                                Nestled in Parthasarathy Gardens, Casa Sia honours visionary legacy with bespoke residences blending artisanal craftsmanship and sustainable innovation.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-
+                <div class="line-divider-green-light mt-16 xl:mt-20"></div>
             </div>
         </section>
 
 
-
-
-        <!-- Section 4: Next Developments -->
-        <section class="next-developments py-30 xl:py-40 bg-white">
+        <!-- Section 4: Gallery at a Glance -->
+        <section class="gallery-at-a-glance py-20 xl:py-30 bg-white">
             <div class="container">
                 <div class="text-reveal--wrapper">
-                    <div class="section-subheader uppercase text-green mb-3">
-                        UPCOMING DEVELOPMENTS
-                    </div>
-                </div>
-                <div class="text-reveal--wrapper">
-                    <h2 class="text-40px xl:text-7xl font-normal mb-6 xl:mb-8 larger-text-size">
-                        Shaping What's Next
+                    <h2 class="text-40px xl:text-56px font-normal mb-12 xl:mb-14 text-green">
+                        Gallery at a Glance
                     </h2>
                 </div>
-                <div class="flex items-center justify-between">
-                    <div class="text-reveal--wrapper developments-text-line-paragraph">
-                        <p class="mb-16">
-                            Designs in progress, destined to become <br /> 
-                            tomorrow's most coveted addresses.
-                        </p>
+                
+                <div class="flex justify-between items-center mb-16 xl:mb-20">
+                    <div class="gallery--categories flex items-center gap-3 xl:gap-8">
+                        <div class="gallery--category active" data-category="all">
+                            <h3 class="text-xl xl:text-4xl font-normal text-gold">
+                                All
+                            </h3>
+                        </div>
+                        <span class="vertical-divider-beige bg-light-beige" style="width: 1px; height: 40px;"></span>
+                        <div class="gallery--category" data-category="residences">
+                            <h3 class="text-xl xl:text-4xl font-normal text-gold">
+                                Residences
+                            </h3>
+                        </div>
+                        <span class="vertical-divider-beige bg-light-beige" style="width: 1px; height: 40px;"></span>
+                        <div class="gallery--category" data-category="facade">
+                            <h3 class="text-xl xl:text-4xl font-normal text-gold">
+                                Facade
+                            </h3>
+                        </div>
+                        <span class="vertical-divider-beige bg-light-beige" style="width: 1px; height: 40px;"></span>
+                        <div class="gallery--category" data-category="amenities">
+                            <h3 class="text-xl xl:text-4xl font-normal text-gold">
+                                Amenities
+                            </h3>
+                        </div>
                     </div>
                 </div>
+
+
                 
             </div>
 
-            <!-- Next Developments Slider -->
-            <div class="next-developments-slider-container relative pl-5 xl:pl-20 pb-12">
+            <div class="relative">
+                <div class="gallery--images">
+                    <!-- Residences Images (8) -->
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 1</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--residences--1.jpg" alt="Residences Gallery Image 1">
+                    </div>
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 2</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--residences--2.jpg" alt="Residences Gallery Image 2">
+                    </div>
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 3</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--residences--3.jpg" alt="Residences Gallery Image 3">
+                    </div>
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 4</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--residences--4.jpg" alt="Residences Gallery Image 4">
+                    </div>
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 5</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--residences--5.jpg" alt="Residences Gallery Image 5">
+                    </div>
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 6</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--residences--6.jpg" alt="Residences Gallery Image 6">
+                    </div>
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 7</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--residences--7.jpg" alt="Residences Gallery Image 7">
+                    </div>
+                    <div class="gallery--slide" data-categories="residences">
+                        <div class="slide-number">Slide 8</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--residences--8.jpg" alt="Residences Gallery Image 8">
+                    </div>
 
-                <!-- Slick Arrows: Desktop: Green -->
-                <div class="slick-arrows flex items-center justify-end gap-6 mb-16_ hidden xl:flex">
-                    <div class="slick-arrow-prev cursor-pointer absolute top-1/2 -translate-y-1/2 left-4 z-1">
+                    <!-- Facade Images (6) -->
+                    <div class="gallery--slide" data-categories="facade">
+                        <div class="slide-number">Slide 9</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--facade--1.jpg" alt="Facade Gallery Image 1">
+                    </div>
+                    <div class="gallery--slide" data-categories="facade">
+                        <div class="slide-number">Slide 10</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--facade--2.jpg" alt="Facade Gallery Image 2">
+                    </div>
+                    <div class="gallery--slide" data-categories="facade">
+                        <div class="slide-number">Slide 11</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--facade--3.jpg" alt="Facade Gallery Image 3">
+                    </div>
+                    <div class="gallery--slide" data-categories="facade">
+                        <div class="slide-number">Slide 12</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--facade--4.jpg" alt="Facade Gallery Image 4">
+                    </div>
+                    <div class="gallery--slide" data-categories="facade">
+                        <div class="slide-number">Slide 13</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--facade--5.jpg" alt="Facade Gallery Image 5">
+                    </div>
+                    <div class="gallery--slide" data-categories="facade">
+                        <div class="slide-number">Slide 14</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--facade--6.jpg" alt="Facade Gallery Image 6">
+                    </div>
+
+                    <!-- Amenities Images (5) -->
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 15</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--amenities--1.jpg" alt="Amenities Gallery Image 1">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 16</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--amenities--2.jpg" alt="Amenities Gallery Image 2">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 17</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--amenities--3.jpg" alt="Amenities Gallery Image 3">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 18</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--amenities--4.jpg" alt="Amenities Gallery Image 4">
+                    </div>
+                    <div class="gallery--slide" data-categories="amenities">
+                        <div class="slide-number">Slide 19</div>
+                        <img src="images/2025/casa-sia/gallery-casasia--amenities--5.jpg" alt="Amenities Gallery Image 5">
+                    </div>
+                </div>
+
+                <!-- Desktop Arrows -->
+                <div class="slick-arrows flex items-center justify-end gap-6 hidden xl:flex">
+                    <div class="slick-arrow-prev cursor-pointer absolute top-1/2 -translate-y-1/2 left-4">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
-                            <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
+                            <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
+                            <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
                         </svg>
                     </div>
-                    <div class="slick-arrow-next cursor-pointer absolute top-1/2 -translate-y-1/2 right-4 z-1">
+                    <div class="slick-arrow-next cursor-pointer absolute top-1/2 -translate-y-1/2 right-4">
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
-                            <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
+                            <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
+                            <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
                         </svg>
                     </div>
                 </div>
-                
-                <!-- <div class="line-divider pr-20"></div> -->
-                <div class="next-developments-slider">
-                    <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
-                            Residential Development
-                            <br />
-                            - Cunningham Road
-                        </h4>
-                        <div class="line-divider mb-10"></div>
-                        <img src="images/2025/homepage/Next-development--4.png" alt="Next Development 4">
-                    </div>
-                    <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
-                            Residential Development
-                            <br />
-                            - Jakkur Lake
-                        </h4>
-                        <div class="line-divider mb-10"></div>
-                        <img src="images/2025/homepage/Next-development--5.png" alt="Next Development 5">
-                    </div>
-                </div>
-                <div class="line-divider pr-20"></div>
+
+
             </div>
 
-            <!-- Slick Arrows: Desktop -->
-            <div class="slick-arrows flex items-center justify-start gap-6 xl:hidden px-5">
-                <div class="slick-arrow-prev cursor-pointer">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
-                        <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
-                    </svg>
-                </div>
-                <div class="slick-arrow-next cursor-pointer">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
-                        <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
-                    </svg>
+
+            <div class="container">
+                 <!-- Mobile Arrows -->
+                 <div class="slick-arrows flex items-center justify-between mt-16 gap-6 xl:hidden">
+                        <div class="slick-arrow-prev cursor-pointer">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#F2F1EB"/>
+                                <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#00362A"/>
+                            </svg>
+                        </div>
+                        <div class="slick-arrow-next cursor-pointer">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#F2F1EB"/>
+                                <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#00362A"/>
+                            </svg>
+                        </div>
+                
                 </div>
             </div>
         </section>
 
+       
 
 
+        
+        <!-- Section 5: Know More -->
+        <section class="py-20 bg-beige">
+            <div class="container flex flex-col items-center">
+                <div class="mt-20 xl:mt-20">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 0.465332L20.7851 6.87685C22.1732 11.8621 26.0686 15.7575 31.0538 17.1455L37.4653 18.9307L31.0538 20.7158C26.0686 22.1038 22.1732 25.9993 20.7851 30.9845L19 37.396L17.2149 30.9845C15.8268 25.9993 11.9314 22.1038 6.94619 20.7158L0.534668 18.9307L6.94619 17.1455C11.9314 15.7575 15.8268 11.8621 17.2149 6.87685L19 0.465332Z" fill="#847B5E"/>
+                        <circle cx="19" cy="18.9307" r="18.0653" stroke="#847B5E" stroke-width="0.8"/>
+                    </svg>
+                </div>
 
-        <!-- Section 5: Contact Us -->
+                <div class="mt-8 mb-14">
+                    <div class="text-reveal--wrapper">
+                        <h3 class="text-gold text-4xl xl:text-6xl leading-11 text-center font-heading font-normal px-4 xl:px-0">
+                            To know more about <br />
+                            the development.
+                        </h3>
+                    </div>
+                </div>
+                <div class="fade-up">
+                    <a href="index.php#contact-us--form" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center mb-20 xl:mb-16">
+                        <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
+                        </svg>
+                        <span class="text-xs font-medium uppercase">Learn More</span>
+                    </a>
+                </div>
+                <div class="line-divider"></div>
+            </div>
+        </section>
+
+
+        <!-- Section 6: Contact Us -->
         <section id="contact-us--form" class="contact-us py-20 bg-white relative overflow-hidden">
             <div class="image-scale-down--wrapper absolute top-0 left-0 w-full h-full">
                 <img src="images/2025/homepage/contact-us-bg.png" alt="Contact Us Bg Image" class="contact-us-bg-image w-full h-full object-cover">
@@ -883,7 +891,7 @@
                                 <div class="mb-8">
                                     <!-- <h3 class="text-lg font-semibold text-gray-900 mb-4">Address</h3> -->
                                     <p class="text-black opacity-70 text-sm font-medium">
-                                        Maia Estates, 34 (New No. 84), Ulsoor Road,<br>
+                                        MAIA Estates, 34 (New No. 84), Ulsoor Road,<br>
                                         Yellappa Chetty Layout, Sivanchetti Gardens,<br>
                                         Bengaluru, Karnataka 560042
                                     </p>
@@ -900,7 +908,7 @@
 
                             <div class="bg-plain-green p-6 xl:py-6 xl:px-10 xl:mt-20">
                                 <div class="grid grid-cols-1 xl:items-center justify-between gap-8">
-                                    <h4 class="text-white font-heading leading-12 font-normal text-3xl xl:text-4xl">
+                                    <h4 class="text-white font-heading leading-12 font-normal text-3xl xl:text-4xl letter-spacing-0-05">
                                         Build your career in real estate excellence.
                                     </h4>
                                     <div class="flex">
@@ -908,7 +916,7 @@
                                             <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="2.7332" cy="3.47538" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
                                             </svg>
-                                            <span class="text-xs font-medium">Contact Us</span>
+                                            <span class="text-xs font-medium">Join Our Team</span>
                                         </a>
                                     </div>
                                 </div>
@@ -1093,7 +1101,9 @@
     <!-- Animation JavaScript -->
     <script src="animation.js"></script>
     <script src="sliders.js"></script>
-    <script async src="contact-form.js"></script>
+    <script src="contact-form.js"></script>
+
+    
     
 </body>
 </html>
