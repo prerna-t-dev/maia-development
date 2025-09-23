@@ -414,7 +414,7 @@
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
                             <img class="w-full xl:w-3-5 h-full" style="aspect-ratio: 14/9; object-fit: cover;" src="images/2025/impact/maiaimpact-about--1.png" alt="Maia Impact 1">
                             <div class="xl:pr-0">
-                                <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5 xl:mb-16">
+                                <h4 class="font-heading text-gold text-3xl xl:text-40px font-normal leading-11 mb-5 xl:mb-16">
                                     Commitment To <br>
                                     Sustainability 
                                 </h4>
@@ -448,7 +448,7 @@
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
                             <img class="w-full xl:w-3-5 h-full" style="aspect-ratio: 14/9; object-fit: cover;" src="images/2025/impact/maiaimpact-about--2.jpg" alt="Maia Impact 2">
                             <div class="xl:pr-0">
-                                <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5 xl:mb-16">
+                                <h4 class="font-heading text-gold text-3xl xl:text-40px font-normal leading-11 mb-5 xl:mb-16">
                                     Urban <br>
                                     Greening 
                                 </h4>
@@ -481,7 +481,7 @@
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
                             <img class="w-full xl:w-3-5 h-full" style="aspect-ratio: 14/9; object-fit: cover;" src="images/2025/impact/maiaimpact-about--3.jpg" alt="Maia Impact 3">
                             <div class="xl:pr-0">
-                                <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5 xl:mb-16">
+                                <h4 class="font-heading text-gold text-3xl xl:text-40px font-normal leading-11 mb-5 xl:mb-16">
                                     Foster <br>
                                     Community
                                 </h4>
@@ -571,7 +571,7 @@
 
                             <div class="env-slider-grid text-white">
                                 <div class="env-grid-item--1">
-                                    <h4 class="text-white text-3xl xl:text-36px font-normal leading-11 mb-3 xl:mb-8">
+                                    <h4 class="text-white text-3xl xl:text-36px font-normal leading-11 mb-3 xl:mb-8 letter-spacing-0-1">
                                         The Richmond <br />
                                         Road Edition 
                                     </h4>
@@ -603,7 +603,7 @@
 
                             <div class="env-slider-grid text-white">
                                 <div class="env-grid-item--1">
-                                    <h4 class="text-white text-3xl xl:text-36px font-normal leading-11 mb-3 xl:mb-8">
+                                    <h4 class="text-white text-3xl xl:text-36px font-normal leading-11 mb-3 xl:mb-8 letter-spacing-0-1">
                                         MAIA x Goonj: Sharing the 
                                         <br>
                                         Light of Diwali, Together
@@ -636,7 +636,7 @@
 
                             <div class="env-slider-grid text-white">
                                 <div class="env-grid-item--1">
-                                    <h4 class="text-white text-3xl xl:text-36px font-normal leading-11 mb-3 xl:mb-8">
+                                    <h4 class="text-white text-3xl xl:text-36px font-normal leading-11 mb-3 xl:mb-8 letter-spacing-0-1">
                                         Meals of Hope in a 
                                         <br>
                                         Time of Crisis
@@ -670,7 +670,7 @@
 
                             <div class="env-slider-grid text-white">
                                 <div class="env-grid-item--1">
-                                    <h4 class="text-white text-3xl xl:text-36px font-normal leading-11 mb-3 xl:mb-8">
+                                    <h4 class="text-white text-3xl xl:text-36px font-normal leading-11 mb-3 xl:mb-8 letter-spacing-0-1">
                                         Reimagine. Recreate. 
                                         <br>
                                         Restore.
@@ -704,7 +704,7 @@
 
                             <div class="env-slider-grid text-white">
                                 <div class="env-grid-item--1">
-                                    <h4 class="text-white text-3xl xl:text-36px font-normal leading-11 mb-3 xl:mb-8">
+                                    <h4 class="text-white text-3xl xl:text-36px font-normal leading-11 mb-3 xl:mb-8 letter-spacing-0-1">
                                         Earth Day in Action
                                     </h4>
                                     <p class="text-white text-base xl:text-base font-medium">
@@ -791,7 +791,7 @@
                             <div class="sustainability-accordion">
                                 <div class="accordion-item">
                                     <div class="accordion-header">
-                                        <h4 class="accordion-title text-gold text-3xl xl:text-4xl font-normal leading-11">Sustainable Material Usage</h4>
+                                        <h4 class="accordion-title text-gold text-3xl xl:text-36px font-normal leading-11">Sustainable Material Usage</h4>
                                         <div class="accordion-icon">
                                             <svg class="plus-icon" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <line x1="14.6663" y1="9.17554" x2="14.6663" y2="19.0128" stroke="#847B5E" stroke-width="0.504474"/>
@@ -811,7 +811,7 @@
 
                                 <div class="accordion-item">
                                     <div class="accordion-header">
-                                        <h4 class="accordion-title text-gold text-3xl xl:text-4xl font-normal leading-11">Workforce Dignity</h4>
+                                        <h4 class="accordion-title text-gold text-3xl xl:text-36px font-normal leading-11">Workforce Dignity</h4>
                                         <div class="accordion-icon">
                                             <svg class="plus-icon" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <line x1="14.6663" y1="9.17554" x2="14.6663" y2="19.0128" stroke="#847B5E" stroke-width="0.504474"/>
@@ -831,7 +831,7 @@
 
                                 <div class="accordion-item">
                                     <div class="accordion-header">
-                                        <h4 class="accordion-title text-gold text-3xl xl:text-4xl font-normal leading-11">Preserving Natural Resources</h4>
+                                        <h4 class="accordion-title text-gold text-3xl xl:text-36px font-normal leading-11">Preserving Natural Resources</h4>
                                         <div class="accordion-icon">
                                             <svg class="plus-icon" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <line x1="14.6663" y1="9.17554" x2="14.6663" y2="19.0128" stroke="#847B5E" stroke-width="0.504474"/>
@@ -851,7 +851,7 @@
 
                                 <div class="accordion-item">
                                     <div class="accordion-header">
-                                        <h4 class="accordion-title text-gold text-3xl xl:text-4xl font-normal leading-11">Enriching Landscape</h4>
+                                        <h4 class="accordion-title text-gold text-3xl xl:text-36px font-normal leading-11">Enriching Landscape</h4>
                                         <div class="accordion-icon">
                                             <svg class="plus-icon" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <line x1="14.6663" y1="9.17554" x2="14.6663" y2="19.0128" stroke="#847B5E" stroke-width="0.504474"/>
@@ -873,7 +873,7 @@
 
                                 <div class="accordion-item">
                                     <div class="accordion-header">
-                                        <h4 class="accordion-title text-gold text-3xl xl:text-4xl font-normal leading-11">Responsible Waste Management</h4>
+                                        <h4 class="accordion-title text-gold text-3xl xl:text-36px font-normal leading-11">Responsible Waste Management</h4>
                                         <div class="accordion-icon">
                                             <svg class="plus-icon" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <line x1="14.6663" y1="9.17554" x2="14.6663" y2="19.0128" stroke="#847B5E" stroke-width="0.504474"/>
@@ -943,11 +943,11 @@
                 </div>
                 <div class="container w-full grid grid-cols-1 xl:grid-cols-3 gap-20">
                     <div class="footer-logo">
-                        <!-- <img src="images/2025/footer-logo.png" alt="Footer Logo"> -->
+                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
                     </div>
                     <div class="footer-links">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Links
                             </h3>
                         </div>
@@ -981,12 +981,12 @@
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/article-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news" class="footer-menu-item text-white text-sm">
                                         In the News
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/blog-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/blogs" class="footer-menu-item text-white text-sm">
                                         Blogs
                                     </a>
                                 </li>
@@ -995,7 +995,7 @@
                     </div>
                     <div class="info-social">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Info
                             </h3>
                         </div>
@@ -1019,7 +1019,7 @@
 
                         <div class="mt-24">
                             <div class="text-reveal--wrapper">
-                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                     Social Icons
                                 </h3>
                             </div>

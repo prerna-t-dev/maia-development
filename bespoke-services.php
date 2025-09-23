@@ -373,7 +373,7 @@
                 </div>
                 <div class="flex items-center justify-between">
                     <div class="text-reveal--wrapper">
-                        <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-20 text-white xl:pr-24">
+                        <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-20 text-white xl:pr-24 larger-text-size">
                             A Collaboration Unlike <br />
                             Any Other.
                         </h2>
@@ -403,7 +403,7 @@
                         <div class="maialife-purpose-slider-item-inner">
                             <div>
                                 <img class="mb-10" src="images/2025/bespoke/bespoke-experience--1.png" alt="Bespoke Experience Slider Item 1">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4 letter-spacing-0-1">
                                     Preferences <br>
                                     & Lifestyle
                                 </h3>
@@ -419,7 +419,7 @@
                         <div class="maialife-purpose-slider-item-inner_">
                             <div>
                                 <img class="mb-10" src="images/2025/bespoke/bespoke-experience--2.png" alt="Bespoke Experience Slider Item 2">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4 letter-spacing-0-1">
                                     Transparency <br>
                                     & Clarity
                                 </h3>
@@ -435,7 +435,7 @@
                         <div class="maialife-purpose-slider-item-inner">
                             <div>
                                 <img class="mb-10" src="images/2025/bespoke/bespoke-experience--3.png" alt="Bespoke Experience Slider Item 3">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4 letter-spacing-0-1">
                                     Material <br>
                                     Mastery
                                 </h3>
@@ -451,7 +451,7 @@
                         <div class="maialife-purpose-slider-item-inner">
                             <div>
                             <img class="mb-10" src="images/2025/bespoke/bespoke-experience--4.png" alt="Bespoke Experience Slider Item 4">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4 letter-spacing-0-1">
                                     Quality <br>
                                     Assurance
                                 </h3>
@@ -467,7 +467,7 @@
                         <div class="maialife-purpose-slider-item-inner">
                             <div>
                             <img class="mb-10" src="images/2025/bespoke/bespoke-experience--5.png" alt="Bespoke Experience Slider Item 4">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4 letter-spacing-0-1">
                                     Tailored Comfort <br>
                                     & Lasting Value
                                 </h3>
@@ -529,7 +529,7 @@
                         Why Bespoke?
                     </h2>
                 </div>
-                <div class="text-reveal--paragraph developments-text-line-paragraph">
+                <div class="text-reveal--wrapper developments-text-line-paragraph">
                     <p class="text-sm xl:text-base font-medium text-brown xl:mb-12">
                         Turning world class designs into interiors that are timeless, <br />
                         Personal and undeniably you.
@@ -554,7 +554,7 @@
                                     <div>
 
                                     
-                                    <h4 class="text-base xl:text-4xl font-heading font-normal mb-4 text-brown">
+                                    <h4 class="text-2xl xl:text-4xl font-heading font-normal mb-4 text-brown letter-spacing-0-1">
                                         Design Expertise
                                     </h4>
                                     <p class="text-sm font-normal text-brown">
@@ -582,7 +582,7 @@
                                     <div>
 
                                     
-                                    <h4 class="text-base xl:text-4xl font-heading font-normal mb-4 text-brown">
+                                    <h4 class="text-2xl xl:text-4xl font-heading font-normal mb-4 text-brown letter-spacing-0-1">
                                         Time Saved
                                     </h4>
                                     <p class="text-sm font-normal text-brown">
@@ -608,7 +608,7 @@
                                         <path d="M17.9409 15.1092L15.2538 12.4222C15.0195 12.1878 15.0195 11.808 15.2538 11.5736L17.9409 8.88667C18.1753 8.65236 18.5552 8.65236 18.7895 8.88667L21.4765 11.5736C21.7108 11.808 21.7108 12.1878 21.4765 12.4222L18.7895 15.1092C18.5552 15.3435 18.1753 15.3435 17.9409 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                     </svg>
                                     <div>
-                                        <h4 class="text-base xl:text-4xl font-heading font-normal mb-4 text-brown">
+                                        <h4 class="text-2xl xl:text-4xl font-heading font-normal mb-4 text-brown letter-spacing-0-1">
                                             Process Driven
                                         </h4>
                                         <p class="text-sm xl:text-base font-normal text-brown">
@@ -634,7 +634,7 @@
                                         <path d="M17.9409 15.1092L15.2538 12.4222C15.0195 12.1878 15.0195 11.808 15.2538 11.5736L17.9409 8.88667C18.1753 8.65236 18.5552 8.65236 18.7895 8.88667L21.4765 11.5736C21.7108 11.808 21.7108 12.1878 21.4765 12.4222L18.7895 15.1092C18.5552 15.3435 18.1753 15.3435 17.9409 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                     </svg>
                                     <div>
-                                        <h4 class="text-base xl:text-4xl font-heading font-normal mb-4 text-brown">
+                                        <h4 class="text-2xl xl:text-4xl font-heading font-normal mb-4 text-brown letter-spacing-0-1">
                                             Cost Benefit
                                         </h4>
                                         <p class="text-sm xl:text-base font-normal text-brown">
@@ -660,7 +660,7 @@
                                         <path d="M17.9409 15.1092L15.2538 12.4222C15.0195 12.1878 15.0195 11.808 15.2538 11.5736L17.9409 8.88667C18.1753 8.65236 18.5552 8.65236 18.7895 8.88667L21.4765 11.5736C21.7108 11.808 21.7108 12.1878 21.4765 12.4222L18.7895 15.1092C18.5552 15.3435 18.1753 15.3435 17.9409 15.1092Z" fill="#403524" stroke="#403524" stroke-width="1.5"/>
                                     </svg>
                                     <div>
-                                        <h4 class="text-base xl:text-4xl font-heading font-normal mb-4 text-brown">
+                                        <h4 class="text-2xl xl:text-4xl font-heading font-normal mb-4 text-brown letter-spacing-0-1">
                                             Quality Assured
                                         </h4>
                                         <p class="text-sm xl:text-base font-normal text-brown">
@@ -702,18 +702,18 @@
 
 
         <!-- Section 4: Contact Us -->
-        <section class="contact-us py-20 bg-white relative overflow-hidden">
+        <section id="contact-us--form" class="contact-us py-20 bg-white relative overflow-hidden">
             <div class="image-scale-down--wrapper absolute top-0 left-0 w-full h-full">
                 <img src="images/2025/homepage/contact-us-bg.png" alt="Contact Us Bg Image" class="contact-us-bg-image w-full h-full object-cover">
             </div>
             <div class="container relative">
                 <div class="contact-form-container bg-white p-10 py-20 xl:px-14">
-                    <div class="grid grid-cols-1 xl:grid-cols-2 items-center gap-20">
+                    <div class="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr] items-end gap-20">
                         <!-- Left Section: Contact Form -->
                         <div class="contact-form">
-                            <h2 class="text-40px xl:text-7xl font-heading font-normal text-green mb-16">Contact us</h2>
+                            <h2 class="text-40px xl:text-7xl font-heading font-normal text-green mb-16 larger-text-size">Contact us</h2>
                             
-                            <form action="contactmail.php" method="POST" class="space-y-8">
+                            <form id="contactform" action="contactmail.php" method="POST" class="space-y-8">
                                 <div class="form-group form-group-input mb-4 xl:mb-8">
                                     <label for="contact-fullname" class="block text-base font-heading font-extralight text-green mb-2">FULL NAME (*)</label>
                                     <input type="text" id="contact-fullname" name="contact-fullname" required 
@@ -758,12 +758,12 @@
                         </div>
                         
                         <!-- Right Section: Contact Information -->
-                        <div class="contact-info flex justify-end hidden xl:flex">
-                            <div class="space-y-8">
+                        <div class="contact-info green-border-left h-full xl:pl-20 flex flex-col justify-end">
+                            <div class="space-y-8 hidden xl:block">
                                 <div class="mb-8">
                                     <!-- <h3 class="text-lg font-semibold text-gray-900 mb-4">Address</h3> -->
                                     <p class="text-black opacity-70 text-sm font-medium">
-                                        Maia Estates, 34 (New No. 84), Ulsoor Road,<br>
+                                        MAIA Estates, 34 (New No. 84), Ulsoor Road,<br>
                                         Yellappa Chetty Layout, Sivanchetti Gardens,<br>
                                         Bengaluru, Karnataka 560042
                                     </p>
@@ -772,9 +772,25 @@
                                 <div>
                                     <!-- <h3 class="text-lg font-semibold text-gray-900 mb-4">Get in Touch</h3> -->
                                     <p class="">
-                                        <a href="mailto:info@maia.com" class="text-black opacity-70 text-sm font-medium">info@maia.com</a> | 
+                                        <a href="mailto:getintouch@maiaestates.in" class="text-black opacity-70 text-sm font-medium">getintouch@maiaestates.in</a> | 
                                         <a href="tel:+918041219231" class="text-black opacity-70 text-sm font-medium">+91 80 4121 9231</a>
                                     </p>
+                                </div>
+                            </div>
+
+                            <div class="bg-plain-green p-6 xl:py-6 xl:px-10 xl:mt-20">
+                                <div class="grid grid-cols-1 xl:items-center justify-between gap-8">
+                                    <h4 class="text-white font-heading leading-12 font-normal text-3xl xl:text-4xl letter-spacing-0-05">
+                                        Build your career in real estate excellence.
+                                    </h4>
+                                    <div class="flex">
+                                        <a href="mailto:careers@maiaestates.in" class="btn-secondary bg-white w-fit text-green uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                                            <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="2.7332" cy="3.47538" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
+                                            </svg>
+                                            <span class="text-xs font-medium">Join Our Team</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -812,11 +828,11 @@
                 </div>
                 <div class="container w-full grid grid-cols-1 xl:grid-cols-3 gap-20">
                     <div class="footer-logo">
-                        <!-- <img src="images/2025/footer-logo.png" alt="Footer Logo"> -->
+                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
                     </div>
                     <div class="footer-links">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Links
                             </h3>
                         </div>
@@ -850,12 +866,12 @@
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/article-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news" class="footer-menu-item text-white text-sm">
                                         In the News
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/blog-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/blogs" class="footer-menu-item text-white text-sm">
                                         Blogs
                                     </a>
                                 </li>
@@ -864,7 +880,7 @@
                     </div>
                     <div class="info-social">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Info
                             </h3>
                         </div>
@@ -888,7 +904,7 @@
 
                         <div class="mt-24">
                             <div class="text-reveal--wrapper">
-                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                     Social Icons
                                 </h3>
                             </div>
@@ -952,5 +968,6 @@
     <script src="sliders.js"></script>
     <!-- Animation JavaScript -->
     <script src="animation.js"></script>
+    <script src="contact-form.js"></script>
 </body>
 </html>

@@ -342,7 +342,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col gap-6 mb-16 xl:mb-20">
-                         <h1 class="text-56px xl:text-7xl font-normal text-white">
+                         <h1 class="text-56px xl:text-7xl font-normal text-white larger-text-size">
                             <span class="line-wrapper">
                                 <span class="line">Where Timeless Elegance</span>
                             </span>
@@ -432,7 +432,7 @@
                                 <div class="key-feature-data--item flex items-center gap-3 px-6">
                                     <div class="text-reveal--wrapper">
                                         <p class="text-dark-slate font-heading font-normal text-5xl whitespace-nowrap">
-                                        4 BHK
+                                        4 &nbsp;BHK
                                         </p>
                                     </div>
                                     <div class="text-reveal--wrapper">
@@ -830,18 +830,18 @@
 
 
         <!-- Section 6: Contact Us -->
-        <section class="contact-us py-20 bg-white relative overflow-hidden">
+        <section id="contact-us--form" class="contact-us py-20 bg-white relative overflow-hidden">
             <div class="image-scale-down--wrapper absolute top-0 left-0 w-full h-full">
                 <img src="images/2025/homepage/contact-us-bg.png" alt="Contact Us Bg Image" class="contact-us-bg-image w-full h-full object-cover">
             </div>
             <div class="container relative">
                 <div class="contact-form-container bg-white p-10 py-20 xl:px-14">
-                    <div class="grid grid-cols-1 xl:grid-cols-2 items-center gap-20">
+                    <div class="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr] items-end gap-20">
                         <!-- Left Section: Contact Form -->
                         <div class="contact-form">
-                            <h2 class="text-40px xl:text-7xl font-heading font-normal text-green mb-16">Contact us</h2>
+                            <h2 class="text-40px xl:text-7xl font-heading font-normal text-green mb-16 larger-text-size">Contact us</h2>
                             
-                            <form action="contactmail.php" method="POST" class="space-y-8">
+                            <form id="contactform" action="contactmail.php" method="POST" class="space-y-8">
                                 <div class="form-group form-group-input mb-4 xl:mb-8">
                                     <label for="contact-fullname" class="block text-base font-heading font-extralight text-green mb-2">FULL NAME (*)</label>
                                     <input type="text" id="contact-fullname" name="contact-fullname" required 
@@ -850,20 +850,20 @@
                                 </div>
                                 
                                 <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-4 xl:mb-8">
-                                <div class="form-group form-group-input">
+                                    <div class="form-group form-group-input">
                                         <label for="contact-phone" class="block text-base font-heading font-extralight text-green mb-2">PHONE NUMBER (*)</label>
-                                    <input type="tel" id="contact-phone" name="contact-phone" required 
-                                           placeholder="PHONE NUMBER (*)"
+                                        <input type="tel" id="contact-phone" name="contact-phone" required 
+                                            placeholder="PHONE NUMBER (*)"
                                             pattern="[0-9+\-\s\(\)]+"
                                             maxlength="10"
                                             oninput="this.value = this.value.replace(/[^0-9+\-\s\(\)]/g, '').substring(0, 10)"
                                             class="w-full px-3 py-3 bg-transparent focus:border-green focus:outline-none transition-colors">
-                                </div>
-                                
-                                <div class="form-group form-group-input">
+                                    </div>
+                                    
+                                    <div class="form-group form-group-input">
                                     <label for="contact-email" class="block text-base font-heading font-extralight text-green mb-2">EMAIL ADDRESS (*)</label>
-                                    <input type="email" id="contact-email" name="contact-email" required 
-                                           placeholder="EMAIL ADDRESS (*)"
+                                        <input type="email" id="contact-email" name="contact-email" required 
+                                            placeholder="EMAIL ADDRESS (*)"
                                             class="w-full px-3 py-3 bg-transparent focus:border-green focus:outline-none transition-colors">
                                     </div>
                                 </div>
@@ -886,12 +886,12 @@
                         </div>
                         
                         <!-- Right Section: Contact Information -->
-                        <div class="contact-info flex justify-end hidden xl:flex">
-                            <div class="space-y-8">
+                        <div class="contact-info green-border-left h-full xl:pl-20 flex flex-col justify-end">
+                            <div class="space-y-8 hidden xl:block">
                                 <div class="mb-8">
                                     <!-- <h3 class="text-lg font-semibold text-gray-900 mb-4">Address</h3> -->
                                     <p class="text-black opacity-70 text-sm font-medium">
-                                        Maia Estates, 34 (New No. 84), Ulsoor Road,<br>
+                                        MAIA Estates, 34 (New No. 84), Ulsoor Road,<br>
                                         Yellappa Chetty Layout, Sivanchetti Gardens,<br>
                                         Bengaluru, Karnataka 560042
                                     </p>
@@ -900,9 +900,25 @@
                                 <div>
                                     <!-- <h3 class="text-lg font-semibold text-gray-900 mb-4">Get in Touch</h3> -->
                                     <p class="">
-                                        <a href="mailto:info@maia.com" class="text-black opacity-70 text-sm font-medium">info@maia.com</a> | 
+                                        <a href="mailto:getintouch@maiaestates.in" class="text-black opacity-70 text-sm font-medium">getintouch@maiaestates.in</a> | 
                                         <a href="tel:+918041219231" class="text-black opacity-70 text-sm font-medium">+91 80 4121 9231</a>
                                     </p>
+                                </div>
+                            </div>
+
+                            <div class="bg-plain-green p-6 xl:py-6 xl:px-10 xl:mt-20">
+                                <div class="grid grid-cols-1 xl:items-center justify-between gap-8">
+                                    <h4 class="text-white font-heading leading-12 font-normal text-3xl xl:text-4xl letter-spacing-0-05">
+                                        Build your career in real estate excellence.
+                                    </h4>
+                                    <div class="flex">
+                                        <a href="mailto:careers@maiaestates.in" class="btn-secondary bg-white w-fit text-green uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                                            <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="2.7332" cy="3.47538" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
+                                            </svg>
+                                            <span class="text-xs font-medium">Join Our Team</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -946,11 +962,11 @@
                 </div>
                 <div class="container w-full grid grid-cols-1 xl:grid-cols-3 gap-20">
                     <div class="footer-logo">
-                        <!-- <img src="images/2025/footer-logo.png" alt="Footer Logo"> -->
+                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
                     </div>
                     <div class="footer-links">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Links
                             </h3>
                         </div>
@@ -984,12 +1000,12 @@
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/article-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news" class="footer-menu-item text-white text-sm">
                                         In the News
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/blog-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/blogs" class="footer-menu-item text-white text-sm">
                                         Blogs
                                     </a>
                                 </li>
@@ -998,7 +1014,7 @@
                     </div>
                     <div class="info-social">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Info
                             </h3>
                         </div>
@@ -1022,7 +1038,7 @@
 
                         <div class="mt-24">
                             <div class="text-reveal--wrapper">
-                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                     Social Icons
                                 </h3>
                             </div>
@@ -1085,6 +1101,7 @@
     <!-- Animation JavaScript -->
     <script src="animation.js"></script>
     <script src="sliders.js"></script>
+    <script src="contact-form.js"></script>
 
     
     

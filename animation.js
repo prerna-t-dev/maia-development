@@ -7,7 +7,7 @@ function checkGSAPAvailability() {
     gsapCheckAttempts++;
     
     if (typeof gsap !== 'undefined') {
-        console.log('gsap found')
+        // console.log('gsap found')
         initializeAnimations();
     } else if (gsapCheckAttempts < maxGsapChecks) {
         setTimeout(checkGSAPAvailability, 100);
@@ -19,12 +19,12 @@ function checkGSAPAvailability() {
 function initializeAnimations() {
     // Check if ScrollTrigger is available
     if (typeof ScrollTrigger !== 'undefined') {
-        console.log('ScrollTrigger found')
+        // console.log('ScrollTrigger found')
         gsap.registerPlugin(ScrollTrigger);
 
         // Register SplitText if available
         if (typeof SplitText !== 'undefined') {
-            console.log('SplitText found')
+            // console.log('SplitText found')
             gsap.registerPlugin(SplitText);
         }
         
@@ -489,7 +489,7 @@ function initializeAnimations() {
                 
                 // Create parallax effect for desktop image
                 if (heroImage) {
-                    console.log('Creating desktop parallax ScrollTrigger...');
+                    // console.log('Creating desktop parallax ScrollTrigger...');
                     ScrollTrigger.create({
                         trigger: '.hero-image-wrapper-desktop',
                         start: 'top bottom',
@@ -557,8 +557,8 @@ function initializeAnimations() {
                 if (document.fonts && document.fonts.ready) {
                     document.fonts.ready.then(() => {
                         splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" }));
-                        console.log('SplitText initialized for headings (fonts loaded)');
-                        console.log('splitHeadings', splitHeadings);
+                        // console.log('SplitText initialized for headings (fonts loaded)');
+                        // console.log('splitHeadings', splitHeadings);
                         
                         // Set up character animations after SplitText is ready
                         setupCharacterAnimations();
@@ -567,14 +567,14 @@ function initializeAnimations() {
                     // Fallback: wait a bit for fonts to load
                     setTimeout(() => {
                         splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" }));
-                        console.log('SplitText initialized for headings (fallback)');
+                        // console.log('SplitText initialized for headings (fallback)');
                         
                         // Set up character animations after SplitText is ready
                         setupCharacterAnimations();
                     }, 100);
                 }
             } else {
-                console.log('SplitText not available - skipping text splitting');
+                // console.log('SplitText not available - skipping text splitting');
             }
             
             // Function to set up character animations with ScrollTrigger
@@ -650,10 +650,10 @@ function initializeAnimations() {
            
 
             backgrounds.forEach((img, i) => {
-                console.log('img', img);
+                // console.log('img', img);
             
                 img.addEventListener("load", () => { // wait until the image loads because we need to ascertain the naturalWidth/naturalHeight
-                console.log('img', img);
+                // console.log('img', img);
                 fitImage(img, movementFactor);
                 
                 // the first image (i === 0) should be handled differently because it should start at the very top.

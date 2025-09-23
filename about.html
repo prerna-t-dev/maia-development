@@ -329,7 +329,7 @@
 
             <div class="container absolute top-32 xl:top-1/2 xl:right-0  xl:-translate-y-1/2">
                 <div class="hero-banner-content">
-                    <h1 class="text-white text-60px xl:text-8xl font-heading font-normal leading-10">
+                    <h1 class="text-white text-60px xl:text-8xl font-heading letter-spacing-2-05 font-normal leading-10">
                     <span class="line-wrapper">
                         <span class="line">
                             Building Lives
@@ -350,7 +350,7 @@
         <section class="about-founder">
             <div class="bg-beige py-30 xl:py-40">
                 <div class="container flex flex-col items-center">
-                    <div class="mb-20 xl:mb-32 text-gold text-36px xl:text-56px leading-11 text-center font-heading px-5 xl:px-30 fade-up">
+                    <div class="mb-20 xl:mb-32 text-gold text-36px xl:text-56px leading-11 text-center letter-spacing-0-2 font-heading px-5 xl:px-30 fade-up">
                         Founded by Mayank Ruia, MAIA is focused on creating ecosystems that redefine real estate in modern India, built on the belief that developments go beyond physical structures to create meaningful environments where people can thrive.
                     </div>
 
@@ -420,7 +420,7 @@
         <!-- Section 4: Our Purpose -->
         <section class="py-30 xl:py-50 bg-green-dark overflow-hidden">
             <div class="container">
-                <div class="section-subheader uppercase text-white mb-3">
+                <div class="section-subheader uppercase text-white mb-4">
                     OUR PURPOSE
                 </div>
                 <h2 class="text-36px xl:text-6xl font-normal mb-30 xl:mb-50 text-white xl:pr-44">
@@ -700,7 +700,7 @@
                         </div>
                     </div>
                     <div class="xl:pl-16 xl:pr-12">
-                        <h3 class="text-green text-4xl xl:text-36px font-heading font-normal leading-11 mb-3">
+                        <h3 class="text-green text-4xl xl:text-40px letter-spacing-0-1 font-heading font-normal leading-11 mb-3">
                             Mayank Ruia
                         </h3>
                         <p class="text-gold text-xl font-medium mb-5 xl:mb-10">
@@ -1368,50 +1368,50 @@
                 </div>
                 <div class="container w-full grid grid-cols-1 xl:grid-cols-3 gap-20">
                     <div class="footer-logo">
-                        <!-- <img src="images/2025/footer-logo.png" alt="Footer Logo"> -->
+                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
                     </div>
                     <div class="footer-links">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Links
                             </h3>
                         </div>
                         <div class="grid grid-cols-2 xl:gap-10">
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="index.html" class="footer-menu-item text-white text-sm">
+                                    <a href="index.php" class="footer-menu-item text-white text-sm">
                                         Home
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="about.html" class="footer-menu-item text-white text-sm">
+                                    <a href="about.php" class="footer-menu-item text-white text-sm">
                                         Our Story
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="developments.html" class="footer-menu-item text-white text-sm">
+                                    <a href="developments.php" class="footer-menu-item text-white text-sm">
                                         Developments
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="maialife.html" class="footer-menu-item text-white text-sm">
+                                    <a href="maialife.php" class="footer-menu-item text-white text-sm">
                                         Our Services
                                     </a>
                                 </li>
                             </ul>
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="maia-impact.html" class="footer-menu-item text-white text-sm">
+                                    <a href="maia-impact.php" class="footer-menu-item text-white text-sm">
                                         MAIA Impact
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/article-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news" class="footer-menu-item text-white text-sm">
                                         In the News
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/blog-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/blogs" class="footer-menu-item text-white text-sm">
                                         Blogs
                                     </a>
                                 </li>
@@ -1420,7 +1420,7 @@
                     </div>
                     <div class="info-social">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Info
                             </h3>
                         </div>
@@ -1444,7 +1444,7 @@
 
                         <div class="mt-24">
                             <div class="text-reveal--wrapper">
-                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                     Social Icons
                                 </h3>
                             </div>

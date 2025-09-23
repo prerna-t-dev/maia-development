@@ -413,7 +413,7 @@
                     </div>
                 </div>
                 <div class="flex items-center justify-between">
-                    <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-32 text-white xl:pr-24">
+                    <h2 class="text-40px xl:text-7xl font-normal mb-12 xl:mb-32 text-white xl:pr-24 larger-text-size">
                         <div class="text-reveal--wrapper">
                             <span class="hidden xl:block">
                                 Anticipating Needs to Create <br />
@@ -453,7 +453,7 @@
                         <div class="maialife-purpose-slider-item-inner_">
                             <div>
                                 <img class="mb-10" src="images/2025/maialife/maialife-purpose--2.png" alt="Purpose Slider Item 2">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4 letter-spacing-0-1">
                                     Hospitality-Driven <br>
                                     Experiences 
                                 </h3>
@@ -470,7 +470,7 @@
                         <div class="maialife-purpose-slider-item-inner">
                             <div>
                                 <img class="mb-10" src="images/2025/maialife/maialife-purpose--3.png" alt="Purpose Slider Item 3">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4 letter-spacing-0-1">
                                     Customer <br>
                                     Centricity 
                                 </h3>
@@ -490,7 +490,7 @@
                         <div class="maialife-purpose-slider-item-inner">
                             <div>
                                 <img class="mb-10" src="images/2025/maialife/maialife-purpose--1.png" alt="Purpose Slider Item 1">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4 letter-spacing-0-1">
                                     Reclaim Your <br>
                                     Time
                                 </h3>
@@ -507,7 +507,7 @@
                         <div class="maialife-purpose-slider-item-inner">
                             <div>
                             <img class="mb-10" src="images/2025/maialife/maialife-purpose--5.png" alt="Purpose Slider Item 4">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4 letter-spacing-0-1">
                                     Tech  <br>
                                     Integrated
                                 </h3>
@@ -524,7 +524,7 @@
                         <div class="maialife-purpose-slider-item-inner">
                             <div>
                             <img class="mb-10" src="images/2025/maialife/maialife-purpose--4.png" alt="Purpose Slider Item 4">
-                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4">
+                                <h3 class="text-white text-3xl font-heading font-normal leading-11 mb-4 letter-spacing-0-1">
                                     Sustainable  <br>
                                     Living Practices
                                 </h3>
@@ -623,7 +623,7 @@
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
                             <img class="w-full xl:w-3-5" src="images/2025/maialife/maialife-services--1.png" alt="Maialife 1">
                             <div class="xl:pr-20">
-                                <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
+                                <h4 class="font-heading text-gold text-3xl xl:text-40px font-normal leading-11 mb-5 letter-spacing-0-1">
                                     Effortless Event Hosting
                                 </h4>
                                 <p class="text-gold  pr-10 xl:pr-0 text-sm xl:text-base">
@@ -637,7 +637,7 @@
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
                             <img class="w-full xl:w-3-5" src="images/2025/maialife/maialife-services--2.png" alt="Maialife 2">
                             <div class="xl:pr-20">
-                                <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
+                                <h4 class="font-heading text-gold text-3xl xl:text-40px font-normal leading-11 mb-5 letter-spacing-0-1">
                                     Amenity Booking
                                 </h4>
                                 <p class="text-gold  pr-10 xl:pr-0 text-sm xl:text-base">
@@ -651,7 +651,7 @@
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
                             <img class="w-full xl:w-3-5" src="images/2025/maialife/maialife-services--3.png" alt="Maialife 3">
                             <div class="xl:pr-20">
-                                <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
+                                <h4 class="font-heading text-gold text-3xl xl:text-40px font-normal leading-11 mb-5 letter-spacing-0-1">
                                     Seamless<br>
                                     Everyday Support
                                 </h4>
@@ -666,7 +666,7 @@
                         <div class="flex flex-col xl:flex-row items-center gap-8 xl:gap-16">
                             <img class="w-full xl:w-3-5" src="images/2025/maialife/maialife-services--4.png" alt="Maialife 4">
                             <div class="xl:pr-20">
-                                <h4 class="font-heading text-gold text-3xl xl:text-36px font-normal leading-11 mb-5">
+                                <h4 class="font-heading text-gold text-3xl xl:text-40px font-normal leading-11 mb-5">
                                     Sustainable <br>
                                     Home Care
                                 </h4>
@@ -742,7 +742,7 @@
                         </div>
                         <div>
                             <div class="text-reveal--wrapper">
-                                <h4 class="font-heading text-green text-3xl xl:text-36px font-normal leading-11 mb-3">
+                                <h4 class="font-heading text-green text-3xl xl:text-36px font-normal leading-11 mb-3 letter-spacing-0-1">
                                     Mayank Ruia
                                 </h4>
                             </div>
@@ -799,11 +799,11 @@
                 </div>
                 <div class="container w-full grid grid-cols-1 xl:grid-cols-3 gap-20">
                     <div class="footer-logo">
-                        <!-- <img src="images/2025/footer-logo.png" alt="Footer Logo"> -->
+                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
                     </div>
                     <div class="footer-links">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Links
                             </h3>
                         </div>
@@ -837,12 +837,12 @@
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/article-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news" class="footer-menu-item text-white text-sm">
                                         In the News
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/blog-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/blogs" class="footer-menu-item text-white text-sm">
                                         Blogs
                                     </a>
                                 </li>
@@ -851,7 +851,7 @@
                     </div>
                     <div class="info-social">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Info
                             </h3>
                         </div>
@@ -875,7 +875,7 @@
 
                         <div class="mt-24">
                             <div class="text-reveal--wrapper">
-                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                     Social Icons
                                 </h3>
                             </div>

@@ -263,12 +263,12 @@
                         <div class="nav-list--container mt-40 pb-40 xl:pb-20">
                             <nav class="text-left">
                                 <ul class="container space-y-8 text-4xl font-medium">
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="about.html">About Us</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="about.html">About Us</a></li>
                                     
                                     <!-- Services Accordion -->
                                     <li class="services-accordion nav-list--item">
                                         <div class="services-header flex items-center justify-between gap-4 cursor-pointer">
-                                            <span class="text-white font-heading font-normal text-2xl xl:text-4xl">Services</span>
+                                            <span class="text-white font-heading font-normal text-2xl xl:text-36px">Services</span>
                                             <span class="services-toggle text-white text-2xl font-light">+</span>
                                         </div>
                                         <ul class="services-submenu text-2xl font-normal" style="opacity: 0; max-height: 0; overflow: hidden; transform: translateY(-10px) scale(0.95); pointer-events: none;">
@@ -287,10 +287,10 @@
                                         </ul>
                                     </li>
                                     
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="developments.html">Developments</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="maia-impact.html">MAIA Impact</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="in-the-news/article-listing.html">In The News</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-4xl" href="in-the-news/blog-listing.html">Blogs</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="developments.html">Developments</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="maia-impact.html">MAIA Impact</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/article-listing.html">In The News</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/maiablogs.html">Blogs</a></li>
                                 </ul>
                             </nav>
 
@@ -393,7 +393,7 @@
                             ABOUT MAIA
                         </div>
                         <div class="text-reveal--wrapper">
-                            <h2 class="text-40px xl:text-6xl font-normal mb-16 xl:mb-18">
+                            <h2 class="text-40px xl:text-6xl font-normal mb-10 xl:mb-18">
                                 Crafting Iconic Spaces 
                                 
                             </h2>
@@ -492,7 +492,7 @@
                         <a href="27-summit.html" target="_blank" class="bg one">
                           <!-- <h2 class="section-heading">1. 27 Summit</h2> -->
                             <div class="bg-overlay" data-overlay="0"></div>
-                            <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
+                            <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
                                 <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                     27 Summit
                                 </h4>
@@ -525,7 +525,7 @@
                         <a href="pelican-gardens.html" target="_blank" class="bg">
                           <!-- <h2 class="section-heading">3. Pelican Gardens</h2> -->
                             <div class="bg-overlay" data-overlay="1"></div>
-                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
+                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
                             <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                 Pelican Gardens
                             </h4>
@@ -555,7 +555,7 @@
                         <a href="pelican-grove.html" target="_blank" class="bg">
                           <!-- <h2 class="section-heading">4. Pelican Grove</h2> -->
                             <div class="bg-overlay" data-overlay="2"></div>
-                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
+                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
                             <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                 Pelican Grove
                             </h4>
@@ -586,7 +586,7 @@
 
                           <!-- <h2 class="section-heading">4. Pelican Grove</h2> -->
                          <div class="bg-overlay" data-overlay="3"></div>
-                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
+                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
                             <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                 The Beacon
                             </h4>
@@ -622,7 +622,7 @@
                         <a href="javascript:void(0)" class="bg">
                           <!-- <h2 class="section-heading">4. Pelican Grove</h2> -->
                             <div class="bg-overlay" data-overlay="4"></div>
-                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
+                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
                             <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                 The Seven
                             </h4>
@@ -657,7 +657,7 @@
                         <a href="casa-sia.html" target="_blank" class="bg">
                           <!-- <h2 class="section-heading">2. Casa Sia</h2> -->
                             <div class="bg-overlay" data-overlay="5"></div>
-                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 xl:left-20 pl-5 xl:pl-0 py-4">
+                          <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
                             <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                 Casa Sia
                             </h4>
@@ -853,7 +853,7 @@
                     </div>
                 </div>
                 <div class="text-reveal--wrapper">
-                    <h2 class="text-40px xl:text-7xl font-normal mb-6 xl:mb-8">
+                    <h2 class="text-40px xl:text-7xl font-normal mb-6 xl:mb-8 larger-text-size">
                         Shaping What's Next
                     </h2>
                 </div>
@@ -891,7 +891,7 @@
                 <!-- <div class="line-divider pr-20"></div> -->
                 <div class="next-developments-slider">
                     <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
+                        <h4 class="text-gold text-4xl xl:text-4xl font-heading font-normal mb-10">
                             Residential Development
                             <br />
                             - Cunningham Road
@@ -900,7 +900,7 @@
                         <img src="images/2025/homepage/Next-development--4.png" alt="Next Development 4">
                     </div>
                     <div class="next-developments-slide-item">
-                        <h4 class="text-gold text-xl xl:text-4xl font-heading font-normal mb-10">
+                        <h4 class="text-gold text-4xl xl:text-4xl font-heading font-normal mb-10">
                             Residential Development
                             <br />
                             - Jakkur Lake
@@ -1137,7 +1137,7 @@
                                 <img src="images/2025/homepage/news-article--1.jpg" alt="News Article 1">
                             </div>
                             <div class="mt-8">
-                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2 letter-spacing-0-1 leading-12">
                                     Fortune India : The MAIA Method featured in Fortune India
                                 </h4>
                                 <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
@@ -1152,7 +1152,7 @@
                                 <img src="images/2025/homepage/news-article--2.jpg" alt="News Article 2">
                             </div>
                             <div class="mt-8">
-                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2 letter-spacing-0-1 leading-12">
                                     Hindustan Times: MAIA Estates plans ₹3,000 crore investment to scale up its real estate presence in Bengaluru
                                 </h4>
                                 <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
@@ -1167,7 +1167,7 @@
                                 <img src="images/2025/homepage/news-article--3.jpg" alt="News Article 3">
                             </div>
                             <div class="mt-8">
-                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2 letter-spacing-0-1 leading-12">
                                     News18: Moodboards Are Out, Mood-Led Design Is In-The Emotional Intelligence of Modern Spaces
                                 </h4>
                                 <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
@@ -1182,7 +1182,7 @@
                                 <img src="images/2025/homepage/news-article--4.jpg" alt="News Article 4">
                             </div>
                             <div class="mt-8">
-                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2 letter-spacing-0-1 leading-12">
                                     Real Estate News: Why NRIs and HNIs are betting BIG on Bengaluru’s luxury residential market? Insights from MAIA Estates’ Mayank Ruia | EXCLUSIVE
                                 </h4>
                                 <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
@@ -1197,7 +1197,7 @@
                                 <img src="images/2025/homepage/news-article--5.jpg" alt="News Article 4">
                             </div>
                             <div class="mt-8">
-                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2 letter-spacing-0-1 leading-12">
                                     Casa Sia represents India and wins big at the International Property Awards 2025-26.
                                 </h4>
                                 <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
@@ -1212,7 +1212,7 @@
                                 <img src="images/2025/homepage/news-article--6.jpg" alt="News Article 4">
                             </div>
                             <div class="mt-8">
-                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2">
+                                <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2 letter-spacing-0-1 leading-12">
                                     India Property Awards: Best Upcoming Project 2025 (South India)
                                 </h4>
                                 <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
@@ -1255,7 +1255,7 @@
                     <div class="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr] items-end gap-20">
                         <!-- Left Section: Contact Form -->
                         <div class="contact-form">
-                            <h2 class="text-40px xl:text-7xl font-heading font-normal text-green mb-16">Contact us</h2>
+                            <h2 class="text-40px xl:text-7xl font-heading font-normal text-green mb-16 larger-text-size">Contact us</h2>
                             
                             <form id="contactform" action="contactmail.php" method="POST" class="space-y-8">
                                 <div class="form-group form-group-input mb-4 xl:mb-8">
@@ -1324,7 +1324,7 @@
 
                             <div class="bg-plain-green p-6 xl:py-6 xl:px-10 xl:mt-20">
                                 <div class="grid grid-cols-1 xl:items-center justify-between gap-8">
-                                    <h4 class="text-white font-heading leading-12 font-normal text-3xl xl:text-4xl">
+                                    <h4 class="text-white font-heading leading-12 font-normal text-3xl xl:text-4xl letter-spacing-0-05">
                                         Build your career in real estate excellence.
                                     </h4>
                                     <div class="flex">
@@ -1332,7 +1332,7 @@
                                             <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="2.7332" cy="3.47538" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
                                             </svg>
-                                            <span class="text-xs font-medium">Contact Us</span>
+                                            <span class="text-xs font-medium">Join Our Team</span>
                                         </a>
                                     </div>
                                 </div>
@@ -1371,11 +1371,11 @@
                 </div>
                 <div class="container w-full grid grid-cols-1 xl:grid-cols-3 gap-20">
                     <div class="footer-logo">
-                        <!-- <img src="images/2025/footer-logo.png" alt="Footer Logo"> -->
+                        <img src="images/2025/footer-logo.png" alt="Footer Logo">
                     </div>
                     <div class="footer-links">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Links
                             </h3>
                         </div>
@@ -1409,12 +1409,12 @@
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/article-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news" class="footer-menu-item text-white text-sm">
                                         In the News
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="in-the-news/blog-listing.html" class="footer-menu-item text-white text-sm">
+                                    <a href="in-the-news/blogs" class="footer-menu-item text-white text-sm">
                                         Blogs
                                     </a>
                                 </li>
@@ -1423,7 +1423,7 @@
                     </div>
                     <div class="info-social">
                         <div class="text-reveal--wrapper">
-                            <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                            <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Info
                             </h3>
                         </div>
@@ -1447,7 +1447,7 @@
 
                         <div class="mt-24">
                             <div class="text-reveal--wrapper">
-                                <h3 class="text-grey text-xl xl:text-4xl font-heading font-normal mb-8">
+                                <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                     Social Icons
                                 </h3>
                             </div>

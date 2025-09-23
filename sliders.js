@@ -61,7 +61,7 @@ $(document).ready(function(){
     
     // Handle Google Maps iframe scroll interference
     $('.location--map iframe').on('load', function() {
-        console.log('Google Maps iframe loaded - scroll handling active');
+        // console.log('Google Maps iframe loaded - scroll handling active');
         
         // Prevent iframe from interfering with Lenis
         $(this).on('wheel', function(e) {
@@ -94,7 +94,7 @@ $(document).ready(function(){
                 }
                 requestAnimationFrame(raf);
                 
-                console.log('Lenis reinitialized'); // Debug log
+                // console.log('Lenis reinitialized'); // Debug log
             }
         }, 1200); // Wait for CSS transition to complete (1.2s)
     }
@@ -140,7 +140,7 @@ $(document).ready(function(){
     navClose.on('click touchstart', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Close button clicked'); // Debug log
+        // console.log('Close button clicked'); // Debug log
         
         // Start closing animation by removing open class
         navOverlay.removeClass('open');
@@ -1528,7 +1528,7 @@ function openTeamMemberDrawer(teamMemberId) {
             contentDiv.style.opacity = '1';
         }
     } else {
-        console.log('Source content or wrapper not found!');
+        // console.log('Source content or wrapper not found!');
     }
     
     // Get the drawer and content elements

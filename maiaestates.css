@@ -114,6 +114,11 @@
     opacity: 0.5;
 }
 
+.btn-primary span, 
+.btn-secondary span{
+    letter-spacing: 1px;
+}
+
 
 .btn-secondary:hover{
     background-color: #027E5D;
@@ -132,12 +137,49 @@
     opacity: 0.5;
 }
 
+.header nav ul {
+    letter-spacing: 1px;
+}
+
+
 .header nav ul li a{
     transition: all 0.3s ease;
 }
 
+.header nav ul li a,
+.header nav ul li span{
+    font-size: 14px !important;
+}
+
+
 .header nav ul li a:hover{
     color: #027E5D;
+}
+
+.services-dropdown li a{
+    font-size: 14px !important;
+    letter-spacing: 1px;
+}
+
+.header .menu-bar .btn-primary,
+.header .menu-bar .btn-secondary,
+.nav-overlay .nav-overlay-contact-us{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.nav-overlay .nav-list--item a{
+    letter-spacing: -1px;
+}
+
+.nav-overlay .nav-list--item .services-submenu a{
+    letter-spacing: -0.5px;
+}
+
+@media (max-width: 1023px) {
+    .nav-overlay .nav-list--item a{
+        letter-spacing: -0.5px;
+    }
 }
 
 
@@ -413,6 +455,36 @@
     font-family: "Albert Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+.letter-spacing-0-05{
+    letter-spacing: -0.5px;
+}
+
+.letter-spacing-0-1{
+    letter-spacing: -1px;
+}
+
+.letter-spacing-0-2{
+    letter-spacing: -2px;
+}
+
+.letter-spacing-2-05{
+    letter-spacing: -2.5px;
+}
+
+.larger-text-size{
+    letter-spacing: -3px;
+}
+
+@media (max-width: 1023px) {
+
+    .letter-spacing-0-2{
+        letter-spacing: -1px;
+    }
+    .larger-text-size{
+        letter-spacing: -1.75px !important;
+    }
+}
+
 
 
 body{
@@ -432,6 +504,13 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Teodor', serif;
     color: var(--green);
     line-height: 96%;
+    letter-spacing: -2px;
+}
+
+@media (max-width: 1023px) {
+    h1, h2, h3, h4, h5, h6{
+        letter-spacing: -1px !important;
+    }
 }
 
 p{
@@ -501,6 +580,9 @@ body.bespoke-services .header{
     transition: opacity 0.3s ease;
 }
 
+
+
+
 .footer a.footer-info-item,
 .footer a.footer-policy-item{
     opacity: 0.4;
@@ -512,6 +594,12 @@ body.bespoke-services .header{
 
 .footer .footer-logo{
     width: 198px;
+}
+
+@media (max-width: 1023px) {
+    .footer-content h3{
+        letter-spacing: -0.5px !important;
+    }
 }
 
 
@@ -526,6 +614,8 @@ body.bespoke-services .header{
         z-index: 10;
         pointer-events: none; /* Allow scrolling through it */
     }
+
+    
 
     .sticky-section .footer {
         pointer-events: auto; /* Re-enable interactions for footer content */
@@ -701,6 +791,20 @@ body.bespoke-services .header{
     padding: 40px 32px;
 }
 
+.next-developments-slide-item h3,
+.next-developments-slide-item h4 {
+    letter-spacing: -1px;
+}
+
+@media (max-width: 1023px) {
+    .next-developments-slide-item h3,
+    .next-developments-slide-item h4 {
+        letter-spacing: -0.5px !important;
+    }
+}
+
+
+
 .next-developments-slide-item::before {
     content: '';
     position: absolute;
@@ -782,6 +886,11 @@ body.bespoke-services .header{
 
     .maia-life--logo{
         width: 162px;
+    }
+
+    .development--header{
+        padding-top: 72px;
+        padding-bottom: 24px;
     }
 }
 
@@ -1137,6 +1246,10 @@ section.contact-us{
 }
 
 
+.purpose-slider-item-inner h3{
+    letter-spacing: -0.5px !important;
+}
+
 
 /* Purpose Slider Progress Bar */
 .purpose-slider-progress {
@@ -1180,6 +1293,10 @@ section.contact-us{
     object-fit: cover;
 }
 
+.sustainability-initiatives-slider-item h4{
+    letter-spacing: -1px;
+}
+
 
 
 
@@ -1212,6 +1329,10 @@ section.contact-us{
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: top;
+}
+
+.team-member-item h3{
+    letter-spacing: -1px;
 }
 
 /* Ensure body scroll prevention works */
@@ -1350,11 +1471,11 @@ section.contact-us{
 }
 
 .maia-life--logo{
-    width: 170px;
+    width: 200px;
 }
 
 .maia-bespoke--logo{
-    width: 162px;
+    width: 200px;
 }
 
 @media (max-width: 1023px) {
@@ -1362,6 +1483,10 @@ section.contact-us{
     .maia-life--logo,
     .maia-bespoke--logo{
         width: 150px;
+    }
+
+    .maia-life--logo{
+        width: 170px;
     }
 
     .maialife-services-slider .slick-list{
@@ -1533,6 +1658,10 @@ section.contact-us{
     border-left: 2px solid #AEA893;
 }
 
+.key-features-data .key-feature-data--item .font-heading{
+    letter-spacing: -2px;
+}
+
 
 /* Google Maps Embed CSS - Prevent Lenis interference */
 .location--map {
@@ -1587,9 +1716,13 @@ section.contact-us{
     cursor: pointer;
 }
 
+.gallery--category h3{
+    opacity: 0.5;
+}
 
 .gallery--category.active h3{
-    font-weight: 600;
+    font-weight: 400;
+    opacity: 1;
 }
 
 .gallery--images .slick-list {
