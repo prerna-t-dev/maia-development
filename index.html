@@ -34,6 +34,32 @@
     <link rel="stylesheet" type="text/css" href="utility.css">
     <link rel="stylesheet" type="text/css" href="maiaestates.css">
     
+    <!-- Loading Screen Styles -->
+    <style>
+        .loading-screen { position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; z-index: 99999 !important; transition: opacity 1.2s ease-out, visibility 1.2s ease-out; transform: none !important; will-change: opacity, visibility; }
+        .loading-screen.fade-out { opacity: 0; visibility: hidden; }
+        .loading-logo { transition: opacity 1.2s ease-out 0.5s, transform 1.2s ease-out 0.5s; width: 350px; height: auto; transform: scale(1.2); opacity: 0; }
+        .loading-logo.fade-in { opacity: 1; transform: scale(1); }
+        .loading-text { transition: opacity 1.2s ease-out 1s; font-family: 'Albert Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; font-weight: 300 !important; letter-spacing: 0.16em !important; }
+        .loading-text h2 { font-family: 'Albert Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; font-weight: 300 !important; letter-spacing: 0.16em !important; }
+        .loading-text.fade-in { opacity: 1; }
+        .loading-spinner { transition: opacity 1s ease-out 1.5s; }
+        .loading-spinner.fade-in { opacity: 1; }
+        .spinner { width: 40px; height: 40px; border: 2px solid rgba(255, 255, 255, 0.3); border-top: 2px solid white; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .body_wrapper { opacity: 0; transition: opacity 0.8s ease-in; transform: none !important; }
+        .body_wrapper.content-loaded { opacity: 1; }
+
+        @media (max-width: 1023px) {
+            .loading-logo { width: 200px; }
+        }
+        /* Hide footer during loading */
+        html:has(.loading-screen) footer { opacity: 0 !important; }
+        html:has(.loading-screen) .footer { opacity: 0 !important; }
+        html:has(.loading-screen) { overflow: hidden !important; }
+        body:has(.loading-screen) { overflow: hidden !important; position: fixed !important; width: 100% !important; height: 100% !important; }
+    </style>
+    
     <!-- Slick Slider -->
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
@@ -44,23 +70,23 @@
         function initLenis() {
             if (typeof Lenis !== 'undefined') {
                 window.lenis = new Lenis({
-                    duration: 1.2,
-                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                    direction: 'vertical',
-                    gestureDirection: 'vertical',
-                    smooth: true,
-                    mouseMultiplier: 1,
-                    smoothTouch: false,
-                    touchMultiplier: 2,
-                    infinite: false,
-                });
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
 
-                function raf(time) {
-                    lenis.raf(time);
-                    requestAnimationFrame(raf);
-                }
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
 
-                requestAnimationFrame(raf);
+        requestAnimationFrame(raf);
             }
         }
 
@@ -80,6 +106,164 @@
                 }
             }
         }
+    </script>
+
+    <!-- Loading Screen JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            const loadingLogo = document.querySelector('.loading-logo');
+            const loadingTexts = document.querySelectorAll('.loading-text');
+            const loadingSpinner = document.querySelector('.loading-spinner');
+            const bodyWrapper = document.querySelector('.body_wrapper');
+            
+            // Skip loading screen if there's a hash in URL (e.g., #contact-us--form)
+            if (window.location.hash) {
+                loadingScreen.style.display = 'none';
+                // Remove the loading-screen class to disable CSS rules
+                loadingScreen.classList.remove('loading-screen');
+                bodyWrapper.classList.add('content-loaded');
+                
+                // Ensure scroll is enabled
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+                document.body.style.height = '';
+                
+                // Wait for Lenis to be available, then start it
+                const checkLenis = setInterval(() => {
+                    if (window.lenis) {
+                        clearInterval(checkLenis);
+                        window.lenis.start();
+                        
+                        // Trigger GSAP ScrollTrigger refresh if available
+                        if (typeof gsap !== 'undefined' && gsap.ScrollTrigger) {
+                            gsap.ScrollTrigger.refresh();
+                        }
+                    }
+                }, 50);
+                
+                // Fallback: if Lenis doesn't load within 3 seconds, try direct initialization
+                setTimeout(() => {
+                    if (typeof Lenis !== 'undefined' && !window.lenis) {
+                        clearInterval(checkLenis);
+                        if (typeof initLenis === 'function') {
+                            initLenis();
+                        }
+                    }
+                }, 3000);
+                
+                return;
+            }
+            
+            // Disable scroll during loading
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+            
+            // Temporarily disable Lenis if it exists
+            if (window.lenis) {
+                window.lenis.stop();
+            }
+            
+            // Start the loading sequence
+            setTimeout(() => {
+                loadingLogo.classList.add('fade-in');
+            }, 500);
+            
+            setTimeout(() => {
+                loadingTexts.forEach(text => text.classList.add('fade-in'));
+            }, 1000);
+            
+            setTimeout(() => {
+                loadingSpinner.classList.add('fade-in');
+            }, 1500);
+            
+            // Function to hide loading screen
+            function hideLoadingScreen() {
+                loadingScreen.classList.add('fade-out');
+                bodyWrapper.classList.add('content-loaded');
+                
+                // Re-enable scroll and restore body
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+                document.body.style.height = '';
+                
+                // Re-enable Lenis if it exists
+                if (window.lenis) {
+                    window.lenis.start();
+                }
+                
+                // Remove loading screen from DOM after fade animation
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                    // Remove the loading-screen class to disable the CSS rule
+                    loadingScreen.classList.remove('loading-screen');
+                    
+                    // Trigger GSAP ScrollTrigger refresh if available
+                    if (typeof gsap !== 'undefined' && gsap.ScrollTrigger) {
+                        gsap.ScrollTrigger.refresh();
+                    }
+                }, 1200);
+            }
+            
+            // Track loading start time
+            const loadingStartTime = Date.now();
+            const minimumLoadingTime = 5000; // 5 seconds minimum
+            
+            // Check if all critical resources are loaded
+            let resourcesLoaded = 0;
+            const totalResources = 3;
+            
+            function checkResourceLoaded() {
+                resourcesLoaded++;
+                if (resourcesLoaded >= totalResources) {
+                    const elapsedTime = Date.now() - loadingStartTime;
+                    const remainingTime = Math.max(0, minimumLoadingTime - elapsedTime);
+                    setTimeout(hideLoadingScreen, remainingTime);
+                }
+            }
+            
+            // Check for critical resources
+            window.addEventListener('load', checkResourceLoaded);
+            
+            // Check for GSAP and Lenis availability
+            const checkGSAP = setInterval(() => {
+                if (typeof gsap !== 'undefined' && typeof Lenis !== 'undefined') {
+                    clearInterval(checkGSAP);
+                    checkResourceLoaded();
+                }
+            }, 100);
+            
+            // Check for video loading
+            const checkVideo = setInterval(() => {
+                const videos = document.querySelectorAll('video');
+                if (videos.length > 0) {
+                    let videosReady = 0;
+                    videos.forEach(video => {
+                        if (video.readyState >= 3) {
+                            videosReady++;
+                        }
+                    });
+                    if (videosReady >= videos.length) {
+                        clearInterval(checkVideo);
+                        checkResourceLoaded();
+                    }
+                } else {
+                    clearInterval(checkVideo);
+                    checkResourceLoaded();
+                }
+            }, 100);
+            
+            // Fallback: Hide loading screen after maximum time (but ensure minimum 3 seconds)
+            setTimeout(() => {
+                const elapsedTime = Date.now() - loadingStartTime;
+                const remainingTime = Math.max(0, minimumLoadingTime - elapsedTime);
+                setTimeout(hideLoadingScreen, remainingTime);
+            }, 5000);
+        });
     </script>
 
     <!-- Non-critical JavaScript - Load asynchronously -->
@@ -155,20 +339,42 @@
     <meta name="facebook-domain-verification" content="pognb9mgkrukvqi84431jr4q18r62l" />
 </head>
 <body id="bodycontainer">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen fixed inset-0 z-[9999] bg-green-footer flex items-center justify-center">
+        <div class="loading-content text-center">
+            <div class="grid grid-cols-1 xl:grid-cols-3 items-center gap-20">
+                <div class="loading-text font-body mb-8 opacity-0">
+                    <h2 class="text-white text-sm">ENDLESS</h2>
+                </div>
+                <div class="loading-logo mb-8 opacity-0">
+                    <img src="images/2025/MAIA-logo-white.png" alt="MAIA Logo" class="w-32 h-auto mx-auto">
+                </div>
+                <div class="loading-text font-body mb-8 opacity-0">
+                    <h2 class="text-white text-sm">POSSIBILITIES</h2>
+                </div>
+            </div>
+            
+            
+            <div class="loading-spinner absolute bottom-20 left-1/2 -translate-x-1/2 opacity-0">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+    
     <div class="body_wrapper scroll-section overflow-x-hidden">
         <!-- Header -->
         <header class="header header-transparent sticky_ fixed top-0 left-0 right-0 z-50">
             <div class="container header-container flex justify-between items-center">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="images/2025/MAIA-logo-white.png" alt="Logo">
                     </a>
                 </div>
                 <!-- Links: Home, About, Projects, Contact -->
                 <nav class="hidden xl:block absolute left-1/2 transform -translate-x-1/2">
                     <ul class="flex gap-12 text-base font-semibold">
-                        <li><a class="text-white uppercase" href="about.html">About Us</a></li>
-                        <li><a class="text-white uppercase" href="developments.html">Developments</a></li>
+                        <li><a class="text-white uppercase" href="about.php">About Us</a></li>
+                        <li><a class="text-white uppercase" href="developments.php">Developments</a></li>
 
                         <li class="relative nav-services--link">
                             <div class="text-white uppercase flex items-center gap-2 cursor-pointer">
@@ -183,7 +389,7 @@
                             <div class="absolute services-dropdown opacity-0 invisible top-full left-0 mt-2 py-1 px-6 min-w-48" style="background-color: #E8E7E1;">
                                 <ul class="space-y-2">
                                     <li>
-                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="bespoke-services.html">
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="bespoke-services.php">
                                             Bespoke Services
                                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
@@ -192,7 +398,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.html">
+                                        <a class="text-green uppercase hover:text-green-light transition-colors" href="maialife.php">
                                             MAIA Life
                                             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4.5 1L9 5.5M9 5.5L4.5 10M9 5.5L-1.96701e-07 5.5" stroke="#00362A" stroke-width="1.5"/>
@@ -232,7 +438,7 @@
             <!-- Nav Overlay controls -->
             <div class="container w-full flex justify-between items-center absolute top-0 left-0 right-0" style="padding-top: 6px;">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="images/2025/MAIA-logo-white.png" alt="Logo">
                     </a>
                 </div>
@@ -263,7 +469,7 @@
                         <div class="nav-list--container mt-40 pb-40 xl:pb-20">
                             <nav class="text-left">
                                 <ul class="container space-y-8 text-4xl font-medium">
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="about.html">About Us</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="about.php">About Us</a></li>
                                     
                                     <!-- Services Accordion -->
                                     <li class="services-accordion nav-list--item">
@@ -276,21 +482,21 @@
                                                 <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect y="0.882812" width="5" height="5" fill="white" fill-opacity="0.64"/>
                                                 </svg>
-                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="maialife.html">MAIA Life</a>
+                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="maialife.php">MAIA Life</a>
                                             </li>
                                             <li class="flex items-center">
                                                 <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect y="0.882812" width="5" height="5" fill="white" fill-opacity="0.64"/>
                                                 </svg>
-                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="bespoke-services.html">Bespoke Services</a>
+                                                <a class="pl-4 text-white font-heading font-normal text-lg" href="bespoke-services.php">Bespoke Services</a>
                                             </li>
                                         </ul>
                                     </li>
                                     
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="developments.html">Developments</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="maia-impact.html">MAIA Impact</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/article-listing.html">In The News</a></li>
-                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/maiablogs.html">Blogs</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="developments.php">Developments</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="maia-impact.php">MAIA Impact</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/">In The News</a></li>
+                                    <li class="nav-list--item"><a class="text-white font-heading font-normal text-2xl xl:text-36px" href="in-the-news/blogs">Blogs</a></li>
                                 </ul>
                             </nav>
 
@@ -422,7 +628,7 @@
                          -->
 
                         <div class="fade-up">
-                            <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                            <a href="about.php" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                                 </svg>
@@ -465,13 +671,13 @@
                     </h2>
                 </div>
                 <div class="hidden xl:block">
-                    <div class="text-reveal--wrapper developments-text-line-paragraph">
-                        <p>
+                <div class="text-reveal--wrapper developments-text-line-paragraph">
+                    <p>
                         Our developments reflect a deep commitment to craftsmanship, context <br />
                         and quality, creating spaces that stand the test of time.
-                        </p>
-                    </div>
+                    </p>
                 </div>
+            </div>
 
                 <div class="xl:hidden">
                     <div class="text-reveal--wrapper developments-text-line-paragraph">
@@ -489,10 +695,10 @@
                   <section class="first">
                     <div class="outer">
                       <div class="inner">
-                        <a href="27-summit.html" target="_blank" class="bg one">
+                        <a href="27-summit.php" target="_blank" class="bg one">
                           <!-- <h2 class="section-heading">1. 27 Summit</h2> -->
                             <div class="bg-overlay" data-overlay="0"></div>
-                            <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
+                            <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header_ xl:left-20 pl-5 xl:pl-0 py-4">
                                 <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                     27 Summit
                                 </h4>
@@ -513,7 +719,7 @@
                             </div>
                             <img src="images/2025/homepage/dev-project--1.png" alt="27 Summit" class="bg-img">
                         </a>
-                      </div>
+                        </div>
                     </div>
                   </section> 
 
@@ -522,60 +728,60 @@
                   <section class="second">
                     <div class="outer">
                       <div class="inner">
-                        <a href="pelican-gardens.html" target="_blank" class="bg">
+                        <a href="pelican-gardens.php" target="_blank" class="bg">
                           <!-- <h2 class="section-heading">3. Pelican Gardens</h2> -->
                             <div class="bg-overlay" data-overlay="1"></div>
                           <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
-                            <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
+                                <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                 Pelican Gardens
-                            </h4>
-                            <p class="flex items-center gap-2">
-                                <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                    <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                </h4>
+                                <p class="flex items-center gap-2">
+                                    <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                        <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
+                                        <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
                                 <span class="project-location-span text-green xl:text-white font-medium text-base">
                                     North Bangalore - Jakkur Road
-                                </span>
-                            </p>
-                          </div>
+                                    </span>
+                                </p>
+                            </div>
                           <img src="images/2025/homepage/dev-project--3.png" alt="Pelican Gardens" class="bg-img">
                         </a>
-                      </div>
+                        </div>
                     </div>
                   </section>
 
                   <section class="third">
                     <div class="outer">
                       <div class="inner">
-                        <a href="pelican-grove.html" target="_blank" class="bg">
+                        <a href="pelican-grove.php" target="_blank" class="bg">
                           <!-- <h2 class="section-heading">4. Pelican Grove</h2> -->
                             <div class="bg-overlay" data-overlay="2"></div>
                           <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
-                            <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
+                                <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                 Pelican Grove
-                            </h4>
-                            <p class="flex items-center gap-2">
-                                <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                    <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                </h4>
+                                <p class="flex items-center gap-2">
+                                    <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                        <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
+                                        <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
                                 <span class="project-location-span text-green xl:text-white font-medium text-base">
                                     North Bangalore - Jakkur
-                                </span>
-                            </p>
-                          </div>
+                                    </span>
+                                </p>
+                            </div>
                           <img src="images/2025/homepage/dev-project--4.png" alt="Pelican Grove" class="bg-img">
                         </a>
-                      </div>
+                        </div>
                     </div>
                   </section>
 
@@ -587,32 +793,32 @@
                           <!-- <h2 class="section-heading">4. Pelican Grove</h2> -->
                          <div class="bg-overlay" data-overlay="3"></div>
                           <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
-                            <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
+                                <h4 class="text-green xl:text-white text-40px xl:text-6xl font-normal mb-3 xl:mb-5">
                                 The Beacon
-                            </h4>
-                            <p class="flex items-center gap-2">
-                                <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
-                                    <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
-                                    <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                </h4>
+                                <p class="flex items-center gap-2">
+                                    <svg class="map-white hidden xl:block" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.0625 10.1562C20.0625 14.5746 12.0625 22.1562 12.0625 22.1562C12.0625 22.1562 4.0625 14.5746 4.0625 10.1562C4.0625 5.73797 7.64422 2.15625 12.0625 2.15625C16.4808 2.15625 20.0625 5.73797 20.0625 10.1562Z" stroke="white" stroke-width="1.5"/>
+                                        <path d="M12.0625 11.1562C12.6148 11.1562 13.0625 10.7085 13.0625 10.1562C13.0625 9.60397 12.6148 9.15625 12.0625 9.15625C11.5102 9.15625 11.0625 9.60397 11.0625 10.1562C11.0625 10.7085 11.5102 11.1562 12.0625 11.1562Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <svg class="map-green block xl:hidden" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 10.4688C20 14.8871 12 22.4688 12 22.4688C12 22.4688 4 14.8871 4 10.4688C4 6.05047 7.58172 2.46875 12 2.46875C16.4183 2.46875 20 6.05047 20 10.4688Z" stroke="#00362A" stroke-width="1.5"/>
+                                        <path d="M12 11.4688C12.5523 11.4688 13 11.021 13 10.4688C13 9.91647 12.5523 9.46875 12 9.46875C11.4477 9.46875 11 9.91647 11 10.4688C11 11.021 11.4477 11.4688 12 11.4688Z" fill="#00362A" stroke="#00362A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
                                 <span class="project-location-span text-green xl:text-white font-medium text-base">
                                     Nagawara Lake
-                                </span>
-                            </p>
-                          </div>
+                                    </span>
+                                </p>
+                            </div>
                           <div class="absolute bottom-4 left-4 xl:bottom-unset xl:left-unset xl:top-20 xl:right-20 z-2">
                             <div class="development-badge mb-5">
                                 Coming Soon
-                            </div>
-                          </div>
+                        </div>
+                    </div>
 
                           <img src="images/2025/homepage/dev-project--5.png" alt="The Beacon" class="bg-img">
                         </a>
-                      </div>
+            </div>
                     </div>
                   </section>
 
@@ -654,7 +860,7 @@
                   <section class="sixth">
                     <div class="outer">
                       <div class="inner">
-                        <a href="casa-sia.html" target="_blank" class="bg">
+                        <a href="casa-sia.php" target="_blank" class="bg">
                           <!-- <h2 class="section-heading">2. Casa Sia</h2> -->
                             <div class="bg-overlay" data-overlay="5"></div>
                           <div class="z-2 bg-white xl:bg-transparent absolute w-full top-0 left-0 xl:top-20 development--header xl:left-20 pl-5 xl:pl-0 py-4">
@@ -831,7 +1037,7 @@
                     </div>
                     
                     <div class="fade-up">
-                        <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center mb-20 xl:mb-16">
+                        <a href="developments.php" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center mb-20 xl:mb-16">
                             <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                             </svg>
@@ -875,16 +1081,16 @@
                 <!-- Slick Arrows: Desktop: Green -->
                 <div class="slick-arrows flex items-center justify-end gap-6 mb-16_ hidden xl:flex">
                     <div class="slick-arrow-prev cursor-pointer absolute top-1/2 -translate-y-1/2 left-4 z-1">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
                             <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
-                        </svg>
-                    </div>
+                            </svg>
+                        </div>
                     <div class="slick-arrow-next cursor-pointer absolute top-1/2 -translate-y-1/2 right-4 z-1">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
                             <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
-                        </svg>
+                            </svg>
                     </div>
                 </div>
                 
@@ -960,12 +1166,12 @@
                     <div class="flex-1" style="max-width: 400px;">
                         <div class="text-reveal--paragraph">
                             <p class="text-white mb-18 opacity-70">
-                                Anchored in integrity, transparency, and innovation, our purpose and vision guide every development toward timeless excellence.
+                                Anchored in integrity, transparency and innovation, our purpose and vision guide every development toward timeless excellence.
                             </p>
                         </div>
 
                         <div class="fade-up">
-                            <a href="#" class="btn-secondary bg-white w-fit text-green uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                            <a href="about.php" class="btn-secondary bg-white w-fit text-green uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2.7332" cy="3.47538" r="2.18652" stroke="#00362A" stroke-width="0.874607"/>
                                 </svg>
@@ -1022,7 +1228,7 @@
                             <p class="font-gold mb-12 xl:mb-26">
                                 Delivering turnkey interiors for luxury homes with complete transparency and effortless craftsmanship. In collaboration with leading interior designers, we create spaces of timeless elegance, designed around you.
                             </p>
-                            <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                            <a href="bespoke-services.php" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                                 </svg>
@@ -1052,7 +1258,7 @@
                             <p class="font-gold mb-12 xl:mb-26">
                                 With MAIA Life, your home extends beyond its walls, offering a seamless blend of hospitality-driven, facility management, where luxury meets effortless convenience.
                             </p>
-                            <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                            <a href="maialife.php" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                                 <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                                 </svg>
@@ -1084,11 +1290,11 @@
 
                     <div class="hidden xl:block">
                         <div class="text-reveal--wrapper developments-text-line-paragraph">
-                            <p class="">
+                        <p class="">
                                 MAIA’s recent features, exclusive interviews and industry <br />
-                                insights shaping tomorrow’s real estate narrative.
-                            </p>
-                        </div>
+                            insights shaping tomorrow’s real estate narrative.
+                        </p>
+                    </div>
                     </div>
                     <div class="xl:hidden">
                         <div class="text-reveal--wrapper developments-text-line-paragraph">
@@ -1102,7 +1308,7 @@
 
 
                     <div class="fade-up">
-                        <a href="#" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
+                        <a href="in-the-news/" class="btn-primary bg-green w-fit text-white uppercase px-6 py-3 h-11 rounded-full flex gap-2 items-center">
                             <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="2.97148" cy="3.51249" r="2.18652" stroke="white" stroke-width="0.874607"/>
                             </svg>
@@ -1130,72 +1336,72 @@
                 </div>
 
 
-                <div class="news-article-slider px-1 xl:pl-20">
-                    <div class="news-article-slide-item">
+            <div class="news-article-slider px-1 xl:pl-20">
+                <div class="news-article-slide-item">
                         <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/fortune-india-maia-estates-in-fortune-india/">
-                            <div class="image-scale-down--wrapper">
+                        <div class="image-scale-down--wrapper">
                                 <img src="images/2025/homepage/news-article--1.jpg" alt="News Article 1">
-                            </div>
-                            <div class="mt-8">
+                        </div>
+                        <div class="mt-8">
                                 <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2 letter-spacing-0-1 leading-12">
-                                    Fortune India : The MAIA Method featured in Fortune India
-                                </h4>
+                                    Fortune India : An exclusive feature on the MAIA method
+                            </h4>
                                 <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
                                 We’re honoured to be featured in Fortune India, a moment that reflects our quiet commitment to building with purpose.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="news-article-slide-item">
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-article-slide-item">
                         <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/hindustan-times/">
-                            <div class="image-scale-down--wrapper">
+                        <div class="image-scale-down--wrapper">
                                 <img src="images/2025/homepage/news-article--2.jpg" alt="News Article 2">
-                            </div>
-                            <div class="mt-8">
+                        </div>
+                        <div class="mt-8">
                                 <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2 letter-spacing-0-1 leading-12">
                                     Hindustan Times: MAIA Estates plans ₹3,000 crore investment to scale up its real estate presence in Bengaluru
-                                </h4>
+                            </h4>
                                 <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
                                     Bengaluru Real Estate: With this expansion, MAIA Estates’ total development footprint in the city is expected to cross 2.5 million sq ft by the end of the year
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="news-article-slide-item">
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-article-slide-item">
                         <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/news18-moodboards-are-out-mood-led-design-is-in-the-emotional-intelligence-of-modern-spaces/">
-                            <div class="image-scale-down--wrapper">
+                        <div class="image-scale-down--wrapper">
                                 <img src="images/2025/homepage/news-article--3.jpg" alt="News Article 3">
-                            </div>
-                            <div class="mt-8">
+                        </div>
+                        <div class="mt-8">
                                 <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2 letter-spacing-0-1 leading-12">
                                     News18: Moodboards Are Out, Mood-Led Design Is In-The Emotional Intelligence of Modern Spaces
-                                </h4>
+                            </h4>
                                 <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
                                     In 2025, the design world is undergoing a quiet but meaningful revolution. Gone are the days when static moodboards dictated the aesthetic of a space. Instead, designers are embracing mood-led design—an intuitive, emotion-forward approach that puts how a space makes you feel at the heart of its function.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="news-article-slide-item">
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-article-slide-item">
                         <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/real-estate-news-why-nris-and-hnis-are-betting-big-on-bengalurus-luxury-residential-market-insights-from-maia-estates-mayank-ruia-exclusive">
-                            <div class="image-scale-down--wrapper">
+                        <div class="image-scale-down--wrapper">
                                 <img src="images/2025/homepage/news-article--4.jpg" alt="News Article 4">
-                            </div>
-                            <div class="mt-8">
+                        </div>
+                        <div class="mt-8">
                                 <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2 letter-spacing-0-1 leading-12">
                                     Real Estate News: Why NRIs and HNIs are betting BIG on Bengaluru’s luxury residential market? Insights from MAIA Estates’ Mayank Ruia | EXCLUSIVE
-                                </h4>
+                            </h4>
                                 <p class="text-green font-normal text-dark-grey text-sm pr-8 line-clamp-2">
                                     Bengaluru Real Estate: Bengaluru’s luxury real estate boom isn’t just a trend—it’s a structural shift in how the city’s new-age wealth creators define lifestyle value. Market data reveals a growing appetite for large-format residences—5,000+ sq. ft.—with FY25 already recording over ₹1,250 crore in luxury sales.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
+                            </p>
+                        </div>
+                    </a>
+                </div>
                     <div class="news-article-slide-item">
                         <a target="_blank" href="https://www.maiaestates.in/in-the-news/project/casa-sia-represents-india-and-wins-big-at-the-international-property-awards-2025-26/">
                             <div class="image-scale-down--wrapper">
                                 <img src="images/2025/homepage/news-article--5.jpg" alt="News Article 4">
-                            </div>
+            </div>
                             <div class="mt-8">
                                 <h4 class="text-green text-3xl font-heading font-normal mb-4 line-clamp-2 letter-spacing-0-1 leading-12">
                                     Casa Sia represents India and wins big at the International Property Awards 2025-26.
@@ -1223,20 +1429,20 @@
                     </div>
                 </div>
                 <!-- Slick Arrows: Mobile -->
-                <div class="slick-arrows flex items-center justify-start gap-6 xl:hidden px-5 mt-12">
-                    <div class="slick-arrow-prev cursor-pointer">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="slick-arrows flex items-center justify-start gap-6 xl:hidden px-5 mt-12">
+                <div class="slick-arrow-prev cursor-pointer">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="49.1985" height="49.1985" rx="24.5993" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 49.8672 49.2656)" fill="#00362A"/>
                             <path d="M24.5785 30.4531L25.6848 29.324L21.7339 25.4851L31.7578 25.4851L31.7578 23.8366L21.7339 23.8366L25.6848 19.9752L24.5785 18.8687L18.7764 24.6496L24.5785 30.4531Z" fill="#F2F1EB"/>
-                        </svg>
-                    </div>
-                    <div class="slick-arrow-next cursor-pointer">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    </svg>
+                </div>
+                <div class="slick-arrow-next cursor-pointer">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.800781" y="49.2656" width="49.1985" height="49.1985" rx="24.5993" transform="rotate(-90 0.800781 49.2656)" fill="#00362A"/>
                             <path d="M26.0895 30.4687L24.9832 29.3397L28.9341 25.5007L18.9102 25.5007L18.9102 23.8523L28.9341 23.8523L24.9832 19.9908L26.0895 18.8843L31.8916 24.6652L26.0895 30.4687Z" fill="#F2F1EB"/>
-                        </svg>
-                    </div>
+                    </svg>
                 </div>
+            </div>
             </div>
 
 
@@ -1266,20 +1472,20 @@
                                 </div>
                                 
                                 <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-4 xl:mb-8">
-                                    <div class="form-group form-group-input">
+                                <div class="form-group form-group-input">
                                         <label for="contact-phone" class="block text-base font-heading font-extralight text-green mb-2">PHONE NUMBER (*)</label>
-                                        <input type="tel" id="contact-phone" name="contact-phone" required 
-                                            placeholder="PHONE NUMBER (*)"
+                                    <input type="tel" id="contact-phone" name="contact-phone" required 
+                                           placeholder="PHONE NUMBER (*)"
                                             pattern="[0-9+\-\s\(\)]+"
                                             maxlength="10"
                                             oninput="this.value = this.value.replace(/[^0-9+\-\s\(\)]/g, '').substring(0, 10)"
                                             class="w-full px-3 py-3 bg-transparent focus:border-green focus:outline-none transition-colors">
-                                    </div>
-                                    
-                                    <div class="form-group form-group-input">
+                                </div>
+                                
+                                <div class="form-group form-group-input">
                                     <label for="contact-email" class="block text-base font-heading font-extralight text-green mb-2">EMAIL ADDRESS (*)</label>
-                                        <input type="email" id="contact-email" name="contact-email" required 
-                                            placeholder="EMAIL ADDRESS (*)"
+                                    <input type="email" id="contact-email" name="contact-email" required 
+                                           placeholder="EMAIL ADDRESS (*)"
                                             class="w-full px-3 py-3 bg-transparent focus:border-green focus:outline-none transition-colors">
                                     </div>
                                 </div>
@@ -1348,32 +1554,29 @@
     <!-- Footer -->
     <div class="sticky-section">
         <footer class="footer sticky-content pt-12 bg-green-footer">
-            <div class="footer-content py-8 xl:py-20 relative flex items-center" style="min-height: calc(100vh - 150px);">
-                <div class="absolute left-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom left; bottom: -3px">
-                    <svg width="309" height="260" viewBox="0 0 309 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1138_411)">
+            <div class="footer-content py-8 xl:py-10 relative flex items-center" style="min-height: calc(100vh - 150px);">
+                <div class="absolute right-0 bottom-0 scale-50 xl:scale-100" style="transform-origin: bottom right; bottom: -3px">
+                    <svg width="404" height="261" viewBox="0 0 404 261" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g style="mix-blend-mode:exclusion">
-                        <path d="M309.166 259.911L65.8848 -0.261719V96.5583L285.334 259.911H309.166Z" fill="white" fill-opacity="0.03"/>
-                        </g>
-                        <g style="mix-blend-mode:exclusion">
-                        <path d="M309.168 259.911L65.8867 -0.261719V96.5583L285.336 259.911H309.168Z" fill="white" fill-opacity="0.03"/>
+                        <path d="M486.562 260.173L243.281 0V96.8201L462.73 260.173H486.562Z" fill="white" fill-opacity="0.03"/>
                         </g>
                         <g style="mix-blend-mode:exclusion">
-                        <path d="M-177.396 259.911L65.8848 -0.261719V96.5583L-153.565 259.911H-177.396Z" fill="white" fill-opacity="0.03"/>
+                        <path d="M486.562 260.173L243.281 0V96.8201L462.73 260.173H486.562Z" fill="white" fill-opacity="0.03"/>
                         </g>
+                        <g style="mix-blend-mode:exclusion">
+                        <path d="M-0.000137329 260.173L243.281 0V96.8201L23.8314 260.173H-0.000137329Z" fill="white" fill-opacity="0.03"/>
                         </g>
-                        <defs>
-                        <clipPath id="clip0_1138_411">
-                        <rect width="309" height="260" fill="white"/>
-                        </clipPath>
-                        </defs>
                     </svg>
                 </div>
                 <div class="container w-full grid grid-cols-1 xl:grid-cols-3 gap-20">
+                    <div class="footer-links">
+
+                        <!-- Mobile MAIA Logo -->
+                        <div class="xl:hidden mb-20">
                     <div class="footer-logo">
                         <img src="images/2025/footer-logo.png" alt="Footer Logo">
                     </div>
-                    <div class="footer-links">
+                        </div>
                         <div class="text-reveal--wrapper">
                             <h3 class="text-grey letter-spacing-0-1 text-2xl xl:text-4xl font-heading font-normal mb-8">
                                 Links
@@ -1382,29 +1585,34 @@
                         <div class="grid grid-cols-2 xl:gap-10">
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="index.html" class="footer-menu-item text-white text-sm">
+                                    <a href="index.php" class="footer-menu-item text-white text-sm">
                                         Home
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="about.html" class="footer-menu-item text-white text-sm">
+                                    <a href="about.php" class="footer-menu-item text-white text-sm">
                                         Our Story
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="developments.html" class="footer-menu-item text-white text-sm">
+                                    <a href="developments.php" class="footer-menu-item text-white text-sm">
                                         Developments
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="maialife.html" class="footer-menu-item text-white text-sm">
-                                        Our Services
+                                    <a href="bespoke-services.php" class="footer-menu-item text-white text-sm">
+                                        Bespoke Services
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="maialife.php" class="footer-menu-item text-white text-sm">
+                                        MAIA Life
                                     </a>
                                 </li>
                             </ul>
                             <ul class="text-white text-sm font-medium">
                                 <li class="mb-3">
-                                    <a href="maia-impact.html" class="footer-menu-item text-white text-sm">
+                                    <a href="maia-impact.php" class="footer-menu-item text-white text-sm">
                                         MAIA Impact
                                     </a>
                                 </li>
@@ -1461,28 +1669,32 @@
                                             </svg>
                                         </a>
                                     </li>
-                                    <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
+                                    <a href="privacy-policy.php" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
                                         Privacy Policy
                                     </a>
                                 </div>
                                 
                                 <div class="grid grid-cols-2 gap-0">
                                     <li class="mb-3">
-                                        <a href="https://www.linkedin.com/company/maiaestates/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
+                                        <a href="https://www.linkedin.com/company/maia-estates/mycompany/" target="_blank" class="footer-menu-item text-white text-sm flex items-center gap-2">
                                             LinkedIn
                                             <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0.617188 9.12109L8.42969 1.30859M8.42969 1.30859H0.617188M8.42969 1.30859V9.12109" stroke="#829591"/>
                                             </svg>
                                         </a>
                                     </li>
-                                    <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
+                                    <a href="terms-of-service.php" class="footer-policy-item text-white text-xs uppercase font-bold xl:hidden">
                                         Terms of Service
                                     </a>
                                 </div>
                             </ul>
                         </div>
                     </div>
-
+                    <div class="footer-logo--wrapper w-full flex xl:justify-end">
+                        <div class="footer-logo hidden xl:block">
+                            <img src="images/2025/footer-logo.png" alt="Footer Logo">
+                        </div>
+                    </div>
                 </div>  
             </div>
             <div class="footer-bottom py-8 pb-20 xl:pb-8">
@@ -1491,10 +1703,10 @@
                         &copy; MAIA Estates LLP, 2025. All rights reserved.
                     </p>
                     <div class="flex items-center gap-20 hidden xl:flex">
-                        <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
+                        <a href="privacy-policy.php" class="footer-policy-item text-white text-xs uppercase font-bold">
                             Privacy Policy
                         </a>
-                        <a href="#" class="footer-policy-item text-white text-xs uppercase font-bold">
+                        <a href="terms-of-service.php" class="footer-policy-item text-white text-xs uppercase font-bold">
                             Terms of Service
                         </a>
                     </div>
